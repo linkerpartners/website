@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="meta.privacy.title">LINKERPARTNERS</title>
+    <meta name="description" content="" data-i18n-attr="content:meta.privacy.description" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        // 이 창에서 처음이면 인트로, 사이트 안에서 넘어왔으면 전환 막. 동작 줄이기 설정이면 둘 다 생략
+        try {
+          var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (!sessionStorage.getItem("lp_intro_seen") && !still) d.classList.add("is-intro");
+          else if (sessionStorage.getItem("lp_nav") && !still) d.classList.add("is-arriving");
+          sessionStorage.removeItem("lp_nav");
+        } catch (e) {}
+        // 안전장치: 스크립트가 늦거나 실패해도 6초 뒤에는 첫 화면을 그대로 보여 줌
+        setTimeout(function () {
+          if (d.classList.contains("is-ready")) return;
+          d.classList.add("is-ready");
+          d.classList.remove("is-arriving");
+          document.querySelectorAll("[data-hero]").forEach(function (n) {
+            n.classList.add("is-inview");
+          });
+        }, 6000);
+      })();
+    </script>
+
+    <!-- 글꼴: 한국어 Pretendard / 일본어 Noto Serif JP / 영어 · 숫자 Newsreader Display ExtraLight(대문자). 모두 assets/fonts에 직접 두고 필요한 글자 조각만 불러옴 (tools/build/fonts.cjs) -->
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+
+    <!-- 공통 CSS (순서 중요) -->
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <link rel="stylesheet" href="assets/css/ambient.css" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main" tabindex="-1">
+
+      <!-- 첫 화면: 가운데 정렬. 제목 → 한 줄 → 아래로 이어지는 금빛 세로선 -->
+      <section class="pg-hero container" aria-labelledby="page-title">
+        <h1 id="page-title" class="pg-title" data-reveal="lines" data-hero data-i18n="privacy.hero.title"></h1>
+        <p class="pg-lead" data-reveal="rise" data-hero style="--d: 450ms" data-i18n="privacy.hero.lead"></p>
+        <span class="pg-drop" data-reveal="drawy" data-hero style="--d: 900ms" aria-hidden="true"></span>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div class="legal" data-list="privacy.sections">
+            <template>
+              <section data-reveal="rise" data-keep>
+                <h2 data-k="h"></h2>
+                <p data-k="p"></p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            </template>
+          </div>
+          <div class="legal">
+            <p class="fine"><a class="inline-link" data-config-href="email" data-config-text="email"></a> · <a class="inline-link" data-config-href="phone" data-config-text="phone"></a></p>
+            <p class="fine" data-i18n="privacy.effective"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- 공통 JS (순서 중요) -->
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/intro.js" defer></script>
+    <script src="assets/js/ambient.js" defer></script>
+    <script src="assets/js/motion.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/ticker.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

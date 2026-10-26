@@ -1,0 +1,239 @@
+<!doctype html>
+<!-- 자동 생성 파일: src/about.html 을 고친 뒤 tools/build 에서 npm run build -->
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8"><meta content="default-src 'self'; script-src 'self' 'sha256-3tgS6NiBvlG5EjYI79ZLCmHSYpXotSZYP50TuxQnFRA='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.frankfurter.dev; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="meta.about.title">회사 소개 | LINKERPARTNERS</title>
+    <meta name="description" content="한국과 일본 사이에서 판매하려는 1인 사업자와 작은 브랜드, 스타트업의 진출을 돕는 컨설팅 회사입니다." data-i18n-attr="content:meta.about.description">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        // 이 창에서 처음이면 인트로, 사이트 안에서 넘어왔으면 전환 막. 동작 줄이기 설정이면 둘 다 생략
+        try {
+          var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (!sessionStorage.getItem("lp_intro_seen") && !still) d.classList.add("is-intro");
+          else if (sessionStorage.getItem("lp_nav") && !still) d.classList.add("is-arriving");
+          sessionStorage.removeItem("lp_nav");
+        } catch (e) {}
+        // 안전장치: 스크립트가 늦거나 실패해도 6초 뒤에는 첫 화면을 그대로 보여 줌
+        setTimeout(function () {
+          if (d.classList.contains("is-ready")) return;
+          d.classList.add("is-ready");
+          d.classList.remove("is-arriving");
+          document.querySelectorAll("[data-hero]").forEach(function (n) {
+            n.classList.add("is-inview");
+          });
+        }, 6000);
+      })();
+    </script>
+
+    <!-- 글꼴: 한국어 Pretendard / 일본어 Noto Serif JP / 영어 · 숫자 Newsreader Display ExtraLight(대문자). 모두 assets/fonts에 직접 두고 필요한 글자 조각만 불러옴 (tools/build/fonts.cjs) -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+
+    <!-- 공통 CSS (순서 중요) -->
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/ambient.css">
+  <link href="https://linkerpartners.com/about.html" rel="canonical"><link href="https://linkerpartners.com/about.html" hreflang="ko" rel="alternate"><link href="https://linkerpartners.com/ja/about.html" hreflang="ja" rel="alternate"><link href="https://linkerpartners.com/en/about.html" hreflang="en" rel="alternate"><link href="https://linkerpartners.com/about.html" hreflang="x-default" rel="alternate"><meta content="website" property="og:type"><meta content="LINKERPARTNERS" property="og:site_name"><meta content="회사 소개 | LINKERPARTNERS" property="og:title"><meta content="한국과 일본 사이에서 판매하려는 1인 사업자와 작은 브랜드, 스타트업의 진출을 돕는 컨설팅 회사입니다." property="og:description"><meta content="https://linkerpartners.com/about.html" property="og:url"><meta content="ko_KR" property="og:locale"><meta content="ja_JP" property="og:locale:alternate"><meta content="en_US" property="og:locale:alternate"><meta content="summary" name="twitter:card"></head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main" tabindex="-1">
+
+      <!-- 1. 첫 화면: 가운데 정렬. 제목 → 한 줄 → 아래로 이어지는 금빛 세로선 -->
+      <section class="pg-hero container" aria-labelledby="page-title">
+        <h1 id="page-title" class="pg-title" data-reveal="lines" data-hero="" data-i18n="about.hero.title"><span style="--l: 0" class="line"><span>두 시장 사이의</span></span><span style="--l: 1" class="line"><span>간격을 메웁니다</span></span></h1>
+        <p class="pg-lead" data-reveal="rise" data-hero="" style="--d: 450ms" data-i18n="about.hero.lead">LINKERPARTNERS는 한국과 일본 사이에서 판매하려는 1인 사업자, 작은 브랜드, 스타트업의 진출을 돕는 컨설팅 회사입니다. 상담부터 로고, 홈페이지, 예약 시스템, SNS · 광고까지 함께합니다.</p>
+        <span class="pg-drop" data-reveal="drawy" data-hero="" style="--d: 900ms" aria-hidden="true"></span>
+      </section>
+
+      <!-- 2. 우리의 생각: 큰 한 문장 -->
+      <section class="section ab-story" aria-labelledby="story-title">
+        <div class="container">
+          <h2 id="story-title" class="sr-only" data-i18n="nav.about">회사 소개</h2>
+          <span class="ab-mark" data-reveal="drawy" aria-hidden="true"></span>
+          <p class="ab-statement" data-reveal="wipe" data-i18n="about.story.text">처음 이야기를 들은 담당자가 끝까지 함께합니다. 필요한 만큼만 맡길 수 있어서 부담 없는 금액으로 시작하실 수 있어요. 고객이 읽는 방식, 믿음을 쌓는 순서, 판매 채널의 관행이 한국과 일본은 서로 다릅니다. 그 차이를 먼저 설명하고, 양쪽 고객에게 같은 브랜드로 보이도록 다듬습니다.</p>
+          <img class="ab-logo" src="assets/logo/linker-logo.svg" alt="LINKERPARTNERS" width="160" height="50" data-reveal="fade" style="--d: 300ms">
+        </div>
+      </section>
+
+      <!-- 3. 이름의 뜻: LINKER | PARTNERS -->
+      <section class="section" aria-labelledby="name-title">
+        <div class="container">
+          <h2 id="name-title" class="sr-only" data-i18n="about.name.title">이름의 뜻</h2>
+          <div class="ab-name-grid" data-reveal="fade">
+            <div data-reveal="left">
+              <span class="ab-word" lang="en">Linker</span>
+              <p data-i18n="about.name.linker">두 시장과 두 브랜드, 두 사람을 잇는 사람.</p>
+            </div>
+            <div data-reveal="right">
+              <span class="ab-word" lang="en">Partners</span>
+              <p data-i18n="about.name.partners">보고서만 건네고 끝내지 않고, 결과가 나올 때까지 곁에 있는 동료.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 일하는 원칙: 번호 · 선이 그려지는 네 칸 -->
+      <section class="section" aria-labelledby="principles-title">
+        <div class="container">
+          <div class="pg-head">
+            <h2 id="principles-title" class="pg-h2" data-reveal="lines" data-i18n="about.principles.title"><span style="--l: 0" class="line"><span>네 가지를</span></span><span style="--l: 1" class="line"><span>지킵니다</span></span></h2>
+          </div>
+          <ul class="ab-principles" data-stagger="" data-list="about.principles.items">
+            <template>
+              <li data-reveal="zoom">
+                <h3 data-k="t"></h3>
+                <p data-k="d"></p>
+              </li>
+            </template>
+          
+              <li data-gen="" style="--i: 0" data-reveal="zoom">
+                <h3 data-k="t">사실부터 말합니다</h3>
+                <p data-k="d">가능성이 낮으면 낮다고 말씀드립니다. 진출하지 않는 것도 좋은 결정일 수 있습니다.</p>
+              </li>
+            
+              <li data-gen="" style="--i: 1" data-reveal="zoom">
+                <h3 data-k="t">금액을 먼저 공개합니다</h3>
+                <p data-k="d">모든 항목의 금액을 공개하고, 범위를 넘는 비용은 시작 전에 합의합니다.</p>
+              </li>
+            
+              <li data-gen="" style="--i: 2" data-reveal="zoom">
+                <h3 data-k="t">필요한 만큼만 권합니다</h3>
+                <p data-k="d">큰 묶음을 먼저 권하지 않습니다. 지금 필요한 한 가지부터 맡기세요.</p>
+              </li>
+            
+              <li data-gen="" style="--i: 3" data-reveal="zoom">
+                <h3 data-k="t">끝까지 같은 사람이</h3>
+                <p data-k="d">처음 이야기를 들은 담당자가 결과가 나올 때까지 함께합니다.</p>
+              </li>
+            </ul>
+        </div>
+      </section>
+
+      <!-- 5. 두 담당: KR ─●─ JP -->
+      <section class="section" aria-labelledby="team-title">
+        <div class="container">
+          <div class="pg-head">
+            <h2 id="team-title" class="pg-h2" data-reveal="lines" data-i18n="about.team.title"><span style="--l: 0" class="line"><span>처음 만난 사람이</span></span><span style="--l: 1" class="line"><span>끝까지</span></span></h2>
+            <p class="pg-sub" data-reveal="rise" data-keep="" style="--d: 200ms" data-i18n="about.team.lead">중간에 담당자가 바뀌지 않습니다. 고객과는 고객의 언어로, 현지에서는 상대의 방식으로 일합니다.</p>
+          </div>
+          <div class="ab-route" aria-hidden="true">
+            <span data-reveal="left">KR</span>
+            <span class="ab-route-line" data-reveal="draw" style="--d: 250ms"></span>
+            <span data-reveal="right">JP</span>
+          </div>
+          <div class="ab-duo" data-stagger="">
+            <div data-reveal="wipe">
+              <h3 data-i18n="about.team.client_title">고객과 함께</h3>
+              <p data-i18n="about.team.client">고객의 언어로 소통하고, 판매에 바로 쓸 수 있는 자료를 만듭니다.</p>
+            </div>
+            <div data-reveal="wipe">
+              <h3 data-i18n="about.team.local_title">현지에서</h3>
+              <p data-i18n="about.team.local">현지 고객과 판매 채널이 기대하는 방식을 알아보고, 있는 그대로 전달합니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. 회사 정보 -->
+      <section class="section" aria-labelledby="company-title">
+        <div class="container">
+          <h2 id="company-title" class="sr-only" data-i18n="about.company.title">회사 정보</h2>
+          <div class="ab-company" data-reveal="zoom">
+            <dl class="info rows" data-list="about.company.rows">
+              <template>
+                <div><dt data-k="k"></dt><dd data-k="v"></dd></div>
+              </template>
+            
+                <div data-gen=""><dt data-k="k">회사명</dt><dd data-k="v">LINKERPARTNERS</dd></div>
+              
+                <div data-gen=""><dt data-k="k">사업 분야</dt><dd data-k="v">한일 진출 컨설팅과 제작 지원 (로고 · 홈페이지 · 예약 시스템 · SNS · 광고 · 브랜드 현지화 · 입점 준비)</dd></div>
+              
+                <div data-gen=""><dt data-k="k">상담 언어</dt><dd data-k="v">한국어 · 일본어 · 영어</dd></div>
+              
+                <div data-gen=""><dt data-k="k">상담 시간</dt><dd data-k="v">평일 10:00⁠–⁠18:00 (서울 · 도쿄 기준)</dd></div>
+              
+                <div data-gen=""><dt data-k="k">설립 · 대표 · 주소</dt><dd data-k="v">확정 후 기재</dd></div>
+              </dl>
+            <dl class="info rows">
+              <div><dt data-i18n="about.company.phone">전화</dt><dd><a class="inline-link" data-config-href="phone" data-config-text="phone"></a></dd></div>
+              <div><dt data-i18n="about.company.email">이메일</dt><dd><a class="inline-link" data-config-href="email" data-config-text="email"></a></dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="container">
+          <span class="closing-rule" data-reveal="draw" aria-hidden="true"></span>
+          <div class="closing-body">
+            <div class="closing-lead">
+              <div>
+                <h2 id="closing-title" class="sr-only" data-i18n="closing.title">문의하기</h2>
+                <p class="closing-desc" data-reveal="rise" style="--d: 150ms" data-i18n="closing.desc">첫 상담 30분은 무료입니다</p>
+              </div>
+              <p class="closing-clock" data-reveal="fade" style="--d: 250ms"><span class="live-dot" aria-hidden="true"></span><span data-closing-status=""></span><span class="closing-time num" data-closing-time=""></span><span data-i18n="closing.info.clock">서울 · 도쿄 현지 시각</span></p>
+            </div>
+            <form class="quick-form" id="quick-form" novalidate data-reveal="rise" style="--d: 200ms">
+              <div class="quick-grid">
+                <div class="field">
+                  <label class="field-label" for="q-name"><span data-i18n="contact.form.name">이름</span><span class="req" data-i18n="contact.form.required">필수</span></label>
+                  <input class="input" id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="q-name-hint">
+                  <p class="field-hint" id="q-name-hint" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label class="field-label" for="q-email"><span data-i18n="contact.form.email">이메일</span><span class="req" data-i18n="contact.form.required">필수</span></label>
+                  <input class="input" id="q-email" name="email" type="email" autocomplete="email" required aria-describedby="q-email-hint">
+                  <p class="field-hint" id="q-email-hint" aria-live="polite"></p>
+                </div>
+                <div class="field span-2">
+                  <label class="field-label" for="q-service" data-i18n="contact.form.services">관심 서비스</label>
+                  <select class="input" id="q-service" name="service" data-list="services.items">
+                    <option value="" data-i18n="closing.form.pick">관심 서비스 선택 (선택 사항)</option>
+                    <template><option data-k-attr="value:id" data-k="title"></option></template>
+                  <option data-gen="" value="spot" data-k-attr="value:id" data-k="title">1:1 집중 상담</option><option data-gen="" value="diagnostic" data-k-attr="value:id" data-k="title">진출 진단 리포트</option><option data-gen="" value="logo" data-k-attr="value:id" data-k="title">로고 · 브랜드 디자인</option><option data-gen="" value="web" data-k-attr="value:id" data-k="title">홈페이지 제작</option><option data-gen="" value="booking" data-k-attr="value:id" data-k="title">예약 시스템 구축</option><option data-gen="" value="sns" data-k-attr="value:id" data-k="title">SNS · 광고 운영 도움</option><option data-gen="" value="localization" data-k-attr="value:id" data-k="title">브랜드 현지화 · 상세페이지</option><option data-gen="" value="channel" data-k-attr="value:id" data-k="title">입점 준비 가이드</option><option data-gen="" value="advisory" data-k-attr="value:id" data-k="title">월간 멘토링</option></select>
+                </div>
+                <div class="field span-2">
+                  <label class="field-label" for="q-message"><span data-i18n="contact.form.message">문의 내용</span><span class="req" data-i18n="contact.form.required">필수</span></label>
+                  <textarea placeholder="판매하려는 시장, 상품이나 서비스, 지금 고민되는 점을 적어 주세요." class="input" id="q-message" name="message" rows="4" required aria-describedby="q-message-hint" data-i18n-attr="placeholder:contact.form.message_placeholder"></textarea>
+                  <p class="field-hint" id="q-message-hint" aria-live="polite"></p>
+                </div>
+                <div class="field span-2">
+                  <label class="consent">
+                    <input type="checkbox" name="consent" required aria-describedby="q-consent-hint">
+                    <span><span data-i18n="contact.form.consent">개인정보 수집 · 이용에 동의합니다.</span> <a class="inline-link" href="privacy.html" data-i18n="contact.form.consent_link">자세히</a></span>
+                  </label>
+                  <p class="field-hint" id="q-consent-hint" aria-live="polite"></p>
+                </div>
+              </div>
+              <div class="quick-submit">
+                <button class="btn btn--primary" type="submit"><span class="roll"><span data-i18n="contact.form.submit">상담 신청 보내기</span></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></button>
+                <p class="form-note" data-i18n="contact.form.note">보내기를 누르면 사용 중인 메일 앱이 열리고, 작성한 내용이 채워집니다.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- 공통 JS (순서 중요) -->
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/intro.js" defer></script>
+    <script src="assets/js/ambient.js" defer></script>
+    <script src="assets/js/motion.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/ticker.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

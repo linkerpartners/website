@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>404 | LINKERPARTNERS</title>
+    <link rel="icon" href="/assets/logo/favicon.svg" type="image/svg+xml" />
+    <!-- 없는 주소로 들어오면 호스팅이 이 페이지를 보여 줌(어느 폴더 깊이에서도 열리도록 경로는 모두 맨 위 기준 /). 번역 파일 없이 세 언어를 한 번에 보여 주는 정적 페이지 -->
+    <link rel="stylesheet" href="/assets/css/fonts.css" />
+    <link rel="stylesheet" href="/assets/css/tokens.css" />
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <style>
+      .nf {
+        display: grid;
+        min-height: 100svh;
+        place-items: center;
+        padding: var(--space-8) var(--gutter);
+        text-align: center;
+      }
+      .nf-code {
+        display: block;
+        margin: 0;
+        font-family: var(--font-brand);
+        font-size: clamp(6rem, 4rem + 14vw, 14rem);
+        font-weight: 200;
+        line-height: 1;
+        letter-spacing: 0.02em;
+        color: var(--ink);
+      }
+      .nf-rule {
+        display: block;
+        width: 2.5rem;
+        height: 1px;
+        margin: var(--space-5) auto;
+        background: var(--accent);
+      }
+      .nf p {
+        margin: 0 auto var(--space-2);
+        max-width: 28em;
+        color: var(--ink-2);
+      }
+      .nf-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-3) var(--space-6);
+        margin-top: var(--space-6);
+      }
+      .nf-links a {
+        padding: var(--space-2) 0;
+        border-bottom: 1px solid var(--accent);
+        color: var(--ink);
+      }
+      .nf-logo {
+        display: block;
+        margin-bottom: var(--space-7);
+      }
+      .nf-logo img {
+        margin-inline: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="nf" id="main">
+      <div>
+        <a class="nf-logo" href="/" aria-label="LINKERPARTNERS"><img src="/assets/logo/linker-logo.svg" alt="LINKERPARTNERS" width="160" height="50" /></a>
+        <h1 class="nf-code">404</h1>
+        <span class="nf-rule" aria-hidden="true"></span>
+        <p lang="ko">찾으시는 페이지가 없어요. 주소를 다시 확인해 주세요</p>
+        <p lang="ja">お探しのページが見つかりません。アドレスをご確認ください</p>
+        <p lang="en">We couldn't find that page. Please check the address</p>
+        <nav class="nf-links" aria-label="LINKERPARTNERS">
+          <a href="/" lang="ko">한국어 홈</a>
+          <a href="/ja/" lang="ja">日本語ホーム</a>
+          <a href="/en/" lang="en">English home</a>
+        </nav>
+      </div>
+    </main>
+  </body>
+</html>

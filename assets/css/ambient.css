@@ -1,0 +1,25 @@
+/* ==========================================================
+   배경 분위기 (모든 페이지 공통, ambient.js와 한 벌). 없애려면 이 파일 · ambient.js · 각 HTML의 두 줄을 지우면 됩니다.
+   글자 뒤(z-index -1)에 고정된 canvas 하나: 비단처럼 천천히 흐르는 아주 가는 실 다발(마우스가 가까우면 비켜 휘고, 스크롤을 따라 움직임).
+   글자 대비에 영향을 주지 않을 만큼 옅게(바탕에 가장 진한 곳이 12–16%, 선 두께 1px 이하), 마우스를 막지 않음.
+   ========================================================== */
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 2200ms var(--ease-standard);
+}
+
+.ambient.is-on {
+  opacity: 1;
+}
+
+@media print {
+  .ambient {
+    display: none;
+  }
+}

@@ -1,0 +1,795 @@
+/* 디자인 시스템 페이지에서만 쓰는 값: 로고 규정의 색 · 큰 글자 단계 · 예시 모서리 · 떠 있는 그림자 (사이트에서는 쓰지 않아 tokens.css에 없음) */
+:root {
+  --base-mist: #f3f2ef; /* 로고 규정의 옅은 단색 바탕 */
+  --base-ink: #2a2722; /* 로고 단색 잉크 */
+  --base-warm-gray: #8e8a82; /* 로고 PARTNERS 웜그레이 */
+  --base-night: #15171b; /* 로고 규정의 짙은 바탕 */
+  --paper-soft: #f7f8f9; /* 예시 칸 바탕 */
+  --paper-mist: var(--base-mist);
+  --paper-night: var(--base-night);
+  --light-pearl: #e3eaef; /* 유리 안의 옅은 진주색 */
+  --shadow-3: 0 2px 4px rgb(29 31 35 / 0.04), 0 40px 90px -30px rgb(24 30 40 / 0.28);
+  --radius-lg: 16px;
+  --lh-display: 1.22;
+  --text-display-xl: clamp(2.5rem, 1.55rem + 3.9vw, 5rem);
+}
+
+:root:lang(en) {
+  --lh-display: 1.12;
+}
+
+/* ==========================================================
+   design-system.css - design-system.html (디자인 시스템 문서) 전용
+   실제 사이트 페이지에서는 불러오지 않습니다.
+   ========================================================== */
+
+/* 견본 칸의 작은 제목 */
+.list-heading {
+  margin-bottom: var(--space-5);
+  font-size: var(--text-label-m);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0;
+  color: var(--ink-3);
+}
+
+.ds-cover {
+  position: relative;
+  min-height: max(640px, min(100svh, 960px));
+  overflow: hidden;
+}
+
+.ds-cover-inner {
+  position: relative;
+  padding-top: calc(var(--header-h) + clamp(3rem, 1rem + 7vh, 7rem));
+  padding-bottom: var(--space-9);
+}
+
+.ds-cover .tag {
+  margin-bottom: var(--space-5);
+}
+
+.ds-cover-title {
+  font-family: var(--font-brand);
+  font-size: clamp(3.5rem, 1rem + 8vw, 8.5rem);
+  font-weight: var(--fw-regular);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.ds-cover-desc {
+  max-width: 30em;
+  margin-top: var(--space-6);
+  font-size: var(--text-body-l);
+  color: var(--ink-2);
+}
+
+/* 문서의 장 이름: 이름 + 끝까지 이어지는 가는 선 (사이트에서는 쓰지 않음) */
+.ds-rule {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: clamp(var(--space-7), 2rem + 3vw, var(--space-9));
+  font-size: var(--text-label-m);
+  font-weight: var(--fw-medium);
+  color: var(--ink-3);
+}
+
+.ds-rule::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line-strong);
+}
+
+.lead {
+  max-width: 34em;
+  font-size: var(--text-body-l);
+  color: var(--ink-2);
+}
+
+/* 문서의 설명 목록: 위쪽 선 + 작은 제목 + 설명 */
+.ds-item {
+  padding-top: var(--space-4);
+  box-shadow: inset 0 1px 0 var(--line-strong);
+}
+
+.ds-item > h4 {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-title-m);
+  font-weight: var(--fw-semibold);
+}
+
+.ds-item > p {
+  font-size: var(--text-body-s);
+  color: var(--ink-2);
+}
+
+.ds-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-7);
+  max-width: 36rem;
+}
+
+.ds-toc a {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--glass-fill);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: inset 0 0 0 1px var(--glass-edge);
+  font-size: var(--text-label-l);
+  font-weight: var(--fw-medium);
+  transition: background-color var(--dur-2) var(--ease-standard);
+}
+
+.ds-toc a:hover {
+  background: var(--glass-fill-strong);
+}
+
+.ds-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-5) var(--grid-gap-x);
+  align-items: end;
+  margin-bottom: var(--space-8);
+}
+
+.section .title + .ds-glass-row,
+.section .title + .ds-grid-2,
+.section .title + .ds-specimens {
+  margin-top: var(--space-8);
+}
+
+.ds-note {
+  margin-top: var(--space-3);
+  font-size: var(--text-label-m);
+  color: var(--ink-3);
+}
+
+.ds-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-8) var(--grid-gap-x);
+}
+
+code {
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 0.8125rem;
+  letter-spacing: 0;
+}
+
+/* ---------- 로고 ---------- */
+.logo-construct {
+  margin-bottom: var(--space-8);
+  padding: clamp(var(--space-5), 2vw, var(--space-7));
+  border-radius: var(--radius-xl);
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.logo-construct svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.lc-clear {
+  fill: none;
+  stroke: var(--ink-30);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+  vector-effect: non-scaling-stroke;
+}
+
+.lc-box {
+  fill: none;
+  stroke: var(--ink-20);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.lc-edge {
+  stroke: var(--ink);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.lc-guide {
+  stroke: var(--danger);
+  stroke-width: 1;
+  stroke-dasharray: 2 3;
+  vector-effect: non-scaling-stroke;
+}
+
+.lc-label {
+  font-family: var(--font-ko);
+  font-size: 6.5px;
+  fill: var(--ink-3);
+}
+
+.lc-strong {
+  fill: var(--danger);
+  font-weight: 600;
+}
+
+.logo-specs {
+  margin-bottom: var(--space-8);
+}
+
+.logo-spec-list li {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-block: var(--space-3);
+  border-top: 1px solid var(--line);
+  font-size: var(--text-body-s);
+}
+
+.logo-spec-list b {
+  font-weight: var(--fw-semibold);
+}
+
+.logo-spec-list span {
+  color: var(--ink-2);
+}
+
+.logo-variants {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin-bottom: var(--space-8);
+}
+
+.lv {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-7) var(--space-6) var(--space-5);
+  border-radius: var(--radius-xl);
+}
+
+.lv img {
+  width: min(100%, 22rem);
+  height: auto;
+  margin: var(--space-5) auto;
+}
+
+.lv--short img {
+  width: min(100%, 16rem);
+}
+
+.lv--light {
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.lv--dark {
+  background: #15171b;
+  color: #ffffff;
+}
+
+.lv figcaption {
+  display: grid;
+  gap: 2px;
+  font-size: var(--text-label-m);
+}
+
+.lv figcaption span,
+.lv figcaption code {
+  color: var(--ink-3);
+}
+
+.lv--dark figcaption span,
+.lv--dark figcaption code {
+  color: rgb(255 255 255 / 0.62);
+}
+
+.logo-sizes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-7) var(--space-8);
+  margin-bottom: var(--space-8);
+  padding: var(--space-7) var(--space-6);
+  border-radius: var(--radius-xl);
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.logo-sizes figure {
+  display: grid;
+  gap: var(--space-3);
+  justify-items: start;
+}
+
+.logo-sizes img {
+  height: auto;
+}
+
+.logo-sizes figcaption {
+  font-size: var(--text-label-s);
+  color: var(--ink-3);
+}
+
+.logo-dos,
+.logo-donts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.lu {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: space-between;
+  gap: var(--space-4);
+  min-height: 150px;
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.lu img {
+  position: relative;
+  width: 70%;
+  height: auto;
+  margin: var(--space-3) auto 0;
+}
+
+.lu figcaption {
+  position: relative;
+  font-size: var(--text-label-m);
+  color: var(--ink-2);
+}
+
+.lu--ok {
+  box-shadow: inset 0 3px 0 var(--ink), inset 0 0 0 1px var(--line);
+}
+
+.lu--ok[style*="#15171b"] figcaption {
+  color: rgb(255 255 255 / 0.78);
+}
+
+.lu--busy {
+  background:
+    radial-gradient(circle at 20% 30%, #c9b48d 0 12%, transparent 13%),
+    radial-gradient(circle at 70% 60%, #8e8a82 0 16%, transparent 17%),
+    radial-gradient(circle at 45% 80%, #d9c7a6 0 10%, transparent 11%),
+    linear-gradient(135deg, #e9e2d3, #b9b1a3);
+}
+
+.lu--no {
+  box-shadow: inset 0 3px 0 var(--danger), inset 0 0 0 1px var(--line);
+}
+
+.lu--no figcaption {
+  color: var(--danger);
+  font-weight: var(--fw-medium);
+}
+
+.lu-fake {
+  display: grid;
+  justify-items: center;
+  margin-top: var(--space-3);
+  font-family: var(--font-brand);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #a8874e;
+}
+
+.lu-fake span {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: #8e8a82;
+}
+
+/* ---------- 색 ---------- */
+.ds-swatches {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-6) var(--space-5);
+  margin-bottom: var(--space-8);
+}
+
+.ds-swatches li {
+  display: grid;
+  gap: 2px;
+}
+
+.ds-swatches .sw {
+  height: 96px;
+  margin-bottom: var(--space-3);
+  border-radius: var(--radius-md);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.ds-swatches b {
+  font-weight: var(--fw-semibold);
+}
+
+.ds-swatches code,
+.ds-swatches small {
+  color: var(--ink-3);
+}
+
+.ds-ramps {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-7) var(--grid-gap-x);
+}
+
+.ramp {
+  display: flex;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.ramp span {
+  flex: 1;
+  display: grid;
+  place-items: end start;
+  height: 72px;
+  padding: var(--space-2);
+  font-size: var(--text-label-s);
+  color: var(--ink);
+}
+
+.ramp span.on-dark {
+  color: var(--paper);
+}
+
+/* ---------- 유리 ---------- */
+.ds-glass-stage {
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--space-5);
+  padding-block: var(--space-9);
+}
+
+.ds-glass-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.ds-glass-card {
+  display: grid;
+  align-content: end;
+  gap: var(--space-2);
+  min-height: 240px;
+  padding: var(--space-6);
+}
+
+.ds-glass-card b {
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.ds-glass-card p {
+  font-size: var(--text-body-s);
+  color: var(--ink-2);
+}
+
+/* ---------- 글자 ---------- */
+.ds-langs {
+  display: grid;
+  gap: var(--space-6);
+  margin-bottom: var(--space-9);
+}
+
+.ds-langs figure {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: baseline;
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+}
+
+.ds-langs figcaption {
+  justify-self: start;
+  font-family: var(--font-brand);
+}
+
+.ds-langs p {
+  font-size: var(--text-display-l);
+  font-weight: var(--fw-medium);
+}
+
+.spec-ko {
+  font-family: var(--font-ko);
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+  word-break: keep-all;
+}
+
+.spec-ja {
+  font-family: var(--font-ja);
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  word-break: auto-phrase;
+}
+
+.spec-en {
+  font-family: var(--font-en);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+.spec-brand {
+  font-family: var(--font-brand);
+  font-size: var(--text-headline-l);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.ds-scale li {
+  display: grid;
+  grid-template-columns: 112px 40px minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: baseline;
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--line);
+}
+
+.ds-scale code,
+.ds-scale span {
+  color: var(--ink-3);
+}
+
+.ds-scale p {
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tracking-heading);
+  overflow-wrap: anywhere;
+}
+
+/* ---------- 간격·모서리·그림자 ---------- */
+.ds-space li {
+  display: grid;
+  grid-template-columns: 88px auto 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  padding-block: var(--space-2);
+  font-size: var(--text-label-m);
+  color: var(--ink-3);
+}
+
+.ds-space span {
+  height: 12px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--light-pearl));
+}
+
+.ds-radius {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.ds-radius li {
+  display: grid;
+  gap: var(--space-1);
+  font-size: var(--text-label-m);
+  color: var(--ink-3);
+}
+
+.ds-radius span {
+  aspect-ratio: 1;
+  margin-bottom: var(--space-2);
+  background: var(--paper-mist);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+}
+
+.ds-radius code {
+  color: var(--ink);
+}
+
+.ds-shadows {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.ds-shadows li {
+  display: grid;
+  gap: var(--space-1);
+  align-content: end;
+  min-height: 120px;
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+  font-size: var(--text-label-m);
+  color: var(--ink-3);
+}
+
+.ds-shadows code {
+  color: var(--ink);
+}
+
+/* ---------- 부품 ---------- */
+.ds-specimens {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.ds-specimen {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  background: var(--glass-fill);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.ds-specimen--wide {
+  grid-column: 1 / -1;
+}
+
+.ds-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.ds-row + .ds-row {
+  margin-top: var(--space-4);
+}
+
+/* 견본 안에서는 사이트 부품을 작게 */
+.ds-specimen .route {
+  font-size: var(--text-display-s);
+}
+
+.ds-specimen .price-sentence {
+  font-size: var(--text-display-m);
+}
+
+.ds-specimen .steps {
+  margin-top: 0;
+}
+
+.ds-row--lang {
+  min-height: 11rem;
+  align-items: flex-start;
+}
+
+.ds-est {
+  margin-top: 0;
+}
+
+.ds-cases {
+  row-gap: var(--space-6);
+}
+
+.ds-note--below {
+  margin-top: var(--space-5);
+}
+
+.ds-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.ds-form-wide {
+  grid-column: 1 / -1;
+}
+
+/* ---------- 움직임 ---------- */
+.ds-easing li {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: center;
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+}
+
+.ds-easing span {
+  position: relative;
+  height: 16px;
+}
+
+.ds-easing span::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--ink);
+  transition: left var(--dur-5) var(--e);
+}
+
+.ds-easing li:hover span::before {
+  left: calc(100% - 12px);
+}
+
+.ds-reveal {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  background: var(--paper-soft);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.ds-reveal p {
+  font-size: var(--text-headline-s);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--tracking-heading);
+}
+
+.ds-reveal .ds-draw {
+  display: block;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* ---------- 움직임 견본 ---------- */
+.ds-note--first {
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+  max-width: 34em;
+}
+
+.ds-cursor-input {
+  width: 12rem;
+}
+
+@media (max-width: 1024px) {
+  .ds-head {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+}
+
+@media (max-width: 768px) {
+  .ds-grid-2,
+  .ds-specimens,
+  .ds-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* 디자인 시스템 페이지 자체의 구역 제목 · 라벨 (사이트에서는 쓰지 않음) */
+.title {
+  font-size: var(--text-display-l);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-display);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--glass-fill);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: inset 0 0 0 1px var(--glass-stroke);
+  font-size: var(--text-label-s);
+  font-weight: var(--fw-medium);
+  line-height: 1.3;
+  color: var(--ink-2);
+  white-space: nowrap;
+}

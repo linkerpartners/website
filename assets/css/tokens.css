@@ -1,0 +1,190 @@
+/* ==========================================================
+   LINKERPARTNERS - 디자인 토큰 (tokens.css)
+   V1 컨셉: 흰 바탕 위를 흐르는 가는 금빛 실과 큰 가는 글자.
+   화면은 무채색(차콜 잉크 · 흰 바탕)이고, 금색은 로고 골드(#A8874E)에서 뽑아 기본 버튼 · 금빛 선 · 점 · 배경 실에만 씁니다.
+   푸터만 따뜻한 종이색(--paper-warm). 사이트에서 쓰는 값만 두며, 로고 규정용 색은 design-system.css에 있습니다.
+   다른 CSS 파일에는 숫자를 직접 쓰지 말고 이 변수만 사용하세요. (DESIGN.md 참고)
+   ========================================================== */
+
+:root {
+  /* ======================================================
+     1. 기본 색 (원색) — 직접 쓰지 말고 아래 '역할 색'을 쓰세요
+     ====================================================== */
+  --base-white: #ffffff;
+
+  /* 잉크 투명도 단계 (레퍼런스 foreground-5 ~ 100과 같은 방식). 모두 중립 차콜에서 */
+  --ink-5: rgb(29 31 35 / 0.05);
+  --ink-10: rgb(29 31 35 / 0.1);
+  --ink-20: rgb(29 31 35 / 0.2);
+  --ink-30: rgb(29 31 35 / 0.3);
+  --ink-40: rgb(29 31 35 / 0.4);
+  --ink-60: #5f636a; /* 글자에 쓸 수 있는 최소 (흰 바탕 6.0:1) */
+  --ink-80: #43464c; /* 9.6:1 */
+  --ink-100: #1d1f23; /* 16.4:1 */
+
+  /* 골드 단계 — 기본 버튼과 금빛 선 · 점에만 */
+  --gold-100: #a8874e; /* 장식 전용: 선 · 점 (흰 바탕 3.4:1이라 글자 금지) */
+  --gold-120: #8c6f3d; /* 버튼 배경 (흰 글자 4.7:1) */
+  --gold-140: #735a30; /* 버튼 호버 · 누름 (6.5:1) */
+
+  /* 흰색 투명도 단계 (유리 재료) */
+  --white-60: rgb(255 255 255 / 0.62);
+  --white-80: rgb(255 255 255 / 0.84);
+  --white-90: rgb(255 255 255 / 0.92);
+
+  /* 유리 안의 반사: 흰 빛과 아주 옅은 차가운 진주색 하나 */
+
+  /* ======================================================
+     2. 역할 색 — 화면에서는 이것만 씁니다
+     ====================================================== */
+  --paper: var(--base-white); /* 모든 바탕 */
+  --paper-warm: #f5efe4; /* 푸터 바탕: 금빛 · 배경 실과 같은 따뜻한 종이색 */
+
+  --ink: var(--ink-100); /* 제목·본문 */
+  --ink-2: var(--ink-80); /* 보조 본문 */
+  --ink-3: var(--ink-60); /* 라벨·캡션 */
+
+  --line: var(--ink-10);
+  --line-strong: var(--ink-20);
+
+  --wash: var(--ink-5); /* 고른 칸 · 강조 칸 · 금액 · 그래프 카드 바탕: 옅은 회색 면 (금빛 바탕 대신) */
+  --selection: var(--ink-10); /* 글자 선택 */
+
+  --accent: var(--gold-100); /* 금빛 선 · 점: 국가 경로, 마무리 선, 진행 막대, 일정 점, 지금 페이지 */
+  --accent-strong: var(--gold-120); /* 기본 버튼 */
+  --accent-strong-hover: var(--gold-140);
+
+  --focus-ring: var(--ink);
+
+  --danger: #a3322b; /* 입력 오류 (흰 바탕 6.9:1) */
+  --danger-ring: rgb(163 50 43 / 0.12);
+
+  /* ======================================================
+     3. 유리 재료 — 세 단계 두께
+     ====================================================== */
+  --glass-fill: var(--white-60); /* 패널 기본 */
+  --glass-fill-strong: var(--white-80); /* 헤더·메뉴 (글자 가독성 우선) */
+  --glass-blur: blur(16px) saturate(150%); /* 레퍼런스 blur(16px) */
+  --glass-blur-strong: blur(28px) saturate(160%);
+  --glass-stroke: var(--white-90); /* 위쪽 빛 반사선 */
+  --glass-edge: var(--ink-10); /* 바깥 윤곽 */
+  --glass-sheen: linear-gradient(180deg, rgb(255 255 255 / 0.75) 0%, rgb(255 255 255 / 0) 42%);
+  --glass-caustic: radial-gradient(60% 50% at 30% 0%, rgb(255 255 255 / 0.8), transparent 70%),
+    radial-gradient(50% 40% at 85% 100%, rgb(227 234 239 / 0.5), transparent 70%); /* 흰 반사 + 진주색 */
+
+  /* ======================================================
+     4. 그림자 — 항상 아래로, 부드럽게, 무채색 (아주 살짝 차갑게)
+     ====================================================== */
+  --shadow-1: 0 1px 2px rgb(29 31 35 / 0.05), 0 6px 16px -8px rgb(24 30 40 / 0.16);
+  --shadow-2: 0 1px 2px rgb(29 31 35 / 0.04), 0 24px 56px -24px rgb(24 30 40 / 0.22);
+
+
+  /* ======================================================
+     5. 글꼴
+     ====================================================== */
+  --font-ko: "Newsreader", "Pretendard Variable", "Pretendard", -apple-system, "Apple SD Gothic Neo",
+    "Malgun Gothic", sans-serif;
+  --font-ja: "Newsreader", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "Pretendard Variable", serif;
+  --font-en: "Newsreader", "Pretendard Variable", "Pretendard", -apple-system, "Segoe UI", sans-serif;
+  --font-brand: "Newsreader", "Pretendard Variable", sans-serif; /* 라틴 글자 · 숫자 · 국가 코드: Newsreader Display(광학 크기 72) ExtraLight 200, 대문자(base.css). 한글 · 일본어는 Pretendard로 자동 대체. 로고만 예외(Jost로 만든 SVG 파일) */
+  --font-base: var(--font-ko);
+
+  --fw-thin: 100; /* 각 페이지 첫 제목 */
+  --fw-extralight: 200;
+  --fw-light: 300; /* 큰 글자: 포스터 단어, 숫자 (가늘수록 조용하고 고급스러움) */
+  --fw-regular: 400; /* 한글·일본어 큰 제목 */
+  --fw-medium: 500; /* 레퍼런스: 제목·본문 모두 500 */
+  --fw-semibold: 600; /* 작은 제목·버튼 */
+
+  /* 글자 크기 — 레퍼런스 이름 체계 (display / headline / title / body / label) */
+  --text-display-l: clamp(2.125rem, 1.45rem + 2.8vw, 4rem); /* 64px: 섹션 제목 */
+  --text-display-m: clamp(1.875rem, 1.4rem + 1.9vw, 3rem); /* 48px */
+  --text-display-s: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem); /* 40px */
+  --text-headline-l: clamp(1.5rem, 1.25rem + 1vw, 2rem); /* 32px: 목록 큰 항목 */
+  --text-headline-m: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem); /* 28px */
+  --text-headline-s: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem); /* 24px: 항목 제목 */
+  --text-title-l: 1.375rem; /* 22px */
+  --text-title-m: 1.0625rem; /* 17px: 작은 항목 제목 */
+  --text-body-l: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem); /* 20px: 소개 문단 */
+  --text-body-m: 1rem; /* 16px: 본문 */
+  --text-body-s: 0.9375rem; /* 15px: 항목 설명 */
+  --text-label-l: 0.875rem; /* 14px: 버튼·메뉴 */
+  --text-label-m: 0.8125rem; /* 13px: 섹션 라벨 */
+  --text-label-s: 0.75rem; /* 12px: 캡션 */
+
+  /* 줄 간격 — 한·일은 글자가 꽉 차므로 영어보다 넉넉하게 */
+  --lh-heading: 1.28;
+  --lh-body: 1.75;
+
+  /* 자간 — 레퍼런스 값을 em으로 환산 */
+  --tracking-display: -0.025em;
+  --tracking-heading: -0.025em;
+  --tracking-title: -0.025em; /* 제목 · 큰 글자 */
+  --tracking-body: -0.01em;
+
+  /* ======================================================
+     6. 간격 (8px 체계, 레퍼런스와 동일 + 큰 단계 추가)
+     ====================================================== */
+  --space-1: 0.25rem; /* 4 */
+  --space-2: 0.5rem; /* 8 */
+  --space-3: 0.75rem; /* 12 */
+  --space-4: 1rem; /* 16 */
+  --space-5: 1.5rem; /* 24 */
+  --space-6: 2rem; /* 32 */
+  --space-7: 2.5rem; /* 40 */
+  --space-8: 4rem; /* 64 */
+  --space-9: 6rem; /* 96 */
+  --space-10: 8rem; /* 128 */
+  --section-y: clamp(5.5rem, 3.5rem + 7vw, 10rem);
+
+  /* ======================================================
+     7. 레이아웃
+     ====================================================== */
+  --container: 1600px;
+  --gutter: clamp(1rem, 0.5rem + 2.2vw, 2rem); /* 레퍼런스 32px */
+  --page-x: max(var(--gutter), calc((100vw - var(--container)) / 2 + var(--gutter))); /* 화면 끝에서 내용 시작선까지 (넓은 화면에서도 내용 칸에 맞춤) */
+  --grid-gap-x: clamp(2rem, 1rem + 3vw, 4rem); /* 레퍼런스 64px */
+  --header-h: 72px; /* 기존 88px에서 줄임 */
+
+  /* 화면 폭 기준점 (레퍼런스 768 / 1024) — CSS 변수는 미디어쿼리에 못 쓰므로 참고용 */
+
+  /* ======================================================
+     8. 모서리 (레퍼런스 체계 그대로)
+     텍스트·버튼 영역은 직선, 유리 재료만 둥글게
+     ====================================================== */
+  --radius-md: 12px;
+  --radius-xl: 24px; /* 유리 패널 */
+  --radius-full: 9999px; /* 알약 버튼 */
+
+  /* ======================================================
+     9. 움직임 (레퍼런스 곡선·시간)
+     ====================================================== */
+  --ease-emphasized: cubic-bezier(0.3, 0, 0, 1); /* 레퍼런스 주 곡선 */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: var(--ease-emphasized);
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1); /* 큰 등장: 빠르게 나와 길게 멈춤 */
+  --ease-curtain: cubic-bezier(0.77, 0, 0.175, 1); /* 화면을 덮고 걷는 막 (페이지 전환 · 카드 가림막) */
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1); /* 두 상태 사이를 미끄러지듯 (메뉴 버튼의 X) */
+  --ease-morph: cubic-bezier(0.45, 0, 0.15, 1); /* 같은 카드가 다른 모양으로 옮겨 감 (사례 라이브러리 보기 전환, avea.studio 실측) */
+
+  --dur-1: 160ms; /* 누름 (버튼이 0.97배로) */
+  --dur-2: 200ms; /* 색 변화 */
+  --dur-3: 300ms; /* 메뉴·밑줄 */
+  --dur-4: 500ms; /* 헤더 전환 */
+  --dur-5: 750ms; /* 등장 (레퍼런스 reveal 0.75s) */
+  --dur-6: 1200ms; /* 선 그리기 · 줄 등장 */
+  --dur-7: 1600ms; /* 첫 화면 연출 */
+  --stagger: 80ms; /* 차례로 나타날 때 항목 사이 간격 */
+
+}
+
+/* ----- 언어별 글꼴·줄 간격 ----- */
+:root:lang(ja) {
+  --font-base: var(--font-ja);
+}
+
+:root:lang(en) {
+  --font-base: var(--font-en);
+  --lh-heading: 1.12;
+  --lh-body: 1.55;
+}

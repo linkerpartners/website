@@ -1,0 +1,140 @@
+{
+  "id": "nakai-shuzo",
+  "brand": "Nakai Shuzo",
+  "example": true,
+  "route": "jp_kr",
+  "year": "2025",
+  "services": [
+    "channel",
+    "localization"
+  ],
+  "metrics": [
+    {
+      "value": "1877",
+      "label": {
+        "ko": "창업 연도",
+        "ja": "創業年",
+        "en": "Year founded"
+      }
+    },
+    {
+      "value": "3",
+      "label": {
+        "ko": "프로모션 기간 추가 주문(건)",
+        "ja": "プロモーション期間の追加注文(件)",
+        "en": "Extra orders during the promotion"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "JETRO 활용 사례 · 中井酒造株式会社 (2026)",
+      "url": "https://www.jetro.go.jp/case_study/2026/nakaishuzo.html"
+    }
+  ],
+  "ko": {
+    "client": "나카이주조 (中井酒造)",
+    "industry": "청주 · 돗토리현 구라요시시",
+    "duration": "2025년도 (공개 2026.08)",
+    "short": "Nakai Shuzo의 첫 한국 수출",
+    "title": "Nakai Shuzo, 국내 납품 · 전량 매입으로 첫 한국 수출에서 재주문까지",
+    "summary": "1877년에 문을 연 돗토리의 양조장이 수출 부담 없는 거래 방식으로 한국 첫 주문을 받고, 재주문까지 이어 갔습니다.",
+    "challenge": "한국에 처음 파는 작은 양조장에게는 수출 절차와 반품 위험, 현지 판매망이 모두 부담이었습니다.",
+    "approach": [
+      "JETRO의 바이어 전용 온라인 카탈로그 ‘Japan Street’에 상품을 올렸습니다.",
+      "그 뒤 한국 크로스보더 EC 업체 말테일(malltail)의 문의가 왔고, JETRO를 거쳐 상담했습니다.",
+      "선결제, 국내 창고 납품 뒤 전량 매입하는 조건으로 수출 부담을 줄였습니다.",
+      "말테일의 무료 온라인 프로모션에 참여했습니다.",
+      "다른 한국 바이어의 문의도 있었지만 이미 거래하던 말테일을 우선했습니다."
+    ],
+    "result": "상담 직후 첫 주문이 들어와 한국 첫 수출이 이뤄졌고 재주문이 이어졌습니다. 2025년도 프로모션 기간에는 추가 주문이 3건 더 들어왔습니다. JETRO는 상품 ‘야시오 준마이 다이긴조’의 합리적인 가격, 품질, 안정적인 공급이 맞은 점을 꼽습니다. 앞으로 해외 매출 비중을 높이고 박람회 등 새 판로를 찾을 계획입니다.",
+    "timeline": [
+      {
+        "when": "준비",
+        "what": "Japan Street에 상품 등록"
+      },
+      {
+        "when": "2025년도",
+        "what": "말테일 문의 → 상담 → 한국 첫 주문"
+      },
+      {
+        "when": "이후",
+        "what": "재주문, 말테일 무료 프로모션 참여, 추가 주문 3건"
+      },
+      {
+        "when": "앞으로",
+        "what": "해외 매출 비중 확대, 박람회 등 새 판로"
+      }
+    ]
+  },
+  "ja": {
+    "client": "中井酒造",
+    "industry": "日本酒・鳥取県倉吉市",
+    "duration": "2025年度(2026年8月公開)",
+    "short": "Nakai Shuzo、初めての韓国輸出",
+    "title": "Nakai Shuzo、国内納品・全量買取で初めての韓国輸出からリピートまで",
+    "summary": "1877年創業の鳥取の酒蔵が、輸出の負担が少ない取引方法で韓国から初の注文を受け、リピートにつなげました。",
+    "challenge": "初めて韓国に販売する酒蔵にとって、輸出手続きや返品リスク、現地の販売網のすべてが負担でした。",
+    "approach": [
+      "JETROの招待バイヤー向けオンラインカタログ「Japan Street」に商品を掲載しました。",
+      "その後、韓国の越境EC事業者malltailから問い合わせがあり、JETROを通じて商談しました。",
+      "前払い、国内倉庫納品後に全量買取という条件で、輸出への不安を減らしました。",
+      "malltailの無料オンラインプロモーションに参加しました。",
+      "ほかの韓国バイヤーからの問い合わせもありましたが、すでに取引のあるmalltailを優先しました。"
+    ],
+    "result": "商談後すぐに初回注文が入り、韓国向けの初輸出が実現してリピート注文が続きました。2025年度のプロモーション期間にも追加注文が3件入りました。JETROは「八潮純米大吟醸」の手頃な価格、品質、安定供給が合ったことを挙げています。今後は海外売上比率を高め、展示会などの新たな販路も探る計画です。",
+    "timeline": [
+      {
+        "when": "準備",
+        "what": "Japan Streetに商品を登録"
+      },
+      {
+        "when": "2025年度",
+        "what": "malltailから問い合わせ → 商談 → 韓国初注文"
+      },
+      {
+        "when": "その後",
+        "what": "リピート注文、malltailの無料プロモーション参加、追加注文3件"
+      },
+      {
+        "when": "今後",
+        "what": "海外売上比率の拡大、展示会など新たな販路"
+      }
+    ]
+  },
+  "en": {
+    "client": "Nakai Shuzo",
+    "industry": "Sake · Kurayoshi, Tottori",
+    "duration": "FY2025 (published Aug 2026)",
+    "short": "Nakai Shuzo's first export to Korea",
+    "title": "Nakai Shuzo: from a first export to Korea to repeat orders, with domestic delivery and full buy-out",
+    "summary": "A sake brewery in Tottori, founded in 1877, took its first Korean order on terms that spared it the usual export burden, and won repeat orders.",
+    "challenge": "For a small brewery selling in Korea for the first time, export procedures, return risk and a local sales network were all burdens.",
+    "approach": [
+      "Listed its products on Japan Street, JETRO's online catalogue for invited buyers.",
+      "A Korean cross-border e-commerce operator, malltail, then enquired, and JETRO arranged the talks.",
+      "Eased export worries with prepayment and full buy-out after delivery to a domestic warehouse.",
+      "Joined malltail's free online promotion.",
+      "Turned down priority for a second Korean buyer's enquiry in favour of its existing partner, malltail."
+    ],
+    "result": "A first order came right after the talks, making it the brewery's first export to Korea, and repeat orders followed. Three more orders came in during the FY2025 promotion. JETRO credits the match of reasonable price, quality and stable supply for Yashio Junmai Daiginjo. The brewery plans to raise its overseas share and look at trade shows and other channels.",
+    "timeline": [
+      {
+        "when": "Prep",
+        "what": "Listed on Japan Street"
+      },
+      {
+        "when": "FY2025",
+        "what": "malltail enquiry → talks → first Korean order"
+      },
+      {
+        "when": "Later",
+        "what": "Repeat orders, free malltail promotion, three more orders"
+      },
+      {
+        "when": "Next",
+        "what": "Higher overseas share, trade shows and new channels"
+      }
+    ]
+  }
+}

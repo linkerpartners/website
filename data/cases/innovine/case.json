@@ -1,0 +1,156 @@
+{
+  "id": "innovine",
+  "brand": "Innovine Korea",
+  "example": true,
+  "route": "kr_jp",
+  "year": "2025",
+  "services": [
+    "localization",
+    "sns",
+    "channel"
+  ],
+  "metrics": [
+    {
+      "value": {
+        "ko": "20억",
+        "ja": "2.4億円",
+        "en": "₩2B"
+      },
+      "label": {
+        "ko": "연 매출(원, 인터뷰 기준)",
+        "ja": "年商(円換算、インタビュー時点)",
+        "en": "Annual sales (KRW, per interview)"
+      }
+    },
+    {
+      "value": "8⁠–⁠9×",
+      "label": {
+        "ko": "메가와리 기간 매출(평소 대비)",
+        "ja": "メガ割期間の売上(通常比)",
+        "en": "Mega Wari sales vs. usual"
+      }
+    },
+    {
+      "value": "4",
+      "label": {
+        "ko": "한 상점에서 키운 브랜드 수",
+        "ja": "1店舗で育てたブランド数",
+        "en": "Brands grown in one shop"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Qoo10大学 · 한국 중소 브랜드가 20억 매출을 달성한 성공 비결",
+      "url": "https://article-university.qoo10.jp/entry/case_Innovinekorea_kor"
+    }
+  ],
+  "ko": {
+    "client": "이노바인코리아 (Innovine Korea)",
+    "industry": "뷰티 · 다이어트 식품 (멀티 브랜드)",
+    "duration": "큐텐재팬 운영 (2025.11 인터뷰)",
+    "short": "Innovine의 큐텐재팬 멀티 브랜드 운영",
+    "title": "Innovine Korea, 브랜드 여러 개를 한 상점에서 키워 연 20억 원을 만들다",
+    "summary": "번역 지원으로 빠르게 입점하고, 인플루언서와 일본 전용 상품을 만들며 한 상점에서 브랜드 넷을 키웠습니다.",
+    "challenge": "경쟁사가 잘 팔고 덜 알려진 한국 브랜드도 순위에 오르는 걸 보고 일본 진출을 정했지만, 일본어 상세 페이지와 상품 이름, 고객 응대까지 새로 만들어야 했습니다.",
+    "approach": [
+      "큐텐재팬의 번역 서비스를 써서 입점 시간을 줄였습니다.",
+      "헤어케어 moev, 다이어트 식품 Boratalks · prumwellness, 치약 Dr.Viuum을 한 셀러 샵에서 함께 운영하고, 물량이 늘며 배송비도 협상했습니다.",
+      "일본의 다이어트 커피 이름 관례에 맞춰 한국 이름 ‘살뺄라카노’를 ‘S커피’로 바꿨습니다.",
+      "인플루언서와 일본 전용 글루타치온 마스크팩을 함께 개발해, 2024년 2월 메가포 기간 내내 종합 10위권을 지켰습니다.",
+      "다른 상품을 사면 효소 제품을 사은품으로 얹어 별도 광고 없이 재구매를 이끌었습니다.",
+      "배송 중 파손에는 교환품과 사은품, 최소 금액 없는 쿠폰으로 응대했습니다."
+    ],
+    "result": "연 매출 20억 원(인터뷰 기준)을 말하고, moev는 카테고리 1위에 올랐습니다. 메가와리 기간에는 방문이 6배 이상, 매출이 8~9배 늘었고, 팔로워 약 12만 명 인플루언서의 자발적 추천 게시물이 2025년 6월 메가와리 매출을 끌어올렸다고 합니다.",
+    "timeline": [
+      {
+        "when": "2024.02",
+        "what": "일본 전용 마스크팩이 메가포 내내 종합 10위권"
+      },
+      {
+        "when": "2025.05",
+        "what": "일본 엑스포 뒤 인플루언서가 샘플을 써 보고 자발적으로 추천"
+      },
+      {
+        "when": "2025.06",
+        "what": "메가와리 매출 급증"
+      },
+      {
+        "when": "2025.11",
+        "what": "큐텐 사례 인터뷰 공개"
+      }
+    ]
+  },
+  "ja": {
+    "client": "イノバインコリア(Innovine Korea)",
+    "industry": "ビューティー・ダイエット食品(マルチブランド)",
+    "duration": "Qoo10 Japan運営(2025.11インタビュー)",
+    "short": "InnovineのQoo10 Japanマルチブランド運営",
+    "title": "Innovine Korea、1つのショップで複数ブランドを育てて年商約2.4億円に",
+    "summary": "翻訳サポートで素早く出店し、インフルエンサーと日本限定商品をつくりながら、1店舗で4ブランドを育てました。",
+    "challenge": "競合が売れていて、あまり知られていない韓国ブランドも上位に入っているのを見て日本進出を決めましたが、日本語の商品ページや商品名、お客様対応まで一から整える必要がありました。",
+    "approach": [
+      "Qoo10 Japanの翻訳サービスを使って出店までの時間を短縮しました。",
+      "ヘアケアのmoev、ダイエット食品のBoratalksとprumwellness、歯磨き粉のDr.Viuumを1つのセラーショップで運営し、物量が増えるなかで送料も交渉しました。",
+      "日本のダイエットコーヒーの名前の慣習に合わせ、韓国での名前「サルッペラカノ」を「Sコーヒー」に変えました。",
+      "インフルエンサーと日本限定のグルタチオンマスクパックを共同開発し、2024年2月のメガポ期間を通して総合10位圏を維持しました。",
+      "ほかの商品を買うと酵素製品をプレゼントとして付け、広告なしでリピートにつなげました。",
+      "配送中の破損には、交換品とプレゼント、最低金額なしのクーポンで対応しました。"
+    ],
+    "result": "年商約2.4億円(20億ウォン、インタビュー時点)を挙げ、moevはカテゴリ1位になりました。メガ割期間は訪問が6倍以上、売上が8〜9倍に伸び、フォロワー約12万人のインフルエンサーの自発的なおすすめ投稿が2025年6月のメガ割の売上を押し上げたとのことです。",
+    "timeline": [
+      {
+        "when": "2024.02",
+        "what": "日本限定マスクパックがメガポ期間中ずっと総合10位圏"
+      },
+      {
+        "when": "2025.05",
+        "what": "日本の展示会後、インフルエンサーがサンプルを試して自発的におすすめ"
+      },
+      {
+        "when": "2025.06",
+        "what": "メガ割で売上が急増"
+      },
+      {
+        "when": "2025.11",
+        "what": "Qoo10の事例インタビューが公開"
+      }
+    ]
+  },
+  "en": {
+    "client": "Innovine Korea",
+    "industry": "Beauty · diet food (multi-brand)",
+    "duration": "Running on Qoo10 Japan (interview Nov 2025)",
+    "short": "Innovine's multi-brand shop on Qoo10 Japan",
+    "title": "Innovine Korea grows several brands in one shop to KRW 2 billion a year",
+    "summary": "It joined quickly with translation support and, working with influencers and Japan-only products, grew four brands from a single shop.",
+    "challenge": "Competitors were selling well and lesser-known Korean brands were ranking high, so it chose Japan, but Japanese product pages, product names and customer service all had to be built from scratch.",
+    "approach": [
+      "Used Qoo10 Japan's translation service to shorten the time to open.",
+      "Ran hair-care moev, diet foods Boratalks and prumwellness, and toothpaste Dr.Viuum from one seller shop, and negotiated shipping costs as volume grew.",
+      "Renamed a diet coffee from its Korean name to “S Coffee” to follow Japanese naming conventions.",
+      "Co-developed a Japan-only glutathione mask pack with an influencer, which held a top-10 overall spot throughout the February 2024 MegaPo.",
+      "Added enzyme products as free gifts with other purchases, driving repeat orders without separate ads.",
+      "Answered shipping damage with a replacement, a gift and a coupon with no minimum spend."
+    ],
+    "result": "It reports annual sales of KRW 2 billion (per the interview), and moev reached #1 in its category. During Mega Wari, traffic rose six-fold or more and sales eight to nine-fold, and unprompted recommendation posts from an influencer with about 120,000 followers lifted June 2025 sales.",
+    "timeline": [
+      {
+        "when": "2024.02",
+        "what": "Japan-only mask pack holds a top-10 overall spot through MegaPo"
+      },
+      {
+        "when": "2025.05",
+        "what": "After a Japan expo, an influencer tries samples and recommends them unprompted"
+      },
+      {
+        "when": "2025.06",
+        "what": "Mega Wari sales surge"
+      },
+      {
+        "when": "2025.11",
+        "what": "Qoo10 publishes the case interview"
+      }
+    ]
+  }
+}

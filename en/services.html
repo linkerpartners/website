@@ -1,0 +1,528 @@
+<!doctype html>
+<!-- 자동 생성 파일: src/services.html 을 고친 뒤 tools/build 에서 npm run build -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"><meta content="default-src 'self'; script-src 'self' 'sha256-3tgS6NiBvlG5EjYI79ZLCmHSYpXotSZYP50TuxQnFRA='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.frankfurter.dev; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="meta.services.title">Services | LINKERPARTNERS</title>
+    <meta name="description" content="1:1 sessions, market-fit reports, logo and brand design, websites, booking systems, social media and ads, brand localization, store-launch guides and monthly mentoring. From ₩50K to under ₩1M." data-i18n-attr="content:meta.services.description">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        // 이 창에서 처음이면 인트로, 사이트 안에서 넘어왔으면 전환 막. 동작 줄이기 설정이면 둘 다 생략
+        try {
+          var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (!sessionStorage.getItem("lp_intro_seen") && !still) d.classList.add("is-intro");
+          else if (sessionStorage.getItem("lp_nav") && !still) d.classList.add("is-arriving");
+          sessionStorage.removeItem("lp_nav");
+        } catch (e) {}
+        // 안전장치: 스크립트가 늦거나 실패해도 6초 뒤에는 첫 화면을 그대로 보여 줌
+        setTimeout(function () {
+          if (d.classList.contains("is-ready")) return;
+          d.classList.add("is-ready");
+          d.classList.remove("is-arriving");
+          document.querySelectorAll("[data-hero]").forEach(function (n) {
+            n.classList.add("is-inview");
+          });
+        }, 6000);
+      })();
+    </script>
+
+    <!-- 글꼴: 한국어 Pretendard / 일본어 Noto Serif JP / 영어 · 숫자 Newsreader Display ExtraLight(대문자). 모두 assets/fonts에 직접 두고 필요한 글자 조각만 불러옴 (tools/build/fonts.cjs) -->
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+
+    <!-- 공통 CSS (순서 중요) -->
+    <link rel="stylesheet" href="../assets/css/tokens.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/ambient.css">
+  <link href="https://linkerpartners.com/en/services.html" rel="canonical"><link href="https://linkerpartners.com/services.html" hreflang="ko" rel="alternate"><link href="https://linkerpartners.com/ja/services.html" hreflang="ja" rel="alternate"><link href="https://linkerpartners.com/en/services.html" hreflang="en" rel="alternate"><link href="https://linkerpartners.com/services.html" hreflang="x-default" rel="alternate"><meta content="website" property="og:type"><meta content="LINKERPARTNERS" property="og:site_name"><meta content="Services | LINKERPARTNERS" property="og:title"><meta content="1:1 sessions, market-fit reports, logo and brand design, websites, booking systems, social media and ads, brand localization, store-launch guides and monthly mentoring. From ₩50K to under ₩1M." property="og:description"><meta content="https://linkerpartners.com/en/services.html" property="og:url"><meta content="en_US" property="og:locale"><meta content="ko_KR" property="og:locale:alternate"><meta content="ja_JP" property="og:locale:alternate"><meta content="summary" name="twitter:card"></head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main" tabindex="-1">
+
+      <!-- 첫 화면: 가운데 정렬. 제목 → 한 줄 → 아래로 이어지는 금빛 세로선 -->
+      <section class="pg-hero container" aria-labelledby="page-title">
+        <h1 id="page-title" class="pg-title" data-reveal="lines" data-hero="" data-i18n="services.hero.title"><span style="--l: 0" class="line"><span>Pick only</span></span><span style="--l: 1" class="line"><span>what you need</span></span></h1>
+        <p class="pg-lead" data-reveal="rise" data-hero="" style="--d: 450ms" data-i18n="services.hero.lead">From a first conversation to a logo, a website, a booking system or social media and ads: hand us just the one thing you need now. Every service has its price and timeline up front.</p>
+        <span class="pg-drop" data-reveal="drawy" data-hero="" style="--d: 900ms" aria-hidden="true"></span>
+      </section>
+
+      <!-- 서비스 아홉 가지: 줄을 누르면 대상 · 결과물 · 기간이 펼쳐짐 -->
+      <section class="section section--tight">
+        <div class="container">
+          <ul class="rows" data-accordion="" data-stagger="" data-list="services.items">
+            <template>
+              <li class="acc-item" data-k-attr="id:id" data-reveal="rise" data-keep="">
+                <button class="acc-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="title"></span>
+                  <span class="acc-sum" data-k="summary"></span>
+                  <span class="acc-meta" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body svc-acc-body">
+                      <div>
+                        <p class="acc-lead" data-k="lead"></p>
+                        <a class="text-link" data-k-attr="href:ask"><span data-i18n="services.labels.ask"></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                      </div>
+                      <dl class="defs">
+                        <div>
+                          <dt data-i18n="services.labels.for"></dt>
+                          <dd><ul class="dots" data-k-list="for"><template><li data-k="."></li></template></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.deliverables"></dt>
+                          <dd><ul class="dots" data-k-list="deliverables"><template><li data-k="."></li></template></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.duration"></dt>
+                          <dd data-k="duration"></dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </template>
+          
+              <li data-gen="" style="--i: 0" id="spot" class="acc-item" data-k-attr="id:id" data-reveal="rise" data-keep="">
+                <button class="acc-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="title">1:1 focus session</span>
+                  <span class="acc-sum" data-k="summary">Sixty minutes on the one thing holding you back.</span>
+                  <span data-price-mode="plain" data-price="items.spot" class="acc-meta" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body svc-acc-body">
+                      <div>
+                        <p class="acc-lead" data-k="lead">We take your questions in advance and spend 60 minutes on answers and next steps. Afterwards you get a short summary note.</p>
+                        <a href="contact.html?services=spot" class="text-link" data-k-attr="href:ask"><span data-i18n="services.labels.ask">Ask about this service</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                      </div>
+                      <dl class="defs">
+                        <div>
+                          <dt data-i18n="services.labels.for">Best for</dt>
+                          <dd><ul class="dots" data-k-list="for"><template><li data-k="."></li></template><li data-gen="" data-k=".">Anyone who has just started thinking about selling abroad</li><li data-gen="" data-k=".">Anyone unsure whether to start with the logo, website or social media</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.deliverables">You receive</dt>
+                          <dd><ul class="dots" data-k-list="deliverables"><template><li data-k="."></li></template><li data-gen="" data-k=".">60-minute video session</li><li data-gen="" data-k=".">Summary note with next steps</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.duration">Timeline</dt>
+                          <dd data-k="duration">One session · 60 min</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            
+              <li data-gen="" style="--i: 1" id="diagnostic" class="acc-item" data-k-attr="id:id" data-reveal="rise" data-keep="">
+                <button class="acc-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="title">Market-fit report</span>
+                  <span class="acc-sum" data-k="summary">Check, with evidence, whether your product suits that market.</span>
+                  <span data-price-mode="from" data-price="items.diagnostic" class="acc-meta" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body svc-acc-body">
+                      <div>
+                        <p class="acc-lead" data-k="lead">The basic report researches the market and competing products. The deep version adds a price comparison, a labelling-rules checklist and a 30-minute follow-up call.</p>
+                        <a href="contact.html?services=diagnostic" class="text-link" data-k-attr="href:ask"><span data-i18n="services.labels.ask">Ask about this service</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                      </div>
+                      <dl class="defs">
+                        <div>
+                          <dt data-i18n="services.labels.for">Best for</dt>
+                          <dd><ul class="dots" data-k-list="for"><template><li data-k="."></li></template><li data-gen="" data-k=".">Solo and small sellers looking at Japan or Korea for the first time</li><li data-gen="" data-k=".">Startups that need supporting evidence for grant or investor documents</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.deliverables">You receive</dt>
+                          <dd><ul class="dots" data-k-list="deliverables"><template><li data-k="."></li></template><li data-gen="" data-k=".">Market and competitor research report</li><li data-gen="" data-k=".">Price comparison with similar products (deep)</li><li data-gen="" data-k=".">Labelling-rules checklist (deep)</li><li data-gen="" data-k=".">A go or no-go view and a first step</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.duration">Timeline</dt>
+                          <dd data-k="duration">1⁠–⁠3 weeks</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            
+              <li data-gen="" style="--i: 2" id="logo" class="acc-item" data-k-attr="id:id" data-reveal="rise" data-keep="">
+                <button class="acc-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="title">Logo and brand design</span>
+                  <span class="acc-sum" data-k="summary">A logo that works in both Korea and Japan, made for you.</span>
+                  <span data-price-mode="from" data-price="items.logo" class="acc-meta" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body svc-acc-body">
+                      <div>
+                        <p class="acc-lead" data-k="lead">We make your logo while checking sound, meaning and colour through both Korean and Japanese eyes. The basic option is three logo drafts and the final files for the one you pick. The deep option adds a one-page brand guide plus social profile and business-card images.</p>
+                        <a href="contact.html?services=logo" class="text-link" data-k-attr="href:ask"><span data-i18n="services.labels.ask">Ask about this service</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                      </div>
+                      <dl class="defs">
+                        <div>
+                          <dt data-i18n="services.labels.for">Best for</dt>
+                          <dd><ul class="dots" data-k-list="for"><template><li data-k="."></li></template><li data-gen="" data-k=".">Solo founders and startups that have just built a brand</li><li data-gen="" data-k=".">Anyone who wants to name or refine their logo before selling in Japan</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.deliverables">You receive</dt>
+                          <dd><ul class="dots" data-k-list="deliverables"><template><li data-k="."></li></template><li data-gen="" data-k=".">Three logo drafts</li><li data-gen="" data-k=".">Final files (PNG and SVG)</li><li data-gen="" data-k=".">Memo on sound, meaning and colour</li><li data-gen="" data-k=".">Brand guide, social profile and card images (deep)</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.duration">Timeline</dt>
+                          <dd data-k="duration">1⁠–⁠3 weeks</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            
+              <li data-gen="" style="--i: 3" id="web" class="acc-item" data-k-attr="id:id" data-reveal="rise" data-keep="">
+                <button class="acc-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="title">Website building</span>
+                  <span class="acc-sum" data-k="summary">An intro site that reads well in Korean and Japanese.</span>
+                  <span data-price-mode="from" data-price="items.web" class="acc-meta" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body svc-acc-body">
+                      <div>
+                        <p class="acc-lead" data-k="lead">We build a website with your brand story, products and how to reach you. The basic option is a one-page site. The deep option is a site of up to five pages with a contact form and both Japanese and Korean versions. A custom online shop or complex member features are not included; we can point you to developers if you need one.</p>
+                        <a href="contact.html?services=web" class="text-link" data-k-attr="href:ask"><span data-i18n="services.labels.ask">Ask about this service</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                      </div>
+                      <dl class="defs">
+                        <div>
+                          <dt data-i18n="services.labels.for">Best for</dt>
+                          <dd><ul class="dots" data-k-list="for"><template><li data-k="."></li></template><li data-gen="" data-k=".">Sellers whose only presence is social media</li><li data-gen="" data-k=".">Anyone who needs a page that customers in Japan or Korea can find by search</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.deliverables">You receive</dt>
+                          <dd><ul class="dots" data-k-list="deliverables"><template><li data-k="."></li></template><li data-gen="" data-k=".">One-page site (basic) or up to five pages (deep)</li><li data-gen="" data-k=".">Contact form connected to your email</li><li data-gen="" data-k=".">Japanese and Korean copy (deep)</li><li data-gen="" data-k=".">A short guide to editing it</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.duration">Timeline</dt>
+                          <dd data-k="duration">2⁠–⁠5 weeks</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            
+              <li data-gen="" style="--i: 4" id="booking" class="acc-item" data-k-attr="id:id" data-reveal="rise" data-keep="">
+                <button class="acc-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="title">Booking system setup</span>
+                  <span class="acc-sum" data-k="summary">A smooth way to take bookings and send confirmations.</span>
+                  <span data-price-mode="from" data-price="items.booking" class="acc-meta" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body svc-acc-body">
+                      <div>
+                        <p class="acc-lead" data-k="lead">For shops, classes and consultations that run on bookings, we set up a booking page and notifications. The basic option configures an existing booking service and polishes the notices in Japanese and Korean. The deep option adds a booking page styled to your brand with confirmation emails and chat alerts. We do not build payment systems from scratch.</p>
+                        <a href="contact.html?services=booking" class="text-link" data-k-attr="href:ask"><span data-i18n="services.labels.ask">Ask about this service</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                      </div>
+                      <dl class="defs">
+                        <div>
+                          <dt data-i18n="services.labels.for">Best for</dt>
+                          <dd><ul class="dots" data-k-list="for"><template><li data-k="."></li></template><li data-gen="" data-k=".">Owners of shops, studios and classes that take bookings</li><li data-gen="" data-k=".">Anyone who wants Korean and Japanese customers booking in one place</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.deliverables">You receive</dt>
+                          <dd><ul class="dots" data-k-list="deliverables"><template><li data-k="."></li></template><li data-gen="" data-k=".">Booking page</li><li data-gen="" data-k=".">Notices in Japanese and Korean</li><li data-gen="" data-k=".">Confirmation email and alert setup (deep)</li><li data-gen="" data-k=".">A guide to running it</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.duration">Timeline</dt>
+                          <dd data-k="duration">1⁠–⁠4 weeks</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            
+              <li data-gen="" style="--i: 5" id="sns" class="acc-item" data-k-attr="id:id" data-reveal="rise" data-keep="">
+                <button class="acc-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="title">Social media and ads support</span>
+                  <span class="acc-sum" data-k="summary">We set up accounts and ads and plan your first month.</span>
+                  <span data-price-mode="from" data-price="items.sns" class="acc-meta" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body svc-acc-body">
+                      <div>
+                        <p class="acc-lead" data-k="lead">We help you start on channels such as Instagram, X and LINE and run ads in Japan. The basic option is an account review and an ad-setup guide. The deep option adds a four-week content calendar, 12 post and ad captions, and a results check after a month. We polish the local wording in Japanese and Korean. Ad spend is separate, and we cannot promise sales.</p>
+                        <a href="contact.html?services=sns" class="text-link" data-k-attr="href:ask"><span data-i18n="services.labels.ask">Ask about this service</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                      </div>
+                      <dl class="defs">
+                        <div>
+                          <dt data-i18n="services.labels.for">Best for</dt>
+                          <dd><ul class="dots" data-k-list="for"><template><li data-k="."></li></template><li data-gen="" data-k=".">Sellers who want to reach customers in Japan or Korea through social media and ads</li><li data-gen="" data-k=".">Brands with an account but little response</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.deliverables">You receive</dt>
+                          <dd><ul class="dots" data-k-list="deliverables"><template><li data-k="."></li></template><li data-gen="" data-k=".">Account review report</li><li data-gen="" data-k=".">Ad-account setup guide</li><li data-gen="" data-k=".">Four-week content calendar (deep)</li><li data-gen="" data-k=".">12 post and ad captions (deep)</li><li data-gen="" data-k=".">Results check after one month (deep)</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.duration">Timeline</dt>
+                          <dd data-k="duration">1⁠–⁠3 weeks</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            
+              <li data-gen="" style="--i: 6" id="localization" class="acc-item" data-k-attr="id:id" data-reveal="rise" data-keep="">
+                <button class="acc-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="title">Brand localization and product pages</span>
+                  <span class="acc-sum" data-k="summary">Not a translation: rewritten for how local customers read.</span>
+                  <span data-price-mode="unit" data-price="items.localization" class="acc-meta" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body svc-acc-body">
+                      <div>
+                        <p class="acc-lead" data-k="lead">Hand us product pages, brand intros, product names or sales emails one piece at a time. We rework tone and the order of information for the local market, and check that cosmetics and food claims stay within the rules.</p>
+                        <a href="contact.html?services=localization" class="text-link" data-k-attr="href:ask"><span data-i18n="services.labels.ask">Ask about this service</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                      </div>
+                      <dl class="defs">
+                        <div>
+                          <dt data-i18n="services.labels.for">Best for</dt>
+                          <dd><ul class="dots" data-k-list="for"><template><li data-k="."></li></template><li data-gen="" data-k=".">Sellers who need Japanese or Korean product pages</li><li data-gen="" data-k=".">Anyone uneasy about copy made with a translation tool</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.deliverables">You receive</dt>
+                          <dd><ul class="dots" data-k-list="deliverables"><template><li data-k="."></li></template><li data-gen="" data-k=".">Localized material</li><li data-gen="" data-k=".">Note on wording and labelling rules</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.duration">Timeline</dt>
+                          <dd data-k="duration">1⁠–⁠2 weeks per piece</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            
+              <li data-gen="" style="--i: 6" id="channel" class="acc-item" data-k-attr="id:id" data-reveal="rise" data-keep="">
+                <button class="acc-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="title">Store-launch guide</span>
+                  <span class="acc-sum" data-k="summary">What to prepare before you list on a marketplace.</span>
+                  <span data-price-mode="from" data-price="items.channel" class="acc-meta" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body svc-acc-body">
+                      <div>
+                        <p class="acc-lead" data-k="lead">For first-time sellers on Qoo10 or Rakuten in Japan, or Smartstore or Coupang in Korea: choosing a channel, documents to prepare, shipping and pricing, and your product page. The basic option is a channel comparison and preparation checklist. The deep option adds a review of two product pages. Tax and customs advice is not included; we can point you to specialists.</p>
+                        <a href="contact.html?services=channel" class="text-link" data-k-attr="href:ask"><span data-i18n="services.labels.ask">Ask about this service</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                      </div>
+                      <dl class="defs">
+                        <div>
+                          <dt data-i18n="services.labels.for">Best for</dt>
+                          <dd><ul class="dots" data-k-list="for"><template><li data-k="."></li></template><li data-gen="" data-k=".">Sellers starting online sales for the first time</li><li data-gen="" data-k=".">Sellers who are listed but not selling</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.deliverables">You receive</dt>
+                          <dd><ul class="dots" data-k-list="deliverables"><template><li data-k="."></li></template><li data-gen="" data-k=".">Channel comparison table</li><li data-gen="" data-k=".">Preparation checklist</li><li data-gen="" data-k=".">Shipping and pricing memo</li><li data-gen="" data-k=".">Review of two product pages (deep)</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.duration">Timeline</dt>
+                          <dd data-k="duration">1⁠–⁠3 weeks</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            
+              <li data-gen="" style="--i: 6" id="advisory" class="acc-item" data-k-attr="id:id" data-reveal="rise" data-keep="">
+                <button class="acc-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="title">Monthly mentoring</span>
+                  <span class="acc-sum" data-k="summary">A monthly check-in and answers to your questions after launch.</span>
+                  <span data-price-mode="monthly" data-price="items.advisory" class="acc-meta" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body svc-acc-body">
+                      <div>
+                        <p class="acc-lead" data-k="lead">Light is one 30-minute check-in a month. Standard is two calls a month, answers to your questions by chat and one small fix. Start for one month and stop whenever you like.</p>
+                        <a href="contact.html?services=advisory" class="text-link" data-k-attr="href:ask"><span data-i18n="services.labels.ask">Ask about this service</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                      </div>
+                      <dl class="defs">
+                        <div>
+                          <dt data-i18n="services.labels.for">Best for</dt>
+                          <dd><ul class="dots" data-k-list="for"><template><li data-k="."></li></template><li data-gen="" data-k=".">Sellers running local sales on their own</li><li data-gen="" data-k=".">Anyone who wants steady check-ins, not a one-off job</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.deliverables">You receive</dt>
+                          <dd><ul class="dots" data-k-list="deliverables"><template><li data-k="."></li></template><li data-gen="" data-k=".">Regular calls and notes</li><li data-gen="" data-k=".">Answers by chat (Standard)</li><li data-gen="" data-k=".">One small fix a month (Standard)</li></ul></dd>
+                        </div>
+                        <div>
+                          <dt data-i18n="services.labels.duration">Timeline</dt>
+                          <dd data-k="duration">Monthly</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+        </div>
+      </section>
+
+      <!-- 두 방향 -->
+      <section class="section" aria-labelledby="dir-title">
+        <div class="container">
+          <div class="pg-head"><h2 id="dir-title" class="pg-h2" data-reveal="lines" data-i18n="services.directions.title"><span style="--l: 0" class="line"><span>Each direction</span></span><span style="--l: 1" class="line"><span>needs different prep</span></span></h2></div>
+          <div class="dir-grid" data-reveal="fade" data-stagger="">
+            <article class="dir" data-reveal="left">
+              <div class="route" aria-hidden="true">KR<span class="poster-link"><span class="poster-track"><span data-reveal="draw" style="--d: 300ms"></span></span></span>JP</div>
+              <h3 data-i18n="directions.kr_jp.title">Korean brands entering Japan</h3>
+              <p data-i18n="directions.kr_jp.desc">Customers in Japan buy from shops that explain things in detail and feel trustworthy. For a small brand, the first page and the first reviews decide a lot.</p>
+              <ul class="dots" data-list="directions.kr_jp.points"><template><li data-k="."></li></template><li data-gen="" data-k=".">Starting on online channels such as Qoo10 and Rakuten</li><li data-gen="" data-k=".">Japanese product pages and labelling rules (especially cosmetics and food)</li><li data-gen="" data-k=".">A Japanese website, bookings and communication built for Instagram, X and LINE</li></ul>
+            </article>
+            <article class="dir" data-reveal="right">
+              <div class="route" aria-hidden="true">JP<span class="poster-link"><span class="poster-track"><span data-reveal="draw" style="--d: 400ms"></span></span></span>KR</div>
+              <h3 data-i18n="directions.jp_kr.title">Japanese brands entering Korea</h3>
+              <p data-i18n="directions.jp_kr.desc">Korea moves fast and runs mostly online. Starting small, watching the response and changing quickly works best.</p>
+              <ul class="dots" data-list="directions.jp_kr.points"><template><li data-k="."></li></template><li data-gen="" data-k=".">Online sales through Smartstore, Coupang and Instagram</li><li data-gen="" data-k=".">Korean product pages and an understanding of review culture</li><li data-gen="" data-k=".">Small pop-ups and test sales to check the response</li></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 진행 4단계 -->
+      <section class="section" aria-labelledby="process-title">
+        <div class="container">
+          <div class="pg-head"><h2 id="process-title" class="pg-h2" data-reveal="lines" data-i18n="services.process.title"><span style="--l: 0" class="line"><span>Every job runs</span></span><span style="--l: 1" class="line"><span>in four steps</span></span></h2></div>
+          <ol class="steps" data-stagger="" data-list="process.steps">
+            <template>
+              <li data-reveal="zoom">
+                <span class="step-line" data-reveal="draw" aria-hidden="true"></span>
+                <h3 data-k="line"></h3>
+                <p data-k="desc"></p>
+                <p class="step-time" data-k="time"></p>
+              </li>
+            </template>
+          
+              <li data-gen="" style="--i: 0" data-reveal="zoom">
+                <span style="--i: 0" class="step-line" data-reveal="draw" aria-hidden="true"></span>
+                <h3 data-k="line">First, we listen</h3>
+                <p data-k="desc">In a free call we go over your product, goals and budget</p>
+                <p class="step-time" data-k="time">30 min · free</p>
+              </li>
+            
+              <li data-gen="" style="--i: 1" data-reveal="zoom">
+                <span style="--i: 1" class="step-line" data-reveal="draw" aria-hidden="true"></span>
+                <h3 data-k="line">Then, we check where you stand</h3>
+                <p data-k="desc">We look at your logo, sales page and social accounts and list what is needed</p>
+                <p class="step-time" data-k="time">1⁠–⁠2 weeks</p>
+              </li>
+            
+              <li data-gen="" style="--i: 2" data-reveal="zoom">
+                <span style="--i: 2" class="step-line" data-reveal="draw" aria-hidden="true"></span>
+                <h3 data-k="line">Together, we build it</h3>
+                <p data-k="desc">We prepare localized copy, a logo, a website and an operating plan</p>
+                <p class="step-time" data-k="time">1⁠–⁠5 weeks</p>
+              </li>
+            
+              <li data-gen="" style="--i: 3" data-reveal="zoom">
+                <span style="--i: 3" class="step-line" data-reveal="draw" aria-hidden="true"></span>
+                <h3 data-k="line">If you need more, we continue</h3>
+                <p data-k="desc">After launch we check in monthly and answer your questions</p>
+                <p class="step-time" data-k="time">Monthly</p>
+              </li>
+            </ol>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="container">
+          <span class="closing-rule" data-reveal="draw" aria-hidden="true"></span>
+          <div class="closing-body">
+            <div class="closing-lead">
+              <div>
+                <h2 id="closing-title" class="sr-only" data-i18n="closing.title">Contact us</h2>
+                <p class="closing-desc" data-reveal="rise" style="--d: 150ms" data-i18n="closing.desc">Your first 30-minute call is free</p>
+              </div>
+              <p class="closing-clock" data-reveal="fade" style="--d: 250ms"><span class="live-dot" aria-hidden="true"></span><span data-closing-status=""></span><span class="closing-time num" data-closing-time=""></span><span data-i18n="closing.info.clock">Seoul · Tokyo time</span></p>
+            </div>
+            <form class="quick-form" id="quick-form" novalidate data-reveal="rise" style="--d: 200ms">
+              <div class="quick-grid">
+                <div class="field">
+                  <label class="field-label" for="q-name"><span data-i18n="contact.form.name">Name</span><span class="req" data-i18n="contact.form.required">Required</span></label>
+                  <input class="input" id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="q-name-hint">
+                  <p class="field-hint" id="q-name-hint" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label class="field-label" for="q-email"><span data-i18n="contact.form.email">Email</span><span class="req" data-i18n="contact.form.required">Required</span></label>
+                  <input class="input" id="q-email" name="email" type="email" autocomplete="email" required aria-describedby="q-email-hint">
+                  <p class="field-hint" id="q-email-hint" aria-live="polite"></p>
+                </div>
+                <div class="field span-2">
+                  <label class="field-label" for="q-service" data-i18n="contact.form.services">Services of interest</label>
+                  <select class="input" id="q-service" name="service" data-list="services.items">
+                    <option value="" data-i18n="closing.form.pick">Choose a service (optional)</option>
+                    <template><option data-k-attr="value:id" data-k="title"></option></template>
+                  <option data-gen="" value="spot" data-k-attr="value:id" data-k="title">1:1 focus session</option><option data-gen="" value="diagnostic" data-k-attr="value:id" data-k="title">Market-fit report</option><option data-gen="" value="logo" data-k-attr="value:id" data-k="title">Logo and brand design</option><option data-gen="" value="web" data-k-attr="value:id" data-k="title">Website building</option><option data-gen="" value="booking" data-k-attr="value:id" data-k="title">Booking system setup</option><option data-gen="" value="sns" data-k-attr="value:id" data-k="title">Social media and ads support</option><option data-gen="" value="localization" data-k-attr="value:id" data-k="title">Brand localization and product pages</option><option data-gen="" value="channel" data-k-attr="value:id" data-k="title">Store-launch guide</option><option data-gen="" value="advisory" data-k-attr="value:id" data-k="title">Monthly mentoring</option></select>
+                </div>
+                <div class="field span-2">
+                  <label class="field-label" for="q-message"><span data-i18n="contact.form.message">Message</span><span class="req" data-i18n="contact.form.required">Required</span></label>
+                  <textarea placeholder="The market you want to sell in, your product or service, and what is on your mind." class="input" id="q-message" name="message" rows="4" required aria-describedby="q-message-hint" data-i18n-attr="placeholder:contact.form.message_placeholder"></textarea>
+                  <p class="field-hint" id="q-message-hint" aria-live="polite"></p>
+                </div>
+                <div class="field span-2">
+                  <label class="consent">
+                    <input type="checkbox" name="consent" required aria-describedby="q-consent-hint">
+                    <span><span data-i18n="contact.form.consent">I agree to the collection and use of my personal data.</span> <a class="inline-link" href="privacy.html" data-i18n="contact.form.consent_link">Details</a></span>
+                  </label>
+                  <p class="field-hint" id="q-consent-hint" aria-live="polite"></p>
+                </div>
+              </div>
+              <div class="quick-submit">
+                <button class="btn btn--primary" type="submit"><span class="roll"><span data-i18n="contact.form.submit">Send request</span></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></button>
+                <p class="form-note" data-i18n="contact.form.note">Sending opens your email app with everything filled in.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- 공통 JS (순서 중요) -->
+    <script src="../assets/js/config.js" defer></script>
+    <script src="../assets/js/components.js" defer></script>
+    <script src="../assets/js/i18n.js" defer></script>
+    <script src="../assets/js/intro.js" defer></script>
+    <script src="../assets/js/ambient.js" defer></script>
+    <script src="../assets/js/motion.js" defer></script>
+    <script src="../assets/js/pricing.js" defer></script>
+    <script src="../assets/js/site.js" defer></script>
+    <script src="../assets/js/ticker.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>

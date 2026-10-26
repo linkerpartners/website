@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="meta.pricing.title">LINKERPARTNERS</title>
+    <meta name="description" content="" data-i18n-attr="content:meta.pricing.description" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        // 이 창에서 처음이면 인트로, 사이트 안에서 넘어왔으면 전환 막. 동작 줄이기 설정이면 둘 다 생략
+        try {
+          var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (!sessionStorage.getItem("lp_intro_seen") && !still) d.classList.add("is-intro");
+          else if (sessionStorage.getItem("lp_nav") && !still) d.classList.add("is-arriving");
+          sessionStorage.removeItem("lp_nav");
+        } catch (e) {}
+        // 안전장치: 스크립트가 늦거나 실패해도 6초 뒤에는 첫 화면을 그대로 보여 줌
+        setTimeout(function () {
+          if (d.classList.contains("is-ready")) return;
+          d.classList.add("is-ready");
+          d.classList.remove("is-arriving");
+          document.querySelectorAll("[data-hero]").forEach(function (n) {
+            n.classList.add("is-inview");
+          });
+        }, 6000);
+      })();
+    </script>
+
+    <!-- 글꼴: 한국어 Pretendard / 일본어 Noto Serif JP / 영어 · 숫자 Newsreader Display ExtraLight(대문자). 모두 assets/fonts에 직접 두고 필요한 글자 조각만 불러옴 (tools/build/fonts.cjs) -->
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+
+    <!-- 공통 CSS (순서 중요) -->
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <link rel="stylesheet" href="assets/css/ambient.css" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main" tabindex="-1">
+
+      <!-- 첫 화면: 가운데 정렬. 제목 → 한 줄 → 아래로 이어지는 금빛 세로선 -->
+      <section class="pg-hero container" aria-labelledby="page-title">
+        <h1 id="page-title" class="pg-title" data-reveal="lines" data-hero data-i18n="pricing.hero.title"></h1>
+        <p class="pg-lead" data-reveal="rise" data-hero style="--d: 450ms" data-i18n="pricing.hero.lead"></p>
+        <span class="pg-drop" data-reveal="drawy" data-hero style="--d: 900ms" aria-hidden="true"></span>
+      </section>
+
+      <!-- 견적 계산기: 고르면 바로 계산 (pricing.js) -->
+      <section class="section section--tight" id="estimator-section" aria-labelledby="est-title">
+        <div class="container">
+          <h2 id="est-title" class="sr-only" data-i18n="pricing.estimator.title"></h2>
+          <form class="est estimator is-empty" id="estimator" novalidate>
+            <div class="est-options" data-reveal="left">
+              <p class="est-legend" data-i18n="pricing.estimator.legend"></p>
+              <div data-est-items></div>
+              <label class="est-switch">
+                <input type="checkbox" name="rush" />
+                <span><span class="est-name" data-i18n="pricing.estimator.rush"></span><small data-i18n="pricing.estimator.rush_desc"></small></span>
+              </label>
+            </div>
+
+            <div class="est-result glass glass--lit" data-reveal="right" style="--d: 150ms" aria-live="polite">
+              <p class="est-result-label" data-i18n="pricing.estimator.result_title"></p>
+              <p class="est-total" data-est="total">—</p>
+              <ul class="est-lines" data-est="lines"></ul>
+              <dl class="est-sums">
+                <div><dt data-i18n="pricing.estimator.subtotal"></dt><dd data-est="subtotal">—</dd></div>
+                <div data-est="rush-row" hidden><dt data-i18n="pricing.estimator.rush"></dt><dd data-est="rush"></dd></div>
+                <div><dt data-i18n="pricing.estimator.vat_line"></dt><dd data-est="vat">—</dd></div>
+              </dl>
+              <dl class="defs">
+                <div><dt data-i18n="pricing.estimator.duration"></dt><dd data-est="weeks">—</dd></div>
+              </dl>
+              <p class="est-pack" data-est="package-row" hidden><span data-est="package"></span></p>
+              <p class="est-hint" data-i18n="pricing.estimator.hint"></p>
+              <div class="est-actions">
+                <a class="btn btn--primary" href="contact.html" data-est="cta"><span class="roll"><span data-i18n="pricing.estimator.cta"></span></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                <button class="text-link" type="button" data-est="copy"><span data-i18n="pricing.estimator.copy"></span></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- 패키지 세 가지 -->
+      <section class="section" aria-labelledby="plans-title">
+        <div class="container">
+          <div class="pg-head"><h2 id="plans-title" class="pg-h2" data-reveal="lines" data-i18n="pricing.plans.title"></h2></div>
+          <div class="plans-scroll" data-reveal="zoom">
+            <table class="plans">
+              <thead>
+                <tr>
+                  <th scope="col"><span class="sr-only" data-i18n="pricing.plans.head"></span></th>
+                  <th scope="col">
+                    <span class="plan-name" data-i18n="pricing.plans.names.check"></span>
+                    <span class="plan-for" data-i18n="pricing.plans.for.check"></span>
+                    <span class="plan-price" data-price="packages.check" data-price-mode="plain"></span>
+                  </th>
+                  <th scope="col" class="is-pick">
+                    <span class="plan-pick" data-i18n="pricing.plans.pick"></span>
+                    <span class="plan-name" data-i18n="pricing.plans.names.brand"></span>
+                    <span class="plan-for" data-i18n="pricing.plans.for.brand"></span>
+                    <span class="plan-price" data-price="packages.brand" data-price-mode="plain"></span>
+                  </th>
+                  <th scope="col">
+                    <span class="plan-name" data-i18n="pricing.plans.names.launch"></span>
+                    <span class="plan-for" data-i18n="pricing.plans.for.launch"></span>
+                    <span class="plan-price" data-price="packages.launch" data-price-mode="plain"></span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody data-list="pricing.plans.rows">
+                <template>
+                  <tr>
+                    <th scope="row" data-k="k"></th>
+                    <td data-k="v.0"></td>
+                    <td data-k="v.1"></td>
+                    <td data-k="v.2"></td>
+                  </tr>
+                </template>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td></td>
+                  <td><a class="text-link" href="contact.html?services=spot,diagnostic"><span data-i18n="pricing.plans.cta"></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a></td>
+                  <td><a class="text-link" href="contact.html?services=spot,logo,localization"><span data-i18n="pricing.plans.cta"></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a></td>
+                  <td><a class="text-link" href="contact.html?services=logo,web,sns,localization"><span data-i18n="pricing.plans.cta"></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 항목별 요금표 -->
+      <section class="section" aria-labelledby="menu-title">
+        <div class="container">
+          <div class="pg-head"><h2 id="menu-title" class="pg-h2" data-reveal="lines" data-i18n="pricing.menu_section.title"></h2></div>
+          <div class="pg-narrow">
+            <div data-list="pricing.menu">
+              <template>
+                <div class="pm-group" data-reveal="wipe">
+                  <h3 data-k="group"></h3>
+                  <ul class="rows" data-k-list="items">
+                    <template>
+                      <li class="pm-row">
+                        <span class="pm-name"><strong data-k="name"></strong><small data-k="desc"></small></span>
+                        <span class="pm-price" data-k="text"></span>
+                        <span class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </template>
+                  </ul>
+                </div>
+              </template>
+            </div>
+            <p class="fine" data-i18n="pricing.note"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="container">
+          <span class="closing-rule" data-reveal="draw" aria-hidden="true"></span>
+          <div class="closing-body">
+            <div class="closing-lead">
+              <div>
+                <h2 id="closing-title" class="sr-only" data-i18n="closing.title"></h2>
+                <p class="closing-desc" data-reveal="rise" style="--d: 150ms" data-i18n="closing.desc"></p>
+              </div>
+              <p class="closing-clock" data-reveal="fade" style="--d: 250ms"><span class="live-dot" aria-hidden="true"></span><span data-closing-status></span><span class="closing-time num" data-closing-time></span><span data-i18n="closing.info.clock"></span></p>
+            </div>
+            <form class="quick-form" id="quick-form" novalidate data-reveal="rise" style="--d: 200ms">
+              <div class="quick-grid">
+                <div class="field">
+                  <label class="field-label" for="q-name"><span data-i18n="contact.form.name"></span><span class="req" data-i18n="contact.form.required"></span></label>
+                  <input class="input" id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="q-name-hint" />
+                  <p class="field-hint" id="q-name-hint" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label class="field-label" for="q-email"><span data-i18n="contact.form.email"></span><span class="req" data-i18n="contact.form.required"></span></label>
+                  <input class="input" id="q-email" name="email" type="email" autocomplete="email" required aria-describedby="q-email-hint" />
+                  <p class="field-hint" id="q-email-hint" aria-live="polite"></p>
+                </div>
+                <div class="field span-2">
+                  <label class="field-label" for="q-service" data-i18n="contact.form.services"></label>
+                  <select class="input" id="q-service" name="service" data-list="services.items">
+                    <option value="" data-i18n="closing.form.pick"></option>
+                    <template><option data-k-attr="value:id" data-k="title"></option></template>
+                  </select>
+                </div>
+                <div class="field span-2">
+                  <label class="field-label" for="q-message"><span data-i18n="contact.form.message"></span><span class="req" data-i18n="contact.form.required"></span></label>
+                  <textarea class="input" id="q-message" name="message" rows="4" required aria-describedby="q-message-hint" data-i18n-attr="placeholder:contact.form.message_placeholder"></textarea>
+                  <p class="field-hint" id="q-message-hint" aria-live="polite"></p>
+                </div>
+                <div class="field span-2">
+                  <label class="consent">
+                    <input type="checkbox" name="consent" required aria-describedby="q-consent-hint" />
+                    <span><span data-i18n="contact.form.consent"></span> <a class="inline-link" href="privacy.html" data-i18n="contact.form.consent_link"></a></span>
+                  </label>
+                  <p class="field-hint" id="q-consent-hint" aria-live="polite"></p>
+                </div>
+              </div>
+              <div class="quick-submit">
+                <button class="btn btn--primary" type="submit"><span class="roll"><span data-i18n="contact.form.submit"></span></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></button>
+                <p class="form-note" data-i18n="contact.form.note"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- 공통 JS (순서 중요) -->
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/intro.js" defer></script>
+    <script src="assets/js/ambient.js" defer></script>
+    <script src="assets/js/motion.js" defer></script>
+    <script src="assets/js/pricing.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/ticker.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

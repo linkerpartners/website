@@ -1,0 +1,144 @@
+{
+  "id": "crassiang",
+  "brand": "crassiang",
+  "example": true,
+  "route": "kr_jp",
+  "year": "2025",
+  "services": [
+    "localization",
+    "sns",
+    "channel"
+  ],
+  "metrics": [
+    {
+      "value": "3⁠–⁠4×",
+      "label": {
+        "ko": "2025.9 메가와리 매출(6월 대비)",
+        "ja": "2025年9月メガ割の売上(6月比)",
+        "en": "Sep 2025 Mega Wari vs. June"
+      }
+    },
+    {
+      "value": "2⁠–⁠3×",
+      "label": {
+        "ko": "이후 평소 매출(이전 대비)",
+        "ja": "その後の通常期売上(以前比)",
+        "en": "Normal-period sales afterwards"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Qoo10大学 · crassiang — ゼロから「メガ割」ランキング1位へ!",
+      "url": "https://article-university.qoo10.jp/entry/case_crassiang"
+    }
+  ],
+  "ko": {
+    "client": "crassiang (크라시앙)",
+    "industry": "란제리 · 패션",
+    "duration": "큐텐재팬 운영 (2025.12 공개)",
+    "short": "crassiang의 큐텐재팬 란제리 판매",
+    "title": "crassiang, 일본 전담 인력 없이 시작해 메가와리 1위까지",
+    "summary": "대행사로 입점한 뒤 전담 카테고리 담당자를 만나, 상세 페이지를 일본 취향으로 바꾸며 매출이 크게 늘었습니다.",
+    "challenge": "한국에서 이미 알려진 속옷 브랜드였지만 일본 시장 전문가도 전담 직원도 없었습니다. 화장품이 강한 큐텐에서 패션 속옷을 팔아야 했습니다.",
+    "approach": [
+      "체형과 문화가 비슷한 일본을 첫 해외 시장으로 골랐습니다.",
+      "처음에는 입점 대행사를 쓰다가, 큐텐 카테고리 담당자가 붙으며 전환점을 맞았습니다.",
+      "인기 상품을 분석해 썸네일과 상품 설명을 일본 취향에 맞췄고, 정보가 많은 이미지를 좋아하는 일본 고객 특성을 반영했습니다.",
+      "일본에서 익숙한 레이스 브라를 주력으로 신뢰를 쌓은 뒤 볼륨 업 브라로 넓혔습니다.",
+      "메가와리 2~3주 전에 인플루언서와 공동 구매 이벤트를 열었습니다.",
+      "경량 상품 동봉과 ‘2+1’ 판매로 객단가를 올려 해외 배송비를 줄였습니다."
+    ],
+    "result": "2025년 9월 메가와리에서 역대 최고 매출을 올렸고, 6월 메가와리의 3~4배 이상이었습니다. 이후 평소 매출도 2~3배로 늘었습니다. 담당자는 이벤트 외에도 광고를 멈추지 않고, 카테고리 담당자의 제안을 적극 실행하는 것이 장기 성공의 열쇠라고 말합니다.",
+    "timeline": [
+      {
+        "when": "2025.06",
+        "what": "메가와리 (비교 기준)"
+      },
+      {
+        "when": "2025.09",
+        "what": "메가와리 역대 최고 매출, 6월의 3~4배 이상"
+      },
+      {
+        "when": "이후",
+        "what": "평소 매출도 2~3배"
+      },
+      {
+        "when": "2025.12",
+        "what": "큐텐 사례로 공개"
+      }
+    ]
+  },
+  "ja": {
+    "client": "crassiang(クラシアン)",
+    "industry": "ランジェリー・ファッション",
+    "duration": "Qoo10運営(2025年12月公開)",
+    "short": "crassiangのQoo10ランジェリー販売",
+    "title": "crassiang、日本専任者ゼロからメガ割ランキング1位へ",
+    "summary": "出店代行で始め、専任のカテゴリー担当者と出会い、商品ページを日本の好みに変えて売上を大きく伸ばしました。",
+    "challenge": "韓国では知られた下着ブランドでしたが、日本市場の専門家も専任スタッフもいませんでした。化粧品が強いQoo10でファッション下着を売る必要がありました。",
+    "approach": [
+      "体型や文化が近い日本を最初の海外市場に選びました。",
+      "最初は出店代行会社を使い、Qoo10から専任のカテゴリー担当者がついたことが転機になりました。",
+      "上位商品を分析し、サムネイルや商品説明を日本の好みに合わせ、情報量の多い画像を好む日本の顧客特性を反映しました。",
+      "日本で馴染みのあるレースブラを主力に信頼を築き、ボリュームアップブラへ広げました。",
+      "メガ割の2〜3週間前にインフルエンサーと共同購入イベントを行いました。",
+      "軽量商品の同梱と「2+1」販売で客単価を上げ、海外配送費を抑えました。"
+    ],
+    "result": "2025年9月のメガ割で過去最高売上を達成し、6月のメガ割の3〜4倍以上でした。その後は通常期の売上も2〜3倍に伸びました。担当者は、イベント外も広告を止めず、カテゴリー担当者の提案を積極的に実行することが長期的な成功の鍵だと述べています。",
+    "timeline": [
+      {
+        "when": "2025.06",
+        "what": "メガ割(比較の基準)"
+      },
+      {
+        "when": "2025.09",
+        "what": "メガ割で過去最高売上、6月の3〜4倍以上"
+      },
+      {
+        "when": "その後",
+        "what": "通常期の売上も2〜3倍"
+      },
+      {
+        "when": "2025.12",
+        "what": "Qoo10の事例として公開"
+      }
+    ]
+  },
+  "en": {
+    "client": "crassiang",
+    "industry": "Lingerie · fashion",
+    "duration": "On Qoo10 (published Dec 2025)",
+    "short": "crassiang's lingerie sales on Qoo10",
+    "title": "crassiang: from no Japan staff to the top of Mega Wari rankings",
+    "summary": "It opened through an agency, gained a dedicated category manager, reshaped pages to Japanese taste and sales jumped.",
+    "challenge": "Well known as an underwear brand in Korea, it had no Japan market experts or dedicated staff, and had to sell fashion underwear on Qoo10, where cosmetics dominate.",
+    "approach": [
+      "Chose Japan, with similar body types and culture, as its first overseas market.",
+      "Opened through an agency at first; getting a dedicated Qoo10 category manager became the turning point.",
+      "Analysed top products and localised thumbnails and descriptions, reflecting that Japanese shoppers prefer information-rich images.",
+      "Led with lace bras familiar in Japan to build trust, then widened to comfortable push-up bras.",
+      "Held group-buy events with influencers two to three weeks before Mega Wari.",
+      "Raised order value with lightweight add-ins and “2+1” offers to offset overseas shipping."
+    ],
+    "result": "September 2025 Mega Wari brought record sales, three to four times June's, and normal-period sales then rose two to three times. The brand's lesson: keep ads running outside events and act on the category manager's suggestions to win in the long run.",
+    "timeline": [
+      {
+        "when": "Jun 2025",
+        "what": "Mega Wari (baseline)"
+      },
+      {
+        "when": "Sep 2025",
+        "what": "Record Mega Wari sales, 3⁠–⁠4× June"
+      },
+      {
+        "when": "After",
+        "what": "Normal-period sales 2⁠–⁠3×"
+      },
+      {
+        "when": "Dec 2025",
+        "what": "Featured as a Qoo10 case"
+      }
+    ]
+  }
+}

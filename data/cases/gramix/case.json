@@ -1,0 +1,141 @@
+{
+  "id": "gramix",
+  "brand": "GRAMIX",
+  "example": true,
+  "route": "kr_jp",
+  "year": "2026",
+  "services": [
+    "web",
+    "localization",
+    "channel"
+  ],
+  "metrics": [
+    {
+      "value": "2,000%",
+      "label": {
+        "ko": "키워드 광고 최고 ROAS(상품에 따라 다름)",
+        "ja": "キーワード広告の最高ROAS(商品により異なる)",
+        "en": "Best keyword-ad ROAS (varies by product)"
+      }
+    },
+    {
+      "value": "30⁠–⁠40×",
+      "label": {
+        "ko": "메가와리 기간 일부 상품 매출(평소 대비)",
+        "ja": "メガ割期間の一部商品の売上(通常比)",
+        "en": "Mega Wari sales on some items vs. usual"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Qoo10大学 · GRAMIX — 韓国のサロン品質を日本へ",
+      "url": "https://article-university.qoo10.jp/entry/case_gramix"
+    }
+  ],
+  "ko": {
+    "client": "GRAMIX (샤블 인터내셔널)",
+    "industry": "헤어케어 · 미용실 전문 브랜드",
+    "duration": "큐텐재팬 (2026.8 공개)",
+    "short": "GRAMIX의 큐텐재팬 진출",
+    "title": "GRAMIX, 일본 법인 없이 큐텐에서 한국 미용실 품질을 팔다",
+    "summary": "도쿄의 한국계 미용실에서 시험한 반응을 믿고, 일본 법인 없이 큐텐에서 시작했습니다.",
+    "challenge": "한국에서는 미용실 판매가 중심이던 브랜드가 일본어 상세 페이지를 만들고 해외 배송 체계를 처음부터 갖춰야 했습니다.",
+    "approach": [
+      "도쿄의 한국계 미용실에서 써 본 뒤 ‘다시 사고 싶다’는 반응을 확인하고 큐텐을 골랐습니다.",
+      "일본 법인이 필요 없고 초기 · 월 고정 비용이 낮으며, 관리 화면과 고객 지원을 한국어로 쓸 수 있다는 점이 이유였습니다.",
+      "정부 해외 진출 지원 사업과 큐텐대학 배송 콘텐츠를 활용했고, 지금은 큐텐 연계 3PL을 씁니다.",
+      "제3 기관 시험 자료를 싣고 성분 정보를 한국 페이지보다 자세히 썼으며, 일본의 광고 · 표시 규칙에 맞춰 효능 표현에 신경 썼습니다.",
+      "샘플 마켓에 5회 이상 참가하고, 팝업 · 백화점 행사에서 큐텐 페이지로 이어지는 QR 코드를 넣은 샘플을 나눠 줬습니다."
+    ],
+    "result": "키워드 광고에서 ROAS 2,000%를 낸 사례가 있고, 가격대가 높은 상품은 메가와리 기간에 평소의 30~40배를 팔았다고 합니다(상품에 따라 다름). 앞으로 LINE과 인플루언서를 강화하고 일본 미용실 유통을 위한 물류 · 신고 · 일본어 라벨을 준비합니다. 담당자는 한국에서 인기라는 것만으로는 선택받기 어렵다고 말합니다.",
+    "timeline": [
+      {
+        "when": "시험",
+        "what": "도쿄 한국계 미용실에서 사용 반응 확인"
+      },
+      {
+        "when": "진출",
+        "what": "일본 법인 없이 큐텐에서 시작"
+      },
+      {
+        "when": "이후",
+        "what": "샘플 마켓 5회 이상 · 팝업 · 백화점 행사"
+      },
+      {
+        "when": "2026.08",
+        "what": "큐텐 사례로 공개"
+      }
+    ]
+  },
+  "ja": {
+    "client": "GRAMIX(シャブルインターナショナル)",
+    "industry": "ヘアケア・サロン専売ブランド",
+    "duration": "Qoo10(2026年8月公開)",
+    "short": "GRAMIXのQoo10日本進出",
+    "title": "GRAMIX、日本法人なしでQoo10から韓国サロン品質を届ける",
+    "summary": "東京の韓国系美容室での試用の反応を頼りに、日本法人なしでQoo10から始めました。",
+    "challenge": "韓国では美容室での販売が中心だったブランドが、日本語の商品ページと海外配送体制をゼロから整える必要がありました。",
+    "approach": [
+      "東京の韓国系美容室で試してもらい、「ぜひまた購入したい」という声を確認してQoo10を選びました。",
+      "日本法人が不要で、初期・月額費用を抑えられ、管理画面とサポートが韓国語で使えることが理由でした。",
+      "政府の海外進出支援事業とQoo10大学の配送コンテンツを活用し、現在はQoo10連携の3PLを使っています。",
+      "第三者機関の試験データを載せ、成分情報も韓国ページより充実させ、日本の広告・表示ルールに配慮して効能表現に注意しています。",
+      "サンプルマーケットに5回以上参加し、ポップアップや百貨店催事でQoo10ページへのQRコード付きサンプルを配りました。"
+    ],
+    "result": "キーワード広告でROAS2,000%を達成したケースがあり、比較的価格帯の高い商品は、メガ割期間に通常時の30〜40倍を売り上げたとされます(商品により異なります)。今後はLINEとインフルエンサー施策を強化し、日本の美容室流通に向けて物流・申請・日本語ラベルを整えます。担当者は、韓国で人気というだけではお客様に選んでもらうのは難しいと語っています。",
+    "timeline": [
+      {
+        "when": "試用",
+        "what": "東京の韓国系美容室で反応を確認"
+      },
+      {
+        "when": "参入",
+        "what": "日本法人なしでQoo10から開始"
+      },
+      {
+        "when": "その後",
+        "what": "サンプルマーケット5回以上・ポップアップ・百貨店催事"
+      },
+      {
+        "when": "2026.08",
+        "what": "Qoo10の事例として公開"
+      }
+    ]
+  },
+  "en": {
+    "client": "GRAMIX (Sciable International)",
+    "industry": "Hair care · salon-exclusive brand",
+    "duration": "Qoo10 (published Aug 2026)",
+    "short": "GRAMIX's launch in Japan on Qoo10",
+    "title": "GRAMIX: Korean salon quality sold on Qoo10 without a Japanese entity",
+    "summary": "Trusting reactions from Korean-run salons in Tokyo, it started on Qoo10 with no Japanese entity.",
+    "challenge": "A brand sold mainly through salons in Korea had to build Japanese product pages and an overseas shipping setup from scratch.",
+    "approach": [
+      "Had Korean-run salons in Tokyo try it, heard they wanted to buy again, then chose Qoo10.",
+      "Reasons: no Japanese entity needed, low start-up and monthly costs, and a Korean-language admin screen and support.",
+      "Used government overseas-expansion programmes and Qoo10 University's shipping content, and now uses a Qoo10-linked 3PL.",
+      "Posted third-party test data, wrote fuller ingredient details than on the Korean page, and watched claims against Japan's advertising and labelling rules.",
+      "Joined sample markets five or more times and handed out samples with QR codes to its Qoo10 page at pop-ups and department-store events."
+    ],
+    "result": "Keyword ads reached 2,000% ROAS in one case, and higher-priced items sold 30⁠–⁠40 times usual during Mega Wari (varies by product). Next it will strengthen LINE and influencer work and prepare logistics, filings and Japanese labels for salon distribution. Its manager says being popular in Korea is not enough for customers to choose it.",
+    "timeline": [
+      {
+        "when": "Trial",
+        "what": "Tests reactions at Korean-run salons in Tokyo"
+      },
+      {
+        "when": "Launch",
+        "what": "Starts on Qoo10 with no Japanese entity"
+      },
+      {
+        "when": "After",
+        "what": "Five or more sample markets, pop-ups and department-store events"
+      },
+      {
+        "when": "Aug 2026",
+        "what": "Featured as a Qoo10 case"
+      }
+    ]
+  }
+}

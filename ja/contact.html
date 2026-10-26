@@ -1,0 +1,285 @@
+<!doctype html>
+<!-- 자동 생성 파일: src/contact.html 을 고친 뒤 tools/build 에서 npm run build -->
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8"><meta content="default-src 'self'; script-src 'self' 'sha256-3tgS6NiBvlG5EjYI79ZLCmHSYpXotSZYP50TuxQnFRA='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.frankfurter.dev; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="meta.contact.title">お問い合わせ | LINKERPARTNERS</title>
+    <meta name="description" content="日韓進出の無料相談のお申し込み。2営業日以内にご返信します。" data-i18n-attr="content:meta.contact.description">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        // 이 창에서 처음이면 인트로, 사이트 안에서 넘어왔으면 전환 막. 동작 줄이기 설정이면 둘 다 생략
+        try {
+          var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (!sessionStorage.getItem("lp_intro_seen") && !still) d.classList.add("is-intro");
+          else if (sessionStorage.getItem("lp_nav") && !still) d.classList.add("is-arriving");
+          sessionStorage.removeItem("lp_nav");
+        } catch (e) {}
+        // 안전장치: 스크립트가 늦거나 실패해도 6초 뒤에는 첫 화면을 그대로 보여 줌
+        setTimeout(function () {
+          if (d.classList.contains("is-ready")) return;
+          d.classList.add("is-ready");
+          d.classList.remove("is-arriving");
+          document.querySelectorAll("[data-hero]").forEach(function (n) {
+            n.classList.add("is-inview");
+          });
+        }, 6000);
+      })();
+    </script>
+
+    <!-- 글꼴: 한국어 Pretendard / 일본어 Noto Serif JP / 영어 · 숫자 Newsreader Display ExtraLight(대문자). 모두 assets/fonts에 직접 두고 필요한 글자 조각만 불러옴 (tools/build/fonts.cjs) -->
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+
+    <!-- 공통 CSS (순서 중요) -->
+    <link rel="stylesheet" href="../assets/css/tokens.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/ambient.css">
+  <link href="https://linkerpartners.com/ja/contact.html" rel="canonical"><link href="https://linkerpartners.com/contact.html" hreflang="ko" rel="alternate"><link href="https://linkerpartners.com/ja/contact.html" hreflang="ja" rel="alternate"><link href="https://linkerpartners.com/en/contact.html" hreflang="en" rel="alternate"><link href="https://linkerpartners.com/contact.html" hreflang="x-default" rel="alternate"><meta content="website" property="og:type"><meta content="LINKERPARTNERS" property="og:site_name"><meta content="お問い合わせ | LINKERPARTNERS" property="og:title"><meta content="日韓進出の無料相談のお申し込み。2営業日以内にご返信します。" property="og:description"><meta content="https://linkerpartners.com/ja/contact.html" property="og:url"><meta content="ja_JP" property="og:locale"><meta content="ko_KR" property="og:locale:alternate"><meta content="en_US" property="og:locale:alternate"><meta content="summary" name="twitter:card"></head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main" tabindex="-1">
+
+      <!-- 첫 화면: 가운데 정렬. 제목 → 한 줄 → 아래로 이어지는 금빛 세로선 -->
+      <section class="pg-hero container" aria-labelledby="page-title">
+        <h1 id="page-title" class="pg-title" data-reveal="lines" data-hero="" data-i18n="contact.hero.title"><span style="--l: 0" class="line"><span>お気軽に</span></span><span style="--l: 1" class="line"><span>ご相談ください</span></span></h1>
+        <p class="pg-lead" data-reveal="rise" data-hero="" style="--d: 450ms" data-i18n="contact.hero.lead">考え始めたばかりでも大丈夫です。2営業日以内に担当者が直接ご返信します。</p>
+        <span class="pg-drop" data-reveal="drawy" data-hero="" style="--d: 900ms" aria-hidden="true"></span>
+      </section>
+
+      <!-- 문의 후 진행 + 직접 연락 / 상담 신청 양식 -->
+      <section class="section section--tight" aria-labelledby="form-title">
+        <div class="container contact-grid">
+          <div class="contact-side">
+            <div data-reveal="left">
+              <span class="side-label" data-i18n="contact.steps_title">お問い合わせの後は</span>
+              <ol class="contact-steps rows" data-list="contact.steps">
+                <template>
+                  <li><strong data-k="t"></strong><p data-k="d"></p></li>
+                </template>
+              
+                  <li data-gen=""><strong data-k="t">ご返信</strong><p data-k="d">2営業日以内にメールでご連絡します。</p></li>
+                
+                  <li data-gen=""><strong data-k="t">無料相談 30分</strong><p data-k="d">オンラインまたは対面で、方向性を一緒に整理します。</p></li>
+                
+                  <li data-gen=""><strong data-k="t">ご提案とお見積もり</strong><p data-k="d">範囲、期間、費用を書面でお送りします。</p></li>
+                </ol>
+            </div>
+            <div data-reveal="left" style="--d: 120ms">
+              <span class="side-label" data-i18n="contact.direct">メールで直接</span>
+              <a class="direct-mail" data-config-href="email" data-config-text="email"></a><br>
+              <a class="direct-tel" data-config-href="phone" data-config-text="phone"></a>
+              <p class="direct-hours" data-i18n="menu.hours">平日 10:00⁠–⁠18:00(ソウル・東京時間)</p>
+            </div>
+          </div>
+
+          <form class="contact-form glass glass--lit" id="contact-form" novalidate data-reveal="zoom" style="--d: 200ms">
+            <h2 id="form-title" class="form-title" data-i18n="contact.form.title">ご相談のお申し込み</h2>
+            <div class="form-grid">
+              <div class="field">
+                <label class="field-label" for="f-name"><span data-i18n="contact.form.name">お名前</span><span class="req" data-i18n="contact.form.required">必須</span></label>
+                <input class="input" id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-hint">
+                <p class="field-hint" id="f-name-hint" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label class="field-label" for="f-company" data-i18n="contact.form.company">会社名・ブランド名</label>
+                <input class="input" id="f-company" name="company" type="text" autocomplete="organization">
+              </div>
+              <div class="field">
+                <label class="field-label" for="f-email"><span data-i18n="contact.form.email">メールアドレス</span><span class="req" data-i18n="contact.form.required">必須</span></label>
+                <input class="input" id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-email-hint">
+                <p class="field-hint" id="f-email-hint" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label class="field-label" for="f-direction" data-i18n="contact.form.direction">進出の方向</label>
+                <select class="input" id="f-direction" name="direction" data-list="contact.form.directions">
+                  <template><option data-k-attr="value:v" data-k="label"></option></template>
+                <option data-gen="" value="kr_jp" data-k-attr="value:v" data-k="label">韓国 → 日本</option><option data-gen="" value="jp_kr" data-k-attr="value:v" data-k="label">日本 → 韓国</option><option data-gen="" value="undecided" data-k-attr="value:v" data-k="label">まだ決めていない</option></select>
+              </div>
+              <fieldset class="field fieldset span-2">
+                <legend class="field-label" data-i18n="contact.form.services">関心のあるサービス</legend>
+                <div class="chips" data-list="services.items">
+                  <template>
+                    <label class="chip"><input type="checkbox" name="services" data-k-attr="value:id"><span data-k="title"></span></label>
+                  </template>
+                
+                    <label data-gen="" class="chip"><input value="spot" type="checkbox" name="services" data-k-attr="value:id"><span data-k="title">個別集中相談</span></label>
+                  
+                    <label data-gen="" class="chip"><input value="diagnostic" type="checkbox" name="services" data-k-attr="value:id"><span data-k="title">進出診断レポート</span></label>
+                  
+                    <label data-gen="" class="chip"><input value="logo" type="checkbox" name="services" data-k-attr="value:id"><span data-k="title">ロゴ・ブランドデザイン</span></label>
+                  
+                    <label data-gen="" class="chip"><input value="web" type="checkbox" name="services" data-k-attr="value:id"><span data-k="title">ホームページ制作</span></label>
+                  
+                    <label data-gen="" class="chip"><input value="booking" type="checkbox" name="services" data-k-attr="value:id"><span data-k="title">予約システム構築</span></label>
+                  
+                    <label data-gen="" class="chip"><input value="sns" type="checkbox" name="services" data-k-attr="value:id"><span data-k="title">SNS・広告運用サポート</span></label>
+                  
+                    <label data-gen="" class="chip"><input value="localization" type="checkbox" name="services" data-k-attr="value:id"><span data-k="title">ブランドのローカライズ・商品ページ</span></label>
+                  
+                    <label data-gen="" class="chip"><input value="channel" type="checkbox" name="services" data-k-attr="value:id"><span data-k="title">出店準備ガイド</span></label>
+                  
+                    <label data-gen="" class="chip"><input value="advisory" type="checkbox" name="services" data-k-attr="value:id"><span data-k="title">月次メンタリング</span></label>
+                  </div>
+              </fieldset>
+              <div class="field span-2">
+                <label class="field-label" for="f-message"><span data-i18n="contact.form.message">ご相談内容</span><span class="req" data-i18n="contact.form.required">必須</span></label>
+                <textarea placeholder="販売したい市場、商品やサービス、いまお悩みのことをお書きください。" class="input" id="f-message" name="message" rows="5" required aria-describedby="f-message-hint" data-i18n-attr="placeholder:contact.form.message_placeholder"></textarea>
+                <p class="field-hint" id="f-message-hint" aria-live="polite"></p>
+              </div>
+              <div class="field span-2">
+                <label class="consent">
+                  <input type="checkbox" name="consent" required aria-describedby="f-consent-hint">
+                  <span><span data-i18n="contact.form.consent">個人情報の収集・利用に同意します。</span> <a class="inline-link" href="privacy.html" data-i18n="contact.form.consent_link">詳しく</a></span>
+                </label>
+                <p class="field-hint" id="f-consent-hint" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="form-submit">
+              <button class="btn btn--primary" type="submit"><span class="roll"><span data-i18n="contact.form.submit">相談を申し込む</span></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></button>
+              <p class="form-note" data-i18n="contact.form.note">送信を押すと、お使いのメールアプリが開き、入力した内容が入ります。</p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- 자주 묻는 질문 -->
+      <section class="section" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="pg-head"><h2 id="faq-title" class="pg-h2" data-reveal="lines" data-i18n="faq.title"><span style="--l: 0" class="line"><span>よくあるご質問</span></span></h2></div>
+          <ul class="pg-narrow rows" data-accordion="" data-stagger="" data-list="faq.items">
+            <template>
+              <li data-reveal="rise" data-keep="">
+                <button class="acc-head faq-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="q"></span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body faq-body"><p data-k="a"></p></div>
+                  </div>
+                </div>
+              </li>
+            </template>
+          
+              <li data-gen="" style="--i: 0" data-reveal="rise" data-keep="">
+                <button class="acc-head faq-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="q">小さな依頼だけでもお願いできますか?</span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body faq-body"><p data-k="a">はい。約6,000円の個別相談や、商品ページ1件だけでもご依頼いただけます。必要な分だけお任せいただくのが、私たちのやり方です。</p></div>
+                  </div>
+                </div>
+              </li>
+            
+              <li data-gen="" style="--i: 1" data-reveal="rise" data-keep="">
+                <button class="acc-head faq-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="q">仕上がりの品質は信頼できますか?</span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body faq-body"><p data-k="a">大手制作会社のようにすべてを一からオーダーメイドで作るわけではありませんが、事業を始めるのに十分な水準を、無理のない料金でご提供します。納品前にもう一度確認し、難しいことは難しいとお伝えして、専門の会社をご紹介します。</p></div>
+                  </div>
+                </div>
+              </li>
+            
+              <li data-gen="" style="--i: 2" data-reveal="rise" data-keep="">
+                <button class="acc-head faq-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="q">個人事業主や、創業準備中でも大丈夫ですか?</span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body faq-body"><p data-k="a">はい。個人事業主、ひとりブランド、創業を準備している方も歓迎です。事業を始めたばかりの段階のお悩みを中心に扱っています。</p></div>
+                  </div>
+                </div>
+              </li>
+            
+              <li data-gen="" style="--i: 3" data-reveal="rise" data-keep="">
+                <button class="acc-head faq-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="q">費用はどのように決まりますか?</span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body faq-body"><p data-k="a">すべての料金は料金ページで公開しており、シミュレーターですぐに概算を出せます。ご相談のあと、範囲と金額を明記したお見積書をお送りし、範囲を超える費用は事前にお伝えします。広告費やドメインなどの実費は別です。</p></div>
+                  </div>
+                </div>
+              </li>
+            
+              <li data-gen="" style="--i: 4" data-reveal="rise" data-keep="">
+                <button class="acc-head faq-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="q">韓国語や日本語が話せなくても大丈夫ですか?</span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body faq-body"><p data-k="a">大丈夫です。ご相談は韓国語、日本語、英語で行い、ローカライズした資料やホームページの文章は現地の言語で作成します。</p></div>
+                  </div>
+                </div>
+              </li>
+            
+              <li data-gen="" style="--i: 5" data-reveal="rise" data-keep="">
+                <button class="acc-head faq-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="q">期間はどのくらいかかりますか?</span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body faq-body"><p data-k="a">個別相談は1回、診断・ロゴ・SNS・出店ガイドは1⁠〜⁠3週間が一般的です。ホームページは2⁠〜⁠5週間、予約システムは1⁠〜⁠4週間、商品ページなどの資料は1件につき1⁠〜⁠2週間かかります。</p></div>
+                  </div>
+                </div>
+              </li>
+            
+              <li data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <button class="acc-head faq-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="q">売上は保証してもらえますか?</span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body faq-body"><p data-k="a">売上や順位をお約束することはできません。そのかわり、いまできることを根拠とともに整理し、難しそうなことは難しいとお伝えします。</p></div>
+                  </div>
+                </div>
+              </li>
+            
+              <li data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <button class="acc-head faq-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="q">秘密保持はどうなりますか?</span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body faq-body"><p data-k="a">ご相談の段階から秘密保持契約(NDA)を結べます。お客様の情報や事例は、同意なく公開しません。</p></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- 공통 JS (순서 중요) -->
+    <script src="../assets/js/config.js" defer></script>
+    <script src="../assets/js/components.js" defer></script>
+    <script src="../assets/js/i18n.js" defer></script>
+    <script src="../assets/js/intro.js" defer></script>
+    <script src="../assets/js/ambient.js" defer></script>
+    <script src="../assets/js/motion.js" defer></script>
+    <script src="../assets/js/contact.js" defer></script>
+    <script src="../assets/js/site.js" defer></script>
+    <script src="../assets/js/ticker.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>

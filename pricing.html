@@ -1,0 +1,452 @@
+<!doctype html>
+<!-- 자동 생성 파일: src/pricing.html 을 고친 뒤 tools/build 에서 npm run build -->
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8"><meta content="default-src 'self'; script-src 'self' 'sha256-3tgS6NiBvlG5EjYI79ZLCmHSYpXotSZYP50TuxQnFRA='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.frankfurter.dev; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="meta.pricing.title">비용 | LINKERPARTNERS</title>
+    <meta name="description" content="모든 항목의 금액을 공개합니다. 견적 계산기에서 필요한 것을 고르면 예상 비용이 바로 나옵니다." data-i18n-attr="content:meta.pricing.description">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        // 이 창에서 처음이면 인트로, 사이트 안에서 넘어왔으면 전환 막. 동작 줄이기 설정이면 둘 다 생략
+        try {
+          var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (!sessionStorage.getItem("lp_intro_seen") && !still) d.classList.add("is-intro");
+          else if (sessionStorage.getItem("lp_nav") && !still) d.classList.add("is-arriving");
+          sessionStorage.removeItem("lp_nav");
+        } catch (e) {}
+        // 안전장치: 스크립트가 늦거나 실패해도 6초 뒤에는 첫 화면을 그대로 보여 줌
+        setTimeout(function () {
+          if (d.classList.contains("is-ready")) return;
+          d.classList.add("is-ready");
+          d.classList.remove("is-arriving");
+          document.querySelectorAll("[data-hero]").forEach(function (n) {
+            n.classList.add("is-inview");
+          });
+        }, 6000);
+      })();
+    </script>
+
+    <!-- 글꼴: 한국어 Pretendard / 일본어 Noto Serif JP / 영어 · 숫자 Newsreader Display ExtraLight(대문자). 모두 assets/fonts에 직접 두고 필요한 글자 조각만 불러옴 (tools/build/fonts.cjs) -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+
+    <!-- 공통 CSS (순서 중요) -->
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/ambient.css">
+  <link href="https://linkerpartners.com/pricing.html" rel="canonical"><link href="https://linkerpartners.com/pricing.html" hreflang="ko" rel="alternate"><link href="https://linkerpartners.com/ja/pricing.html" hreflang="ja" rel="alternate"><link href="https://linkerpartners.com/en/pricing.html" hreflang="en" rel="alternate"><link href="https://linkerpartners.com/pricing.html" hreflang="x-default" rel="alternate"><meta content="website" property="og:type"><meta content="LINKERPARTNERS" property="og:site_name"><meta content="비용 | LINKERPARTNERS" property="og:title"><meta content="모든 항목의 금액을 공개합니다. 견적 계산기에서 필요한 것을 고르면 예상 비용이 바로 나옵니다." property="og:description"><meta content="https://linkerpartners.com/pricing.html" property="og:url"><meta content="ko_KR" property="og:locale"><meta content="ja_JP" property="og:locale:alternate"><meta content="en_US" property="og:locale:alternate"><meta content="summary" name="twitter:card"></head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main" tabindex="-1">
+
+      <!-- 첫 화면: 가운데 정렬. 제목 → 한 줄 → 아래로 이어지는 금빛 세로선 -->
+      <section class="pg-hero container" aria-labelledby="page-title">
+        <h1 id="page-title" class="pg-title" data-reveal="lines" data-hero="" data-i18n="pricing.hero.title"><span style="--l: 0" class="line"><span>견적을 기다리지 말고</span></span><span style="--l: 1" class="line"><span>직접 계산해 보세요</span></span></h1>
+        <p class="pg-lead" data-reveal="rise" data-hero="" style="--d: 450ms" data-i18n="pricing.hero.lead">5만 원짜리 상담부터 100만 원 안쪽 제작까지, 모든 금액을 공개합니다. 필요한 것만 골라 단계와 수량을 정하면 부가세를 포함한 예상 비용이 바로 나옵니다.</p>
+        <span class="pg-drop" data-reveal="drawy" data-hero="" style="--d: 900ms" aria-hidden="true"></span>
+      </section>
+
+      <!-- 견적 계산기: 고르면 바로 계산 (pricing.js) -->
+      <section class="section section--tight" id="estimator-section" aria-labelledby="est-title">
+        <div class="container">
+          <h2 id="est-title" class="sr-only" data-i18n="pricing.estimator.title"><span class="line">필요한 것만 고르면</span><span class="line">견적이 나옵니다</span></h2>
+          <form class="est estimator is-empty" id="estimator" novalidate>
+            <div class="est-options" data-reveal="left">
+              <p class="est-legend" data-i18n="pricing.estimator.legend">항목을 고르면 단계와 수량을 정할 수 있어요</p>
+              <div data-est-items=""></div>
+              <label class="est-switch">
+                <input type="checkbox" name="rush">
+                <span><span class="est-name" data-i18n="pricing.estimator.rush">빠른 진행</span><small data-i18n="pricing.estimator.rush_desc">일정을 약 4분의 1 줄입니다. 소계의 20%가 더해져요.</small></span>
+              </label>
+            </div>
+
+            <div class="est-result glass glass--lit" data-reveal="right" style="--d: 150ms" aria-live="polite">
+              <p class="est-result-label" data-i18n="pricing.estimator.result_title">예상 비용 · 부가세 포함</p>
+              <p class="est-total" data-est="total">—</p>
+              <ul class="est-lines" data-est="lines"></ul>
+              <dl class="est-sums">
+                <div><dt data-i18n="pricing.estimator.subtotal">소계</dt><dd data-est="subtotal">—</dd></div>
+                <div data-est="rush-row" hidden><dt data-i18n="pricing.estimator.rush">빠른 진행</dt><dd data-est="rush"></dd></div>
+                <div><dt data-i18n="pricing.estimator.vat_line">부가세 10%</dt><dd data-est="vat">—</dd></div>
+              </dl>
+              <dl class="defs">
+                <div><dt data-i18n="pricing.estimator.duration">예상 기간</dt><dd data-est="weeks">—</dd></div>
+              </dl>
+              <p class="est-pack" data-est="package-row" hidden><span data-est="package"></span></p>
+              <p class="est-hint" data-i18n="pricing.estimator.hint">외부 전문가 비용은 제외입니다. 정확한 금액은 상담 뒤 견적서로 안내해 드립니다.</p>
+              <div class="est-actions">
+                <a class="btn btn--primary" href="contact.html" data-est="cta"><span class="roll"><span data-i18n="pricing.estimator.cta">이 견적으로 상담하기</span></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                <button class="text-link" type="button" data-est="copy"><span data-i18n="pricing.estimator.copy">견적 내용 복사</span></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- 패키지 세 가지 -->
+      <section class="section" aria-labelledby="plans-title">
+        <div class="container">
+          <div class="pg-head"><h2 id="plans-title" class="pg-h2" data-reveal="lines" data-i18n="pricing.plans.title"><span style="--l: 0" class="line"><span>자주 고르시는</span></span><span style="--l: 1" class="line"><span>세 가지 묶음</span></span></h2></div>
+          <div class="plans-scroll" data-reveal="zoom">
+            <table class="plans">
+              <thead>
+                <tr>
+                  <th scope="col"><span class="sr-only" data-i18n="pricing.plans.head">들어 있는 것</span></th>
+                  <th scope="col">
+                    <span class="plan-name" data-i18n="pricing.plans.names.check">점검</span>
+                    <span class="plan-for" data-i18n="pricing.plans.for.check">먼저 가능성을 확인할 때</span>
+                    <span class="plan-price" data-price="packages.check" data-price-mode="plain"></span>
+                  </th>
+                  <th scope="col" class="is-pick">
+                    <span class="plan-pick" data-i18n="pricing.plans.pick">가장 많이 선택</span>
+                    <span class="plan-name" data-i18n="pricing.plans.names.brand">브랜딩</span>
+                    <span class="plan-for" data-i18n="pricing.plans.for.brand">브랜드를 만들고 다듬을 때</span>
+                    <span class="plan-price" data-price="packages.brand" data-price-mode="plain"></span>
+                  </th>
+                  <th scope="col">
+                    <span class="plan-name" data-i18n="pricing.plans.names.launch">런칭</span>
+                    <span class="plan-for" data-i18n="pricing.plans.for.launch">판매를 시작할 준비를 한 번에</span>
+                    <span class="plan-price" data-price="packages.launch" data-price-mode="plain"></span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody data-list="pricing.plans.rows">
+                <template>
+                  <tr>
+                    <th scope="row" data-k="k"></th>
+                    <td data-k="v.0"></td>
+                    <td data-k="v.1"></td>
+                    <td data-k="v.2"></td>
+                  </tr>
+                </template>
+              
+                  <tr data-gen="">
+                    <th scope="row" data-k="k">기간</th>
+                    <td data-k="v.0">1⁠–⁠2주</td>
+                    <td data-k="v.1">2⁠–⁠3주</td>
+                    <td data-k="v.2">4⁠–⁠6주</td>
+                  </tr>
+                
+                  <tr data-gen="">
+                    <th scope="row" data-k="k">1:1 집중 상담</th>
+                    <td data-k="v.0">포함</td>
+                    <td data-k="v.1">포함</td>
+                    <td data-k="v.2">—</td>
+                  </tr>
+                
+                  <tr data-gen="">
+                    <th scope="row" data-k="k">진출 진단 리포트</th>
+                    <td data-k="v.0">기본</td>
+                    <td data-k="v.1">—</td>
+                    <td data-k="v.2">—</td>
+                  </tr>
+                
+                  <tr data-gen="">
+                    <th scope="row" data-k="k">로고 · 브랜드 디자인</th>
+                    <td data-k="v.0">—</td>
+                    <td data-k="v.1">기본</td>
+                    <td data-k="v.2">기본</td>
+                  </tr>
+                
+                  <tr data-gen="">
+                    <th scope="row" data-k="k">홈페이지 제작</th>
+                    <td data-k="v.0">—</td>
+                    <td data-k="v.1">—</td>
+                    <td data-k="v.2">기본</td>
+                  </tr>
+                
+                  <tr data-gen="">
+                    <th scope="row" data-k="k">SNS · 광고 운영 도움</th>
+                    <td data-k="v.0">—</td>
+                    <td data-k="v.1">—</td>
+                    <td data-k="v.2">기본</td>
+                  </tr>
+                
+                  <tr data-gen="">
+                    <th scope="row" data-k="k">브랜드 현지화 · 상세페이지</th>
+                    <td data-k="v.0">—</td>
+                    <td data-k="v.1">2건</td>
+                    <td data-k="v.2">2건</td>
+                  </tr>
+                </tbody>
+              <tfoot>
+                <tr>
+                  <td></td>
+                  <td><a class="text-link" href="contact.html?services=spot,diagnostic"><span data-i18n="pricing.plans.cta">상담하기</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a></td>
+                  <td><a class="text-link" href="contact.html?services=spot,logo,localization"><span data-i18n="pricing.plans.cta">상담하기</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a></td>
+                  <td><a class="text-link" href="contact.html?services=logo,web,sns,localization"><span data-i18n="pricing.plans.cta">상담하기</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 항목별 요금표 -->
+      <section class="section" aria-labelledby="menu-title">
+        <div class="container">
+          <div class="pg-head"><h2 id="menu-title" class="pg-h2" data-reveal="lines" data-i18n="pricing.menu_section.title"><span style="--l: 0" class="line"><span>항목별</span></span><span style="--l: 1" class="line"><span>요금</span></span></h2></div>
+          <div class="pg-narrow">
+            <div data-list="pricing.menu">
+              <template>
+                <div class="pm-group" data-reveal="wipe">
+                  <h3 data-k="group"></h3>
+                  <ul class="rows" data-k-list="items">
+                    <template>
+                      <li class="pm-row">
+                        <span class="pm-name"><strong data-k="name"></strong><small data-k="desc"></small></span>
+                        <span class="pm-price" data-k="text"></span>
+                        <span class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </template>
+                  </ul>
+                </div>
+              </template>
+            
+                <div data-gen="" style="--i: 0" class="pm-group" data-reveal="wipe">
+                  <h3 data-k="group">상담</h3>
+                  <ul class="rows" data-k-list="items">
+                    <template>
+                      <li class="pm-row">
+                        <span class="pm-name"><strong data-k="name"></strong><small data-k="desc"></small></span>
+                        <span class="pm-price" data-k="text"></span>
+                        <span class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </template>
+                  
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">첫 상담</strong><small data-k="desc">30분, 화상</small></span>
+                        <span class="pm-price" data-k="text">무료</span>
+                        <span class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">1:1 집중 상담</strong><small data-k="desc">60분 · 요약 메모</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.spot" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </ul>
+                </div>
+              
+                <div data-gen="" style="--i: 1" class="pm-group" data-reveal="wipe">
+                  <h3 data-k="group">점검과 디자인</h3>
+                  <ul class="rows" data-k-list="items">
+                    <template>
+                      <li class="pm-row">
+                        <span class="pm-name"><strong data-k="name"></strong><small data-k="desc"></small></span>
+                        <span class="pm-price" data-k="text"></span>
+                        <span class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </template>
+                  
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">진출 진단 리포트 · 기본</strong><small data-k="desc">시장 · 경쟁 상품 조사 리포트</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.diagnostic.basic" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">진출 진단 리포트 · 심화</strong><small data-k="desc">가격 비교 · 규정 체크리스트 · 후속 상담</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.diagnostic.deep" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">로고 · 브랜드 디자인 · 기본</strong><small data-k="desc">시안 3안 · 완성 파일 1안</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.logo.basic" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">로고 · 브랜드 디자인 · 심화</strong><small data-k="desc">브랜드 가이드 · SNS 프로필 · 명함 이미지</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.logo.deep" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </ul>
+                </div>
+              
+                <div data-gen="" style="--i: 2" class="pm-group" data-reveal="wipe">
+                  <h3 data-k="group">제작</h3>
+                  <ul class="rows" data-k-list="items">
+                    <template>
+                      <li class="pm-row">
+                        <span class="pm-name"><strong data-k="name"></strong><small data-k="desc"></small></span>
+                        <span class="pm-price" data-k="text"></span>
+                        <span class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </template>
+                  
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">홈페이지 제작 · 기본</strong><small data-k="desc">한 페이지 소개 페이지</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.web.basic" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">홈페이지 제작 · 심화</strong><small data-k="desc">5페이지 안쪽 · 문의 양식 · 두 언어</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.web.deep" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">예약 시스템 구축 · 기본</strong><small data-k="desc">기존 예약 서비스 설정 · 안내문</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.booking.basic" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">예약 시스템 구축 · 심화</strong><small data-k="desc">맞춤 예약 페이지 · 확인 메일 · 알림</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.booking.deep" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">브랜드 현지화 · 상세페이지</strong><small data-k="desc">자료 1건</small></span>
+                        
+                        <span data-price-mode="unit" data-price="items.localization" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </ul>
+                </div>
+              
+                <div data-gen="" style="--i: 3" class="pm-group" data-reveal="wipe">
+                  <h3 data-k="group">판매와 운영</h3>
+                  <ul class="rows" data-k-list="items">
+                    <template>
+                      <li class="pm-row">
+                        <span class="pm-name"><strong data-k="name"></strong><small data-k="desc"></small></span>
+                        <span class="pm-price" data-k="text"></span>
+                        <span class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </template>
+                  
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">SNS · 광고 운영 도움 · 기본</strong><small data-k="desc">계정 진단 · 광고 세팅 안내</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.sns.basic" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">SNS · 광고 운영 도움 · 심화</strong><small data-k="desc">4주 캘린더 · 문구 12개 · 성과 점검</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.sns.deep" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">입점 준비 가이드 · 기본</strong><small data-k="desc">채널 비교 · 준비 체크리스트</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.channel.basic" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">입점 준비 가이드 · 심화</strong><small data-k="desc">상품 페이지 2개 점검 포함</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.channel.deep" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </ul>
+                </div>
+              
+                <div data-gen="" style="--i: 4" class="pm-group" data-reveal="wipe">
+                  <h3 data-k="group">멘토링</h3>
+                  <ul class="rows" data-k-list="items">
+                    <template>
+                      <li class="pm-row">
+                        <span class="pm-name"><strong data-k="name"></strong><small data-k="desc"></small></span>
+                        <span class="pm-price" data-k="text"></span>
+                        <span class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </template>
+                  
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">월간 멘토링 · 라이트</strong><small data-k="desc">월 1회 30분 상담과 메모</small></span>
+                        
+                        <span data-price-mode="monthly" data-price="items.advisory.light" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">월간 멘토링 · 스탠다드</strong><small data-k="desc">월 2회 상담 · 질문 답변 · 작은 수정 1건</small></span>
+                        
+                        <span data-price-mode="monthly" data-price="items.advisory.standard" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            <p class="fine" data-i18n="pricing.note">부가세 별도. 광고비, 도메인 · 서버 같은 실비, 번역 감수 · 세무 · 통관 같은 외부 전문가 비용은 따로 안내합니다. 엔화 금액은 참고용입니다(1원 = 0.118엔).</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="container">
+          <span class="closing-rule" data-reveal="draw" aria-hidden="true"></span>
+          <div class="closing-body">
+            <div class="closing-lead">
+              <div>
+                <h2 id="closing-title" class="sr-only" data-i18n="closing.title">문의하기</h2>
+                <p class="closing-desc" data-reveal="rise" style="--d: 150ms" data-i18n="closing.desc">첫 상담 30분은 무료입니다</p>
+              </div>
+              <p class="closing-clock" data-reveal="fade" style="--d: 250ms"><span class="live-dot" aria-hidden="true"></span><span data-closing-status=""></span><span class="closing-time num" data-closing-time=""></span><span data-i18n="closing.info.clock">서울 · 도쿄 현지 시각</span></p>
+            </div>
+            <form class="quick-form" id="quick-form" novalidate data-reveal="rise" style="--d: 200ms">
+              <div class="quick-grid">
+                <div class="field">
+                  <label class="field-label" for="q-name"><span data-i18n="contact.form.name">이름</span><span class="req" data-i18n="contact.form.required">필수</span></label>
+                  <input class="input" id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="q-name-hint">
+                  <p class="field-hint" id="q-name-hint" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label class="field-label" for="q-email"><span data-i18n="contact.form.email">이메일</span><span class="req" data-i18n="contact.form.required">필수</span></label>
+                  <input class="input" id="q-email" name="email" type="email" autocomplete="email" required aria-describedby="q-email-hint">
+                  <p class="field-hint" id="q-email-hint" aria-live="polite"></p>
+                </div>
+                <div class="field span-2">
+                  <label class="field-label" for="q-service" data-i18n="contact.form.services">관심 서비스</label>
+                  <select class="input" id="q-service" name="service" data-list="services.items">
+                    <option value="" data-i18n="closing.form.pick">관심 서비스 선택 (선택 사항)</option>
+                    <template><option data-k-attr="value:id" data-k="title"></option></template>
+                  <option data-gen="" value="spot" data-k-attr="value:id" data-k="title">1:1 집중 상담</option><option data-gen="" value="diagnostic" data-k-attr="value:id" data-k="title">진출 진단 리포트</option><option data-gen="" value="logo" data-k-attr="value:id" data-k="title">로고 · 브랜드 디자인</option><option data-gen="" value="web" data-k-attr="value:id" data-k="title">홈페이지 제작</option><option data-gen="" value="booking" data-k-attr="value:id" data-k="title">예약 시스템 구축</option><option data-gen="" value="sns" data-k-attr="value:id" data-k="title">SNS · 광고 운영 도움</option><option data-gen="" value="localization" data-k-attr="value:id" data-k="title">브랜드 현지화 · 상세페이지</option><option data-gen="" value="channel" data-k-attr="value:id" data-k="title">입점 준비 가이드</option><option data-gen="" value="advisory" data-k-attr="value:id" data-k="title">월간 멘토링</option></select>
+                </div>
+                <div class="field span-2">
+                  <label class="field-label" for="q-message"><span data-i18n="contact.form.message">문의 내용</span><span class="req" data-i18n="contact.form.required">필수</span></label>
+                  <textarea placeholder="판매하려는 시장, 상품이나 서비스, 지금 고민되는 점을 적어 주세요." class="input" id="q-message" name="message" rows="4" required aria-describedby="q-message-hint" data-i18n-attr="placeholder:contact.form.message_placeholder"></textarea>
+                  <p class="field-hint" id="q-message-hint" aria-live="polite"></p>
+                </div>
+                <div class="field span-2">
+                  <label class="consent">
+                    <input type="checkbox" name="consent" required aria-describedby="q-consent-hint">
+                    <span><span data-i18n="contact.form.consent">개인정보 수집 · 이용에 동의합니다.</span> <a class="inline-link" href="privacy.html" data-i18n="contact.form.consent_link">자세히</a></span>
+                  </label>
+                  <p class="field-hint" id="q-consent-hint" aria-live="polite"></p>
+                </div>
+              </div>
+              <div class="quick-submit">
+                <button class="btn btn--primary" type="submit"><span class="roll"><span data-i18n="contact.form.submit">상담 신청 보내기</span></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></button>
+                <p class="form-note" data-i18n="contact.form.note">보내기를 누르면 사용 중인 메일 앱이 열리고, 작성한 내용이 채워집니다.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- 공통 JS (순서 중요) -->
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/intro.js" defer></script>
+    <script src="assets/js/ambient.js" defer></script>
+    <script src="assets/js/motion.js" defer></script>
+    <script src="assets/js/pricing.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/ticker.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+{
+  "id": "nownthan",
+  "brand": "now&than",
+  "example": true,
+  "route": "kr_jp",
+  "year": "2025",
+  "services": [
+    "sns",
+    "localization"
+  ],
+  "metrics": [
+    {
+      "value": "60%",
+      "label": {
+        "ko": "일본 매출 비중(한국 40%)",
+        "ja": "日本の売上比率(韓国40%)",
+        "en": "Japan's share of sales (Korea 40%)"
+      }
+    },
+    {
+      "value": "10×",
+      "label": {
+        "ko": "메가와리 기간 최대 매출(평소 대비)",
+        "ja": "メガ割期間の最大売上(通常比)",
+        "en": "Peak Mega Wari sales vs. usual"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Qoo10大学 · now&than — 口コミで広まった新規ブランドによるインフルエンサーマーケティングの活用法",
+      "url": "https://article-university.qoo10.jp/entry/case_nownthan"
+    }
+  ],
+  "ko": {
+    "client": "now&than (나우앤댄)",
+    "industry": "헤어케어 · 뷰티",
+    "duration": "2022 겨울 론칭 (2025.6 공개)",
+    "short": "now&than의 큐텐재팬 인플루언서 전략",
+    "title": "now&than, 팔로워 5만 미만 인플루언서의 입소문으로 일본 매출 60%를 만들다",
+    "summary": "본사는 방향만 잡고 운영은 대행사에 맡기며, 상품과 맞는 인플루언서를 개발 단계부터 함께 썼습니다.",
+    "challenge": "2022년 겨울에 막 시작한 신생 브랜드가 일본에서 이름을 알려야 했고, 일본에는 샘플을 써 보는 문화도 자리 잡지 않았습니다.",
+    "approach": [
+      "브랜드 방향은 본사가, 광고 · 매장 운영 · 배송은 운영 대행사가 맡도록 나눴습니다.",
+      "팔로워 수보다 상품과의 관련성을 보고 인플루언서를 골랐고, 개발 단계부터 함께했습니다.",
+      "일본에 샘플 문화가 없어서 구매자에게 샴푸 · 트리트먼트 샘플을 넣어 세트 구매로 이어지게 했습니다.",
+      "한국에서는 흔한 노워시 트리트먼트, 헤어 마스카라를 일본에서는 새 콘셉트로 내놓고, 헤어 밀크 인기에도 빠르게 대응했습니다.",
+      "평소에 순위와 인지도를 쌓고, 메가와리 전후로 경쟁 상품의 페이지 · 가격 · 팔로워 증가를 분석했습니다."
+    ],
+    "result": "일본 매출 비중이 60%(한국 40%)가 됐습니다. 2023년 7월 일본 인플루언서의 게시물로 입소문이 번졌고, 11월 메가와리에서 매출이 크게 늘었습니다. 메가와리 기간에는 평소의 최대 10배 가까이 팔립니다. 일본 약 700곳의 버라이어티 숍 판매는 기대만큼 성과가 나지 않았다고 밝혔습니다.",
+    "timeline": [
+      {
+        "when": "2022 겨울",
+        "what": "브랜드 론칭"
+      },
+      {
+        "when": "2023.07",
+        "what": "일본 인플루언서 게시물로 입소문"
+      },
+      {
+        "when": "2023.11",
+        "what": "메가와리에서 매출 급증"
+      },
+      {
+        "when": "2025.06",
+        "what": "큐텐 사례로 공개"
+      }
+    ]
+  },
+  "ja": {
+    "client": "now&than(ナウアンドダン)",
+    "industry": "ヘアケア・ビューティー",
+    "duration": "2022年冬ローンチ(2025年6月公開)",
+    "short": "now&thanのQoo10インフルエンサー戦略",
+    "title": "now&than、フォロワー5万人未満のインフルエンサーの口コミで日本売上60%に",
+    "summary": "本社は方針だけを決め、運営は代理店に任せ、商品に合ったインフルエンサーを開発段階から巻き込みました。",
+    "challenge": "2022年冬に始まったばかりの新ブランドが日本で知られる必要があり、日本にはサンプルを試す文化も根づいていませんでした。",
+    "approach": [
+      "ブランド方針は本社、広告・店舗運営・配送は運営代理店と役割を分けました。",
+      "フォロワー数より商品との関連性でインフルエンサーを選び、開発段階から一緒に取り組みました。",
+      "日本ではサンプル文化が浸透していないため、購入者にシャンプー・トリートメントのサンプルを同梱し、セット購入につなげました。",
+      "韓国では一般的なノーウォッシュトリートメントやヘアマスカラを日本では新コンセプトとして出し、ヘアミルクの人気にも素早く対応しました。",
+      "通常期にランキングと認知度を築き、メガ割の前後は競合の商品ページ・価格・フォロワー増加を分析しました。"
+    ],
+    "result": "日本の売上比率は60%(韓国40%)になりました。2023年7月に日本のインフルエンサーの投稿から口コミが広がり、11月のメガ割で売上が急増しました。メガ割期間は通常時の最大10倍近くになります。日本約700店舗のバラエティショップでの販売は期待ほどの成果が出ていないと述べています。",
+    "timeline": [
+      {
+        "when": "2022年冬",
+        "what": "ブランドをローンチ"
+      },
+      {
+        "when": "2023.07",
+        "what": "日本のインフルエンサーの投稿で口コミが拡大"
+      },
+      {
+        "when": "2023.11",
+        "what": "メガ割で売上が急増"
+      },
+      {
+        "when": "2025.06",
+        "what": "Qoo10の事例として公開"
+      }
+    ]
+  },
+  "en": {
+    "client": "now&than",
+    "industry": "Hair care · beauty",
+    "duration": "Launched winter 2022 (published Jun 2025)",
+    "short": "now&than's influencer strategy on Qoo10",
+    "title": "now&than: word of mouth from sub-50k influencers brings 60% of sales from Japan",
+    "summary": "Headquarters sets direction, an agency runs operations, and influencers who fit the product join from the development stage.",
+    "challenge": "A brand that had only launched in winter 2022 had to make a name in Japan, where sampling culture was not established.",
+    "approach": [
+      "Split roles: headquarters sets brand direction, an operating agency handles ads, store operations and shipping.",
+      "Chose influencers by relevance to the product rather than follower count, and involved them from development.",
+      "With no sampling culture in Japan, put shampoo and treatment samples in orders to lead to set purchases.",
+      "Launched items common in Korea, such as no-wash treatment and hair mascara, as new concepts in Japan, and reacted quickly to the rise of hair milk.",
+      "Built ranking and awareness in normal months and analysed rivals' pages, prices and follower growth around Mega Wari."
+    ],
+    "result": "Japan became 60% of sales (Korea 40%). Word of mouth spread from a Japanese influencer's post in July 2023 and sales surged at the November Mega Wari, when sales run up to nearly 10 times usual. Sales through about 700 variety shops in Japan have not met expectations.",
+    "timeline": [
+      {
+        "when": "Winter 2022",
+        "what": "Brand launches"
+      },
+      {
+        "when": "Jul 2023",
+        "what": "Word of mouth spreads from a Japanese influencer's post"
+      },
+      {
+        "when": "Nov 2023",
+        "what": "Sales surge at Mega Wari"
+      },
+      {
+        "when": "Jun 2025",
+        "what": "Featured as a Qoo10 case"
+      }
+    ]
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "id": "xation",
+  "brand": "XATION",
+  "example": true,
+  "route": "kr_jp",
+  "year": "2026",
+  "services": [
+    "localization",
+    "logo",
+    "channel"
+  ],
+  "metrics": [
+    {
+      "value": "3",
+      "label": {
+        "ko": "큐텐재팬에서 운영하는 브랜드",
+        "ja": "Qoo10 Japanで運営するブランド",
+        "en": "Brands run on Qoo10 Japan"
+      }
+    },
+    {
+      "value": "4⁠–⁠5×",
+      "label": {
+        "ko": "그라펜 메가와리 기간 매출(평소 대비)",
+        "ja": "グラフェンのメガ割期間の売上(通常比)",
+        "en": "Grafen's Mega Wari sales vs. usual"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Qoo10大学 · “일본 고객이 이해하는 언어로 바꿔야 팔립니다” XATION이 찾은 일본 시장 성장 해법",
+      "url": "https://article-university.qoo10.jp/entry/case_xation_kor"
+    }
+  ],
+  "ko": {
+    "client": "XATION (줄라이미 · 그라펜 · 스탠다드 서울)",
+    "industry": "헤어 · 스킨케어 (브랜드 3개)",
+    "duration": "큐텐재팬 운영 (2026.08 공개)",
+    "short": "XATION의 일본 고객 언어로 바꾸기",
+    "title": "XATION, 일본 고객이 이해하는 말로 바꿔 브랜드 셋을 키우다",
+    "summary": "이름 · 용도 표현 · 묶음 구성을 일본 고객에 맞게 고치고, 온라인 판매 기록으로 로프트 · 드럭스토어까지 이어 갔습니다.",
+    "challenge": "동남아에서 먼저 해외 판매를 키운 뒤 일본을 주력으로 삼았지만, 한국에서 통하던 이름 · 설명이 일본 고객에게는 용도가 잘 전해지지 않았습니다. 향 종류가 늘며 재고 관리도 어려워졌습니다.",
+    "approach": [
+      "한국에서 ‘헤어 에센스’로 팔던 상품을 일본에서는 용도가 바로 전해지는 ‘헤어 밀크’로 불렀습니다.",
+      "한국에서는 남성 화장품으로 시작한 그라펜을 일본에서는 두피 · 헤어 케어 브랜드로 소개하고, 비싼 ‘탈모 샴푸’ 대신 ‘한국 샴푸’ 검색어를 시험했습니다.",
+      "향 종류가 많아 재고가 어려워진 줄라이미는 ‘나다움을 향기로 표현한다’로 핵심 가치를 다시 세우고 포장을 핫핑크로 바꿨습니다.",
+      "세트와 1+1으로 객단가를 올리고, 이전 구매자에게 쿠폰을 보냈습니다.",
+      "큰 행사 전에는 메가포로 먼저 시험하고, 브랜드 X 계정으로 입소문을 더했습니다.",
+      "온라인 판매 데이터를 근거로 일본 현지 거래처와 협업해 로프트 · 드럭스토어 같은 오프라인으로 넓혔습니다."
+    ],
+    "result": "줄라이미는 단골 구매가 꾸준히 이어지고, 그라펜은 메가와리 때 평소의 4~5배까지 팔리며 계속 자랍니다. 스탠다드 서울의 배리어 젤 크림은 큰 광고 없이 후기와 판매가 늘고 있습니다. 구체적인 매출 숫자는 공개되지 않았습니다.",
+    "timeline": [
+      {
+        "when": "이전",
+        "what": "동남아에서 해외 판매를 먼저 키움"
+      },
+      {
+        "when": "일본 진출",
+        "what": "여러 플랫폼을 비교한 끝에 큐텐재팬을 일본 주력 채널로"
+      },
+      {
+        "when": "운영 중",
+        "what": "이름 · 용도 표현 · 묶음 구성 조정, 줄라이미 리브랜딩"
+      },
+      {
+        "when": "이후",
+        "what": "온라인 판매 데이터로 로프트 · 드럭스토어 진출"
+      }
+    ]
+  },
+  "ja": {
+    "client": "XATION(ジュライミー・グラフェン・スタンダードソウル)",
+    "industry": "ヘア・スキンケア(3ブランド)",
+    "duration": "Qoo10 Japan運営(2026.08公開)",
+    "short": "XATION、日本のお客様の言葉に置き換える",
+    "title": "XATION、日本のお客様が理解できる言葉に置き換えて3ブランドを育てる",
+    "summary": "名前・用途の表現・セット構成を日本のお客様に合わせて直し、オンラインの販売データでLOFTやドラッグストアにつなげました。",
+    "challenge": "東南アジアで先に海外販売を伸ばしてから日本を主力にしましたが、韓国で通じた名前や説明では、日本のお客様に用途が伝わりにくい面がありました。香りの種類が増えて在庫管理も難しくなりました。",
+    "approach": [
+      "韓国で「ヘアエッセンス」として売っていた商品を、日本では用途がすぐ伝わる「ヘアミルク」と呼びました。",
+      "韓国では男性化粧品として始まったグラフェンを、日本では頭皮・ヘアケアブランドとして紹介し、高価な「薄毛シャンプー」ではなく「韓国シャンプー」の検索ワードを試しました。",
+      "香りの種類が増えて在庫が難しくなったジュライミーは、「自分らしさを香りで表現する」で核となる価値を見直し、パッケージをホットピンクに変えました。",
+      "セットや1+1で客単価を上げ、過去の購入者にクーポンを送りました。",
+      "大きなイベントの前にはメガポでテストし、ブランドのXアカウントで口コミを広げました。",
+      "オンラインの販売データをもとに日本の取引先と協力し、LOFTやドラッグストアなどオフラインへ広げました。"
+    ],
+    "result": "ジュライミーはリピーターが安定し、グラフェンはメガ割期間に通常の4〜5倍まで売れて伸び続けています。スタンダードソウルのバリアジェルクリームは大きな広告なしでレビューと販売が増えています。具体的な売上額は公開されていません。",
+    "timeline": [
+      {
+        "when": "以前",
+        "what": "東南アジアで海外販売を先に拡大"
+      },
+      {
+        "when": "日本進出",
+        "what": "複数のプラットフォームを比較し、Qoo10 Japanを日本の主力チャネルに"
+      },
+      {
+        "when": "運営中",
+        "what": "名前・用途表現・セット構成を調整、ジュライミーをリブランディング"
+      },
+      {
+        "when": "その後",
+        "what": "オンライン販売データでLOFT・ドラッグストアへ進出"
+      }
+    ]
+  },
+  "en": {
+    "client": "XATION (Julyme · Grafen · Standard Seoul)",
+    "industry": "Hair · skincare (three brands)",
+    "duration": "Running on Qoo10 Japan (published Aug 2026)",
+    "short": "XATION speaks Japanese shoppers' language",
+    "title": "XATION grows three brands by rewording them for Japanese shoppers",
+    "summary": "It adjusted names, use-case wording and bundles for Japan, then used online sales records to reach LOFT and drugstores.",
+    "challenge": "After growing overseas in Southeast Asia first, it made Japan its main market, but names and descriptions that worked in Korea did not convey use clearly to Japanese shoppers, and a growing list of scents made stock hard to manage.",
+    "approach": [
+      "Renamed a product sold as “hair essence” in Korea to “hair milk” in Japan so its purpose is clear at a glance.",
+      "Positioned Grafen, which started as a men's cosmetics line in Korea, as a scalp and hair-care brand, and tested “Korean shampoo” as a search term instead of the costly “hair-loss shampoo”.",
+      "Rebuilt Julyme around “express yourself through scent” after scent variants strained stock, and moved to hot-pink packaging.",
+      "Raised order value with sets and 1+1 offers and sent coupons to past buyers.",
+      "Tested with MegaPo before big events and fed word of mouth through a brand X account.",
+      "Used online sales data to work with Japanese partners and reach offline channels such as LOFT and drugstores."
+    ],
+    "result": "Julyme keeps a steady base of repeat buyers, Grafen sells four to five times its usual volume in Mega Wari periods and keeps growing, and Standard Seoul's barrier gel cream is gaining reviews and sales without heavy advertising. No sales figures were published.",
+    "timeline": [
+      {
+        "when": "Before",
+        "what": "Grew overseas sales in Southeast Asia first"
+      },
+      {
+        "when": "Japan entry",
+        "what": "Compared several platforms and chose Qoo10 Japan as the main channel"
+      },
+      {
+        "when": "Running",
+        "what": "Adjusted names, wording and bundles; rebranded Julyme"
+      },
+      {
+        "when": "Later",
+        "what": "Reached LOFT and drugstores using online sales data"
+      }
+    ]
+  }
+}

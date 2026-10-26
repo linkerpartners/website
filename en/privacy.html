@@ -1,0 +1,118 @@
+<!doctype html>
+<!-- 자동 생성 파일: src/privacy.html 을 고친 뒤 tools/build 에서 npm run build -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"><meta content="default-src 'self'; script-src 'self' 'sha256-3tgS6NiBvlG5EjYI79ZLCmHSYpXotSZYP50TuxQnFRA='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.frankfurter.dev; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="meta.privacy.title">Privacy policy | LINKERPARTNERS</title>
+    <meta name="description" content="LINKERPARTNERS privacy policy" data-i18n-attr="content:meta.privacy.description">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        // 이 창에서 처음이면 인트로, 사이트 안에서 넘어왔으면 전환 막. 동작 줄이기 설정이면 둘 다 생략
+        try {
+          var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (!sessionStorage.getItem("lp_intro_seen") && !still) d.classList.add("is-intro");
+          else if (sessionStorage.getItem("lp_nav") && !still) d.classList.add("is-arriving");
+          sessionStorage.removeItem("lp_nav");
+        } catch (e) {}
+        // 안전장치: 스크립트가 늦거나 실패해도 6초 뒤에는 첫 화면을 그대로 보여 줌
+        setTimeout(function () {
+          if (d.classList.contains("is-ready")) return;
+          d.classList.add("is-ready");
+          d.classList.remove("is-arriving");
+          document.querySelectorAll("[data-hero]").forEach(function (n) {
+            n.classList.add("is-inview");
+          });
+        }, 6000);
+      })();
+    </script>
+
+    <!-- 글꼴: 한국어 Pretendard / 일본어 Noto Serif JP / 영어 · 숫자 Newsreader Display ExtraLight(대문자). 모두 assets/fonts에 직접 두고 필요한 글자 조각만 불러옴 (tools/build/fonts.cjs) -->
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+
+    <!-- 공통 CSS (순서 중요) -->
+    <link rel="stylesheet" href="../assets/css/tokens.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/ambient.css">
+  <link href="https://linkerpartners.com/en/privacy.html" rel="canonical"><link href="https://linkerpartners.com/privacy.html" hreflang="ko" rel="alternate"><link href="https://linkerpartners.com/ja/privacy.html" hreflang="ja" rel="alternate"><link href="https://linkerpartners.com/en/privacy.html" hreflang="en" rel="alternate"><link href="https://linkerpartners.com/privacy.html" hreflang="x-default" rel="alternate"><meta content="website" property="og:type"><meta content="LINKERPARTNERS" property="og:site_name"><meta content="Privacy policy | LINKERPARTNERS" property="og:title"><meta content="LINKERPARTNERS privacy policy" property="og:description"><meta content="https://linkerpartners.com/en/privacy.html" property="og:url"><meta content="en_US" property="og:locale"><meta content="ko_KR" property="og:locale:alternate"><meta content="ja_JP" property="og:locale:alternate"><meta content="summary" name="twitter:card"></head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main" tabindex="-1">
+
+      <!-- 첫 화면: 가운데 정렬. 제목 → 한 줄 → 아래로 이어지는 금빛 세로선 -->
+      <section class="pg-hero container" aria-labelledby="page-title">
+        <h1 id="page-title" class="pg-title" data-reveal="lines" data-hero="" data-i18n="privacy.hero.title"><span style="--l: 0" class="line"><span>Privacy</span></span><span style="--l: 1" class="line"><span>policy</span></span></h1>
+        <p class="pg-lead" data-reveal="rise" data-hero="" style="--d: 450ms" data-i18n="privacy.hero.lead">We collect only what a consultation needs and delete it promptly once the purpose is served.</p>
+        <span class="pg-drop" data-reveal="drawy" data-hero="" style="--d: 900ms" aria-hidden="true"></span>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div class="legal" data-list="privacy.sections">
+            <template>
+              <section data-reveal="rise" data-keep="">
+                <h2 data-k="h"></h2>
+                <p data-k="p"></p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            </template>
+          
+              <section data-gen="" style="--i: 0" data-reveal="rise" data-keep="">
+                <h2 data-k="h">What we collect</h2>
+                <p data-k="p">When you request a call, we collect the following.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template><li data-gen="" data-k=".">Required: name, email, message</li><li data-gen="" data-k=".">Optional: company or brand, direction, services of interest</li></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 1" data-reveal="rise" data-keep="">
+                <h2 data-k="h">How we use it</h2>
+                <p data-k="p">We use your information only for the following.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template><li data-gen="" data-k=".">Confirming your request and replying</li><li data-gen="" data-k=".">Scheduling the call and sending a quote</li></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 2" data-reveal="rise" data-keep="">
+                <h2 data-k="h">How long we keep it</h2>
+                <p data-k="p">We keep it for one year after the consultation ends, then delete it. If a contract is signed, we keep it for the period set by law.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 3" data-reveal="rise" data-keep="">
+                <h2 data-k="h">Sharing with third parties</h2>
+                <p data-k="p">We do not share personal data outside the company without consent, except where the law requires it. If we need a partner expert's help, we ask for your consent first.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 4" data-reveal="rise" data-keep="">
+                <h2 data-k="h">Your rights and contact</h2>
+                <p data-k="p">You can ask at any time to see, correct or delete your personal data, or to stop its use. Please email us at the address below.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            </div>
+          <div class="legal">
+            <p class="fine"><a class="inline-link" data-config-href="email" data-config-text="email"></a> · <a class="inline-link" data-config-href="phone" data-config-text="phone"></a></p>
+            <p class="fine" data-i18n="privacy.effective">Effective date: to be confirmed</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- 공통 JS (순서 중요) -->
+    <script src="../assets/js/config.js" defer></script>
+    <script src="../assets/js/components.js" defer></script>
+    <script src="../assets/js/i18n.js" defer></script>
+    <script src="../assets/js/intro.js" defer></script>
+    <script src="../assets/js/ambient.js" defer></script>
+    <script src="../assets/js/motion.js" defer></script>
+    <script src="../assets/js/site.js" defer></script>
+    <script src="../assets/js/ticker.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>

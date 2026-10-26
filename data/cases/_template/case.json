@@ -1,0 +1,56 @@
+{
+  "id": "folder-name",
+  "example": false,
+  "route": "kr_jp",
+  "year": "2027",
+  "budget": 1000000,
+  "services": ["diagnostic", "channel"],
+  "cover": "cover.jpg",
+  "coverAlt": { "ko": "대표 사진 설명", "ja": "", "en": "" },
+  "coverCredit": "",
+  "images": [
+    { "src": "01.jpg", "caption": { "ko": "사진 설명", "ja": "", "en": "" }, "credit": "" }
+  ],
+  "metrics": [
+    { "value": "3", "label": { "ko": "숫자가 뜻하는 것", "ja": "", "en": "" } }
+  ],
+  "ko": {
+    "client": "고객 (공개 가능한 범위로)",
+    "industry": "업종",
+    "duration": "6주",
+    "short": "홈 사례 문단에 들어갈 짧은 이름",
+    "title": "사례 제목",
+    "summary": "카드와 상세 보기 첫머리에 들어갈 한두 문장",
+    "challenge": "과제",
+    "approach": ["한 일 1", "한 일 2"],
+    "result": "결과",
+    "timeline": [{ "when": "1–2주", "what": "한 일" }],
+    "deliverables": ["결과물 1", "결과물 2"]
+  },
+  "ja": {
+    "client": "",
+    "industry": "",
+    "duration": "",
+    "short": "",
+    "title": "",
+    "summary": "",
+    "challenge": "",
+    "approach": [],
+    "result": "",
+    "timeline": [],
+    "deliverables": []
+  },
+  "en": {
+    "client": "",
+    "industry": "",
+    "duration": "",
+    "short": "",
+    "title": "",
+    "summary": "",
+    "challenge": "",
+    "approach": [],
+    "result": "",
+    "timeline": [],
+    "deliverables": []
+  }
+}

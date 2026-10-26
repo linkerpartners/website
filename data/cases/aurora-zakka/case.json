@@ -1,0 +1,120 @@
+{
+  "id": "aurora-zakka",
+  "brand": "AURORA ZAKKA",
+  "example": true,
+  "route": "kr_jp",
+  "year": "2025",
+  "services": [
+    "sns",
+    "localization",
+    "channel"
+  ],
+  "metrics": [
+    {
+      "value": "32,000+",
+      "label": {
+        "ko": "2년 만의 팔로워 수(명)",
+        "ja": "2年でのフォロワー数(人)",
+        "en": "Followers after two years"
+      }
+    },
+    {
+      "value": "1⁠–⁠2",
+      "label": {
+        "ko": "집중해서 키운 대표 상품 수",
+        "ja": "集中して育てたヒーロー商品の数",
+        "en": "Hero products it focused on"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Qoo10大学 · AURORA ZAKKA — わずか2年でフォロワー32,000人超え!",
+      "url": "https://article-university.qoo10.jp/entry/case_aurora"
+    }
+  ],
+  "ko": {
+    "client": "AURORA ZAKKA (오로라 잡화)",
+    "industry": "셀렉트 숍 · 생활 잡화",
+    "duration": "큐텐재팬 운영 2년 (2025.8 공개)",
+    "short": "한국 셀렉트 숍의 큐텐재팬 2년",
+    "title": "AURORA ZAKKA, 대표 한 사람의 셀렉트 숍이 2년 만에 팔로워 3만 명을 모으다",
+    "summary": "경쟁이 적을 때 뜰 상품을 먼저 찾고, 대표 상품 한두 개에 힘을 모아 일본에서 팬을 만들었습니다.",
+    "challenge": "큰 브랜드의 이름 없이, 이전 회사에서 큐텐 숍을 열어 본 경험만 가지고 일본 소비자에게 처음부터 신뢰를 쌓아야 했습니다.",
+    "approach": [
+      "경쟁이 적을 때 앞으로 팔릴 상품을 먼저 찾아 판매를 시작했습니다.",
+      "‘히어로 상품’ 한두 개를 정해 집중했습니다.",
+      "상품 페이지의 정보를 자세히 쓰고, 이미지는 직접 만들었습니다.",
+      "검색은 많은데 입찰이 없는 키워드에 낮은 금액으로 광고를 걸었습니다.",
+      "메가포를 메가와리 전 테스트 기간으로 썼습니다.",
+      "다른 업체의 이미지 · 설명문을 무단으로 쓰지 않고 지식재산권을 지켰습니다."
+    ],
+    "result": "운영 2년 만에 팔로워가 32,000명을 넘었습니다. 대표는 한국 사람으로서 한국의 좋은 상품을 해외에 알리는 데 큰 자부심과 책임감을 느낀다고 밝혔습니다. 매출 숫자는 공개되지 않았습니다.",
+    "timeline": [
+      {
+        "when": "약 2년 전",
+        "what": "큐텐재팬에서 셀렉트 숍 시작"
+      },
+      {
+        "when": "2025.08",
+        "what": "팔로워 32,000명 돌파, 큐텐 사례로 공개"
+      }
+    ]
+  },
+  "ja": {
+    "client": "AURORA ZAKKA",
+    "industry": "セレクトショップ・雑貨",
+    "duration": "Qoo10運営2年(2025年8月公開)",
+    "short": "韓国セレクトショップのQoo10 2年",
+    "title": "AURORA ZAKKA、代表ひとりのセレクトショップが2年でフォロワー3万人に",
+    "summary": "競合が少ないうちに売れそうな商品を見つけ、ヒーロー商品1〜2点に集中して、日本でファンを増やしました。",
+    "challenge": "大きなブランド名はなく、以前の会社でQoo10ショップを立ち上げた経験だけを頼りに、日本のお客様の信頼をゼロから築く必要がありました。",
+    "approach": [
+      "競合が少ないうちに、これから売れそうな商品をいち早く見つけて販売を始めました。",
+      "ヒーロー商品を1〜2点に絞って集中しました。",
+      "商品ページの情報を詳しく書き、画像は自社で制作しました。",
+      "検索数が多いのに入札がないキーワードに、低い金額で広告を出しました。",
+      "メガポをメガ割前のテスト期間として使いました。",
+      "他社の画像や説明文を無断で使わず、知的財産権に配慮しました。"
+    ],
+    "result": "運営2年でフォロワーは32,000人を超えました。代表は、韓国人として韓国の良い商品を海外に広めることに大きな誇りと責任感を持っていると語っています。売上額は公開されていません。",
+    "timeline": [
+      {
+        "when": "約2年前",
+        "what": "Qoo10でセレクトショップを開始"
+      },
+      {
+        "when": "2025.08",
+        "what": "フォロワー32,000人を突破、Qoo10の事例として公開"
+      }
+    ]
+  },
+  "en": {
+    "client": "AURORA ZAKKA",
+    "industry": "Select shop · lifestyle goods",
+    "duration": "Two years on Qoo10 (published Aug 2025)",
+    "short": "A Korean select shop's two years on Qoo10",
+    "title": "AURORA ZAKKA: a one-owner select shop reaches 32,000 followers in two years",
+    "summary": "It found items before competition arrived and put its weight behind one or two hero products to build fans in Japan.",
+    "challenge": "With no big brand name and only the experience of having run a Qoo10 shop at a previous company, it had to build trust with Japanese shoppers from zero.",
+    "approach": [
+      "Found items likely to sell before competitors arrived and started selling early.",
+      "Picked one or two hero products and focused on them.",
+      "Wrote detailed product pages and made its own images.",
+      "Bid low on keywords with plenty of searches but no bidders.",
+      "Used MegaPo as a test period before Mega Wari.",
+      "Avoided copying other sellers' images or descriptions and respected intellectual property."
+    ],
+    "result": "Followers passed 32,000 within two years. The owner says they take great pride and responsibility, as a Korean, in spreading good Korean products abroad. Sales figures were not published.",
+    "timeline": [
+      {
+        "when": "About 2 yrs earlier",
+        "what": "Starts a select shop on Qoo10"
+      },
+      {
+        "when": "Aug 2025",
+        "what": "Passes 32,000 followers; featured as a Qoo10 case"
+      }
+    ]
+  }
+}

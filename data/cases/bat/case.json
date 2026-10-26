@@ -1,0 +1,146 @@
+{
+  "id": "bat",
+  "brand": "BAT",
+  "example": true,
+  "route": "kr_jp",
+  "year": "2025",
+  "services": [
+    "diagnostic",
+    "channel",
+    "localization"
+  ],
+  "metrics": [
+    {
+      "value": {
+        "ko": "4억+",
+        "ja": "4,700万円+",
+        "en": "₩400M+"
+      },
+      "label": {
+        "ko": "일본 오프라인 매출(원, 2025.8.18 기준)",
+        "ja": "日本のオフライン売上(円換算、2025年8月18日時点)",
+        "en": "Offline sales in Japan (KRW, as of 18 Aug 2025)"
+      }
+    },
+    {
+      "value": "50+",
+      "label": {
+        "ko": "대기 줄 최대 시간(분)",
+        "ja": "行列の最長待ち時間(分)",
+        "en": "Longest queue wait (minutes)"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "위키트리 · 매출 기록까지 갈아치웠다…일본서 난리 난 ‘한국 음식’ 정체",
+      "url": "https://www.wikitree.co.kr/articles/1075756"
+    },
+    {
+      "label": "헤럴드경제 · K-소비재 일본 공략 키워드 ‘팝업’",
+      "url": "https://www.heraldk.com/article/2026033114210641786"
+    }
+  ],
+  "ko": {
+    "client": "농업회사법인 밭",
+    "industry": "베이커리 · 감자빵",
+    "duration": "2024 – 2025",
+    "short": "BAT 감자빵의 일본 백화점 진출",
+    "title": "춘천 감자빵 ‘BAT’, 요코하마에서 이세탄 신주쿠까지",
+    "summary": "일본 법인을 먼저 세우고 팝업으로 반응을 본 뒤, 넉 달 만에 이세탄 신주쿠에서 줄을 세웠습니다.",
+    "challenge": "춘천에서 시작한 감자빵 브랜드가 일본 소비자에게 맛을 처음 보이고, 백화점 같은 큰 판매처에 들어가야 했습니다. 첫 판매처가 곧 시험대였습니다.",
+    "approach": [
+      "2024년에 일본 법인을 세워 준비했습니다.",
+      "2025년 4월 요코하마 매장 팝업으로 일본 첫 판매를 시작했습니다.",
+      "약 넉 달 뒤 도쿄 이세탄 신주쿠점 팝업으로 넓혔습니다.",
+      "감자 모양은 그대로 두고, 쫀득한 식감과 감자 샐러드 같은 짭짤한 속으로 ‘간식 · 아침 식사’로 받아들여지게 했습니다."
+    ],
+    "result": "KOTRA는 이세탄 신주쿠 팝업이 베이커리 단일 상품 기준 10년 만의 최고 매출이라고 밝혔고, 대기 줄은 최대 50분 넘게 이어졌습니다. 2025년 8월 18일 기준 일본 오프라인 매출은 4억 원을 넘었고, 11월에는 이세탄 나고야 매장을 계획했습니다.",
+    "timeline": [
+      {
+        "when": "2024",
+        "what": "일본 법인 설립"
+      },
+      {
+        "when": "2025.04",
+        "what": "요코하마 매장 팝업으로 일본 첫 판매"
+      },
+      {
+        "when": "2025.08",
+        "what": "이세탄 신주쿠 팝업, 베이커리 단일 상품 10년 만의 최고 매출"
+      },
+      {
+        "when": "2025.11",
+        "what": "이세탄 나고야 매장 계획 (당시 보도)"
+      }
+    ]
+  },
+  "ja": {
+    "client": "農業会社法人 パッ(밭)",
+    "industry": "ベーカリー・じゃがいもパン",
+    "duration": "2024 – 2025",
+    "short": "BATのじゃがいもパン、日本の百貨店へ",
+    "title": "春川のじゃがいもパン「BAT」、横浜から伊勢丹新宿へ",
+    "summary": "先に日本法人を設立し、ポップアップで反応を見たうえで、4か月後には伊勢丹新宿に行列をつくりました。",
+    "challenge": "春川で生まれたじゃがいもパンのブランドが、日本のお客様に初めて味を知ってもらい、百貨店のような大きな売り場に入る必要がありました。最初の売り場がそのまま試金石でした。",
+    "approach": [
+      "2024年に日本法人を設立して準備しました。",
+      "2025年4月、横浜の店舗ポップアップで日本での初販売を始めました。",
+      "約4か月後、東京・伊勢丹新宿店のポップアップへ広げました。",
+      "じゃがいもの形はそのままに、もちっとした食感とポテトサラダのような塩気のある具で「おやつ・朝食」として受け入れられるようにしました。"
+    ],
+    "result": "KOTRAは、伊勢丹新宿のポップアップがベーカリー単品として10年ぶりの最高売上になったと発表し、行列は最大50分以上に及びました。2025年8月18日時点の日本でのオフライン売上は約4,700万円(4億ウォン)を超え、11月には伊勢丹名古屋店を計画していました。",
+    "timeline": [
+      {
+        "when": "2024",
+        "what": "日本法人を設立"
+      },
+      {
+        "when": "2025.04",
+        "what": "横浜の店舗ポップアップで日本初販売"
+      },
+      {
+        "when": "2025.08",
+        "what": "伊勢丹新宿ポップアップ、ベーカリー単品として10年ぶりの最高売上"
+      },
+      {
+        "when": "2025.11",
+        "what": "伊勢丹名古屋店を計画(当時の報道)"
+      }
+    ]
+  },
+  "en": {
+    "client": "Bat (agricultural corporation)",
+    "industry": "Bakery · potato bread",
+    "duration": "2024 – 2025",
+    "short": "BAT's potato bread in Japanese department stores",
+    "title": "Chuncheon's BAT potato bread: from Yokohama to Isetan Shinjuku",
+    "summary": "It set up a Japanese entity first, tested demand with pop-ups, and four months later had queues at Isetan Shinjuku.",
+    "challenge": "A potato-bread brand from Chuncheon had to introduce its taste to Japanese shoppers and get into large venues such as department stores. The first venue was also the first test.",
+    "approach": [
+      "Set up a Japanese subsidiary in 2024 to prepare.",
+      "Started selling in Japan with a pop-up at a Yokohama store in April 2025.",
+      "About four months later, widened to a pop-up at Isetan Shinjuku in Tokyo.",
+      "Kept the potato shape, with a chewy texture and a savoury, potato-salad-like filling that fits a snack or a breakfast."
+    ],
+    "result": "KOTRA reported that the Isetan Shinjuku pop-up was the best single-item bakery result in ten years, with queues of 50 minutes or more. Offline sales in Japan passed KRW 400 million as of 18 August 2025, and an Isetan Nagoya store was planned for November.",
+    "timeline": [
+      {
+        "when": "2024",
+        "what": "Japanese subsidiary set up"
+      },
+      {
+        "when": "2025.04",
+        "what": "First sales in Japan at a Yokohama pop-up"
+      },
+      {
+        "when": "2025.08",
+        "what": "Isetan Shinjuku pop-up: best single-item bakery sales in ten years"
+      },
+      {
+        "when": "2025.11",
+        "what": "Isetan Nagoya store planned (as reported then)"
+      }
+    ]
+  }
+}

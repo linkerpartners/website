@@ -1,0 +1,144 @@
+{
+  "id": "beiskin",
+  "brand": "beiskin",
+  "example": true,
+  "route": "kr_jp",
+  "year": "2025",
+  "services": [
+    "logo",
+    "localization",
+    "channel"
+  ],
+  "metrics": [
+    {
+      "value": {
+        "ko": "¥4M",
+        "ja": "400万円",
+        "en": "¥4M"
+      },
+      "label": {
+        "ko": "메가데뷔 론칭 첫날 매출(약 400만 엔)",
+        "ja": "メガデビュー初日の売上(約400万円)",
+        "en": "Launch-day sales in Mega Debut (about ¥4M)"
+      }
+    },
+    {
+      "value": "5⁠–⁠6×",
+      "label": {
+        "ko": "투입 예산 대비 첫날 매출",
+        "ja": "投下予算に対する初日売上",
+        "en": "Launch-day sales vs. budget spent"
+      }
+    },
+    {
+      "value": "6",
+      "label": {
+        "ko": "메가데뷔에서 순위에 든 대표 상품 수",
+        "ja": "メガデビューでランクインした主力商品数",
+        "en": "Products ranked in Mega Debut"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Qoo10大学 · beiskin — 本質に向き合う誠実さが支える、インディブランドの日本市場攻略法",
+      "url": "https://article-university.qoo10.jp/entry/case_beiskin"
+    }
+  ],
+  "ko": {
+    "client": "beiskin (베이스킨)",
+    "industry": "클린 뷰티 · 스킨케어",
+    "duration": "큐텐재팬 (2025.9 공개)",
+    "short": "beiskin의 큐텐 메가데뷔",
+    "title": "beiskin, 인디 브랜드가 큐텐 신규 브랜드 프로그램으로 첫날 400만 엔을 팔다",
+    "summary": "화려한 썸네일 대신 덜어낸 디자인과 실제 체험 후기로, 일본에서는 큐텐 하나에만 집중했습니다.",
+    "challenge": "큰 광고 예산 없는 인디 브랜드가 순위 페이지의 화려한 경쟁 속에서 눈에 띄고, 일본 고객의 신뢰를 먼저 얻어야 했습니다.",
+    "approach": [
+      "큐텐의 신규 브랜드 프로그램 ‘메가데뷔’로 진출하고, 일본에서는 큐텐에만 집중해 운영했습니다.",
+      "사용 뒤 변화를 느끼기 쉬운 콜라겐 마스크, 차가버섯 오일 같은 집중 케어 제품 중심으로 구성했습니다.",
+      "순위 페이지의 화려한 썸네일과 반대로, 요소를 덜어낸 미니멀한 디자인을 썼습니다.",
+      "상세 페이지 맨 위에 시연 영상과 체험 후기를 두고, 샘플 마켓으로 미리 후기를 모았습니다.",
+      "20~30대에는 슬로 에이징 · 저자극 미백, 40대 이상에는 노화 개선 임상시험 · 집중 케어를 내세웠습니다.",
+      "이벤트 기간이 아닐 때도 쿠폰과 타임 세일을 이어 갔습니다."
+    ],
+    "result": "메가데뷔 론칭 첫날 매출은 약 400만 엔으로, 투입 예산의 5~6배였습니다. 대표 상품 6종이 순위에 올랐고 한국 공식 몰의 재구매율은 평균 60~70%입니다. 임원은 화려한 광고보다 진심 어린 입소문, 단기 성과보다 재구매로 이어지는 제품력이 중요하다고 말합니다.",
+    "timeline": [
+      {
+        "when": "론칭",
+        "what": "메가데뷔로 일본 진출, 첫날 약 400만 엔"
+      },
+      {
+        "when": "이후",
+        "what": "대표 상품 6종 순위권, 이벤트 외에도 쿠폰 · 타임 세일 유지"
+      },
+      {
+        "when": "2025.09",
+        "what": "큐텐 사례로 공개"
+      }
+    ]
+  },
+  "ja": {
+    "client": "beiskin(ベースキン)",
+    "industry": "クリーンビューティー・スキンケア",
+    "duration": "Qoo10(2025年9月公開)",
+    "short": "beiskinのQoo10メガデビュー",
+    "title": "beiskin、インディブランドがQoo10の新ブランド枠で初日400万円を売る",
+    "summary": "華やかなサムネイルではなく、削ぎ落としたデザインと実際の体験レビューで、日本ではQoo10に集中しました。",
+    "challenge": "大きな広告予算のないインディブランドが、ランキングページの華やかな競合の中で目立ち、日本の顧客の信頼を先に得る必要がありました。",
+    "approach": [
+      "Qoo10の新ブランド育成プログラム「メガデビュー」で参入し、日本ではQoo10に絞って運営しました。",
+      "使用後の変化を感じやすいコラーゲンマスクやチャーガオイルなど、集中ケア製品を中心にしました。",
+      "ランキングページの華やかなサムネイルとは逆に、要素を削ぎ落としたミニマルなデザインを採用しました。",
+      "商品ページの冒頭に実演動画と体験レビューを置き、サンプルマーケットで事前にレビューを集めました。",
+      "20〜30代にはスローエイジングや低刺激の美白、40代以上には老化改善の臨床試験や集中ケアを訴求しました。",
+      "イベント期間外もクーポンやタイムセールを続けました。"
+    ],
+    "result": "メガデビューのローンチ初日売上は約400万円で、投下予算の5〜6倍でした。主力6商品がランクインし、韓国公式サイトのリピート率は平均60〜70%です。取締役は、派手な広告より心からの口コミ、短期的な成果よりリピートにつながる製品力が大切だと語っています。",
+    "timeline": [
+      {
+        "when": "ローンチ",
+        "what": "メガデビューで日本参入、初日約400万円"
+      },
+      {
+        "when": "その後",
+        "what": "主力6商品がランクイン、イベント外もクーポン・タイムセールを継続"
+      },
+      {
+        "when": "2025.09",
+        "what": "Qoo10の事例として公開"
+      }
+    ]
+  },
+  "en": {
+    "client": "beiskin",
+    "industry": "Clean beauty · skincare",
+    "duration": "Qoo10 (published Sep 2025)",
+    "short": "beiskin's Mega Debut on Qoo10",
+    "title": "beiskin: an indie brand sells ¥4 million on day one through Qoo10's new-brand programme",
+    "summary": "Instead of flashy thumbnails, a stripped-back design and real trial reviews, with Qoo10 as its only channel in Japan.",
+    "challenge": "An indie brand without a big ad budget had to stand out among flashy rivals on the ranking page and win Japanese shoppers' trust first.",
+    "approach": [
+      "Entered through Qoo10's new-brand programme Mega Debut and ran Japan on Qoo10 alone.",
+      "Built the range around intensive-care items where change is easy to feel, such as collagen masks and chaga oil.",
+      "Used a minimal, stripped-back design, the opposite of the flashy thumbnails common on ranking pages.",
+      "Put demo video and trial reviews at the top of product pages and gathered reviews beforehand through a sample market.",
+      "Pitched slow ageing and gentle brightening to people in their 20s–30s, clinical-trial anti-ageing and intensive care to those 40+.",
+      "Kept running coupons and time sales outside event periods."
+    ],
+    "result": "Launch-day sales in Mega Debut were about ¥4 million, 5⁠–⁠6 times the budget spent, and six main products ranked. Repeat rates on its Korean site average 60⁠–⁠70%. A director says sincere word of mouth and repeat-worthy products matter more than flashy ads and short-term results.",
+    "timeline": [
+      {
+        "when": "Launch",
+        "what": "Enters Japan via Mega Debut; about ¥4M on day one"
+      },
+      {
+        "when": "After",
+        "what": "Six main products rank; coupons and time sales continue outside events"
+      },
+      {
+        "when": "Sep 2025",
+        "what": "Featured as a Qoo10 case"
+      }
+    ]
+  }
+}

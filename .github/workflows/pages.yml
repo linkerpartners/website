@@ -1,0 +1,53 @@
+﻿# master(또는 main)에 push하면 사이트를 GitHub Pages로 배포합니다. 저장소가 공개(Public)이거나 유료 플랜이어야 Pages를 쓸 수 있습니다.
+# 사이트에 필요한 파일만 _site로 모아 올립니다(src · docs · tools · 내부 문서는 제외).
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build pages (ko / ja / en, sitemap, robots)
+        working-directory: tools/build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Collect site files
+        run: |
+          mkdir _site
+          cp -r assets data i18n ja en _site/
+          cp index.html about.html services.html pricing.html cases.html insights.html contact.html privacy.html 404.html _site/
+          cp sitemap.xml robots.txt CNAME _site/
+          touch _site/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

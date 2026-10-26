@@ -1,0 +1,48 @@
+{
+  "note": "build-logo.cjs가 계산한 값. 단위: LINKER 글자 크기 100 기준",
+  "linkerCapHeight": 70,
+  "clearSpace": 35,
+  "master": {
+    "width": 399,
+    "height": 123.605,
+    "partnersTrackingEm": 1.83
+  },
+  "report": [
+    {
+      "file": "master(100)",
+      "F": 100,
+      "ratio": 0.23,
+      "partnersPx": 23,
+      "partnersTrackingEm": 1.83,
+      "leftDiff": 0,
+      "rightDiff": 0,
+      "capTopGap": 0.34,
+      "width": 399,
+      "height": 123.605
+    },
+    {
+      "file": "header-mobile(19)",
+      "F": 19,
+      "ratio": 0.421,
+      "partnersPx": 8,
+      "partnersTrackingEm": 0.705,
+      "leftDiff": 0,
+      "rightDiff": 0,
+      "capTopGap": 0.34,
+      "width": 75.81,
+      "height": 26.153
+    },
+    {
+      "file": "header-pc(22)",
+      "F": 22,
+      "ratio": 0.364,
+      "partnersPx": 8,
+      "partnersTrackingEm": 0.919,
+      "leftDiff": 0,
+      "rightDiff": 0,
+      "capTopGap": 0.34,
+      "width": 87.78,
+      "height": 29.354
+    }
+  ]
+}

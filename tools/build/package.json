@@ -1,0 +1,14 @@
+{
+  "name": "linkerpartners-build",
+  "private": true,
+  "description": "언어별 정적 페이지(/ja/, /en/) · sitemap · robots를 만드는 도구",
+  "scripts": {
+    "build": "node build.cjs"
+  },
+  "dependencies": {
+    "linkedom": "0.18.5"
+  },
+  "devDependencies": {
+    "axe-core": "^4.10.2"
+  }
+}

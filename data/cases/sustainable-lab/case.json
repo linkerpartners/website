@@ -1,0 +1,94 @@
+{
+  "id": "sustainable-lab",
+  "brand": "Sustainable Lab",
+  "example": true,
+  "route": "kr_jp",
+  "year": "2026",
+  "services": [
+    "logo",
+    "localization",
+    "sns"
+  ],
+  "metrics": [
+    {
+      "value": "32.6%",
+      "label": {
+        "ko": "2025년 일본 수입 화장품 중 한국산 점유율",
+        "ja": "2025年の日本輸入化粧品に占める韓国産シェア",
+        "en": "Korea's share of Japan's cosmetics imports, 2025"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "프라임경제 · 업사이클 K-뷰티 스타트업, 일본 시장 진출",
+      "url": "https://www.newsprime.co.kr/news/article/?no=726753"
+    }
+  ],
+  "ko": {
+    "client": "서스테이너블랩 (브랜드 Idden)",
+    "industry": "스타트업 · 업사이클 뷰티",
+    "duration": "2026.03",
+    "short": "Sustainable Lab의 아오모리 팝업",
+    "title": "Sustainable Lab, 아오모리 사과 부산물로 일본 지역 팝업을 열다",
+    "summary": "일본 지역 거점과 협업해, 사과 산지의 이야기를 제품에 담아 현지에서 먼저 선보였습니다.",
+    "challenge": "일본은 한국 화장품이 4년 연속 수입 1위일 만큼 경쟁이 치열한데, 작은 브랜드가 눈에 띌 이유가 필요했습니다.",
+    "approach": [
+      "일본 아오모리현 히로사키의 거점과 협업해 장기 팝업을 열었습니다.",
+      "아오모리 사과 부산물을 쓴 HB02 라인을 내세워 사과 산지라는 지역성을 이야기로 만들었습니다.",
+      "세정과 향 중심의 얼스바 · 프래그런스 제품을 현장에서 소개했습니다.",
+      "원료 이야기, 감각적 경험, 자원순환 가치를 함께 전하는 ‘뷰티 리추얼’로 풀었습니다."
+    ],
+    "result": "2026년 3월 31일까지 이어지는 장기 팝업으로 운영 중이며, 매출 등 성과 수치는 공개되지 않았습니다. 대표는 지역성과 업사이클 뷰티의 결합으로 새로운 시장의 언어를 만들 수 있다고 말합니다.",
+    "timeline": [
+      {
+        "when": "2026.03",
+        "what": "히로사키에서 장기 팝업 운영 (3월 31일까지)"
+      }
+    ]
+  },
+  "ja": {
+    "client": "サステナブルラボ(ブランド Idden)",
+    "industry": "スタートアップ・アップサイクルビューティー",
+    "duration": "2026.03",
+    "short": "Sustainable Labの青森ポップアップ",
+    "title": "Sustainable Lab、青森のりんご副産物で日本の地域ポップアップを開催",
+    "summary": "日本の地域拠点と協力し、りんごの産地の物語を製品に込めて、現地でまず紹介しました。",
+    "challenge": "日本では韓国コスメが4年連続で輸入1位になるほど競争が激しく、小さなブランドには目立つ理由が必要でした。",
+    "approach": [
+      "青森県弘前市の拠点と協力して長期ポップアップを開きました。",
+      "青森のりんごの副産物を使ったHB02ラインを前面に出し、りんごの産地という地域性を物語にしました。",
+      "洗浄と香りを中心にしたアースバーやフレグランス製品を会場で紹介しました。",
+      "原料の物語、感覚的な体験、資源循環の価値をあわせて伝える「ビューティーリチュアル」として表現しました。"
+    ],
+    "result": "2026年3月31日まで続く長期ポップアップとして運営中で、売上などの成果の数値は公開されていません。代表は、地域性とアップサイクルビューティーの組み合わせで、新しい市場の言葉をつくれると語っています。",
+    "timeline": [
+      {
+        "when": "2026.03",
+        "what": "弘前で長期ポップアップを運営(3月31日まで)"
+      }
+    ]
+  },
+  "en": {
+    "client": "Sustainable Lab (brand Idden)",
+    "industry": "Startup · upcycled beauty",
+    "duration": "Mar 2026",
+    "short": "Sustainable Lab's Aomori pop-up",
+    "title": "Sustainable Lab opens a regional pop-up in Japan with Aomori apple by-products",
+    "summary": "Working with a local base in Japan, it put the story of an apple-growing region into its products and showed them there first.",
+    "challenge": "Competition in Japan is fierce, with Korean cosmetics first in imports for four years running, so a small brand needed a reason to stand out.",
+    "approach": [
+      "Partnered with a base in Hirosaki, Aomori Prefecture, for a long-running pop-up.",
+      "Led with the HB02 line made from Aomori apple by-products, turning the region's apple heritage into a story.",
+      "Introduced cleansing and fragrance products, such as an earth bar, on site.",
+      "Framed it as a “beauty ritual” that tells the ingredient story, the sensory experience and the value of resource circulation together."
+    ],
+    "result": "The pop-up runs through 31 March 2026, and no sales or other results have been published. The founder says combining regional character with upcycled beauty can create a new market language.",
+    "timeline": [
+      {
+        "when": "Mar 2026",
+        "what": "Long-running pop-up in Hirosaki (until 31 March)"
+      }
+    ]
+  }
+}

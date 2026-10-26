@@ -1,0 +1,124 @@
+{
+  "id": "needer",
+  "brand": "Needer × Timee",
+  "example": true,
+  "route": "jp_kr",
+  "year": "2025",
+  "services": [
+    "advisory",
+    "diagnostic"
+  ],
+  "metrics": [
+    {
+      "value": {
+        "ko": "80억",
+        "ja": "9.4億円",
+        "en": "₩8B"
+      },
+      "label": {
+        "ko": "니더 브릿지 투자 규모(원, 2025.8)",
+        "ja": "ニーダーのブリッジ投資規模(円換算、2025年8月)",
+        "en": "Needer's bridge round (KRW, Aug 2025)"
+      }
+    },
+    {
+      "value": "1st",
+      "label": {
+        "ko": "타이미의 첫 해외 기업 출자",
+        "ja": "タイミー初の海外企業への出資",
+        "en": "Timee's first overseas investment"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "플래텀 · 급구 운영사 니더, 일본 1위 단기알바 플랫폼 타이미로부터 투자 유치",
+      "url": "https://platum.kr/archives/267256"
+    },
+    {
+      "label": "ZDNet Korea · 급구 운영사 니더, 브릿지 80억원 투자 유치",
+      "url": "https://zdnet.co.kr/view/?no=20250827232344"
+    }
+  ],
+  "ko": {
+    "client": "타이미 (Timee) × 니더 (급구)",
+    "industry": "스타트업 · 스팟워크 플랫폼",
+    "duration": "2025.07 – 2025.08",
+    "short": "Timee의 한국 스팟워크 시장 진출",
+    "title": "일본 스팟워크 1위 Timee, 한국 스타트업 Needer에 투자해 한국에 들어오다",
+    "summary": "직접 법인을 세우는 대신 한국 스타트업과 제휴하고 투자하는 방식으로 먼저 한국 시장을 열었습니다.",
+    "challenge": "일본에서 인력 부족을 풀며 성장한 모델을 한국에 들여오되, 한국의 노동 · 일자리 환경과 거래처를 처음부터 알아야 했습니다.",
+    "approach": [
+      "2017년 설립해 2024년 상장한 타이미가 창립 이래 처음으로 해외 기업에 출자했습니다.",
+      "단기 일자리 매칭 서비스 ‘급구’를 운영하는 니더와 업무 제휴를 맺었습니다.",
+      "한국의 합계출산율 0.75명(2024)과 생산가능인구 감소를 진출 배경으로 내세웠습니다.",
+      "부업을 원하는 사람과 고령층 등 아직 일하지 않은 노동력이 한국에도 많다고 봤습니다.",
+      "니더는 쿠팡, 이케아 코리아, BGF리테일 등과 물류 · 유통 · 외식 분야에서 실시간 단기 인력 매칭을 이어 갑니다."
+    ],
+    "result": "2025년 7월 일본 기업의 한국 단기 일자리 중개 기업 투자 첫 사례로 발표됐고, 8월 니더가 타이미 등이 참여한 브릿지 투자 80억 원을 받았습니다. 두 회사는 한국에 스팟워크 방식을 퍼뜨리는 것을 목표로 합니다. 이후 성과 수치는 공개되지 않았습니다.",
+    "timeline": [
+      {
+        "when": "2025.07",
+        "what": "타이미, 니더에 전략 투자 · 업무 제휴 발표"
+      },
+      {
+        "when": "2025.08",
+        "what": "니더, 타이미 등이 참여한 브릿지 투자 80억 원"
+      }
+    ]
+  },
+  "ja": {
+    "client": "タイミー × ニーダー(急求)",
+    "industry": "スタートアップ・スポットワーク",
+    "duration": "2025.07 – 2025.08",
+    "short": "Timeeの韓国スポットワーク市場進出",
+    "title": "スポットワーク国内最大手Timee、韓国スタートアップのNeederに出資して韓国へ",
+    "summary": "自社で法人を設立する代わりに、韓国のスタートアップと提携・出資する形で先に韓国市場を開きました。",
+    "challenge": "日本で人手不足の解消を通じて成長したモデルを韓国に持ち込むため、韓国の雇用環境と取引先を一から理解する必要がありました。",
+    "approach": [
+      "2017年設立、2024年上場のタイミーが、創業以来初めて海外企業に出資しました。",
+      "短期の仕事マッチング「急求」を運営するニーダーと業務提携しました。",
+      "韓国の合計特殊出生率0.75(2024年)と生産年齢人口の減少を進出の背景に挙げました。",
+      "副業を希望する人や高齢層など、まだ働いていない労働力が韓国にも多いと見ました。",
+      "ニーダーはクーパン、イケア・コリア、BGFリテールなどと、物流・流通・外食分野でリアルタイムの短期人材マッチングを続けています。"
+    ],
+    "result": "2025年7月、日本企業による韓国の短期求人仲介企業への初の出資として発表され、8月にはニーダーがタイミーなどが参加した約9.4億円(80億ウォン)のブリッジ投資を受けました。両社は韓国にスポットワークの仕組みを広げることを目指しています。その後の成果の数値は公開されていません。",
+    "timeline": [
+      {
+        "when": "2025.07",
+        "what": "タイミーがニーダーへの戦略出資・業務提携を発表"
+      },
+      {
+        "when": "2025.08",
+        "what": "ニーダーがタイミーなど参加のブリッジ投資約9.4億円を調達"
+      }
+    ]
+  },
+  "en": {
+    "client": "Timee × Needer (Geubgu)",
+    "industry": "Startup · spot-work platform",
+    "duration": "Jul – Aug 2025",
+    "short": "Timee's entry into Korea's spot-work market",
+    "title": "Japan's spot-work leader Timee enters Korea by investing in startup Needer",
+    "summary": "Instead of founding its own entity, it opened the Korean market first by partnering with and investing in a Korean startup.",
+    "challenge": "To bring a model that grew by easing labour shortages in Japan to Korea, it first needed to understand Korea's work environment and clients.",
+    "approach": [
+      "Timee, founded in 2017 and listed in 2024, made its first-ever investment in an overseas company.",
+      "Partnered with Needer, which runs the short-term job-matching service Geubgu.",
+      "Pointed to Korea's 2024 fertility rate of 0.75 and a shrinking working-age population as the background.",
+      "Saw untapped labour in Korea too, such as people wanting side jobs and older adults.",
+      "Needer keeps matching short-term staff in real time for Coupang, IKEA Korea, BGF Retail and others in logistics, retail and food service."
+    ],
+    "result": "Announced in July 2025 as the first investment by a Japanese company in a Korean short-term job-matching firm; in August Needer raised a KRW 8 billion bridge round with Timee among the participants. The two aim to spread the spot-work model in Korea. No later results have been published.",
+    "timeline": [
+      {
+        "when": "Jul 2025",
+        "what": "Timee announces strategic investment and partnership with Needer"
+      },
+      {
+        "when": "Aug 2025",
+        "what": "Needer raises KRW 8 billion bridge round including Timee"
+      }
+    ]
+  }
+}

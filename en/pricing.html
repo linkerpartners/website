@@ -1,0 +1,452 @@
+<!doctype html>
+<!-- 자동 생성 파일: src/pricing.html 을 고친 뒤 tools/build 에서 npm run build -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"><meta content="default-src 'self'; script-src 'self' 'sha256-3tgS6NiBvlG5EjYI79ZLCmHSYpXotSZYP50TuxQnFRA='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.frankfurter.dev; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="meta.pricing.title">Pricing | LINKERPARTNERS</title>
+    <meta name="description" content="Every fee is public. Pick what you need in the estimator and see your estimate straight away." data-i18n-attr="content:meta.pricing.description">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        // 이 창에서 처음이면 인트로, 사이트 안에서 넘어왔으면 전환 막. 동작 줄이기 설정이면 둘 다 생략
+        try {
+          var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (!sessionStorage.getItem("lp_intro_seen") && !still) d.classList.add("is-intro");
+          else if (sessionStorage.getItem("lp_nav") && !still) d.classList.add("is-arriving");
+          sessionStorage.removeItem("lp_nav");
+        } catch (e) {}
+        // 안전장치: 스크립트가 늦거나 실패해도 6초 뒤에는 첫 화면을 그대로 보여 줌
+        setTimeout(function () {
+          if (d.classList.contains("is-ready")) return;
+          d.classList.add("is-ready");
+          d.classList.remove("is-arriving");
+          document.querySelectorAll("[data-hero]").forEach(function (n) {
+            n.classList.add("is-inview");
+          });
+        }, 6000);
+      })();
+    </script>
+
+    <!-- 글꼴: 한국어 Pretendard / 일본어 Noto Serif JP / 영어 · 숫자 Newsreader Display ExtraLight(대문자). 모두 assets/fonts에 직접 두고 필요한 글자 조각만 불러옴 (tools/build/fonts.cjs) -->
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+
+    <!-- 공통 CSS (순서 중요) -->
+    <link rel="stylesheet" href="../assets/css/tokens.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/ambient.css">
+  <link href="https://linkerpartners.com/en/pricing.html" rel="canonical"><link href="https://linkerpartners.com/pricing.html" hreflang="ko" rel="alternate"><link href="https://linkerpartners.com/ja/pricing.html" hreflang="ja" rel="alternate"><link href="https://linkerpartners.com/en/pricing.html" hreflang="en" rel="alternate"><link href="https://linkerpartners.com/pricing.html" hreflang="x-default" rel="alternate"><meta content="website" property="og:type"><meta content="LINKERPARTNERS" property="og:site_name"><meta content="Pricing | LINKERPARTNERS" property="og:title"><meta content="Every fee is public. Pick what you need in the estimator and see your estimate straight away." property="og:description"><meta content="https://linkerpartners.com/en/pricing.html" property="og:url"><meta content="en_US" property="og:locale"><meta content="ko_KR" property="og:locale:alternate"><meta content="ja_JP" property="og:locale:alternate"><meta content="summary" name="twitter:card"></head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main" tabindex="-1">
+
+      <!-- 첫 화면: 가운데 정렬. 제목 → 한 줄 → 아래로 이어지는 금빛 세로선 -->
+      <section class="pg-hero container" aria-labelledby="page-title">
+        <h1 id="page-title" class="pg-title" data-reveal="lines" data-hero="" data-i18n="pricing.hero.title"><span style="--l: 0" class="line"><span>Don't wait for a quote.</span></span><span style="--l: 1" class="line"><span>Calculate it yourself.</span></span></h1>
+        <p class="pg-lead" data-reveal="rise" data-hero="" style="--d: 450ms" data-i18n="pricing.hero.lead">From a ₩50K session to builds under ₩1M, every fee is public. Pick what you need, choose levels and quantities, and your estimate with VAT appears at once.</p>
+        <span class="pg-drop" data-reveal="drawy" data-hero="" style="--d: 900ms" aria-hidden="true"></span>
+      </section>
+
+      <!-- 견적 계산기: 고르면 바로 계산 (pricing.js) -->
+      <section class="section section--tight" id="estimator-section" aria-labelledby="est-title">
+        <div class="container">
+          <h2 id="est-title" class="sr-only" data-i18n="pricing.estimator.title"><span class="line">Pick what you need</span><span class="line">and get a quote</span></h2>
+          <form class="est estimator is-empty" id="estimator" novalidate>
+            <div class="est-options" data-reveal="left">
+              <p class="est-legend" data-i18n="pricing.estimator.legend">Choose an item to set its level and quantity</p>
+              <div data-est-items=""></div>
+              <label class="est-switch">
+                <input type="checkbox" name="rush">
+                <span><span class="est-name" data-i18n="pricing.estimator.rush">Rush</span><small data-i18n="pricing.estimator.rush_desc">Shortens the timeline by about a quarter. Adds 20% to the subtotal.</small></span>
+              </label>
+            </div>
+
+            <div class="est-result glass glass--lit" data-reveal="right" style="--d: 150ms" aria-live="polite">
+              <p class="est-result-label" data-i18n="pricing.estimator.result_title">Estimated cost · incl. VAT</p>
+              <p class="est-total" data-est="total">—</p>
+              <ul class="est-lines" data-est="lines"></ul>
+              <dl class="est-sums">
+                <div><dt data-i18n="pricing.estimator.subtotal">Subtotal</dt><dd data-est="subtotal">—</dd></div>
+                <div data-est="rush-row" hidden><dt data-i18n="pricing.estimator.rush">Rush</dt><dd data-est="rush"></dd></div>
+                <div><dt data-i18n="pricing.estimator.vat_line">VAT 10%</dt><dd data-est="vat">—</dd></div>
+              </dl>
+              <dl class="defs">
+                <div><dt data-i18n="pricing.estimator.duration">Timeline</dt><dd data-est="weeks">—</dd></div>
+              </dl>
+              <p class="est-pack" data-est="package-row" hidden><span data-est="package"></span></p>
+              <p class="est-hint" data-i18n="pricing.estimator.hint">Outside experts are not included. You get an exact quote after we talk.</p>
+              <div class="est-actions">
+                <a class="btn btn--primary" href="contact.html" data-est="cta"><span class="roll"><span data-i18n="pricing.estimator.cta">Talk about this estimate</span></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                <button class="text-link" type="button" data-est="copy"><span data-i18n="pricing.estimator.copy">Copy estimate</span></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- 패키지 세 가지 -->
+      <section class="section" aria-labelledby="plans-title">
+        <div class="container">
+          <div class="pg-head"><h2 id="plans-title" class="pg-h2" data-reveal="lines" data-i18n="pricing.plans.title"><span style="--l: 0" class="line"><span>Three bundles</span></span><span style="--l: 1" class="line"><span>most people choose</span></span></h2></div>
+          <div class="plans-scroll" data-reveal="zoom">
+            <table class="plans">
+              <thead>
+                <tr>
+                  <th scope="col"><span class="sr-only" data-i18n="pricing.plans.head">What is included</span></th>
+                  <th scope="col">
+                    <span class="plan-name" data-i18n="pricing.plans.names.check">Check</span>
+                    <span class="plan-for" data-i18n="pricing.plans.for.check">To see if it can work</span>
+                    <span class="plan-price" data-price="packages.check" data-price-mode="plain"></span>
+                  </th>
+                  <th scope="col" class="is-pick">
+                    <span class="plan-pick" data-i18n="pricing.plans.pick">Most popular</span>
+                    <span class="plan-name" data-i18n="pricing.plans.names.brand">Brand</span>
+                    <span class="plan-for" data-i18n="pricing.plans.for.brand">To build and polish your brand</span>
+                    <span class="plan-price" data-price="packages.brand" data-price-mode="plain"></span>
+                  </th>
+                  <th scope="col">
+                    <span class="plan-name" data-i18n="pricing.plans.names.launch">Launch</span>
+                    <span class="plan-for" data-i18n="pricing.plans.for.launch">To get ready to sell in one go</span>
+                    <span class="plan-price" data-price="packages.launch" data-price-mode="plain"></span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody data-list="pricing.plans.rows">
+                <template>
+                  <tr>
+                    <th scope="row" data-k="k"></th>
+                    <td data-k="v.0"></td>
+                    <td data-k="v.1"></td>
+                    <td data-k="v.2"></td>
+                  </tr>
+                </template>
+              
+                  <tr data-gen="">
+                    <th scope="row" data-k="k">Timeline</th>
+                    <td data-k="v.0">1⁠–⁠2 weeks</td>
+                    <td data-k="v.1">2⁠–⁠3 weeks</td>
+                    <td data-k="v.2">4⁠–⁠6 weeks</td>
+                  </tr>
+                
+                  <tr data-gen="">
+                    <th scope="row" data-k="k">1:1 focus session</th>
+                    <td data-k="v.0">Included</td>
+                    <td data-k="v.1">Included</td>
+                    <td data-k="v.2">—</td>
+                  </tr>
+                
+                  <tr data-gen="">
+                    <th scope="row" data-k="k">Market-fit report</th>
+                    <td data-k="v.0">Basic</td>
+                    <td data-k="v.1">—</td>
+                    <td data-k="v.2">—</td>
+                  </tr>
+                
+                  <tr data-gen="">
+                    <th scope="row" data-k="k">Logo and brand design</th>
+                    <td data-k="v.0">—</td>
+                    <td data-k="v.1">Basic</td>
+                    <td data-k="v.2">Basic</td>
+                  </tr>
+                
+                  <tr data-gen="">
+                    <th scope="row" data-k="k">Website building</th>
+                    <td data-k="v.0">—</td>
+                    <td data-k="v.1">—</td>
+                    <td data-k="v.2">Basic</td>
+                  </tr>
+                
+                  <tr data-gen="">
+                    <th scope="row" data-k="k">Social media and ads support</th>
+                    <td data-k="v.0">—</td>
+                    <td data-k="v.1">—</td>
+                    <td data-k="v.2">Basic</td>
+                  </tr>
+                
+                  <tr data-gen="">
+                    <th scope="row" data-k="k">Brand localization and product pages</th>
+                    <td data-k="v.0">—</td>
+                    <td data-k="v.1">2 pieces</td>
+                    <td data-k="v.2">2 pieces</td>
+                  </tr>
+                </tbody>
+              <tfoot>
+                <tr>
+                  <td></td>
+                  <td><a class="text-link" href="contact.html?services=spot,diagnostic"><span data-i18n="pricing.plans.cta">Talk to us</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a></td>
+                  <td><a class="text-link" href="contact.html?services=spot,logo,localization"><span data-i18n="pricing.plans.cta">Talk to us</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a></td>
+                  <td><a class="text-link" href="contact.html?services=logo,web,sns,localization"><span data-i18n="pricing.plans.cta">Talk to us</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 항목별 요금표 -->
+      <section class="section" aria-labelledby="menu-title">
+        <div class="container">
+          <div class="pg-head"><h2 id="menu-title" class="pg-h2" data-reveal="lines" data-i18n="pricing.menu_section.title"><span style="--l: 0" class="line"><span>Fees</span></span><span style="--l: 1" class="line"><span>by item</span></span></h2></div>
+          <div class="pg-narrow">
+            <div data-list="pricing.menu">
+              <template>
+                <div class="pm-group" data-reveal="wipe">
+                  <h3 data-k="group"></h3>
+                  <ul class="rows" data-k-list="items">
+                    <template>
+                      <li class="pm-row">
+                        <span class="pm-name"><strong data-k="name"></strong><small data-k="desc"></small></span>
+                        <span class="pm-price" data-k="text"></span>
+                        <span class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </template>
+                  </ul>
+                </div>
+              </template>
+            
+                <div data-gen="" style="--i: 0" class="pm-group" data-reveal="wipe">
+                  <h3 data-k="group">Sessions</h3>
+                  <ul class="rows" data-k-list="items">
+                    <template>
+                      <li class="pm-row">
+                        <span class="pm-name"><strong data-k="name"></strong><small data-k="desc"></small></span>
+                        <span class="pm-price" data-k="text"></span>
+                        <span class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </template>
+                  
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">First call</strong><small data-k="desc">30 minutes, video</small></span>
+                        <span class="pm-price" data-k="text">Free</span>
+                        <span class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">1:1 focus session</strong><small data-k="desc">60 minutes · summary note</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.spot" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </ul>
+                </div>
+              
+                <div data-gen="" style="--i: 1" class="pm-group" data-reveal="wipe">
+                  <h3 data-k="group">Review and design</h3>
+                  <ul class="rows" data-k-list="items">
+                    <template>
+                      <li class="pm-row">
+                        <span class="pm-name"><strong data-k="name"></strong><small data-k="desc"></small></span>
+                        <span class="pm-price" data-k="text"></span>
+                        <span class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </template>
+                  
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">Market-fit report · Basic</strong><small data-k="desc">Market and competitor research report</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.diagnostic.basic" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">Market-fit report · Deep</strong><small data-k="desc">Price comparison, rules checklist and follow-up call</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.diagnostic.deep" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">Logo and brand design · Basic</strong><small data-k="desc">Three drafts, final files for one</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.logo.basic" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">Logo and brand design · Deep</strong><small data-k="desc">Brand guide, social profile and card images</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.logo.deep" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </ul>
+                </div>
+              
+                <div data-gen="" style="--i: 2" class="pm-group" data-reveal="wipe">
+                  <h3 data-k="group">Build</h3>
+                  <ul class="rows" data-k-list="items">
+                    <template>
+                      <li class="pm-row">
+                        <span class="pm-name"><strong data-k="name"></strong><small data-k="desc"></small></span>
+                        <span class="pm-price" data-k="text"></span>
+                        <span class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </template>
+                  
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">Website building · Basic</strong><small data-k="desc">One-page site</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.web.basic" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">Website building · Deep</strong><small data-k="desc">Up to five pages, contact form, two languages</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.web.deep" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">Booking system setup · Basic</strong><small data-k="desc">Existing booking service set up, notices written</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.booking.basic" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">Booking system setup · Deep</strong><small data-k="desc">Branded booking page, confirmation emails, alerts</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.booking.deep" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">Brand localization and product pages</strong><small data-k="desc">One piece</small></span>
+                        
+                        <span data-price-mode="unit" data-price="items.localization" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </ul>
+                </div>
+              
+                <div data-gen="" style="--i: 3" class="pm-group" data-reveal="wipe">
+                  <h3 data-k="group">Sell and run</h3>
+                  <ul class="rows" data-k-list="items">
+                    <template>
+                      <li class="pm-row">
+                        <span class="pm-name"><strong data-k="name"></strong><small data-k="desc"></small></span>
+                        <span class="pm-price" data-k="text"></span>
+                        <span class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </template>
+                  
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">Social media and ads support · Basic</strong><small data-k="desc">Account review and ad-setup guide</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.sns.basic" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">Social media and ads support · Deep</strong><small data-k="desc">Four-week calendar, 12 captions, results check</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.sns.deep" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">Store-launch guide · Basic</strong><small data-k="desc">Channel comparison and checklist</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.channel.basic" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">Store-launch guide · Deep</strong><small data-k="desc">Includes review of two product pages</small></span>
+                        
+                        <span data-price-mode="plain" data-price="items.channel.deep" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </ul>
+                </div>
+              
+                <div data-gen="" style="--i: 4" class="pm-group" data-reveal="wipe">
+                  <h3 data-k="group">Mentoring</h3>
+                  <ul class="rows" data-k-list="items">
+                    <template>
+                      <li class="pm-row">
+                        <span class="pm-name"><strong data-k="name"></strong><small data-k="desc"></small></span>
+                        <span class="pm-price" data-k="text"></span>
+                        <span class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </template>
+                  
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">Monthly mentoring · Light</strong><small data-k="desc">One 30-minute call a month, with notes</small></span>
+                        
+                        <span data-price-mode="monthly" data-price="items.advisory.light" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    
+                      <li data-gen="" class="pm-row">
+                        <span class="pm-name"><strong data-k="name">Monthly mentoring · Standard</strong><small data-k="desc">Two calls a month, chat answers and one small fix</small></span>
+                        
+                        <span data-price-mode="monthly" data-price="items.advisory.standard" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            <p class="fine" data-i18n="pricing.note">VAT not included. Ad spend, running costs such as domains and servers, and outside experts such as translation reviewers, tax advisers and customs brokers are quoted separately. Yen amounts are for reference (₩1 = ¥0.118).</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="container">
+          <span class="closing-rule" data-reveal="draw" aria-hidden="true"></span>
+          <div class="closing-body">
+            <div class="closing-lead">
+              <div>
+                <h2 id="closing-title" class="sr-only" data-i18n="closing.title">Contact us</h2>
+                <p class="closing-desc" data-reveal="rise" style="--d: 150ms" data-i18n="closing.desc">Your first 30-minute call is free</p>
+              </div>
+              <p class="closing-clock" data-reveal="fade" style="--d: 250ms"><span class="live-dot" aria-hidden="true"></span><span data-closing-status=""></span><span class="closing-time num" data-closing-time=""></span><span data-i18n="closing.info.clock">Seoul · Tokyo time</span></p>
+            </div>
+            <form class="quick-form" id="quick-form" novalidate data-reveal="rise" style="--d: 200ms">
+              <div class="quick-grid">
+                <div class="field">
+                  <label class="field-label" for="q-name"><span data-i18n="contact.form.name">Name</span><span class="req" data-i18n="contact.form.required">Required</span></label>
+                  <input class="input" id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="q-name-hint">
+                  <p class="field-hint" id="q-name-hint" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label class="field-label" for="q-email"><span data-i18n="contact.form.email">Email</span><span class="req" data-i18n="contact.form.required">Required</span></label>
+                  <input class="input" id="q-email" name="email" type="email" autocomplete="email" required aria-describedby="q-email-hint">
+                  <p class="field-hint" id="q-email-hint" aria-live="polite"></p>
+                </div>
+                <div class="field span-2">
+                  <label class="field-label" for="q-service" data-i18n="contact.form.services">Services of interest</label>
+                  <select class="input" id="q-service" name="service" data-list="services.items">
+                    <option value="" data-i18n="closing.form.pick">Choose a service (optional)</option>
+                    <template><option data-k-attr="value:id" data-k="title"></option></template>
+                  <option data-gen="" value="spot" data-k-attr="value:id" data-k="title">1:1 focus session</option><option data-gen="" value="diagnostic" data-k-attr="value:id" data-k="title">Market-fit report</option><option data-gen="" value="logo" data-k-attr="value:id" data-k="title">Logo and brand design</option><option data-gen="" value="web" data-k-attr="value:id" data-k="title">Website building</option><option data-gen="" value="booking" data-k-attr="value:id" data-k="title">Booking system setup</option><option data-gen="" value="sns" data-k-attr="value:id" data-k="title">Social media and ads support</option><option data-gen="" value="localization" data-k-attr="value:id" data-k="title">Brand localization and product pages</option><option data-gen="" value="channel" data-k-attr="value:id" data-k="title">Store-launch guide</option><option data-gen="" value="advisory" data-k-attr="value:id" data-k="title">Monthly mentoring</option></select>
+                </div>
+                <div class="field span-2">
+                  <label class="field-label" for="q-message"><span data-i18n="contact.form.message">Message</span><span class="req" data-i18n="contact.form.required">Required</span></label>
+                  <textarea placeholder="The market you want to sell in, your product or service, and what is on your mind." class="input" id="q-message" name="message" rows="4" required aria-describedby="q-message-hint" data-i18n-attr="placeholder:contact.form.message_placeholder"></textarea>
+                  <p class="field-hint" id="q-message-hint" aria-live="polite"></p>
+                </div>
+                <div class="field span-2">
+                  <label class="consent">
+                    <input type="checkbox" name="consent" required aria-describedby="q-consent-hint">
+                    <span><span data-i18n="contact.form.consent">I agree to the collection and use of my personal data.</span> <a class="inline-link" href="privacy.html" data-i18n="contact.form.consent_link">Details</a></span>
+                  </label>
+                  <p class="field-hint" id="q-consent-hint" aria-live="polite"></p>
+                </div>
+              </div>
+              <div class="quick-submit">
+                <button class="btn btn--primary" type="submit"><span class="roll"><span data-i18n="contact.form.submit">Send request</span></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></button>
+                <p class="form-note" data-i18n="contact.form.note">Sending opens your email app with everything filled in.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- 공통 JS (순서 중요) -->
+    <script src="../assets/js/config.js" defer></script>
+    <script src="../assets/js/components.js" defer></script>
+    <script src="../assets/js/i18n.js" defer></script>
+    <script src="../assets/js/intro.js" defer></script>
+    <script src="../assets/js/ambient.js" defer></script>
+    <script src="../assets/js/motion.js" defer></script>
+    <script src="../assets/js/pricing.js" defer></script>
+    <script src="../assets/js/site.js" defer></script>
+    <script src="../assets/js/ticker.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>

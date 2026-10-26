@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /design-system.html
+
+Sitemap: https://linkerpartners.com/sitemap.xml

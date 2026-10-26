@@ -1,0 +1,255 @@
+<!doctype html>
+<!-- 자동 생성 파일: src/insights.html 을 고친 뒤 tools/build 에서 npm run build -->
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8"><meta content="default-src 'self'; script-src 'self' 'sha256-3tgS6NiBvlG5EjYI79ZLCmHSYpXotSZYP50TuxQnFRA='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.frankfurter.dev; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="meta.insights.title">インサイト | LINKERPARTNERS</title>
+    <meta name="description" content="日本と韓国のお客様に販売するときに知っておきたいことを、短くまとめたノート。" data-i18n-attr="content:meta.insights.description">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        // 이 창에서 처음이면 인트로, 사이트 안에서 넘어왔으면 전환 막. 동작 줄이기 설정이면 둘 다 생략
+        try {
+          var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (!sessionStorage.getItem("lp_intro_seen") && !still) d.classList.add("is-intro");
+          else if (sessionStorage.getItem("lp_nav") && !still) d.classList.add("is-arriving");
+          sessionStorage.removeItem("lp_nav");
+        } catch (e) {}
+        // 안전장치: 스크립트가 늦거나 실패해도 6초 뒤에는 첫 화면을 그대로 보여 줌
+        setTimeout(function () {
+          if (d.classList.contains("is-ready")) return;
+          d.classList.add("is-ready");
+          d.classList.remove("is-arriving");
+          document.querySelectorAll("[data-hero]").forEach(function (n) {
+            n.classList.add("is-inview");
+          });
+        }, 6000);
+      })();
+    </script>
+
+    <!-- 글꼴: 한국어 Pretendard / 일본어 Noto Serif JP / 영어 · 숫자 Newsreader Display ExtraLight(대문자). 모두 assets/fonts에 직접 두고 필요한 글자 조각만 불러옴 (tools/build/fonts.cjs) -->
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+
+    <!-- 공통 CSS (순서 중요) -->
+    <link rel="stylesheet" href="../assets/css/tokens.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/ambient.css">
+  <link href="https://linkerpartners.com/ja/insights.html" rel="canonical"><link href="https://linkerpartners.com/insights.html" hreflang="ko" rel="alternate"><link href="https://linkerpartners.com/ja/insights.html" hreflang="ja" rel="alternate"><link href="https://linkerpartners.com/en/insights.html" hreflang="en" rel="alternate"><link href="https://linkerpartners.com/insights.html" hreflang="x-default" rel="alternate"><meta content="website" property="og:type"><meta content="LINKERPARTNERS" property="og:site_name"><meta content="インサイト | LINKERPARTNERS" property="og:title"><meta content="日本と韓国のお客様に販売するときに知っておきたいことを、短くまとめたノート。" property="og:description"><meta content="https://linkerpartners.com/ja/insights.html" property="og:url"><meta content="ja_JP" property="og:locale"><meta content="ko_KR" property="og:locale:alternate"><meta content="en_US" property="og:locale:alternate"><meta content="summary" name="twitter:card"></head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main" tabindex="-1">
+
+      <!-- 첫 화면: 가운데 정렬. 제목 → 한 줄 → 아래로 이어지는 금빛 세로선 -->
+      <section class="pg-hero container" aria-labelledby="page-title">
+        <h1 id="page-title" class="pg-title" data-reveal="lines" data-hero="" data-i18n="insights.hero.title"><span style="--l: 0" class="line"><span>二つの市場を読む</span></span><span style="--l: 1" class="line"><span>短いノート</span></span></h1>
+        <p class="pg-lead" data-reveal="rise" data-hero="" style="--d: 450ms" data-i18n="insights.hero.lead">日本と韓国のお客様に販売するときに知っておきたいことを、短くまとめます。毎月、新しい記事を掲載します。</p>
+        <span class="pg-drop" data-reveal="drawy" data-hero="" style="--d: 900ms" aria-hidden="true"></span>
+      </section>
+
+      <!-- 이번 글: 왼쪽에 제목과 한 줄 요약, 오른쪽에 본문 -->
+      <section class="section section--tight" aria-labelledby="feature-title">
+        <div class="container">
+          <div class="pg-feature">
+            <p class="feature-meta" data-reveal="drop">
+              <span class="num" data-i18n="insights.featured.date">2026.10.24</span>
+              <span data-i18n="insights.featured.category">進出戦略</span>
+              <span data-i18n="insights.featured.read">5分</span>
+            </p>
+            <h2 id="feature-title" class="feature-title" data-reveal="lines" data-i18n="insights.featured.title"><span style="--l: 0" class="line"><span>日本に進出した小さなブランドが、最初にやった五つのこと</span></span></h2>
+            <p class="feature-quote" data-reveal="wipe" style="--d: 200ms" data-i18n="insights.featured.quote">大きな予算なしで始めたブランドに共通するのは、翻訳ではなく、日本のお客様が信頼できる根拠から用意したことです。</p>
+          </div>
+          <article class="pg-narrow article-body" data-list="insights.featured.body">
+            <template>
+              <section data-reveal="rise" data-keep="">
+                <h3 data-k="h"></h3>
+                <div data-k-list="p"><template><p data-k="."></p></template></div>
+              </section>
+            </template>
+          
+              <section data-gen="" style="--i: 0" data-reveal="rise" data-keep="">
+                <h3 data-k="h">日本語のページを、ゼロから書き直した</h3>
+                <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">Qoo10で成果を出した韓国ブランドの多くが、最初にやったのは、商品ページを日本のお客様の基準で組み直すことでした。ある下着ブランドは、情報量の多い画像を好む日本のお客様の傾向に合わせてサムネイルと説明を変えたところ、流入が大きく増えたと話しています。</p><p data-gen="" data-k=".">商品名も同じです。あるダイエット食品ブランドは、韓国風の商品名を、日本の似た商品の名づけ方に合わせて短く変えました。なじみのない名前を説明するより、なじみのある言葉に変えるほうが早かったのです。</p></div>
+              </section>
+            
+              <section data-gen="" style="--i: 1" data-reveal="rise" data-keep="">
+                <h3 data-k="h">レビューとサンプルで、信頼を先につくった</h3>
+                <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">広告予算が大きくないブランドほど、レビューと体験が大切でした。あるスキンケアブランドは、商品ページの最上部に実演動画と体験レビューを置き、サンプル配布の場を使って事前にレビューを集めました。日本ではサンプルを試す文化が根づいていないと見て、購入者にサンプルを同梱し、セット購入につなげたブランドもあります。</p><p data-gen="" data-k=".">フォロワーの多くないインフルエンサーの自発的な投稿が、売上を動かした例もありました。数よりも、商品との相性が大切だったそうです。</p></div>
+              </section>
+            
+              <section data-gen="" style="--i: 2" data-reveal="rise" data-keep="">
+                <h3 data-k="h">主力商品を一つか二つに絞った</h3>
+                <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">ひとりで運営するあるセレクトショップは、売れそうな商品を先に見つけ、主力商品を一つか二つに絞りました。そうして2年でフォロワーが3万人を超えています。小さなブランドにとっては、商品を増やす前に一つを確実に知ってもらうほうが安全でした。</p><p data-gen="" data-k=".">最初から大きな販売先を狙わなかった例も多くあります。日本法人をつくったあと、小さなポップアップで反応を見たベーカリーブランドは、その反応を根拠に百貨店のポップアップへと広げました。</p></div>
+              </section>
+            
+              <section data-gen="" style="--i: 3" data-reveal="rise" data-keep="">
+                <h3 data-k="h">では、何から始めればよいでしょうか</h3>
+                <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">いまの販売ページが翻訳ツールで作った文章なら、まずそこを直しましょう。次に、信頼できるレビューか体験を一つ用意します。ロゴ、ホームページ、予約、SNSと広告は、そのあとに一つずつ進めても遅くありません。リンカーパートナーズでは、この順番を約6,000円の相談からご一緒に整理します。</p></div>
+              </section>
+            </article>
+        </div>
+      </section>
+
+      <!-- 모든 글 -->
+      <section class="section" aria-labelledby="list-title">
+        <div class="container">
+          <div class="pg-head">
+            <h2 id="list-title" class="pg-h2" data-reveal="lines" data-i18n="insights.list.title"><span style="--l: 0" class="line"><span>すべての記事</span></span></h2>
+            <div aria-label="テーマで絞り込む" class="filter-bar" role="group" data-filter-for="post-list" data-i18n-attr="aria-label:insights.filters.label" data-reveal="rise">
+              <button type="button" data-filter="all" aria-pressed="true" data-i18n="insights.filters.all">すべて</button>
+              <button type="button" data-filter="culture" aria-pressed="false" data-i18n="insights.filters.culture">消費者文化</button>
+              <button type="button" data-filter="strategy" aria-pressed="false" data-i18n="insights.filters.strategy">進出準備</button>
+              <button type="button" data-filter="market" aria-pressed="false" data-i18n="insights.filters.market">チャネル・販売</button>
+              <button type="button" data-filter="regulation" aria-pressed="false" data-i18n="insights.filters.regulation">規制・表示</button>
+            </div>
+          </div>
+          <ul class="rows" id="post-list" data-stagger="" data-list="insights.posts">
+            <template>
+              <li class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
+                <span class="post-date num" data-k="date"></span>
+                <span class="post-cat" data-k="category"></span>
+                <div>
+                  <h3 data-k="title"></h3>
+                  <p data-k="summary"></p>
+                </div>
+                <span class="post-read" data-k="read"></span>
+              </li>
+            </template>
+          
+              <li data-gen="" style="--i: 0" data-tags="strategy" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
+                <span class="post-date num" data-k="date">2026.10.24</span>
+                <span class="post-cat" data-k="category">進出戦略</span>
+                <div>
+                  <h3 data-k="title">日本に進出した小さなブランドが、最初にやった五つのこと</h3>
+                  <p data-k="summary">翻訳ではなく、日本のお客様が信頼できる根拠から用意したブランドの共通点。</p>
+                </div>
+                <span class="post-read" data-k="read">5分</span>
+              </li>
+            
+              <li data-gen="" style="--i: 1" data-tags="market" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
+                <span class="post-date num" data-k="date">2026.10.10</span>
+                <span class="post-cat" data-k="category">チャネル・販売</span>
+                <div>
+                  <h3 data-k="title">Qoo10に出店する前に整理しておきたい四つのこと</h3>
+                  <p data-k="summary">手数料、配送、入金サイクル、商品ページ。出品前に整理しておくと迷いません。</p>
+                </div>
+                <span class="post-read" data-k="read">5分</span>
+              </li>
+            
+              <li data-gen="" style="--i: 2" data-tags="market" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
+                <span class="post-date num" data-k="date">2026.09.26</span>
+                <span class="post-cat" data-k="category">チャネル・販売</span>
+                <div>
+                  <h3 data-k="title">翻訳ツールで作った商品ページが売れない理由</h3>
+                  <p data-k="summary">文は正しくても、情報の順番と言葉づかいが現地と違うと、お客様は離れてしまいます。</p>
+                </div>
+                <span class="post-read" data-k="read">4分</span>
+              </li>
+            
+              <li data-gen="" style="--i: 3" data-tags="culture" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
+                <span class="post-date num" data-k="date">2026.09.12</span>
+                <span class="post-cat" data-k="category">消費者文化</span>
+                <div>
+                  <h3 data-k="title">ロゴに日本語を入れる前に確認したいこと</h3>
+                  <p data-k="summary">発音と意味、色、文字の配置。小さな違いが印象を変えます。</p>
+                </div>
+                <span class="post-read" data-k="read">4分</span>
+              </li>
+            
+              <li data-gen="" style="--i: 4" data-tags="regulation" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
+                <span class="post-date num" data-k="date">2026.08.29</span>
+                <span class="post-cat" data-k="category">規制・表示</span>
+                <div>
+                  <h3 data-k="title">化粧品・食品の広告表現は、どこまで大丈夫?</h3>
+                  <p data-k="summary">効能をうたう表現の基準は国ごとに違います。公開する前に一度確認しましょう。</p>
+                </div>
+                <span class="post-read" data-k="read">6分</span>
+              </li>
+            
+              <li data-gen="" style="--i: 5" data-tags="market" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
+                <span class="post-date num" data-k="date">2026.08.15</span>
+                <span class="post-cat" data-k="category">チャネル・販売</span>
+                <div>
+                  <h3 data-k="title">韓国市場は速い:日本ブランドが小さく始める方法</h3>
+                  <p data-k="summary">オンラインで試して、すぐ直せるスケジュールから組んでみましょう。</p>
+                </div>
+                <span class="post-read" data-k="read">5分</span>
+              </li>
+            </ul>
+          <span class="sr-only" data-filter-count="post-list"></span>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="container">
+          <span class="closing-rule" data-reveal="draw" aria-hidden="true"></span>
+          <div class="closing-body">
+            <div class="closing-lead">
+              <div>
+                <h2 id="closing-title" class="sr-only" data-i18n="closing.title">お問い合わせ</h2>
+                <p class="closing-desc" data-reveal="rise" style="--d: 150ms" data-i18n="closing.desc">初回30分のご相談は無料です</p>
+              </div>
+              <p class="closing-clock" data-reveal="fade" style="--d: 250ms"><span class="live-dot" aria-hidden="true"></span><span data-closing-status=""></span><span class="closing-time num" data-closing-time=""></span><span data-i18n="closing.info.clock">ソウル・東京の現在時刻</span></p>
+            </div>
+            <form class="quick-form" id="quick-form" novalidate data-reveal="rise" style="--d: 200ms">
+              <div class="quick-grid">
+                <div class="field">
+                  <label class="field-label" for="q-name"><span data-i18n="contact.form.name">お名前</span><span class="req" data-i18n="contact.form.required">必須</span></label>
+                  <input class="input" id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="q-name-hint">
+                  <p class="field-hint" id="q-name-hint" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label class="field-label" for="q-email"><span data-i18n="contact.form.email">メールアドレス</span><span class="req" data-i18n="contact.form.required">必須</span></label>
+                  <input class="input" id="q-email" name="email" type="email" autocomplete="email" required aria-describedby="q-email-hint">
+                  <p class="field-hint" id="q-email-hint" aria-live="polite"></p>
+                </div>
+                <div class="field span-2">
+                  <label class="field-label" for="q-service" data-i18n="contact.form.services">関心のあるサービス</label>
+                  <select class="input" id="q-service" name="service" data-list="services.items">
+                    <option value="" data-i18n="closing.form.pick">ご関心のサービス(任意)</option>
+                    <template><option data-k-attr="value:id" data-k="title"></option></template>
+                  <option data-gen="" value="spot" data-k-attr="value:id" data-k="title">個別集中相談</option><option data-gen="" value="diagnostic" data-k-attr="value:id" data-k="title">進出診断レポート</option><option data-gen="" value="logo" data-k-attr="value:id" data-k="title">ロゴ・ブランドデザイン</option><option data-gen="" value="web" data-k-attr="value:id" data-k="title">ホームページ制作</option><option data-gen="" value="booking" data-k-attr="value:id" data-k="title">予約システム構築</option><option data-gen="" value="sns" data-k-attr="value:id" data-k="title">SNS・広告運用サポート</option><option data-gen="" value="localization" data-k-attr="value:id" data-k="title">ブランドのローカライズ・商品ページ</option><option data-gen="" value="channel" data-k-attr="value:id" data-k="title">出店準備ガイド</option><option data-gen="" value="advisory" data-k-attr="value:id" data-k="title">月次メンタリング</option></select>
+                </div>
+                <div class="field span-2">
+                  <label class="field-label" for="q-message"><span data-i18n="contact.form.message">ご相談内容</span><span class="req" data-i18n="contact.form.required">必須</span></label>
+                  <textarea placeholder="販売したい市場、商品やサービス、いまお悩みのことをお書きください。" class="input" id="q-message" name="message" rows="4" required aria-describedby="q-message-hint" data-i18n-attr="placeholder:contact.form.message_placeholder"></textarea>
+                  <p class="field-hint" id="q-message-hint" aria-live="polite"></p>
+                </div>
+                <div class="field span-2">
+                  <label class="consent">
+                    <input type="checkbox" name="consent" required aria-describedby="q-consent-hint">
+                    <span><span data-i18n="contact.form.consent">個人情報の収集・利用に同意します。</span> <a class="inline-link" href="privacy.html" data-i18n="contact.form.consent_link">詳しく</a></span>
+                  </label>
+                  <p class="field-hint" id="q-consent-hint" aria-live="polite"></p>
+                </div>
+              </div>
+              <div class="quick-submit">
+                <button class="btn btn--primary" type="submit"><span class="roll"><span data-i18n="contact.form.submit">相談を申し込む</span></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></button>
+                <p class="form-note" data-i18n="contact.form.note">送信を押すと、お使いのメールアプリが開き、入力した内容が入ります。</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- 공통 JS (순서 중요) -->
+    <script src="../assets/js/config.js" defer></script>
+    <script src="../assets/js/components.js" defer></script>
+    <script src="../assets/js/i18n.js" defer></script>
+    <script src="../assets/js/intro.js" defer></script>
+    <script src="../assets/js/ambient.js" defer></script>
+    <script src="../assets/js/motion.js" defer></script>
+    <script src="../assets/js/site.js" defer></script>
+    <script src="../assets/js/ticker.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>

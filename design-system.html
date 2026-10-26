@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LINKER 디자인 시스템</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <link rel="stylesheet" href="assets/css/ambient.css" />
+    <link rel="stylesheet" href="assets/css/design-system.css" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <!-- 문서 본문은 한국어로 고정 (헤더 언어 전환과 무관) -->
+    <main id="main" tabindex="-1" lang="ko">
+      <!-- 표지 -->
+      <section class="ds-cover">
+        <div class="container ds-cover-inner">
+          <p class="tag">Design System · V1</p>
+          <h1 class="ds-cover-title">LINKER V1</h1>
+          <p class="ds-cover-desc">
+            흰 바탕 위를 흐르는 가는 금빛 실과, 크고 가는 글자. 조용하고, 신뢰감 있고, 투명하게.
+            이 페이지는 실제 CSS · JS로 그려져, 토큰을 바꾸면 바로 반영됩니다.
+          </p>
+          <nav class="ds-toc" aria-label="목차">
+            <a href="#logo">로고</a>
+            <a href="#color">색</a>
+            <a href="#type">글자</a>
+            <a href="#space">간격 · 모서리 · 유리</a>
+            <a href="#components">부품</a>
+            <a href="#motion">움직임</a>
+            <a href="#mobile">모바일</a>
+            <a href="#rules">원칙</a>
+          </nav>
+        </div>
+      </section>
+
+      <!-- 0. 로고 -->
+      <section id="logo" class="section" aria-labelledby="logo-title">
+        <div class="container">
+          <p class="ds-rule">00 · 로고</p>
+          <div class="ds-head">
+            <h2 id="logo-title" class="title">폰트, 색, 색 배열.<br />그 세 가지만으로</h2>
+            <p class="lead">
+              LINKER / PARTNERS 2줄 워드마크. 도형·선·아이콘·장식 없이 Jost 두 굵기와 골드·웜그레이 두 색으로만 만듭니다. 로고는
+              항상 <code>assets/logo/</code>의 아웃라인 SVG를 그대로 씁니다.
+            </p>
+          </div>
+
+          <!-- 구조 도해: 로고 원본 좌표(LINKER 크기 100) 그대로 -->
+          <figure class="logo-construct">
+            <svg viewBox="-35 -107.7 590 193.605" role="img" aria-label="로고 구조: 양 끝 맞춤, 두 줄 간격, 클리어 스페이스">
+              <rect class="lc-clear" x="-35" y="-107.7" width="469" height="193.605" />
+              <rect class="lc-box" x="0" y="-72.7" width="399" height="123.605" />
+              <image href="assets/logo/linker-logo.svg" x="0" y="-72.7" width="399" height="123.605" />
+              <line class="lc-edge" x1="0" y1="-100" x2="0" y2="78" />
+              <line class="lc-edge" x1="399" y1="-100" x2="399" y2="78" />
+              <line class="lc-guide" x1="-30" y1="0" x2="429" y2="0" />
+              <line class="lc-guide" x1="-30" y1="34" x2="429" y2="34" />
+              <text class="lc-label" x="4" y="-98">L 잉크 왼쪽 = P 잉크 왼쪽</text>
+              <text class="lc-label" x="395" y="-98" text-anchor="end">R 잉크 오른쪽 = S 잉크 오른쪽</text>
+              <text class="lc-label" x="405" y="-3">LINKER 기준선</text>
+              <text class="lc-label" x="405" y="31">PARTNERS 대문자 윗선</text>
+              <text class="lc-label lc-strong" x="405" y="19">0.34 × LINKER 크기</text>
+              <text class="lc-label" x="-31" y="82">클리어 스페이스 = LINKER 대문자 높이의 50% (사방)</text>
+            </svg>
+          </figure>
+
+          <div class="ds-grid-2 logo-specs">
+            <div>
+              <h3 class="list-heading">글자</h3>
+              <ul class="logo-spec-list">
+                <li><b>서체</b><span>Jost (Google Fonts) · 커닝 끔</span></li>
+                <li><b>LINKER</b><span>Light 300 · 대문자 · 자간 0.22em</span></li>
+                <li><b>PARTNERS</b><span>Regular 400 · 대문자 · LINKER 크기의 23%</span></li>
+                <li><b>PARTNERS 자간</b><span>양 끝 맞춤으로 자동 계산 (기본 크기에서 1.83em)</span></li>
+                <li><b>두 줄 간격</b><span>LINKER 기준선 → PARTNERS 대문자 윗선 = 0.34 × LINKER 크기</span></li>
+                <li><b>클리어 스페이스</b><span>사방으로 LINKER 대문자 높이의 50% (= LINKER 크기의 0.35배)</span></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="list-heading">크기</h3>
+              <ul class="logo-spec-list">
+                <li><b>큰 사용</b><span>명함 · 첫 화면 · 소개 · 푸터: PARTNERS 23% 그대로</span></li>
+                <li><b>작은 사용</b><span>PARTNERS 비율 = max(23%, 8px ÷ LINKER 크기)</span></li>
+                <li><b>PC 헤더</b><span>LINKER 22px · PARTNERS 8px (36.4%) · 좌상단 왼쪽 정렬</span></li>
+                <li><b>모바일 헤더</b><span>LINKER 19px · PARTNERS 8px (42.1%)</span></li>
+                <li><b>18px 미만</b><span>파비콘 등: PARTNERS 없이 LINKER 한 줄</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="list-heading">색 버전</h3>
+          <div class="logo-variants">
+            <figure class="lv lv--light">
+              <img src="assets/logo/linker-logo.svg" alt="LINKERPARTNERS 로고, 밝은 바탕용" />
+              <figcaption><b>밝은 바탕 (기본)</b><span>LINKER #A8874E · PARTNERS #8E8A82</span><code>linker-logo.svg</code></figcaption>
+            </figure>
+            <figure class="lv lv--dark">
+              <img src="assets/logo/linker-logo-dark.svg" alt="LINKERPARTNERS 로고, 어두운 바탕용" />
+              <figcaption><b>어두운 바탕</b><span>LINKER #B8975E · PARTNERS #9C988F · 바탕 예시 #15171B</span><code>linker-logo-dark.svg</code></figcaption>
+            </figure>
+            <figure class="lv lv--light">
+              <img src="assets/logo/linker-logo-mono-ink.svg" alt="LINKERPARTNERS 로고, 단색 잉크" />
+              <figcaption><b>단색 · 잉크</b><span>전부 #2A2722</span><code>linker-logo-mono-ink.svg</code></figcaption>
+            </figure>
+            <figure class="lv lv--dark">
+              <img src="assets/logo/linker-logo-mono-white.svg" alt="LINKERPARTNERS 로고, 단색 흰색" />
+              <figcaption><b>단색 · 흰색</b><span>전부 #FFFFFF</span><code>linker-logo-mono-white.svg</code></figcaption>
+            </figure>
+            <figure class="lv lv--light lv--short">
+              <img src="assets/logo/linker-wordmark.svg" alt="LINKER 단독, 밝은 바탕용" />
+              <figcaption><b>LINKER 단독 · 밝은 바탕</b><span>18px 미만에서 사용</span><code>linker-wordmark.svg</code></figcaption>
+            </figure>
+            <figure class="lv lv--dark lv--short">
+              <img src="assets/logo/linker-wordmark-dark.svg" alt="LINKER 단독, 어두운 바탕용" />
+              <figcaption><b>LINKER 단독 · 어두운 바탕</b><span>18px 미만에서 사용</span><code>linker-wordmark-dark.svg</code></figcaption>
+            </figure>
+          </div>
+
+          <h3 class="list-heading">실제 크기</h3>
+          <div class="logo-sizes">
+            <figure>
+              <img src="assets/logo/linker-logo-header-pc.svg" width="88" height="29" alt="PC 헤더 로고" />
+              <figcaption>PC 헤더 · LINKER 22px</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/logo/linker-logo-header-mobile.svg" width="76" height="26" alt="모바일 헤더 로고" />
+              <figcaption>모바일 헤더 · LINKER 19px</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/logo/linker-wordmark.svg" style="width: 72px" alt="LINKER 단독 18px" />
+              <figcaption>LINKER 단독 · 18px</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/logo/favicon.svg" width="32" height="32" alt="파비콘" />
+              <figcaption>파비콘 · 32px</figcaption>
+            </figure>
+          </div>
+
+          <div class="ds-grid-2 logo-usage">
+            <div>
+              <h3 class="list-heading">올바른 사용</h3>
+              <div class="logo-dos">
+                <figure class="lu lu--ok" style="background: #ffffff">
+                  <img src="assets/logo/linker-logo.svg" alt="" />
+                  <figcaption>흰 바탕</figcaption>
+                </figure>
+                <figure class="lu lu--ok" style="background: #f3f2ef">
+                  <img src="assets/logo/linker-logo.svg" alt="" />
+                  <figcaption>옅은 단색 바탕</figcaption>
+                </figure>
+                <figure class="lu lu--ok" style="background: #15171b">
+                  <img src="assets/logo/linker-logo-dark.svg" alt="" />
+                  <figcaption>짙은 단색 바탕 + 어두운 바탕용</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div>
+              <h3 class="list-heading">잘못된 사용</h3>
+              <div class="logo-donts">
+                <figure class="lu lu--no">
+                  <img src="assets/logo/linker-logo.svg" alt="" style="transform: scale(1.3, 0.62)" />
+                  <figcaption>늘이기·누르기</figcaption>
+                </figure>
+                <figure class="lu lu--no">
+                  <img src="assets/logo/linker-logo.svg" alt="" style="transform: rotate(-8deg) skewX(-10deg)" />
+                  <figcaption>기울이기·회전</figcaption>
+                </figure>
+                <figure class="lu lu--no">
+                  <img src="assets/logo/linker-logo.svg" alt="" style="filter: hue-rotate(170deg) saturate(3)" />
+                  <figcaption>정해진 4색 외의 색</figcaption>
+                </figure>
+                <figure class="lu lu--no">
+                  <img src="assets/logo/linker-logo.svg" alt="" style="filter: drop-shadow(0 0 8px rgb(0 122 255 / 0.6)) drop-shadow(0 4px 6px rgb(0 0 0 / 0.3))" />
+                  <figcaption>그림자·빛 효과</figcaption>
+                </figure>
+                <figure class="lu lu--no lu--busy">
+                  <img src="assets/logo/linker-logo.svg" alt="" />
+                  <figcaption>복잡한 배경 위</figcaption>
+                </figure>
+                <figure class="lu lu--no">
+                  <p class="lu-fake" aria-hidden="true">LINKER<span>PARTNERS</span></p>
+                  <figcaption>다른 서체·임의 자간</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1. 색 -->
+      <section id="color" class="section" aria-labelledby="color-title">
+        <div class="container">
+          <p class="ds-rule">01 · 색</p>
+          <div class="ds-head">
+            <h2 id="color-title" class="title">흰 바탕, 차콜 잉크,<br />골드는 선과 버튼에만</h2>
+            <p class="lead">
+              화면은 무채색입니다. 바탕은 흰색, 글자는 갈색 기운 없는 차콜 #1D1F23과 그 투명도 단계, 그림자도 무채색.
+              로고 골드는 기본 버튼 · 금빛 선 · 점 · 배경 실에만 씁니다. 금빛 글자와 금빛 바탕은 화면을 누르스름하게 만들어 쓰지 않아요.
+              푸터만 따뜻한 종이색으로, 금빛 실과 사례 그래프 카드의 색에 어울리게 맞췄습니다.
+            </p>
+          </div>
+
+          <h3 class="list-heading">역할 색</h3>
+          <ul class="ds-swatches">
+            <li><span class="sw" style="background: var(--paper)"></span><b>paper</b><code>#FFFFFF</code><small>모든 바탕</small></li>
+            <li><span class="sw" style="background: var(--paper-warm)"></span><b>paper-warm</b><code>#F5EFE4</code><small>푸터 바탕만 (위에서 천천히 이어짐)</small></li>
+            <li><span class="sw" style="background: var(--ink)"></span><b>ink</b><code>#1D1F23</code><small>제목 · 본문 · 포커스 · 16.4:1</small></li>
+            <li><span class="sw" style="background: var(--ink-2)"></span><b>ink-2</b><code>#43464C</code><small>보조 본문 · 9.6:1</small></li>
+            <li><span class="sw" style="background: var(--ink-3)"></span><b>ink-3</b><code>#5F636A</code><small>라벨 · 캡션 · 6.0:1</small></li>
+            <li><span class="sw" style="background: var(--wash)"></span><b>wash</b><code>ink 5%</code><small>고른 칸 · 금액 면 · 그래프 카드 바탕</small></li>
+            <li><span class="sw" style="background: var(--accent)"></span><b>accent</b><code>#A8874E</code><small>금빛 선 · 점 (글자 금지 · 3.4:1)</small></li>
+            <li><span class="sw" style="background: var(--accent-strong)"></span><b>accent-strong</b><code>#8C6F3D</code><small>기본 버튼 · 흰 글자 4.7:1</small></li>
+            <li><span class="sw" style="background: var(--accent-strong-hover)"></span><b>accent-strong-hover</b><code>#735A30</code><small>버튼 호버 · 누름</small></li>
+            <li><span class="sw" style="background: var(--danger)"></span><b>danger</b><code>#A3322B</code><small>입력 오류 · 6.9:1</small></li>
+          </ul>
+
+          <h3 class="list-heading">로고의 원색 (로고 파일과 로고 예시에만)</h3>
+          <ul class="ds-swatches ds-swatches--source">
+            <li><span class="sw" style="background: var(--gold-100)"></span><b>gold</b><code>#A8874E</code><small>로고 LINKER</small></li>
+            <li><span class="sw" style="background: var(--base-warm-gray)"></span><b>warm-gray</b><code>#8E8A82</code><small>로고 PARTNERS</small></li>
+            <li><span class="sw" style="background: var(--base-ink)"></span><b>ink</b><code>#2A2722</code><small>로고 단색 잉크</small></li>
+            <li><span class="sw" style="background: var(--base-mist)"></span><b>mist</b><code>#F3F2EF</code><small>로고 규정의 옅은 바탕</small></li>
+          </ul>
+
+          <div class="ds-ramps">
+            <div>
+              <h3 class="list-heading">잉크 투명도 단계</h3>
+              <div class="ramp">
+                <span style="background: var(--ink-5)">5</span>
+                <span style="background: var(--ink-10)">10</span>
+                <span style="background: var(--ink-20)">20</span>
+                <span style="background: var(--ink-30)">30</span>
+                <span style="background: var(--ink-40)">40</span>
+                <span class="on-dark" style="background: var(--ink-60)">60</span>
+                <span class="on-dark" style="background: var(--ink-80)">80</span>
+                <span class="on-dark" style="background: var(--ink-100)">100</span>
+              </div>
+              <p class="ds-note">글자는 60 이상만. 10 · 20은 선, 5는 아주 옅은 면.</p>
+            </div>
+            <div>
+              <h3 class="list-heading">사례 그래프 카드 바탕</h3>
+              <div class="ramp ramp--light">
+                <span style="background: var(--paper)">bars · white</span>
+                <span style="background: var(--paper-warm)">ring · warm</span>
+                <span style="background: color-mix(in srgb, var(--ink-100) 5%, var(--paper))">steps · wash</span>
+              </div>
+              <p class="ds-note">그래프 카드는 종류마다 바탕이 달라 줄지어 놓여도 단조롭지 않습니다. 선은 금빛(<code>--accent</code>) · 옅은 잉크, 숫자는 Newsreader 200.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. 글자 -->
+      <section id="type" class="section" aria-labelledby="type-title">
+        <div class="container">
+          <p class="ds-rule">02 · 글자</p>
+          <div class="ds-head">
+            <h2 id="type-title" class="title">크게는 가늘게,<br />세 언어 같은 목소리</h2>
+            <p class="lead">
+              한국어는 Pretendard, 일본어는 Noto Serif JP(명조), 영어 · 숫자 · 국가 코드는 Newsreader Display ExtraLight(200) 대문자입니다. 세 글꼴 모두 직접 호스팅(<code>assets/fonts</code>, 외부 요청 없음)하고 쓰인 글자 조각만 받습니다. 영어 문장(문단 · 설명)과 메일 · 전화는 읽기 쉽게 원래 대소문자 그대로, 제목 자간은 −0.025em입니다.
+              큰 글자일수록 가늘게 쓰고(첫 제목 100 · 첫 화면 문장 200 · 섹션 제목 300 · 본문 500), 영어는 어느 크기에서나 200입니다.
+              기간 범위(2–3주)는 줄 끝에서 갈라지지 않게 줄표 둘레에 WORD JOINER를, 금액의 "만 원"은 NBSP를 씁니다.
+            </p>
+          </div>
+
+          <h3 class="list-heading">세 언어 비교</h3>
+          <div class="ds-langs">
+            <figure>
+              <figcaption class="tag">KO</figcaption>
+              <p lang="ko" class="spec-ko">한국과 일본, 두 시장을 하나로 잇습니다</p>
+            </figure>
+            <figure>
+              <figcaption class="tag">JA</figcaption>
+              <p lang="ja" class="spec-ja">日本と韓国、ふたつの市場をつなぐ</p>
+            </figure>
+            <figure>
+              <figcaption class="tag">EN</figcaption>
+              <p lang="en" class="spec-en">Korea and Japan, linked as one market</p>
+            </figure>
+          </div>
+
+          <h3 class="list-heading">굵기 단계</h3>
+          <ol class="ds-scale">
+            <li><code>thin 100</code><span>첫 제목</span><p style="font-size: var(--text-display-m); font-weight: var(--fw-thin)">각 페이지의 첫 제목</p></li>
+            <li><code>extralight 200</code><span>첫 화면</span><p style="font-size: var(--text-display-m); font-weight: var(--fw-extralight)">두 시장 사이, 가장 가까운 길.</p></li>
+            <li><code>light 300</code><span>섹션 제목</span><p style="font-size: var(--text-display-m); font-weight: var(--fw-light)">섹션 제목과 항목 이름</p></li>
+            <li><code>regular 400</code><span>작은 제목</span><p style="font-size: var(--text-headline-s); font-weight: var(--fw-regular)">요금표 그룹 · 거르기 버튼</p></li>
+            <li><code>medium 500</code><span>본문</span><p style="font-size: var(--text-body-m); font-weight: var(--fw-medium)">본문은 500, 줄 간격 1.75 (영어 1.55)</p></li>
+          </ol>
+
+          <h3 class="list-heading">크기 단계</h3>
+          <ol class="ds-scale">
+            <li><code>display-l</code><span>64</span><p style="font-size: var(--text-display-l)">회사 소개 문장</p></li>
+            <li><code>display-m</code><span>48</span><p style="font-size: var(--text-display-m)">큰 강조 문장</p></li>
+            <li><code>display-s</code><span>40</span><p style="font-size: var(--text-display-s)">진행 단계 문장</p></li>
+            <li><code>headline-l</code><span>32</span><p style="font-size: var(--text-headline-l)">비전 문장 · 서비스 설명</p></li>
+            <li><code>headline-m</code><span>28</span><p style="font-size: var(--text-headline-m)">메뉴 · 사례 제목</p></li>
+            <li><code>headline-s</code><span>24</span><p style="font-size: var(--text-headline-s)">항목 제목</p></li>
+            <li><code>title-m</code><span>17</span><p style="font-size: var(--text-title-m)">작은 항목 제목</p></li>
+            <li><code>body-l</code><span>20</span><p style="font-size: var(--text-body-l); letter-spacing: var(--tracking-body); color: var(--ink-2)">소개 문단은 한 줄 34em을 넘지 않습니다.</p></li>
+            <li><code>body-m</code><span>16</span><p style="font-size: var(--text-body-m); letter-spacing: var(--tracking-body)">본문은 16px, 줄 간격 1.75 (영어 1.55).</p></li>
+            <li><code>body-s</code><span>15</span><p style="font-size: var(--text-body-s); letter-spacing: var(--tracking-body); color: var(--ink-2)">항목 설명과 보조 문장.</p></li>
+            <li><code>label-m</code><span>13</span><p style="font-size: var(--text-label-m); letter-spacing: 0; color: var(--ink-3)">섹션 라벨 · 목록 머리말</p></li>
+            <li><code>brand</code><span>—</span><p class="spec-brand" style="font-weight: var(--fw-light)">KR → JP · 01 02 03 · 300,000</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 3. 간격 · 모서리 · 유리 -->
+      <section id="space" class="section" aria-labelledby="space-title">
+        <div class="container">
+          <p class="ds-rule">03 · 간격 · 모서리 · 유리</p>
+          <h2 id="space-title" class="title">8px 리듬, 직선과 알약</h2>
+
+          <div class="ds-grid-2">
+            <div>
+              <h3 class="list-heading">간격 단계</h3>
+              <ol class="ds-space">
+                <li><code>space-1</code><span style="width: var(--space-1)"></span>4</li>
+                <li><code>space-2</code><span style="width: var(--space-2)"></span>8</li>
+                <li><code>space-3</code><span style="width: var(--space-3)"></span>12</li>
+                <li><code>space-4</code><span style="width: var(--space-4)"></span>16</li>
+                <li><code>space-5</code><span style="width: var(--space-5)"></span>24</li>
+                <li><code>space-6</code><span style="width: var(--space-6)"></span>32</li>
+                <li><code>space-7</code><span style="width: var(--space-7)"></span>40</li>
+                <li><code>space-8</code><span style="width: var(--space-8)"></span>64</li>
+                <li><code>space-9</code><span style="width: var(--space-9)"></span>96</li>
+                <li><code>space-10</code><span style="width: var(--space-10)"></span>128</li>
+              </ol>
+              <p class="ds-note">
+                레이아웃: 최대 폭 1600 · 좌우 여백 16→32 · 2단 간격 32→64 · 헤더 72 (스크롤하면 60 불투명한 흰 띠) · 섹션 위아래 88→160.
+                기준 폭: 1100(환율 띠 숨김) · 1024(표 · 2단이 1단으로) · <b>900(모바일 단순화)</b> · 600 / 400(폰 보정).
+              </p>
+            </div>
+            <div>
+              <h3 class="list-heading">모서리</h3>
+              <ul class="ds-radius">
+                <li><span style="border-radius: 0"></span><code>none</code>글 · 선 · 목록 · 사례 그래프 카드</li>
+                <li><span style="border-radius: var(--radius-md)"></span><code>md 12</code>입력창</li>
+                <li><span style="border-radius: var(--radius-xl)"></span><code>xl 24</code>유리 패널</li>
+                <li><span style="border-radius: var(--radius-full)"></span><code>full</code>버튼 · 칩</li>
+              </ul>
+              <h3 class="list-heading">그림자</h3>
+              <ul class="ds-shadows">
+                <li style="box-shadow: var(--shadow-1)"><code>shadow-1</code>버튼</li>
+                <li style="box-shadow: var(--shadow-2)"><code>shadow-2</code>패널</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="list-heading">유리 (견적 결과 · 문의 양식에만)</h3>
+          <p class="lead ds-note--below">면이 필요할 때만 유리를 씁니다. 흰색 62% · 흐림 28px · 위쪽 빛 반사선 · 바깥 윤곽이고, <code>glass--lit</code>는 안쪽에 흰 반사와 옅은 진주빛이 맺혀요. 헤더는 유리가 아니라 불투명한 흰색이고, 유리 위의 글자는 항상 <code>--ink</code> / <code>--ink-2</code>입니다.</p>
+        </div>
+        <div class="ds-glass-stage">
+          <div class="container ds-glass-row">
+            <div class="glass ds-glass-card">
+              <b>glass</b>
+              <p>흰색 62% · 흐림 28px · 위쪽 빛 반사. 패널 기본.</p>
+            </div>
+            <div class="glass glass--lit ds-glass-card">
+              <b>glass glass--lit</b>
+              <p>패널 안에 흰 반사와 옅은 진주색 빛이 맺힘. 견적 결과 · 문의 양식에만.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 부품 -->
+      <section id="components" class="section" aria-labelledby="components-title">
+        <div class="container">
+          <p class="ds-rule">04 · 부품</p>
+          <h2 id="components-title" class="title">카드 대신 선,<br />상자 대신 여백</h2>
+
+          <div class="ds-specimens">
+            <div class="ds-specimen">
+              <h3 class="list-heading">버튼</h3>
+              <div class="ds-row">
+                <a class="btn btn--primary" href="#components"><span class="roll"><span>상담 문의하기</span></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                <button class="btn btn--primary" type="button" disabled>비활성</button>
+              </div>
+              <p class="ds-note">알약형 하나. 마우스를 올리면 더 짙은 금빛이 아래에서 차오르고 글자가 위로 굴러 바뀝니다. 누르면 0.97배. <b>골드 버튼은 화면마다 하나</b>. 보조 버튼은 유리 버튼(<code>btn--glass</code>).</p>
+            </div>
+
+
+            <div class="ds-specimen">
+              <h3 class="list-heading">링크 · 글자 롤</h3>
+              <div class="ds-row">
+                <a class="text-link" href="#components"><span>서비스 살펴보기</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                <a class="header-link" href="#components"><span class="roll"><span>상담 문의</span></span></a>
+              </div>
+              <p>본문 속 <a class="inline-link" href="#components">인라인 링크</a>는 옅은 밑줄.</p>
+              
+              <p class="ds-note">텍스트 링크의 밑줄은 마우스를 올리면 오른쪽으로 걷혔다가 왼쪽에서 다시 그려집니다. 본문 속 링크는 옅은 밑줄. 글자 롤은 <code>&lt;span class=&quot;roll&quot;&gt;&lt;span&gt;글자&lt;/span&gt;&lt;/span&gt;</code>.</p>
+            </div>
+
+
+            <div class="ds-specimen">
+              <h3 class="list-heading">헤더 · 언어 메뉴 · 메뉴 서랍</h3>
+              <div class="ds-row ds-row--lang">
+                <div class="lang-menu" data-lang-menu>
+                  <button class="lang-trigger" type="button" aria-expanded="false" aria-controls="ds-lang-list" aria-label="언어 선택"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" /><path d="M1.5 8h13M8 1.5c1.9 1.8 2.8 4 2.8 6.5S9.9 12.7 8 14.5M8 1.5C6.1 3.3 5.2 5.5 5.2 8s.9 4.7 2.8 6.5" /></svg></button>
+                  <div class="lang-list" id="ds-lang-list" role="group" aria-label="언어 선택" style="--n:3">
+                    <button type="button" data-lang="ko" aria-pressed="true" lang="ko" style="--i:0"><span class="lang-name">KO</span></button>
+                    <button type="button" data-lang="ja" aria-pressed="false" lang="ja" style="--i:1"><span class="lang-name">JA</span></button>
+                    <button type="button" data-lang="en" aria-pressed="false" lang="en" style="--i:2"><span class="lang-name">EN</span></button>
+                  </div>
+                </div>
+                <button class="menu-toggle" type="button" id="menu-open" aria-expanded="false"><span class="menu-toggle-label">메뉴 열어 보기</span><span class="menu-toggle-lines" aria-hidden="true"></span></button>
+              </div>
+              <p class="ds-note">헤더: 로고 · 가운데 환율 띠(USD/KRW · 100 JPY/KRW · EUR/KRW · CNY/KRW · USD/JPY와 전일 대비, 유럽중앙은행 기준 하루 한 번 갱신, <b>받지 못하면 통째로 숨김</b>) · 언어 · 상담 문의 · 메뉴. 맨 위에서는 투명하고 스크롤하면 불투명한 흰 띠(60px), 내려가면 위로 숨고 올라가면 다시 내려옵니다. 언어는 <b>도형 없이 글자만</b>: 평소엔 지구본, 올리거나 누르면 그 자리에 <code>KO JA EN</code>이 나타납니다. 메뉴 버튼은 두 줄만(누르는 자리 48px, 열리면 X).
+   위 단추를 눌러 보세요: <b>오른쪽에서 흰 서랍</b>이 미끄러져 들어옵니다(0.9초, 폭 최대 32rem). 뒤 페이지는 먹색 10% · 흐림 2px로만 가라앉아 눈이 아프지 않습니다. 서랍 안은 페이지 목록(번호 · 이름 · 한 줄 설명) → 알림 줄(서울 · 도쿄 시각과 상담 가능 여부 · 오늘의 환율 · 최신 글) → 연락처 · 언어 · 상담 버튼. 열 때 끊기지 않도록 흐림 값은 고정하고 막의 투명도만 바꾸며, 서랍은 자기 층(<code>translate3d</code> · <code>will-change</code>)으로 올리고, 스크롤바 자리를 고정(<code>scrollbar-gutter</code>)하고, 열려 있는 동안 배경 실과 환율 띠 움직임을 멈춥니다.</p>
+            </div>
+
+
+            <div class="ds-specimen ds-specimen--wide">
+              <h3 class="list-heading">입력창</h3>
+              <form class="ds-form" onsubmit="return false">
+                <label class="field">
+                  <span class="field-label">회사명</span>
+                  <input class="input" type="text" placeholder="LINKERPARTNERS" />
+                </label>
+                <label class="field">
+                  <span class="field-label">이메일</span>
+                  <input class="input" type="email" placeholder="name@company.com" />
+                  <span class="field-hint">답변을 받을 주소를 적어 주세요.</span>
+                </label>
+                <label class="field is-error">
+                  <span class="field-label">연락처</span>
+                  <input class="input" type="tel" value="010-12" aria-invalid="true" />
+                  <span class="field-hint">전화번호 형식을 확인해 주세요. 예: 010-1234-5678</span>
+                </label>
+                <label class="field ds-form-wide">
+                  <span class="field-label">문의 내용</span>
+                  <textarea class="input" placeholder="진출하려는 시장과 현재 상황을 알려 주세요."></textarea>
+                </label>
+              </form>
+            </div>
+
+            <div class="ds-specimen ds-specimen--wide">
+              <h3 class="list-heading">마무리 · 푸터 · 국가 경로</h3>
+              <span class="closing-rule" aria-hidden="true"></span>
+              <div class="closing-body">
+                <div class="closing-lead">
+                  <div>
+                    <h2 id="closing-title" class="sr-only" data-i18n="closing.title"></h2>
+                    <p class="closing-desc" data-reveal="rise" style="--d: 150ms" data-i18n="closing.desc"></p>
+                  </div>
+                  <p class="closing-clock" data-reveal="fade" style="--d: 250ms"><span class="live-dot" aria-hidden="true"></span><span data-closing-status></span><span class="closing-time num" data-closing-time></span><span data-i18n="closing.info.clock"></span></p>
+                </div>
+                <form class="quick-form" id="quick-form" novalidate data-reveal="rise" style="--d: 200ms">
+                  <div class="quick-grid">
+                    <div class="field">
+                      <label class="field-label" for="q-name"><span data-i18n="contact.form.name"></span><span class="req" data-i18n="contact.form.required"></span></label>
+                      <input class="input" id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="q-name-hint" />
+                      <p class="field-hint" id="q-name-hint" aria-live="polite"></p>
+                    </div>
+                    <div class="field">
+                      <label class="field-label" for="q-email"><span data-i18n="contact.form.email"></span><span class="req" data-i18n="contact.form.required"></span></label>
+                      <input class="input" id="q-email" name="email" type="email" autocomplete="email" required aria-describedby="q-email-hint" />
+                      <p class="field-hint" id="q-email-hint" aria-live="polite"></p>
+                    </div>
+                    <div class="field span-2">
+                      <label class="field-label" for="q-service" data-i18n="contact.form.services"></label>
+                      <select class="input" id="q-service" name="service" data-list="services.items">
+                        <option value="" data-i18n="closing.form.pick"></option>
+                        <template><option data-k-attr="value:id" data-k="title"></option></template>
+                      </select>
+                    </div>
+                    <div class="field span-2">
+                      <label class="field-label" for="q-message"><span data-i18n="contact.form.message"></span><span class="req" data-i18n="contact.form.required"></span></label>
+                      <textarea class="input" id="q-message" name="message" rows="4" required aria-describedby="q-message-hint" data-i18n-attr="placeholder:contact.form.message_placeholder"></textarea>
+                      <p class="field-hint" id="q-message-hint" aria-live="polite"></p>
+                    </div>
+                    <div class="field span-2">
+                      <label class="consent">
+                        <input type="checkbox" name="consent" required aria-describedby="q-consent-hint" />
+                        <span><span data-i18n="contact.form.consent"></span> <a class="inline-link" href="privacy.html" data-i18n="contact.form.consent_link"></a></span>
+                      </label>
+                      <p class="field-hint" id="q-consent-hint" aria-live="polite"></p>
+                    </div>
+                  </div>
+                  <div class="quick-submit">
+                    <button class="btn btn--primary" type="submit"><span class="roll"><span data-i18n="contact.form.submit"></span></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></button>
+                    <p class="form-note" data-i18n="contact.form.note"></p>
+                  </div>
+                </form>
+              </div>
+              <p class="route ds-note--below" aria-hidden="true">KR<span class="poster-link"><span class="poster-track"><span></span></span></span>JP</p>
+              <p class="ds-note">모든 페이지의 끝: 금빛 선이 그려지고, 왼쪽에 "첫 상담 30분은 무료입니다." · 서울 · 도쿄 시각(평일 10:00–18:00이면 금빛 점이 숨 쉬며 "지금 상담 가능") · 자주 묻는 질문 하나, 오른쪽에 <b>빠른 문의 폼</b>(이름 · 이메일 · 관심 서비스 · 내용 · 동의 → 메일 앱에 채워 열기). 직접 눌러 오류 문구를 확인해 보세요. 그 아래 푸터는 따뜻한 종이색(<code>--paper-warm</code>)이 위에서 천천히 이어지고 금빛 가는 선으로 본문과 경계를 줍니다(같은 폭 세 칸: 로고 · SNS / 바로가기 / 연락처). 로고는 헤더 · 푸터 · 인트로 · 회사 소개의 한 문장 아래에만 씁니다.</p>
+            </div>
+
+
+            <div class="ds-specimen ds-specimen--wide">
+              <h3 class="list-heading">선 목록 · 펼치기</h3>
+              <ul class="rows" data-accordion>
+                <li>
+                  <button class="acc-head" type="button" aria-expanded="true" aria-controls="ds-acc-1">
+                    <span class="acc-title">진출 진단 리포트</span>
+                    <span class="acc-sum">내 상품이 그 시장에 맞는지 근거로 살펴봅니다.</span>
+                    <span class="acc-meta">15만 원부터</span>
+                    <span class="acc-icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="acc-panel is-open" id="ds-acc-1"><div class="acc-inner"><div class="acc-body"><p class="lead">큰 비용을 쓰기 전에 시장과 경쟁 상품부터 확인합니다.</p></div></div></div>
+                </li>
+                <li>
+                  <button class="acc-head" type="button" aria-expanded="false" aria-controls="ds-acc-2">
+                    <span class="acc-title">로고 · 브랜드 디자인</span>
+                    <span class="acc-sum">한국과 일본, 양쪽에서 통하는 로고를 만들어 드립니다.</span>
+                    <span class="acc-meta">20만 원부터</span>
+                    <span class="acc-icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="acc-panel" id="ds-acc-2"><div class="acc-inner"><div class="acc-body"><p class="lead">발음 · 뜻 · 색을 한국과 일본 양쪽의 눈으로 점검하며 로고를 만듭니다.</p></div></div></div>
+                </li>
+              </ul>
+              <p class="ds-note">카드 대신 선. 줄을 누르면 패널이 0.65초 동안 열리고 더하기가 빼기로 돌아갑니다. 주소의 <code>#id</code>로 들어오면 그 항목이 펼쳐진 채로 보입니다(서비스 페이지).</p>
+            </div>
+
+
+            <div class="ds-specimen ds-specimen--wide">
+              <h3 class="list-heading">진행 단계 · 요금표 · 거르기</h3>
+              <ol class="steps">
+                <li><span class="step-line" aria-hidden="true"></span><h3>먼저, 이야기를 듣습니다.</h3><p>상품과 목표를 확인합니다.</p><p class="step-time">30분 · 무료</p></li>
+                <li><span class="step-line" aria-hidden="true"></span><h3>그다음, 지금을 점검합니다.</h3><p>고칠 곳을 정리합니다.</p><p class="step-time">1–2주</p></li>
+              </ol>
+              <ul class="rows ds-note--below">
+                <li class="pm-row"><span class="pm-name"><strong>첫 상담</strong><small>30분, 화상 또는 대면</small></span><span class="pm-price">무료</span></li>
+                <li class="pm-row"><span class="pm-name"><strong>진출 진단 리포트 · 기본</strong><small>시장 · 경쟁 상품 조사 리포트</small></span><span class="pm-price">15만 원</span></li>
+              </ul>
+              <div class="filter-bar ds-note--below" role="group" aria-label="예시">
+                <button type="button" aria-pressed="true">전체</button>
+                <button type="button" aria-pressed="false">한국 → 일본</button>
+                <button type="button" aria-pressed="false">일본 → 한국</button>
+              </div>
+              <p class="ds-note">진행 단계는 순서에 뜻이 있어 번호(영어 글꼴)를 쓰고 위쪽 금빛 선이 왼쪽부터 그려집니다. 요금표는 이름 · 설명 · 금액을 한 줄로, 거르기는 알약 버튼(고른 것은 잉크 바탕)입니다.</p>
+            </div>
+
+
+            <div class="ds-specimen ds-specimen--wide">
+              <h3 class="list-heading">문장 속 금액</h3>
+              <p class="price-sentence"><span class="line"><span>컨설팅은</span></span><span class="line"><span><span class="price-chip">5만 원</span>부터.</span></span></p>
+              <p class="ds-note">금액은 다른 글자로 꾸미지 않고 줄 높이만 한 옅은 회색 면(<code>--wash</code>) 위에 둡니다. 홈에서는 확인 문구 세 줄(모든 금액 공개 · 부가세 별도 표기 · 엔화 환산 제공, 체크가 그려짐)과 함께 놓입니다.</p>
+            </div>
+
+
+            <div class="ds-specimen ds-specimen--wide">
+              <h3 class="list-heading">간단 견적 (홈)</h3>
+              <div class="qe" id="quick-est">
+                <p class="qe-label">간단 견적</p>
+                <div class="qe-body" data-qe-body></div>
+              </div>
+              <p class="ds-note">상자 없이 위 가는 선 하나로 열립니다. 서비스를 고르면(알약 버튼, 고른 것은 잉크 바탕) 범위 또는 수량을 정하고, 예상 비용 · 부가세 포함 금액 · 예상 기간 · 실비 안내 · 상담 버튼이 바로 바뀝니다. 금액은 <code>config.js</code>의 <code>pricing</code> 한 곳에서 읽습니다. 직접 눌러 보세요.</p>
+            </div>
+
+
+            <div class="ds-specimen ds-specimen--wide">
+              <h3 class="list-heading">견적 계산기</h3>
+              <div class="est ds-est">
+                <div class="est-options">
+                  <div class="est-item is-on">
+                    <label class="est-opt"><input type="checkbox" checked /><span class="est-dot" aria-hidden="true"></span><span class="est-text"><span class="est-name">SNS · 광고 운영 도움</span><span class="est-desc">계정과 광고 세팅, 운영 계획</span></span><span class="est-price">40만 원부터</span></label>
+                    <div class="est-config acc-panel is-open"><div class="acc-inner"><div class="est-config-body acc-body">
+                      <div class="est-tiers">
+                        <label class="est-tier"><input type="radio" name="ds-tier" checked /><span class="est-tier-name">기본</span><span class="est-tier-price">25만 원</span><span class="est-tier-desc">계정 진단 · 광고 세팅 안내 · 1주 안</span></label>
+                        <label class="est-tier"><input type="radio" name="ds-tier" /><span class="est-tier-name">심화</span><span class="est-tier-price">60만 원</span><span class="est-tier-desc">4주 캘린더 · 문구 12개 · 성과 점검 · 2–3주</span></label>
+                      </div>
+                      <div class="est-qty"><span class="est-qty-label"><span>현지화할 자료</span><small>1건 10만 원</small></span><span class="stepper"><button type="button">−</button><output>2건</output><button type="button">+</button></span></div>
+                    </div></div></div>
+                  </div>
+                </div>
+                <div class="est-result glass glass--lit">
+                  <p class="est-result-label">예상 비용 · 부가세 포함</p>
+                  <p class="est-total">49.5만 원</p>
+                  <ul class="est-lines"><li><span>SNS · 광고 운영 도움 · 기본</span><span class="est-line-price">25만 원</span></li><li><span>브랜드 현지화 · 2건</span><span class="est-line-price">20만 원</span></li></ul>
+                  <dl class="est-sums"><div><dt>소계</dt><dd>45만 원</dd></div><div><dt>부가세 10%</dt><dd>4.5만 원</dd></div></dl>
+                  <p class="est-pack">‘브랜딩’ 묶음으로 맡기시면 7만 원 아낄 수 있어요.</p>
+                </div>
+              </div>
+              <p class="ds-note">항목을 고르면 그 줄이 펼쳐지며 단계(기본 · 심화 등)와 수량을 고릅니다. 오른쪽 유리 패널에 줄별 금액 · 소계 · 빠른 진행 · 부가세 · 합계 · 기간이 바로 나오고, 고른 구성이 묶음보다 비싸면 묶음을 알려 줍니다. 견적은 복사하거나 문의 양식으로 넘길 수 있어요.</p>
+            </div>
+
+
+            <div class="ds-specimen ds-specimen--wide">
+              <h3 class="list-heading">인사이트 · 저널 (홈)</h3>
+              <div class="jr">
+                                <div class="jr-body" style="margin-top: var(--space-7)" data-journal></div>
+              </div>
+              <p class="ds-note">잡지 첫 면처럼: 가장 새 글은 왼쪽에 크게(날짜의 일을 아주 큰 숫자로 · 제목 · 인용문 · 본문 첫 단락 · 읽는 시간), 이전 글은 오른쪽에 번호 · 날짜 · 제목 · 요약으로, 맨 아래에 주제별 글 수. 글은 <code>insights.posts</code>에서 <code>journal.js</code>가 채웁니다.</p>
+            </div>
+
+
+            <div class="ds-specimen ds-specimen--wide">
+              <h3 class="list-heading">사례 라이브러리 (홈)</h3>
+              <div class="lib" data-case-library data-view="ring">
+                <div class="container lib-bar">
+                  <div class="lib-tabs" role="tablist" data-i18n-attr="aria-label:home.work.views">
+                    <button type="button" role="tab" id="lib-tab-ring" aria-controls="lib-stage" aria-selected="true" data-view="ring"><svg class="lib-glyph" viewBox="0 0 32 32" aria-hidden="true"><ellipse class="lib-glyph-faint" cx="16" cy="16" rx="14" ry="5" /><rect class="lib-glyph-faint" x="3" y="12.5" width="4" height="7" /><rect class="lib-glyph-faint" x="25" y="12.5" width="4" height="7" /><rect x="11" y="9" width="10" height="14" /></svg><span class="sr-only" data-i18n="home.work.tabs.showcase"></span></button>
+                    <button type="button" role="tab" id="lib-tab-list" aria-controls="lib-stage" aria-selected="false" tabindex="-1" data-view="list"><svg class="lib-glyph" viewBox="0 0 32 32" aria-hidden="true"><path class="lib-glyph-faint" d="M3 11h6M3 21h6" /><path d="M3 16h8" /><rect class="lib-glyph-faint" x="17" y="2" width="10" height="5" /><rect x="17" y="10" width="10" height="12" /><rect class="lib-glyph-faint" x="17" y="25" width="10" height="5" /></svg><span class="sr-only" data-i18n="home.work.tabs.list"></span></button>
+                    <button type="button" role="tab" id="lib-tab-slider" aria-controls="lib-stage" aria-selected="false" tabindex="-1" data-view="slider"><svg class="lib-glyph" viewBox="0 0 32 32" aria-hidden="true"><rect class="lib-glyph-faint" x="1" y="11" width="6" height="10" /><rect x="10" y="8" width="12" height="16" /><rect class="lib-glyph-faint" x="25" y="11" width="6" height="10" /></svg><span class="sr-only" data-i18n="home.work.tabs.slider"></span></button>
+                  </div>
+                  <p class="lib-count" aria-hidden="true"><b data-lib-current>01</b> / <span data-lib-total>06</span></p>
+                </div>
+                <div class="lib-stage" id="lib-stage" role="tabpanel" aria-labelledby="lib-tab-ring">
+                  <div class="lib-frame"><div class="lib-ring" data-lib-ring></div></div>
+                  <ol class="lib-names" data-lib-names></ol>
+                  <div class="lib-meta" aria-hidden="true">
+                    <span class="lib-m lib-m--cat"><span class="lib-m-in" data-lib-m="cat"></span></span>
+                    <span class="lib-m lib-m--svc"><span class="lib-m-in" data-lib-m="svc"></span></span>
+                    <span class="lib-m lib-m--idx"><span class="lib-m-in" data-lib-m="idx"></span></span>
+                  </div>
+                  <p class="lib-slide-label" aria-hidden="true">
+                    <span class="lib-m"><span class="lib-m-in" data-lib-m="snum"></span></span>
+                    <span class="lib-m"><span class="lib-m-in" data-lib-m="sname"></span></span>
+                  </p>
+                </div>
+                <div class="container lib-caption">
+                  <div class="lib-caption-text" data-lib-caption aria-live="polite"></div>
+                  <div class="lib-nav">
+                    <button class="lib-arrow lib-arrow--prev" type="button" data-lib-go="-1" data-i18n-attr="aria-label:cases.labels.prev"><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></button>
+                    <button class="lib-arrow" type="button" data-lib-go="1" data-i18n-attr="aria-label:cases.labels.next"><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></button>
+                    <a class="text-link" href="cases.html" data-lib-open><span data-i18n="home.work.open"></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>
+                  </div>
+                </div>
+              </div>
+              <p class="ds-note ds-note--below">카드 한 벌이 세 모양(링 · 목록 · 슬라이드)을 오갑니다(<code>data-case-library</code>, <code>cases.js</code> 3). 끌어 보고, 위의 작은 도형 버튼으로 바꿔 보세요. 카드 면은 사진도 그래프도 없이 영문 브랜드 이름만 적습니다. 홈에는 <code>index.json</code>의 <code>home</code>에 적은 8개만 나옵니다.</p>
+              <ul class="dots ds-note">
+                <li><b>링</b>: 원근 1600px, 카드 사이 360/n°. 끌면 관성(프레임마다 ×0.93)으로 돌다 가장 가까운 카드로 멈춤. 90°를 넘은 카드는 좌우를 뒤집어 글자가 바로 보이게. 뒤쪽 카드를 흐리지 않아 글자가 늘 선명</li>
+                <li><b>속도 반응</b>: 빨리 돌수록 카드가 비스듬해지고(최대 22°) 작아짐(최대 14%). 마우스로 세로로 끌면 링이 기울어짐(최대 14°)</li>
+                <li><b>보기 전환</b>: 같은 카드가 0.9초 동안 새 자리로 옮겨 감(<code>--ease-morph</code>)</li>
+                <li><b>슬라이드 · 목록</b>: 목표를 7.5%씩 따라감</li>
+                <li><b>마우스를 올리면</b>: 카드 둘레의 가는 잉크 액자와 안쪽 금빛 틀이 조여 들어옴. 나머지 카드는 옅어짐. 커서 자리에는 "보기"만</li>
+              </ul>
+            </div>
+
+            <div class="ds-specimen ds-specimen--wide">
+              <h3 class="list-heading">사례 갤러리 · 상세 보기</h3>
+              <ul class="case-gallery ds-cases">
+                <li class="case-card is-inview" data-tone="0" data-slot="0"><button class="case-open" type="button" data-cursor="보기"><span class="case-face"><span class="case-mark" aria-hidden="true">B</span><span class="case-top"><span class="case-no num">01</span><span class="case-route">KR → JP</span></span><span class="case-brand"><span class="case-brand-in">BAT</span></span><span class="case-foot"><span class="case-ind">베이커리 · 감자빵</span><span class="case-peek">춘천 감자빵 ‘BAT’, 요코하마에서 이세탄 신주쿠까지</span></span></span></button></li>
+                <li class="case-card is-inview" data-tone="1" data-slot="1"><button class="case-open" type="button" data-cursor="보기"><span class="case-face"><span class="case-mark" aria-hidden="true">A</span><span class="case-top"><span class="case-no num">02</span><span class="case-route">KR → JP</span></span><span class="case-brand"><span class="case-brand-in">AURORA ZAKKA</span></span><span class="case-foot"><span class="case-ind">셀렉트 숍 · 생활 잡화</span><span class="case-peek">한국 셀렉트 숍의 큐텐재팬 2년</span></span></span></button></li>
+              </ul>
+              <div class="namehead" style="--nh: 22rem"><p class="nh-top"><span class="num">CASE 07 / 15</span><span>KR → JP · 2025</span></p><p class="namehead-name"><span style="font-size: 4.5rem">CRASSIANG</span></p><div class="nh-low"><span class="nh-rule"></span><p class="nh-tag">crassiang의 큐텐재팬 란제리 판매</p><dl class="nh-facts"><div><dt>업종</dt><dd>란제리 · 패션</dd></div><div><dt>기간</dt><dd>큐텐재팬 운영(2025.12 공개)</dd></div><div><dt>고객</dt><dd>크라시앙(crassiang)</dd></div></dl></div></div>
+              <p class="ds-note">사례 상세 맨 위와 다음 사례 미리보기의 <code>.namehead</code>: 영문 브랜드 이름이 주인공인 띠로, 화면 폭을 꽉 채우고(<code>fitName</code>이 폭 70% · 높이 26%에 맞춰 키움) 위에는 사례 번호 · 방향 · 연도, 아래에는 금빛 짧은 선 · 한 줄 소개 · 업종 / 기간 / 고객이 작은 글씨로 붙습니다. 이름이 올라온 뒤 아래 글줄이 차례로 떠오릅니다. 숫자와 그래프는 상세 본문(숫자 카드 · 방향 선 · 일정 · 가격 막대)에서 줍니다.</p>
+              <p class="ds-note">사례 하나 = <code>data/cases/&lt;id&gt;/case.json</code> 하나. 사진은 쓰지 않습니다. 사례 페이지의 목록은 영문 브랜드 이름만 적은 타일을 12칸 격자에 놓습니다. 규칙은 한 줄에 두 장이 왼쪽 · 오른쪽으로 번갈아 놓이고 줄마다 큰 타일(4:5)과 작은 타일(1:1)이 좌우를 바꾸는 것이며(네 장이 한 주기, 거르면 다시 셈), 스크롤하면 왼쪽 줄은 왼쪽에서 오른쪽 줄은 오른쪽에서 밀려 들어오고, 올리면 금빛 틀이 조여 들고 업종 자리에 제목이 올라옵니다. 타일을 고르면 흰 바탕 위에 상자 없이 브랜드 이름 머리 → 머리말 → 본문(숫자 카드 · 과제 · 한 일 · 결과 · 비슷한 구성 가격) | 붙어 있는 개요(방향 선) → 진행 · 결과물 → 출처 → 다음 사례 순으로 놓이고, 숫자 · 막대 · 선은 화면에 들어올 때 그려집니다. <a class="inline-link" href="cases.html#case=bat">사례 페이지에서 열어 보기</a></p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. 움직임 -->
+      <section id="motion" class="section" aria-labelledby="motion-title">
+        <div class="container">
+          <p class="ds-rule">05 · 움직임</p>
+          <div class="ds-head">
+            <h2 id="motion-title" class="title">빠르게 시작해<br />천천히 멈춥니다</h2>
+            <p class="lead">
+              큰 등장은 expo 곡선으로 빠르게 나와 길게 멈추고, 화면을 덮는 막(페이지 전환 · 인트로)은 curtain 곡선으로 움직입니다. transform과 opacity 위주로 움직이고, 스크롤에 묶인 값은 매 프레임 부드럽게 따라가게 해 칸 단위 휠에서도 끊기지 않습니다. 동작 줄이기에서는 이동 없이 내용만 보입니다.
+            </p>
+          </div>
+
+          <div class="ds-grid-2">
+            <div>
+              <h3 class="list-heading">곡선 (줄에 마우스를 올려 보세요)</h3>
+              <ul class="ds-easing">
+                <li style="--e: var(--ease-expo)"><code>expo</code><span></span></li>
+                <li style="--e: var(--ease-curtain)"><code>curtain</code><span></span></li>
+                <li style="--e: var(--ease-morph)"><code>morph</code><span></span></li>
+                <li style="--e: var(--ease-emphasized)"><code>emphasized</code><span></span></li>
+                <li style="--e: var(--ease-standard)"><code>standard</code><span></span></li>
+              </ul>
+              <p class="ds-note">시간: 160 누름 · 200 색 · 300 메뉴 · 500 헤더 · 750 등장 · 1200 줄 등장 · 1600 첫 화면. 차례 간격 80ms.</p>
+            </div>
+            <div>
+              <h3 class="list-heading">등장 효과</h3>
+              <div class="ds-reveal" id="reveal-demo">
+                <p data-reveal="lines"><span class="line"><span>lines · 줄마다 자기 자리 아래에서</span></span><span class="line" style="--l: 1"><span>떠오름 (제목)</span></span></p>
+                <p data-reveal="focus"><span class="line"><span>focus · 김 서린 유리가 걷히듯 또렷해짐 (첫 화면)</span></span></p>
+                <p data-reveal="rise" style="--i: 2">rise · 흐림이 걷히며 떠오름 (문단 · 목록)</p>
+                <p data-reveal="fade" style="--i: 3">fade · 그 자리에서 나타남</p>
+                <p data-reveal="left" style="--i: 4">left · right · 옆에서 밀려 들어옴 (목록 줄)</p>
+                <p data-reveal="zoom" style="--i: 5">zoom · 작게 시작해 또렷하게 (카드 · 폼)</p>
+                <p data-reveal="drop" style="--i: 6">drop · 위에서 내려앉음 (바 · 링크)</p>
+                <p data-reveal="wipe" style="--i: 7">wipe · 가림막이 걷히듯 (한 줄 선언 · 질문)</p>
+                <span class="ds-draw" data-reveal="draw" style="--i: 8"></span>
+              </div>
+              <button class="btn btn--glass" type="button" id="reveal-replay">다시 보기</button>
+            </div>
+          </div>
+
+          <div class="ds-specimens">
+            <div class="ds-specimen ds-specimen--wide">
+              <h3 class="list-heading">첫 화면 스크롤 장면</h3>
+              <p class="hero-eyebrow ds-note--first"><i class="hero-rule" aria-hidden="true"></i><span>한일 진출 컨설팅</span></p>
+              <p style="font-size: clamp(1.75rem, 1rem + 2.6vw, 3.25rem); font-weight: 200; line-height: 1.16; letter-spacing: -0.03em; margin-top: 1.5rem">두 시장 사이,<br />가장 가까운 길.</p>
+              <p class="ds-note">사진 없이 큰 문장 두 줄과, 뒤에서 가는 금빛 선으로만 그린 거대한 KOREA · JAPAN 글자 두 줄. 첫 화면은 190svh이고 안의 장면이 화면에 붙은 채 스크롤 진행값(<code>--hp</code> 0 → 1, 매 프레임 14%씩 따라감)으로 움직입니다.</p>
+              <ul class="dots ds-note">
+                <li><b>처음</b>: 문장이 줄마다 가림막 안에서 솟아오름(1.3초) → 뒤의 글자가 천천히 나타남</li>
+                <li><b>0 → 45%</b>: 뒤의 글자 두 줄이 서로 반대 방향으로 흐르고(최대 60vw), 첫 문장은 위로 올라가며 사라짐. 설명 · 버튼은 먼저 걷힘</li>
+                <li><b>40 → 76%</b>: <b>같은 화면에서 회사 소개</b>(라벨 → 한 문장 → 비전 → 설명 → 링크)가 차례로 떠오름</li>
+                <li><b>76 → 100%</b>: 다 열린 소개가 머문 뒤에야 화면이 내려가 세 가지 원칙으로 이어짐</li>
+                <li><b>폰 · 동작 줄이기</b>: 소개 글자를 더 줄여 아래 도구줄에 가리지 않게 / 첫 화면은 문장만, 소개는 그 아래에 그대로 이어짐</li>
+              </ul>
+              <p class="ds-note"><a class="inline-link" href="index.html">홈에서 보기</a></p>
+            </div>
+
+            <div class="ds-specimen ds-specimen--wide">
+              <h3 class="list-heading">배경 실 · 진행선</h3>
+              <p class="ds-note ds-note--first"><b>모든 페이지의 배경</b>(<code>ambient.js</code>)에는 글자 뒤에 고정된 아주 가는 실 다발(6다발 × 5가닥, 1px 이하)이 비단처럼 일렁입니다. 실 위로는 옅은 빛결이 30–50초에 한 번씩 지나가고, 마우스는 실을 건드리지 않고 화면 전체가 ±12px 따라 움직이는 깊이감만 줍니다. 스크롤하면 다발마다 다른 속도로 따라가고 빠를수록 잠깐 빨라집니다. 가장 진한 곳도 바탕에 12–18%라 글자 대비에 영향이 없습니다. <b>폰 · 좁은 화면에서는 금빛 다발 3개 · 각 3가닥 · 초당 30프레임</b>으로 가볍게, 동작 줄이기에서는 멈춘 한 장면만, 탭이 가려지거나 메뉴가 열려 있으면 쉽니다.</p>
+              <p class="ds-note">홈 PC 화면의 오른쪽 가장자리 <b>진행선</b>(<code>rail.js</code>)은 구역마다 눈금이 있고 스크롤만큼 금빛으로 차오르며, 올린 눈금 옆에만 작은 이름표가 나옵니다. 900px 이하에서는 글자와 겹쳐 숨깁니다.</p>
+            </div>
+
+            <div class="ds-specimen">
+              <h3 class="list-heading">첫 접속 인트로</h3>
+              <p class="ds-note ds-note--first">로고 → 문구가 단어 하나씩 진해짐 → 화면이 위로 걷힘. 창마다 한 번, 누르면 건너뜀. 약 2.5초. 동작 줄이기에서는 나오지 않습니다.</p>
+              <button class="btn btn--glass" type="button" id="intro-replay">인트로 다시 보기</button>
+            </div>
+
+            <div class="ds-specimen">
+              <h3 class="list-heading">커서 (마우스 기기만)</h3>
+              <p class="ds-note ds-note--first">작은 점은 바로, 링은 천천히 따라옵니다. 링크 위에서는 링이 커지며 옅게 채워지고, 사례 카드 위에서는 "보기" 글자만, 입력창 위에서는 기본 커서로 돌아갑니다.</p>
+              <div class="ds-row">
+                <a class="text-link" href="#motion">이 링크에 올려 보세요</a>
+                <input class="input ds-cursor-input" type="text" placeholder="입력창 위" aria-label="커서 예시 입력창" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. 모바일 -->
+      <section id="mobile" class="section" aria-labelledby="mobile-title">
+        <div class="container">
+          <p class="ds-rule">06 · 모바일</p>
+          <div class="ds-head">
+            <h2 id="mobile-title" class="title">손가락에는<br />덜어냅니다</h2>
+            <p class="lead">
+              900px 이하(폰 · 태블릿)에서는 읽기 · 조작 · 배터리를 해치는 장치를 덜어냅니다. 같은 문구와 같은 순서이고, 움직임과 장식만 줄어요.
+            </p>
+          </div>
+          <ul class="ds-dos">
+            <li class="ds-item"><h4>오른쪽 진행선 숨김</h4><p>좁은 화면에서 글자와 겹칩니다.</p></li>
+            <li class="ds-item"><h4>진행 방식은 보통 목록</h4><p>PC의 고정 장면 대신 네 단계가 위에서 아래로 보입니다. 화면이 붙은 채 스크롤하면 빈 화면이 길어집니다.</p></li>
+            <li class="ds-item"><h4>등장 효과의 흐림 제거</h4><p>화면 밖 글자마다 층이 생겨 느려져서, 흐림 없이 떠오르기만 합니다. 옆에서 오는 거리도 20px로.</p></li>
+            <li class="ds-item"><h4>배경 실은 가볍게</h4><p>금빛 다발 3개 · 각 3가닥 · 초당 30프레임. 뒤의 큰 글자 선도 더 옅게.</p></li>
+            <li class="ds-item"><h4>눌리는 자리 넓히기</h4><p>작은 링크 · 로고 · 메일 · 전화는 사방 12px 눌리는 자리를 더합니다.</p></li>
+            <li class="ds-item"><h4>비교표는 옆으로 밀어 칸에 맞춰 멈춤</h4><p>묶음 비교표는 화면보다 넓어, 밀면 칸 시작에 멈춥니다.</p></li>
+            <li class="ds-item"><h4>이름이 잘리지 않게</h4><p>사례 목록 이름은 폭에 맞춰 한 단계씩(400px 이하는 더) 작아집니다. 첫 화면의 회사 소개도 폰에서는 한 단계 더 작고 촘촘하게.</p></li>
+            <li class="ds-item"><h4>마우스 전용 효과 없음</h4><p>커서 · 올렸을 때 효과 · 오른쪽 진행선은 손가락에 없습니다.</p></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 7. 원칙 -->
+      <section id="rules" class="section" aria-labelledby="rules-title">
+        <div class="container">
+          <p class="ds-rule">07 · 원칙</p>
+          <h2 id="rules-title" class="title">하는 것과 하지 않는 것</h2>
+          <div class="ds-grid-2 ds-dos">
+            <div>
+            <h3 class="list-heading">하는 것</h3>
+            <ul>
+              <li class="ds-item"><h4>바탕은 흰색, 장식은 실 하나</h4><p>배경에는 가는 금빛 실만 흐르고, 푸터만 따뜻한 종이색입니다.</p></li>
+              <li class="ds-item"><h4>크고 가늘게, 섹션마다 문장 하나와 근거 하나</h4><p>큰 문장이 섹션의 머리이고 그 근거(목록 · 금액 · 표)가 한 가지 따라옵니다. 정보는 선 위에 놓습니다.</p></li>
+              <li class="ds-item"><h4>골드는 행동과 선에</h4><p>기본 버튼 · 링크 밑줄 · 금빛 가는 선 · 점 · 배경 실. 골드 버튼은 화면마다 하나.</p></li>
+              <li class="ds-item"><h4>읽기가 먼저</h4><p>움직임이 글자 읽기나 손가락 조작을 해치면 뺍니다. 모바일에서는 덜어냅니다.</p></li>
+              <li class="ds-item"><h4>사실만</h4><p>실적 · 고객사 · 숫자는 출처가 확인된 것만. 우리가 하지 않은 사례는 그렇게 밝힙니다.</p></li>
+            </ul>
+            </div>
+            <div>
+            <h3 class="list-heading">하지 않는 것</h3>
+            <ul>
+              <li class="ds-item ds-dont"><h4>제목 위 작은 라벨 · 섹션 이름표</h4><p>제목이 스스로 무엇인지 말합니다.</p></li>
+              <li class="ds-item ds-dont"><h4>같은 크기 카드 반복 · 장식용 유리 상자</h4><p>아이콘 + 제목 + 설명 카드 그리드는 쓰지 않습니다.</p></li>
+              <li class="ds-item ds-dont"><h4>눈에 띄는 마우스 효과</h4><p>배경은 ±12px 깊이감뿐. 관성 스크롤 가로채기 · 로딩 숫자도 쓰지 않습니다.</p></li>
+              <li class="ds-item ds-dont"><h4>금빛 글자 · 금빛 바탕</h4><p>화면이 누르스름해 보입니다.</p></li>
+              <li class="ds-item ds-dont"><h4>제작 방식에 대한 설명 · 우리를 "작은 팀"으로 소개하기</h4><p>고객이 읽는 곳에는 쓰지 않습니다.</p></li>
+              <li class="ds-item ds-dont"><h4>확인 안 된 실적 · 숫자</h4><p>고객사 · 실적 · 인증은 사실 확인 후에만 게재합니다.</p></li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/intro.js" defer></script>
+    <script src="assets/js/ambient.js" defer></script>
+    <script src="assets/js/motion.js" defer></script>
+    <script src="assets/js/pricing.js" defer></script>
+    <script src="assets/js/cases.js" defer></script>
+    <script src="assets/js/journal.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/ticker.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script>
+      // 인트로 다시 보기 · 메뉴 열어 보기
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("intro-replay").addEventListener("click", function () {
+          LP_INTRO.replay();
+        });
+        document.getElementById("menu-open").addEventListener("click", function () {
+          document.querySelector(".menu-toggle").click();
+        });
+      });
+
+      // 등장 효과 다시 보기
+      document.addEventListener("DOMContentLoaded", function () {
+        const btn = document.getElementById("reveal-replay");
+        const items = document.querySelectorAll("#reveal-demo [data-reveal]");
+        btn.addEventListener("click", function () {
+          items.forEach(function (n) {
+            n.classList.remove("is-inview");
+          });
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              items.forEach(function (n) {
+                n.classList.add("is-inview");
+              });
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

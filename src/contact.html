@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="meta.contact.title">LINKERPARTNERS</title>
+    <meta name="description" content="" data-i18n-attr="content:meta.contact.description" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        // 이 창에서 처음이면 인트로, 사이트 안에서 넘어왔으면 전환 막. 동작 줄이기 설정이면 둘 다 생략
+        try {
+          var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (!sessionStorage.getItem("lp_intro_seen") && !still) d.classList.add("is-intro");
+          else if (sessionStorage.getItem("lp_nav") && !still) d.classList.add("is-arriving");
+          sessionStorage.removeItem("lp_nav");
+        } catch (e) {}
+        // 안전장치: 스크립트가 늦거나 실패해도 6초 뒤에는 첫 화면을 그대로 보여 줌
+        setTimeout(function () {
+          if (d.classList.contains("is-ready")) return;
+          d.classList.add("is-ready");
+          d.classList.remove("is-arriving");
+          document.querySelectorAll("[data-hero]").forEach(function (n) {
+            n.classList.add("is-inview");
+          });
+        }, 6000);
+      })();
+    </script>
+
+    <!-- 글꼴: 한국어 Pretendard / 일본어 Noto Serif JP / 영어 · 숫자 Newsreader Display ExtraLight(대문자). 모두 assets/fonts에 직접 두고 필요한 글자 조각만 불러옴 (tools/build/fonts.cjs) -->
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+
+    <!-- 공통 CSS (순서 중요) -->
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <link rel="stylesheet" href="assets/css/ambient.css" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main" tabindex="-1">
+
+      <!-- 첫 화면: 가운데 정렬. 제목 → 한 줄 → 아래로 이어지는 금빛 세로선 -->
+      <section class="pg-hero container" aria-labelledby="page-title">
+        <h1 id="page-title" class="pg-title" data-reveal="lines" data-hero data-i18n="contact.hero.title"></h1>
+        <p class="pg-lead" data-reveal="rise" data-hero style="--d: 450ms" data-i18n="contact.hero.lead"></p>
+        <span class="pg-drop" data-reveal="drawy" data-hero style="--d: 900ms" aria-hidden="true"></span>
+      </section>
+
+      <!-- 문의 후 진행 + 직접 연락 / 상담 신청 양식 -->
+      <section class="section section--tight" aria-labelledby="form-title">
+        <div class="container contact-grid">
+          <div class="contact-side">
+            <div data-reveal="left">
+              <span class="side-label" data-i18n="contact.steps_title"></span>
+              <ol class="contact-steps rows" data-list="contact.steps">
+                <template>
+                  <li><strong data-k="t"></strong><p data-k="d"></p></li>
+                </template>
+              </ol>
+            </div>
+            <div data-reveal="left" style="--d: 120ms">
+              <span class="side-label" data-i18n="contact.direct"></span>
+              <a class="direct-mail" data-config-href="email" data-config-text="email"></a><br />
+              <a class="direct-tel" data-config-href="phone" data-config-text="phone"></a>
+              <p class="direct-hours" data-i18n="menu.hours"></p>
+            </div>
+          </div>
+
+          <form class="contact-form glass glass--lit" id="contact-form" novalidate data-reveal="zoom" style="--d: 200ms">
+            <h2 id="form-title" class="form-title" data-i18n="contact.form.title"></h2>
+            <div class="form-grid">
+              <div class="field">
+                <label class="field-label" for="f-name"><span data-i18n="contact.form.name"></span><span class="req" data-i18n="contact.form.required"></span></label>
+                <input class="input" id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-hint" />
+                <p class="field-hint" id="f-name-hint" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label class="field-label" for="f-company" data-i18n="contact.form.company"></label>
+                <input class="input" id="f-company" name="company" type="text" autocomplete="organization" />
+              </div>
+              <div class="field">
+                <label class="field-label" for="f-email"><span data-i18n="contact.form.email"></span><span class="req" data-i18n="contact.form.required"></span></label>
+                <input class="input" id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-email-hint" />
+                <p class="field-hint" id="f-email-hint" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label class="field-label" for="f-direction" data-i18n="contact.form.direction"></label>
+                <select class="input" id="f-direction" name="direction" data-list="contact.form.directions">
+                  <template><option data-k-attr="value:v" data-k="label"></option></template>
+                </select>
+              </div>
+              <fieldset class="field fieldset span-2">
+                <legend class="field-label" data-i18n="contact.form.services"></legend>
+                <div class="chips" data-list="services.items">
+                  <template>
+                    <label class="chip"><input type="checkbox" name="services" data-k-attr="value:id" /><span data-k="title"></span></label>
+                  </template>
+                </div>
+              </fieldset>
+              <div class="field span-2">
+                <label class="field-label" for="f-message"><span data-i18n="contact.form.message"></span><span class="req" data-i18n="contact.form.required"></span></label>
+                <textarea class="input" id="f-message" name="message" rows="5" required aria-describedby="f-message-hint" data-i18n-attr="placeholder:contact.form.message_placeholder"></textarea>
+                <p class="field-hint" id="f-message-hint" aria-live="polite"></p>
+              </div>
+              <div class="field span-2">
+                <label class="consent">
+                  <input type="checkbox" name="consent" required aria-describedby="f-consent-hint" />
+                  <span><span data-i18n="contact.form.consent"></span> <a class="inline-link" href="privacy.html" data-i18n="contact.form.consent_link"></a></span>
+                </label>
+                <p class="field-hint" id="f-consent-hint" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="form-submit">
+              <button class="btn btn--primary" type="submit"><span class="roll"><span data-i18n="contact.form.submit"></span></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></button>
+              <p class="form-note" data-i18n="contact.form.note"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- 자주 묻는 질문 -->
+      <section class="section" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="pg-head"><h2 id="faq-title" class="pg-h2" data-reveal="lines" data-i18n="faq.title"></h2></div>
+          <ul class="pg-narrow rows" data-accordion data-stagger data-list="faq.items">
+            <template>
+              <li data-reveal="rise" data-keep>
+                <button class="acc-head faq-head" type="button" aria-expanded="false" aria-controls="">
+                  <span class="acc-title" data-k="q"></span>
+                  <span class="acc-icon" aria-hidden="true"></span>
+                </button>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body faq-body"><p data-k="a"></p></div>
+                  </div>
+                </div>
+              </li>
+            </template>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- 공통 JS (순서 중요) -->
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/intro.js" defer></script>
+    <script src="assets/js/ambient.js" defer></script>
+    <script src="assets/js/motion.js" defer></script>
+    <script src="assets/js/contact.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/ticker.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

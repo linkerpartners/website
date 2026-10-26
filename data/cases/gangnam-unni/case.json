@@ -1,0 +1,157 @@
+{
+  "id": "gangnam-unni",
+  "brand": "Gangnam Unni",
+  "example": true,
+  "route": "kr_jp",
+  "year": "2025",
+  "services": [
+    "web",
+    "booking",
+    "localization"
+  ],
+  "metrics": [
+    {
+      "value": "1,500",
+      "label": {
+        "ko": "일본 제휴 병원 수(2025.10 기준)",
+        "ja": "日本の提携病院数(2025年10月時点)",
+        "en": "Partner clinics in Japan (as of Oct 2025)"
+      }
+    },
+    {
+      "value": {
+        "ko": "160만",
+        "ja": "160万",
+        "en": "1.6M"
+      },
+      "label": {
+        "ko": "일본 이용자(2025.10 기준)",
+        "ja": "日本のユーザー数(2025年10月時点)",
+        "en": "Users in Japan (as of Oct 2025)"
+      }
+    },
+    {
+      "value": "¼",
+      "label": {
+        "ko": "전체 매출에서 일본 사업 비중(2024 보도)",
+        "ja": "全売上に占める日本事業の割合(2024年報道)",
+        "en": "Japan's share of total revenue (2024 report)"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "바이라인네트워크 · [인터뷰] 강남언니, 일본에서 터진 비결",
+      "url": "https://byline.network/2024/04/22-332/"
+    },
+    {
+      "label": "메디게이트뉴스 · 2025.10.17",
+      "url": "https://medigatenews.com/news/2654920729"
+    }
+  ],
+  "ko": {
+    "client": "힐링페이퍼 (강남언니)",
+    "industry": "미용 의료 플랫폼 · 스타트업",
+    "duration": "2019 진출 – 2025",
+    "short": "Gangnam Unni의 일본 현지화",
+    "title": "Gangnam Unni, 일본 병원 · 일본 이용자까지 품은 플랫폼이 되기까지",
+    "summary": "한국 병원에 찾아온 일본 손님의 요청에서 출발해, 국경이 닫힌 시기에도 일본 서비스를 인수 · 통합하며 뿌리를 내렸습니다.",
+    "challenge": "한국의 시술 이름은 기계 번역을 거치면 어색해지고, 일본에서는 신뢰와 인맥이 쌓이는 데 시간이 오래 걸렸습니다. 2020년에는 국경이 닫히며 일본 사업이 거의 멈췄습니다.",
+    "approach": [
+      "제휴 병원에서 ‘일본 손님이 강남언니 화면을 캡처해 온다’는 이야기를 반복해 들은 뒤 2019년 일본판을 냈습니다.",
+      "시술명은 미용 의료 전문가가 반복 검수해 자연스러운 일본어로 옮겼습니다.",
+      "2020년 일본 서비스 루코모를 인수해 후기 약 8만 건을 확보하고, 약 2년 뒤 앱과 고객 응대를 일본판 강남언니로 통합했습니다.",
+      "2021년 일본 병원 계약에 집중하는 현지 영업팀을 꾸리고, 일본 SNS 계정을 운영했습니다.",
+      "한국인 이름만이 아니라 실력과 경력을 기준으로 현지 인력을 뽑았습니다."
+    ],
+    "result": "2024년 보도에서 일본 사업은 전체 매출의 약 4분의 1을 차지했고, 2025년 10월 기준 일본 제휴 병원 1,500곳, 일본 이용자 160만 명이 보도됐습니다. 대표는 일본에서는 신뢰가 쌓이는 데 한국보다 시간이 더 걸리니 길게 보라고 조언합니다.",
+    "timeline": [
+      {
+        "when": "2019",
+        "what": "일본판 강남언니 출시"
+      },
+      {
+        "when": "2020",
+        "what": "국경 봉쇄, 루코모 인수로 후기 확보"
+      },
+      {
+        "when": "2021",
+        "what": "일본 병원 영업팀 구성"
+      },
+      {
+        "when": "2025.10",
+        "what": "일본 제휴 병원 1,500곳 · 이용자 160만 명 (보도)"
+      }
+    ]
+  },
+  "ja": {
+    "client": "ヒーリングペーパー(カンナムオンニ)",
+    "industry": "美容医療プラットフォーム・スタートアップ",
+    "duration": "2019年進出 – 2025",
+    "short": "Gangnam Unniの日本ローカライズ",
+    "title": "Gangnam Unni、日本の病院と日本のユーザーを抱えるプラットフォームになるまで",
+    "summary": "韓国の病院を訪れた日本のお客様の声から始まり、国境が閉じた時期にも日本のサービスを買収・統合して根を張りました。",
+    "challenge": "韓国の施術名は機械翻訳を通すと不自然になり、日本では信頼と人脈が積み上がるまで時間がかかりました。2020年には国境が閉じ、日本の事業はほぼ止まりました。",
+    "approach": [
+      "提携病院から「日本のお客様がカンナムオンニの画面をキャプチャして来る」という声を繰り返し聞き、2019年に日本版を出しました。",
+      "施術名は美容医療の専門家が繰り返し確認し、自然な日本語にしました。",
+      "2020年に日本のサービス「ルコモ」を買収して口コミ約8万件を確保し、約2年後にアプリと顧客対応を日本版カンナムオンニに統合しました。",
+      "2021年に日本の病院との契約に集中する現地営業チームをつくり、日本のSNSアカウントを運営しました。",
+      "韓国語力だけでなく実力と経験を基準に現地人材を採用しました。"
+    ],
+    "result": "2024年の報道では日本事業が全売上の約4分の1を占め、2025年10月時点で日本の提携病院1,500か所、日本のユーザー160万人と報じられました。代表は、日本では信頼が積み上がるのに韓国より時間がかかるため長い目で見るようにと助言します。",
+    "timeline": [
+      {
+        "when": "2019",
+        "what": "日本版カンナムオンニをリリース"
+      },
+      {
+        "when": "2020",
+        "what": "国境封鎖、ルコモ買収で口コミを確保"
+      },
+      {
+        "when": "2021",
+        "what": "日本の病院向け営業チームを編成"
+      },
+      {
+        "when": "2025.10",
+        "what": "日本の提携病院1,500か所・ユーザー160万人(報道)"
+      }
+    ]
+  },
+  "en": {
+    "client": "Healing Paper (Gangnam Unni)",
+    "industry": "Aesthetic-medicine platform · startup",
+    "duration": "Entered 2019 – 2025",
+    "short": "Gangnam Unni's localisation in Japan",
+    "title": "How Gangnam Unni became a platform with Japanese clinics and Japanese users",
+    "summary": "It began with requests from Japanese visitors to Korean clinics and, even through border closures, took root by acquiring and merging a Japanese service.",
+    "challenge": "Korean procedure names read awkwardly after machine translation, and trust and relationships take longer to build in Japan. In 2020 the borders closed and its Japan business nearly stopped.",
+    "approach": [
+      "Launched a Japanese version in 2019 after partner clinics repeatedly said Japanese visitors were bringing screenshots of the app.",
+      "Had procedure names reviewed repeatedly by aesthetic-medicine experts and rendered into natural Japanese.",
+      "Acquired the Japanese service Lucomo in 2020 for about 80,000 reviews and, about two years later, merged its app and customer service into the Japanese Gangnam Unni app.",
+      "Built a local sales team in 2021 focused on signing Japanese clinics, and ran Japanese social accounts.",
+      "Hired local staff for skill and experience, not just Korean-language ability."
+    ],
+    "result": "A 2024 report put Japan at about a quarter of total revenue, and by October 2025 it was reported to have 1,500 partner clinics and 1.6 million users in Japan. Its CEO advises a long horizon, since trust takes longer to build in Japan than in Korea.",
+    "timeline": [
+      {
+        "when": "2019",
+        "what": "Japanese version launched"
+      },
+      {
+        "when": "2020",
+        "what": "Border closures; Lucomo acquired for its reviews"
+      },
+      {
+        "when": "2021",
+        "what": "Local sales team for Japanese clinics"
+      },
+      {
+        "when": "2025.10",
+        "what": "1,500 partner clinics and 1.6M users in Japan (reported)"
+      }
+    ]
+  }
+}

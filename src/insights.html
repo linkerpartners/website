@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="meta.insights.title">LINKERPARTNERS</title>
+    <meta name="description" content="" data-i18n-attr="content:meta.insights.description" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        // 이 창에서 처음이면 인트로, 사이트 안에서 넘어왔으면 전환 막. 동작 줄이기 설정이면 둘 다 생략
+        try {
+          var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (!sessionStorage.getItem("lp_intro_seen") && !still) d.classList.add("is-intro");
+          else if (sessionStorage.getItem("lp_nav") && !still) d.classList.add("is-arriving");
+          sessionStorage.removeItem("lp_nav");
+        } catch (e) {}
+        // 안전장치: 스크립트가 늦거나 실패해도 6초 뒤에는 첫 화면을 그대로 보여 줌
+        setTimeout(function () {
+          if (d.classList.contains("is-ready")) return;
+          d.classList.add("is-ready");
+          d.classList.remove("is-arriving");
+          document.querySelectorAll("[data-hero]").forEach(function (n) {
+            n.classList.add("is-inview");
+          });
+        }, 6000);
+      })();
+    </script>
+
+    <!-- 글꼴: 한국어 Pretendard / 일본어 Noto Serif JP / 영어 · 숫자 Newsreader Display ExtraLight(대문자). 모두 assets/fonts에 직접 두고 필요한 글자 조각만 불러옴 (tools/build/fonts.cjs) -->
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+
+    <!-- 공통 CSS (순서 중요) -->
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <link rel="stylesheet" href="assets/css/ambient.css" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main" tabindex="-1">
+
+      <!-- 첫 화면: 가운데 정렬. 제목 → 한 줄 → 아래로 이어지는 금빛 세로선 -->
+      <section class="pg-hero container" aria-labelledby="page-title">
+        <h1 id="page-title" class="pg-title" data-reveal="lines" data-hero data-i18n="insights.hero.title"></h1>
+        <p class="pg-lead" data-reveal="rise" data-hero style="--d: 450ms" data-i18n="insights.hero.lead"></p>
+        <span class="pg-drop" data-reveal="drawy" data-hero style="--d: 900ms" aria-hidden="true"></span>
+      </section>
+
+      <!-- 이번 글: 왼쪽에 제목과 한 줄 요약, 오른쪽에 본문 -->
+      <section class="section section--tight" aria-labelledby="feature-title">
+        <div class="container">
+          <div class="pg-feature">
+            <p class="feature-meta" data-reveal="drop">
+              <span class="num" data-i18n="insights.featured.date"></span>
+              <span data-i18n="insights.featured.category"></span>
+              <span data-i18n="insights.featured.read"></span>
+            </p>
+            <h2 id="feature-title" class="feature-title" data-reveal="lines" data-i18n="insights.featured.title"></h2>
+            <p class="feature-quote" data-reveal="wipe" style="--d: 200ms" data-i18n="insights.featured.quote"></p>
+          </div>
+          <article class="pg-narrow article-body" data-list="insights.featured.body">
+            <template>
+              <section data-reveal="rise" data-keep>
+                <h3 data-k="h"></h3>
+                <div data-k-list="p"><template><p data-k="."></p></template></div>
+              </section>
+            </template>
+          </article>
+        </div>
+      </section>
+
+      <!-- 모든 글 -->
+      <section class="section" aria-labelledby="list-title">
+        <div class="container">
+          <div class="pg-head">
+            <h2 id="list-title" class="pg-h2" data-reveal="lines" data-i18n="insights.list.title"></h2>
+            <div class="filter-bar" role="group" data-filter-for="post-list" data-i18n-attr="aria-label:insights.filters.label" data-reveal="rise">
+              <button type="button" data-filter="all" aria-pressed="true" data-i18n="insights.filters.all"></button>
+              <button type="button" data-filter="culture" aria-pressed="false" data-i18n="insights.filters.culture"></button>
+              <button type="button" data-filter="strategy" aria-pressed="false" data-i18n="insights.filters.strategy"></button>
+              <button type="button" data-filter="market" aria-pressed="false" data-i18n="insights.filters.market"></button>
+              <button type="button" data-filter="regulation" aria-pressed="false" data-i18n="insights.filters.regulation"></button>
+            </div>
+          </div>
+          <ul class="rows" id="post-list" data-stagger data-list="insights.posts">
+            <template>
+              <li class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep>
+                <span class="post-date num" data-k="date"></span>
+                <span class="post-cat" data-k="category"></span>
+                <div>
+                  <h3 data-k="title"></h3>
+                  <p data-k="summary"></p>
+                </div>
+                <span class="post-read" data-k="read"></span>
+              </li>
+            </template>
+          </ul>
+          <span class="sr-only" data-filter-count="post-list"></span>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="container">
+          <span class="closing-rule" data-reveal="draw" aria-hidden="true"></span>
+          <div class="closing-body">
+            <div class="closing-lead">
+              <div>
+                <h2 id="closing-title" class="sr-only" data-i18n="closing.title"></h2>
+                <p class="closing-desc" data-reveal="rise" style="--d: 150ms" data-i18n="closing.desc"></p>
+              </div>
+              <p class="closing-clock" data-reveal="fade" style="--d: 250ms"><span class="live-dot" aria-hidden="true"></span><span data-closing-status></span><span class="closing-time num" data-closing-time></span><span data-i18n="closing.info.clock"></span></p>
+            </div>
+            <form class="quick-form" id="quick-form" novalidate data-reveal="rise" style="--d: 200ms">
+              <div class="quick-grid">
+                <div class="field">
+                  <label class="field-label" for="q-name"><span data-i18n="contact.form.name"></span><span class="req" data-i18n="contact.form.required"></span></label>
+                  <input class="input" id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="q-name-hint" />
+                  <p class="field-hint" id="q-name-hint" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label class="field-label" for="q-email"><span data-i18n="contact.form.email"></span><span class="req" data-i18n="contact.form.required"></span></label>
+                  <input class="input" id="q-email" name="email" type="email" autocomplete="email" required aria-describedby="q-email-hint" />
+                  <p class="field-hint" id="q-email-hint" aria-live="polite"></p>
+                </div>
+                <div class="field span-2">
+                  <label class="field-label" for="q-service" data-i18n="contact.form.services"></label>
+                  <select class="input" id="q-service" name="service" data-list="services.items">
+                    <option value="" data-i18n="closing.form.pick"></option>
+                    <template><option data-k-attr="value:id" data-k="title"></option></template>
+                  </select>
+                </div>
+                <div class="field span-2">
+                  <label class="field-label" for="q-message"><span data-i18n="contact.form.message"></span><span class="req" data-i18n="contact.form.required"></span></label>
+                  <textarea class="input" id="q-message" name="message" rows="4" required aria-describedby="q-message-hint" data-i18n-attr="placeholder:contact.form.message_placeholder"></textarea>
+                  <p class="field-hint" id="q-message-hint" aria-live="polite"></p>
+                </div>
+                <div class="field span-2">
+                  <label class="consent">
+                    <input type="checkbox" name="consent" required aria-describedby="q-consent-hint" />
+                    <span><span data-i18n="contact.form.consent"></span> <a class="inline-link" href="privacy.html" data-i18n="contact.form.consent_link"></a></span>
+                  </label>
+                  <p class="field-hint" id="q-consent-hint" aria-live="polite"></p>
+                </div>
+              </div>
+              <div class="quick-submit">
+                <button class="btn btn--primary" type="submit"><span class="roll"><span data-i18n="contact.form.submit"></span></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></button>
+                <p class="form-note" data-i18n="contact.form.note"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- 공통 JS (순서 중요) -->
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/intro.js" defer></script>
+    <script src="assets/js/ambient.js" defer></script>
+    <script src="assets/js/motion.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/ticker.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

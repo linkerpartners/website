@@ -1,0 +1,149 @@
+{
+  "id": "channel-talk",
+  "brand": "Channel Talk",
+  "example": true,
+  "route": "kr_jp",
+  "year": "2026",
+  "services": [
+    "web",
+    "advisory",
+    "localization"
+  ],
+  "metrics": [
+    {
+      "value": "25,000",
+      "label": {
+        "ko": "일본 고객사 수(개)",
+        "ja": "日本の顧客企業数(社)",
+        "en": "Customers in Japan"
+      }
+    },
+    {
+      "value": "~20%",
+      "label": {
+        "ko": "전체 매출 중 일본 비중",
+        "ja": "全売上に占める日本の比率",
+        "en": "Japan's share of total revenue"
+      }
+    },
+    {
+      "value": "+50%",
+      "label": {
+        "ko": "지난해 일본 매출 성장률(전년 대비)",
+        "ja": "昨年の日本売上成長率(前年比)",
+        "en": "Japan revenue growth last year"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "머니투데이 · 일본 기업에 ‘귀이개’로 영업한 한국 스타트업…11년뒤 벌어진 일",
+      "url": "https://www.mt.co.kr/future/2026/06/07/2026060711434842883"
+    }
+  ],
+  "ko": {
+    "client": "채널코퍼레이션 (채널톡)",
+    "industry": "스타트업 · 고객 상담 SaaS",
+    "duration": "2014 – 2026",
+    "short": "Channel Talk의 일본 11년",
+    "title": "Channel Talk, 대리점에서 막힌 뒤 직접 고객을 만나 일본 고객 2만5천 곳을 얻다",
+    "summary": "대리점과 파트너십이 번번이 실패한 뒤, 직접 고객을 만나는 영업으로 길을 열었습니다.",
+    "challenge": "법인 설립 직후인 2014년에 일본에 들어갔지만, 대리점과 파트너십을 통한 방식이 번번이 실패했습니다.",
+    "approach": [
+      "대리점 · 파트너십 대신 고객을 직접 만나는 정석 세일즈로 바꿨습니다.",
+      "코로나로 매장을 닫은 패션 기업의 직원이 온라인으로 접객하는 수요를 출발점으로 삼았습니다.",
+      "일본은 후기보다 구매 전 문의가 많다는 점에 맞춰 패션 · 이커머스와의 궁합을 살렸습니다.",
+      "기존 고객이 낸 개선 제안을 먼저 반영했습니다.",
+      "AI 상담 기능을 일본 고객 환경에 맞춰 키웠고, 일본에서는 평균 해결률이 약 80%로 한국(약 60%)보다 높습니다."
+    ],
+    "result": "일본 고객사는 2만5천 곳, 일본 매출 비중은 약 20%입니다. 지난해 일본 매출은 전년 대비 약 50% 늘었고, 올해 목표는 150억 원입니다. 일본 팀은 50명이고 연말까지 70명으로 늘릴 계획입니다. 일본 지사 대표는 차곡차곡 쌓은 영업의 시간이 가장 큰 자산이라고 말합니다.",
+    "timeline": [
+      {
+        "when": "2014",
+        "what": "법인 설립 직후 일본 진출"
+      },
+      {
+        "when": "초기",
+        "what": "대리점 · 파트너십 전략이 번번이 실패"
+      },
+      {
+        "when": "이후",
+        "what": "직접 영업으로 전환, 패션 · 이커머스로 확대"
+      },
+      {
+        "when": "2026.06",
+        "what": "일본 고객사 2만5천 곳, 팀 50명"
+      }
+    ]
+  },
+  "ja": {
+    "client": "チャネルコーポレーション(Channel Talk)",
+    "industry": "スタートアップ・接客SaaS",
+    "duration": "2014 – 2026",
+    "short": "Channel Talkの日本11年",
+    "title": "Channel Talk、代理店戦略で行き詰まった後、直接営業で日本の顧客2.5万社を獲得",
+    "summary": "代理店やパートナーシップが何度も失敗した後、顧客に直接会う営業で道を開きました。",
+    "challenge": "法人設立直後の2014年に日本へ進出しましたが、代理店やパートナーシップを通じた方法は何度も失敗しました。",
+    "approach": [
+      "代理店・パートナーシップをやめ、顧客に直接会う正攻法の営業に切り替えました。",
+      "コロナ禍で店舗を閉じたアパレル企業のスタッフがオンラインで接客する需要を出発点にしました。",
+      "日本はレビューより購入前の問い合わせが多いという特性に合わせ、ファッション・ECとの相性を活かしました。",
+      "既存顧客から出た改善提案を優先して反映しました。",
+      "AI接客機能を日本の顧客環境に合わせて育て、日本の平均解決率は約80%と韓国(約60%)より高くなっています。"
+    ],
+    "result": "日本の顧客企業は2.5万社、全売上に占める日本の比率は約20%です。昨年の日本売上は前年比約50%増で、今年の目標は約18億円(150億ウォン)です。日本チームは50人で、年末までに70人へ増やす計画です。日本支社長は、コツコツ積み上げた営業の時間が最大の資産だと語っています。",
+    "timeline": [
+      {
+        "when": "2014",
+        "what": "法人設立直後に日本進出"
+      },
+      {
+        "when": "初期",
+        "what": "代理店・パートナーシップ戦略が何度も失敗"
+      },
+      {
+        "when": "その後",
+        "what": "直接営業に転換、ファッション・ECへ拡大"
+      },
+      {
+        "when": "2026.06",
+        "what": "日本の顧客2.5万社、チーム50人"
+      }
+    ]
+  },
+  "en": {
+    "client": "Channel Corporation (Channel Talk)",
+    "industry": "Startup · customer-chat SaaS",
+    "duration": "2014 – 2026",
+    "short": "Channel Talk's eleven years in Japan",
+    "title": "Channel Talk: after agencies failed, selling directly wins 25,000 customers in Japan",
+    "summary": "After reseller and partnership plans failed repeatedly, meeting customers directly opened the way.",
+    "challenge": "It entered Japan in 2014, right after incorporating, but approaches through resellers and partnerships failed repeatedly.",
+    "approach": [
+      "Dropped resellers and partnerships for classic direct sales, meeting customers in person.",
+      "Started from demand among fashion companies whose staff, after shops closed during COVID, served customers online.",
+      "Played to Japan's habit of asking before buying rather than leaving reviews, a fit for fashion and e-commerce.",
+      "Put improvement requests from existing customers first.",
+      "Grew its AI support feature for Japanese customers, where average resolution is about 80% against about 60% in Korea."
+    ],
+    "result": "It has 25,000 customers in Japan, about 20% of total revenue. Japan revenue grew about 50% last year, with a target of KRW 15 billion this year. The Japan team is 50 people and plans to reach 70 by year-end. Its Japan head says the time spent selling steadily is its biggest asset.",
+    "timeline": [
+      {
+        "when": "2014",
+        "what": "Enters Japan right after incorporating"
+      },
+      {
+        "when": "Early",
+        "what": "Reseller and partnership plans repeatedly fail"
+      },
+      {
+        "when": "Later",
+        "what": "Switches to direct sales; grows in fashion and e-commerce"
+      },
+      {
+        "when": "Jun 2026",
+        "what": "25,000 customers in Japan; team of 50"
+      }
+    ]
+  }
+}
