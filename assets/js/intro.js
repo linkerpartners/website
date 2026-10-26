@@ -1,6 +1,6 @@
 /* ==========================================================
    첫 접속 인트로
-   흰 화면에 로고 → 한 줄 문구가 단어 하나씩 빛을 받아 진해짐 → 화면이 위로 걷히며 페이지 등장.
+   흰 화면에서 금빛 가는 줄이 화면 가로로 펼쳐졌다 모이고 → 금빛 선이 로고를 그려 내고 → 한 줄 문구가 단어마다 마스크 뒤에서 떠오름 → 화면이 위로 걷히며 페이지 등장.
    - 세션(창)마다 한 번만. 클릭·키·스크롤로 바로 건너뛸 수 있음.
    - 로딩 숫자/진행 막대는 쓰지 않습니다.
    - <head>의 인라인 스크립트가 <html>에 .is-intro를 붙여 첫 화면이 비치지 않게 가립니다.
@@ -10,8 +10,10 @@
   "use strict";
   const root = document.documentElement;
   const KEY = "lp_intro_seen";
-  const WORD_STEP = 110; // 단어 사이 간격 (ms)
-  const HOLD = 700; // 문구가 다 차오른 뒤 머무는 시간 (ms)
+  const WORD_START = 1300; // 첫 단어가 떠오르기 시작하는 때 (ms). 로고가 다 그려질 즈음
+  const WORD_STEP = 95; // 단어 사이 간격 (ms)
+  const WORD_DUR = 900; // 단어 하나가 떠오르는 시간 (ms, CSS와 같게)
+  const HOLD = 650; // 문구가 다 나온 뒤 머무는 시간 (ms)
   const SKIP_EVENTS = ["pointerdown", "keydown", "wheel", "touchstart"];
 
   function run(waitForText) {
@@ -23,7 +25,8 @@
     el.setAttribute("aria-hidden", "true");
     el.innerHTML =
       '<div class="intro-inner">' +
-      '<img class="intro-logo" src="' + cfg.logo.full + '" alt="" />' +
+      '<span class="intro-logo"><img src="' + cfg.logo.full + '" alt="" /></span>' +
+      '<span class="intro-rule"></span>' +
       '<p class="intro-line"></p>' +
       "</div>";
     document.body.appendChild(el);
@@ -60,9 +63,11 @@
         }
         const w = document.createElement("span");
         w.className = "intro-word";
-        w.textContent = part.text;
+        const inner = document.createElement("span");
+        inner.textContent = part.text;
+        w.appendChild(inner);
         line.appendChild(w);
-        const delay = 500 + count * WORD_STEP;
+        const delay = WORD_START + count * WORD_STEP;
         count += 1;
         timers.push(
           setTimeout(function () {
@@ -74,7 +79,7 @@
       requestAnimationFrame(function () {
         el.classList.add("is-playing");
       });
-      timers.push(setTimeout(finish, 500 + count * WORD_STEP + HOLD + 400));
+      timers.push(setTimeout(finish, WORD_START + count * WORD_STEP + WORD_DUR + HOLD));
       // 건너뛰기는 재생이 시작된 뒤부터 (다시 보기 버튼 클릭이 바로 건너뛰지 않도록)
       setTimeout(function () {
         SKIP_EVENTS.forEach(function (ev) {

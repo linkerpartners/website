@@ -1706,7 +1706,7 @@ select.input {
 }
 
 /* ---------- 12. 첫 접속 인트로 (intro.js) ----------
-   로고 → 문구가 단어 하나씩 빛을 받아 진해짐 → 화면이 위로 걷힘. 로딩 숫자는 쓰지 않음 */
+   금빛 선이 로고를 그려 냄 → 가는 줄 → 문구가 단어마다 떠오름 → 화면이 위로 걷힘. 로딩 숫자는 쓰지 않음 */
 .is-intro body {
   overflow: hidden;
 }
@@ -1739,6 +1739,7 @@ select.input {
 }
 
 .intro-inner {
+  position: relative;
   display: grid;
   justify-items: center;
   gap: var(--space-7);
@@ -1753,19 +1754,126 @@ select.input {
   transform: translateY(-24px);
 }
 
-.intro-logo {
-  width: clamp(160px, 18vw, 240px);
-  height: auto;
+/* 첫 장면: 화면 가로로 금빛 가는 선이 펼쳐짐(한국과 일본 사이의 연결) → 선이 가운데로 모이는 동안 로고가 그려 짐.
+   뒤에는 금빛 빛무리가 숨 쉬듯 번짐(깊이) */
+.intro::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(120vw, 1100px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(214 178 110 / 0.1), rgb(214 178 110 / 0.065) 25%, rgb(214 178 110 / 0.03) 55%, rgb(214 178 110 / 0.008) 80%, transparent);
+  transform: translate(-50%, -54%) scale(0.85);
   opacity: 0;
-  transform: translateY(8px);
-  transition:
-    opacity 900ms var(--ease-standard),
-    transform 900ms var(--ease-emphasized);
+  pointer-events: none;
+}
+
+.intro.is-playing::before {
+  animation: intro-glow 3600ms var(--ease-standard) both;
+}
+
+@keyframes intro-glow {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -54%) scale(0.85);
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.85;
+    transform: translate(-50%, -54%) scale(1.08);
+  }
+}
+
+/* 로고: 금빛 가는 선이 왼쪽에서 오른쪽으로 지나가며 로고를 그려 냄(클립 + 선이 같은 곡선 · 시간).
+   그려지는 동안 로고는 살짝 커 있다가(1.05배) 제자리로 내려앉음 */
+.intro-logo {
+  position: relative;
+  display: block;
+  width: clamp(160px, 18vw, 240px);
+  clip-path: inset(-8px 100% -8px 0);
+}
+
+.intro-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(1.05);
+  transform-origin: 0 50%;
+}
+
+.intro-logo::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  border-right: 1px solid var(--gold-100);
+  opacity: 0;
 }
 
 .intro.is-playing .intro-logo {
-  opacity: 1;
+  clip-path: inset(-8px 0 -8px 0);
+  transition: clip-path 1200ms var(--ease-expo) 350ms;
+}
+
+.intro.is-playing .intro-logo img {
   transform: none;
+  transition: transform 1500ms var(--ease-expo) 350ms;
+}
+
+.intro.is-playing .intro-logo::after {
+  animation: intro-sweep 1200ms var(--ease-expo) 350ms both;
+}
+
+@keyframes intro-sweep {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+/* 로고와 문구 사이 금빛 줄: 처음엔 화면 가로로 길게 펼쳐졌다가(0.7초) 가운데 56px로 모임 */
+.intro-rule {
+  display: block;
+  width: 0;
+  height: 1px;
+  background: var(--gold-100);
+  opacity: 0;
+}
+
+.intro.is-playing .intro-rule {
+  animation: intro-rule 1700ms var(--ease-expo) both;
+}
+
+@keyframes intro-rule {
+  0% {
+    width: 0;
+    opacity: 0.9;
+  }
+  42%,
+  52% {
+    width: min(88vw, 960px);
+    opacity: 0.5;
+  }
+  100% {
+    width: 56px;
+    opacity: 1;
+  }
 }
 
 .intro-line {
@@ -1776,13 +1884,30 @@ select.input {
   line-height: var(--lh-heading);
 }
 
+/* 문구: 단어마다 마스크 뒤에서 떠오르며 흐림이 걷힘 (글줄 높이만큼 가려져 있다가 올라옴) */
 .intro-word {
-  color: var(--ink-20);
-  transition: color 700ms var(--ease-standard);
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding: 0.12em 0;
+  margin: -0.12em 0;
 }
 
-.intro-word.is-lit {
-  color: var(--ink);
+.intro-word > span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(105%);
+  filter: blur(6px);
+  transition:
+    transform 900ms var(--ease-expo),
+    opacity 700ms var(--ease-standard),
+    filter 900ms var(--ease-expo);
+}
+
+.intro-word.is-lit > span {
+  opacity: 1;
+  transform: none;
+  filter: blur(0);
 }
 
 /* ---------- 13. 페이지 전환 막 (main.js) ----------

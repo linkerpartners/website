@@ -183,8 +183,8 @@ write("linker-logo-header-pc.svg", svg(headerPc, COLORS.light));
 // 파비콘: LINKER 한 줄 (18px 미만 규칙)
 // 파비콘은 로고와 같은 Jost Regular의 'L' 한 글자(금색)를 흰 원 안에 둠. 흰 바탕에서도 보이도록 옅은 금색 테두리
 const lGlyph = regular.charToGlyph("L");
-const lb = lGlyph.getPath(0, 0, 62).getBoundingBox();
-const lD = lGlyph.getPath(50 - (lb.x1 + lb.x2) / 2, 50 - (lb.y1 + lb.y2) / 2, 62).toPathData(2);
+const lb = lGlyph.getPath(0, 0, 88).getBoundingBox();
+const lD = lGlyph.getPath(50 - (lb.x1 + lb.x2) / 2, 50 - (lb.y1 + lb.y2) / 2, 88).toPathData(2);
 write(
   "favicon.svg",
   `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="LINKERPARTNERS"><title>LINKERPARTNERS</title><circle cx="50" cy="50" r="49" fill="#FFFFFF" stroke="#E4DAC3" stroke-width="1.4"/><path fill="#A8874E" d="${lD}"/></svg>\n`,
