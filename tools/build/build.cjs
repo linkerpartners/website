@@ -205,7 +205,12 @@ function render(page, lang) {
   }).forEach(function (l) {
     add("meta", { property: "og:locale:alternate", content: LOCALE[l] });
   });
-  if (SITE.ogImage) add("meta", { property: "og:image", content: SITE.url.replace(/\/$/, "") + "/" + SITE.ogImage });
+  if (SITE.ogImage) {
+    add("meta", { property: "og:image", content: SITE.url.replace(/\/$/, "") + "/" + SITE.ogImage });
+    add("meta", { property: "og:image:width", content: "1200" });
+    add("meta", { property: "og:image:height", content: "630" });
+    add("meta", { property: "og:image:alt", content: SITE.name });
+  }
   add("meta", { name: "twitter:card", content: SITE.ogImage ? "summary_large_image" : "summary" });
   // 검색엔진 사이트 소유 확인(site.json에 값이 있을 때만): 구글 서치 콘솔 · 네이버 서치어드바이저의 'HTML 태그' 방식
   if (SITE.googleSiteVerification) add("meta", { name: "google-site-verification", content: SITE.googleSiteVerification });

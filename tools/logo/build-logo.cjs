@@ -181,7 +181,9 @@ write("linker-logo-header-mobile.svg", svg(headerMobile, COLORS.light));
 write("linker-logo-header-pc.svg", svg(headerPc, COLORS.light));
 
 // 파비콘: LINKER 한 줄 (18px 미만 규칙)
-write("favicon.svg", svg(mark, COLORS.light, { sizeAttrs: false, square: true, pad: 4 }));
+// 파비콘은 작은 크기에서 읽히도록 가운데 'L' 모노그램(금빛 바탕 · 흰 L, 가운데 56%에 둠. 구글은 원형으로 잘라 보임)
+write("favicon.svg", '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="LINKERPARTNERS"><title>LINKERPARTNERS</title><rect width="100" height="100" fill="#A8874E"/><path fill="#FFFFFF" d="M35 22H43V70H65V78H35Z"/></svg>\n');
+// PNG(favicon-48/96/192 · apple-touch-icon · icon-512)와 favicon.ico는 이 SVG를 브라우저로 그려 만듦(docs/배포-가이드.md)
 
 // 문서용 수치
 const capL = capHeight(light) * (100 / light.unitsPerEm);
