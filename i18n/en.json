@@ -258,6 +258,45 @@
         "duration": "One session · 60 min"
       },
       {
+        "id": "localization",
+        "href": "services.html#localization",
+        "ask": "contact.html?services=localization",
+        "title": "Brand localization and product pages",
+        "summary": "Not a translation: rewritten for how local customers read.",
+        "price": "items.localization",
+        "mode": "unit",
+        "lead": "Hand us product pages, brand intros, product names or sales emails one piece at a time. We rework tone and the order of information for the local market, and check that cosmetics and food claims stay within the rules.",
+        "for": [
+          "Sellers who need Japanese or Korean product pages",
+          "Anyone uneasy about copy made with a translation tool"
+        ],
+        "deliverables": [
+          "Localized material",
+          "Note on wording and labelling rules"
+        ],
+        "duration": "1⁠–⁠2 weeks per piece"
+      },
+      {
+        "id": "advisory",
+        "href": "services.html#advisory",
+        "ask": "contact.html?services=advisory",
+        "title": "Monthly mentoring",
+        "summary": "A monthly check-in and answers to your questions after launch.",
+        "price": "items.advisory",
+        "mode": "monthly",
+        "lead": "Light is one 30-minute check-in a month. Standard is two calls a month, answers to your questions by chat and one small fix. Start for one month and stop whenever you like.",
+        "for": [
+          "Sellers running local sales on their own",
+          "Anyone who wants steady check-ins, not a one-off job"
+        ],
+        "deliverables": [
+          "Regular calls and notes",
+          "Answers by chat (Standard)",
+          "One small fix a month (Standard)"
+        ],
+        "duration": "Monthly"
+      },
+      {
         "id": "diagnostic",
         "href": "services.html#diagnostic",
         "ask": "contact.html?services=diagnostic",
@@ -300,46 +339,25 @@
         "duration": "1⁠–⁠3 weeks"
       },
       {
-        "id": "web",
-        "href": "services.html#web",
-        "ask": "contact.html?services=web",
-        "title": "Website building",
-        "summary": "An intro site that reads well in Korean and Japanese.",
-        "price": "items.web",
+        "id": "channel",
+        "href": "services.html#channel",
+        "ask": "contact.html?services=channel",
+        "title": "Store-launch guide",
+        "summary": "What to prepare before you list on a marketplace.",
+        "price": "items.channel",
         "mode": "from",
-        "lead": "We build a website with your brand story, products and how to reach you. The basic option is a one-page site. The deep option is a site of up to five pages with a contact form and both Japanese and Korean versions. A custom online shop or complex member features are not included; we can point you to developers if you need one.",
+        "lead": "For first-time sellers on Qoo10 or Rakuten in Japan, or Smartstore or Coupang in Korea: choosing a channel, documents to prepare, shipping and pricing, and your product page. The basic option is a channel comparison and preparation checklist. The deep option adds a review of two product pages. Tax and customs advice is not included; we can point you to specialists.",
         "for": [
-          "Sellers whose only presence is social media",
-          "Anyone who needs a page that customers in Japan or Korea can find by search"
+          "Sellers starting online sales for the first time",
+          "Sellers who are listed but not selling"
         ],
         "deliverables": [
-          "One-page site (basic) or up to five pages (deep)",
-          "Contact form connected to your email",
-          "Japanese and Korean copy (deep)",
-          "A short guide to editing it"
+          "Channel comparison table",
+          "Preparation checklist",
+          "Shipping and pricing memo",
+          "Review of two product pages (deep)"
         ],
-        "duration": "2⁠–⁠5 weeks"
-      },
-      {
-        "id": "booking",
-        "href": "services.html#booking",
-        "ask": "contact.html?services=booking",
-        "title": "Booking system setup",
-        "summary": "A smooth way to take bookings and send confirmations.",
-        "price": "items.booking",
-        "mode": "from",
-        "lead": "For shops, classes and consultations that run on bookings, we set up a booking page and notifications. The basic option configures an existing booking service and polishes the notices in Japanese and Korean. The deep option adds a booking page styled to your brand with confirmation emails and chat alerts. We do not build payment systems from scratch.",
-        "for": [
-          "Owners of shops, studios and classes that take bookings",
-          "Anyone who wants Korean and Japanese customers booking in one place"
-        ],
-        "deliverables": [
-          "Booking page",
-          "Notices in Japanese and Korean",
-          "Confirmation email and alert setup (deep)",
-          "A guide to running it"
-        ],
-        "duration": "1⁠–⁠4 weeks"
+        "duration": "1⁠–⁠3 weeks"
       },
       {
         "id": "sns",
@@ -364,64 +382,46 @@
         "duration": "1⁠–⁠3 weeks"
       },
       {
-        "id": "localization",
-        "href": "services.html#localization",
-        "ask": "contact.html?services=localization",
-        "title": "Brand localization and product pages",
-        "summary": "Not a translation: rewritten for how local customers read.",
-        "price": "items.localization",
-        "mode": "unit",
-        "lead": "Hand us product pages, brand intros, product names or sales emails one piece at a time. We rework tone and the order of information for the local market, and check that cosmetics and food claims stay within the rules.",
-        "for": [
-          "Sellers who need Japanese or Korean product pages",
-          "Anyone uneasy about copy made with a translation tool"
-        ],
-        "deliverables": [
-          "Localized material",
-          "Note on wording and labelling rules"
-        ],
-        "duration": "1⁠–⁠2 weeks per piece"
-      },
-      {
-        "id": "channel",
-        "href": "services.html#channel",
-        "ask": "contact.html?services=channel",
-        "title": "Store-launch guide",
-        "summary": "What to prepare before you list on a marketplace.",
-        "price": "items.channel",
+        "id": "booking",
+        "href": "services.html#booking",
+        "ask": "contact.html?services=booking",
+        "title": "Booking system setup",
+        "summary": "A smooth way to take bookings and send confirmations.",
+        "price": "items.booking",
         "mode": "from",
-        "lead": "For first-time sellers on Qoo10 or Rakuten in Japan, or Smartstore or Coupang in Korea: choosing a channel, documents to prepare, shipping and pricing, and your product page. The basic option is a channel comparison and preparation checklist. The deep option adds a review of two product pages. Tax and customs advice is not included; we can point you to specialists.",
+        "lead": "For shops, classes and consultations that run on bookings, we set up a booking page and notifications. The basic option configures an existing booking service and polishes the notices in Japanese and Korean. The deep option adds a booking page styled to your brand with confirmation emails and chat alerts. We do not build payment systems from scratch.",
         "for": [
-          "Sellers starting online sales for the first time",
-          "Sellers who are listed but not selling"
+          "Owners of shops, studios and classes that take bookings",
+          "Anyone who wants Korean and Japanese customers booking in one place"
         ],
         "deliverables": [
-          "Channel comparison table",
-          "Preparation checklist",
-          "Shipping and pricing memo",
-          "Review of two product pages (deep)"
+          "Booking page",
+          "Notices in Japanese and Korean",
+          "Confirmation email and alert setup (deep)",
+          "A guide to running it"
         ],
-        "duration": "1⁠–⁠3 weeks"
+        "duration": "1⁠–⁠4 weeks"
       },
       {
-        "id": "advisory",
-        "href": "services.html#advisory",
-        "ask": "contact.html?services=advisory",
-        "title": "Monthly mentoring",
-        "summary": "A monthly check-in and answers to your questions after launch.",
-        "price": "items.advisory",
-        "mode": "monthly",
-        "lead": "Light is one 30-minute check-in a month. Standard is two calls a month, answers to your questions by chat and one small fix. Start for one month and stop whenever you like.",
+        "id": "web",
+        "href": "services.html#web",
+        "ask": "contact.html?services=web",
+        "title": "Website building",
+        "summary": "An intro site that reads well in Korean and Japanese.",
+        "price": "items.web",
+        "mode": "from",
+        "lead": "We build a website with your brand story, products and how to reach you. The basic option is a one-page site. The deep option is a site of up to five pages with a contact form and both Japanese and Korean versions. A custom online shop or complex member features are not included; we can point you to developers if you need one.",
         "for": [
-          "Sellers running local sales on their own",
-          "Anyone who wants steady check-ins, not a one-off job"
+          "Sellers whose only presence is social media",
+          "Anyone who needs a page that customers in Japan or Korea can find by search"
         ],
         "deliverables": [
-          "Regular calls and notes",
-          "Answers by chat (Standard)",
-          "One small fix a month (Standard)"
+          "One-page site (basic) or up to five pages (deep)",
+          "Contact form connected to your email",
+          "Japanese and Korean copy (deep)",
+          "A short guide to editing it"
         ],
-        "duration": "Monthly"
+        "duration": "2⁠–⁠5 weeks"
       }
     ],
     "directions": {
@@ -492,6 +492,42 @@
           "mode": "plain"
         },
         {
+          "id": "localization",
+          "title": "Brand localization and product pages",
+          "desc": "Product pages, brand intros, product names and more",
+          "qty": {
+            "label": "Pieces to localize",
+            "unit": "",
+            "min": 1,
+            "max": 10,
+            "start": 2
+          }
+        },
+        {
+          "id": "advisory",
+          "title": "Monthly mentoring",
+          "desc": "Start and stop month by month",
+          "tiers": [
+            {
+              "v": "light",
+              "name": "Light",
+              "desc": "One 30-minute call a month, with notes"
+            },
+            {
+              "v": "standard",
+              "name": "Standard",
+              "desc": "Two calls a month, chat answers and one small fix"
+            }
+          ],
+          "qty": {
+            "label": "Duration",
+            "unit": " mo",
+            "min": 1,
+            "max": 12,
+            "start": 3
+          }
+        },
+        {
           "id": "diagnostic",
           "title": "Market-fit report",
           "desc": "Check that your product suits the market",
@@ -526,36 +562,19 @@
           ]
         },
         {
-          "id": "web",
-          "title": "Website building",
-          "desc": "An intro site in Japanese and Korean",
+          "id": "channel",
+          "title": "Store-launch guide",
+          "desc": "Get ready before you list",
           "tiers": [
             {
               "v": "basic",
               "name": "Basic",
-              "desc": "One-page site · 2⁠–⁠3 weeks"
+              "desc": "Channel comparison and checklist · 1⁠–⁠2 weeks"
             },
             {
               "v": "deep",
               "name": "Deep",
-              "desc": "Up to five pages, contact form, two languages · 3⁠–⁠5 weeks"
-            }
-          ]
-        },
-        {
-          "id": "booking",
-          "title": "Booking system setup",
-          "desc": "A way to take bookings and send confirmations",
-          "tiers": [
-            {
-              "v": "basic",
-              "name": "Basic",
-              "desc": "Existing booking service set up, notices written · 1⁠–⁠2 weeks"
-            },
-            {
-              "v": "deep",
-              "name": "Deep",
-              "desc": "Branded booking page, confirmation emails, alerts · 3⁠–⁠4 weeks"
+              "desc": "Includes review of two product pages · 2⁠–⁠3 weeks"
             }
           ]
         },
@@ -577,57 +596,38 @@
           ]
         },
         {
-          "id": "localization",
-          "title": "Brand localization and product pages",
-          "desc": "Product pages, brand intros, product names and more",
-          "qty": {
-            "label": "Pieces to localize",
-            "unit": "",
-            "min": 1,
-            "max": 10,
-            "start": 2
-          }
-        },
-        {
-          "id": "channel",
-          "title": "Store-launch guide",
-          "desc": "Get ready before you list",
+          "id": "booking",
+          "title": "Booking system setup",
+          "desc": "A way to take bookings and send confirmations",
           "tiers": [
             {
               "v": "basic",
               "name": "Basic",
-              "desc": "Channel comparison and checklist · 1⁠–⁠2 weeks"
+              "desc": "Existing booking service set up, notices written · 1⁠–⁠2 weeks"
             },
             {
               "v": "deep",
               "name": "Deep",
-              "desc": "Includes review of two product pages · 2⁠–⁠3 weeks"
+              "desc": "Branded booking page, confirmation emails, alerts · 3⁠–⁠4 weeks"
             }
           ]
         },
         {
-          "id": "advisory",
-          "title": "Monthly mentoring",
-          "desc": "Start and stop month by month",
+          "id": "web",
+          "title": "Website building",
+          "desc": "An intro site in Japanese and Korean",
           "tiers": [
             {
-              "v": "light",
-              "name": "Light",
-              "desc": "One 30-minute call a month, with notes"
+              "v": "basic",
+              "name": "Basic",
+              "desc": "One-page site · 2⁠–⁠3 weeks"
             },
             {
-              "v": "standard",
-              "name": "Standard",
-              "desc": "Two calls a month, chat answers and one small fix"
+              "v": "deep",
+              "name": "Deep",
+              "desc": "Up to five pages, contact form, two languages · 3⁠–⁠5 weeks"
             }
-          ],
-          "qty": {
-            "label": "Duration",
-            "unit": " mo",
-            "min": 1,
-            "max": 12,
-            "start": 3
-          }
+          ]
         }
       ],
       "result_title": "Estimated cost · incl. VAT",
@@ -745,53 +745,24 @@
         ]
       },
       {
-        "group": "Review and design",
-        "items": [
-          {
-            "name": "Market-fit report · Basic",
-            "desc": "Market and competitor research report",
-            "price": "items.diagnostic.basic",
-            "mode": "plain"
-          },
-          {
-            "name": "Market-fit report · Deep",
-            "desc": "Price comparison, rules checklist and follow-up call",
-            "price": "items.diagnostic.deep",
-            "mode": "plain"
-          },
-          {
-            "name": "Logo and brand design · Basic",
-            "desc": "Three drafts, final files for one",
-            "price": "items.logo.basic",
-            "mode": "plain"
-          },
-          {
-            "name": "Logo and brand design · Deep",
-            "desc": "Brand guide, social profile and card images",
-            "price": "items.logo.deep",
-            "mode": "plain"
-          }
-        ]
-      },
-      {
         "group": "Build",
         "items": [
           {
-            "name": "Website building · Basic",
-            "desc": "One-page site",
-            "price": "items.web.basic",
-            "mode": "plain"
-          },
-          {
-            "name": "Website building · Deep",
-            "desc": "Up to five pages, contact form, two languages",
-            "price": "items.web.deep",
-            "mode": "plain"
+            "name": "Brand localization and product pages",
+            "desc": "One piece",
+            "price": "items.localization",
+            "mode": "unit"
           },
           {
             "name": "Booking system setup · Basic",
             "desc": "Existing booking service set up, notices written",
             "price": "items.booking.basic",
+            "mode": "plain"
+          },
+          {
+            "name": "Website building · Basic",
+            "desc": "One-page site",
+            "price": "items.web.basic",
             "mode": "plain"
           },
           {
@@ -801,38 +772,9 @@
             "mode": "plain"
           },
           {
-            "name": "Brand localization and product pages",
-            "desc": "One piece",
-            "price": "items.localization",
-            "mode": "unit"
-          }
-        ]
-      },
-      {
-        "group": "Sell and run",
-        "items": [
-          {
-            "name": "Social media and ads support · Basic",
-            "desc": "Account review and ad-setup guide",
-            "price": "items.sns.basic",
-            "mode": "plain"
-          },
-          {
-            "name": "Social media and ads support · Deep",
-            "desc": "Four-week calendar, 12 captions, results check",
-            "price": "items.sns.deep",
-            "mode": "plain"
-          },
-          {
-            "name": "Store-launch guide · Basic",
-            "desc": "Channel comparison and checklist",
-            "price": "items.channel.basic",
-            "mode": "plain"
-          },
-          {
-            "name": "Store-launch guide · Deep",
-            "desc": "Includes review of two product pages",
-            "price": "items.channel.deep",
+            "name": "Website building · Deep",
+            "desc": "Up to five pages, contact form, two languages",
+            "price": "items.web.deep",
             "mode": "plain"
           }
         ]
@@ -851,6 +793,64 @@
             "desc": "Two calls a month, chat answers and one small fix",
             "price": "items.advisory.standard",
             "mode": "monthly"
+          }
+        ]
+      },
+      {
+        "group": "Review and design",
+        "items": [
+          {
+            "name": "Market-fit report · Basic",
+            "desc": "Market and competitor research report",
+            "price": "items.diagnostic.basic",
+            "mode": "plain"
+          },
+          {
+            "name": "Logo and brand design · Basic",
+            "desc": "Three drafts, final files for one",
+            "price": "items.logo.basic",
+            "mode": "plain"
+          },
+          {
+            "name": "Market-fit report · Deep",
+            "desc": "Price comparison, rules checklist and follow-up call",
+            "price": "items.diagnostic.deep",
+            "mode": "plain"
+          },
+          {
+            "name": "Logo and brand design · Deep",
+            "desc": "Brand guide, social profile and card images",
+            "price": "items.logo.deep",
+            "mode": "plain"
+          }
+        ]
+      },
+      {
+        "group": "Sell and run",
+        "items": [
+          {
+            "name": "Store-launch guide · Basic",
+            "desc": "Channel comparison and checklist",
+            "price": "items.channel.basic",
+            "mode": "plain"
+          },
+          {
+            "name": "Social media and ads support · Basic",
+            "desc": "Account review and ad-setup guide",
+            "price": "items.sns.basic",
+            "mode": "plain"
+          },
+          {
+            "name": "Store-launch guide · Deep",
+            "desc": "Includes review of two product pages",
+            "price": "items.channel.deep",
+            "mode": "plain"
+          },
+          {
+            "name": "Social media and ads support · Deep",
+            "desc": "Four-week calendar, 12 captions, results check",
+            "price": "items.sns.deep",
+            "mode": "plain"
           }
         ]
       }

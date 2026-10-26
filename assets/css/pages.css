@@ -4542,12 +4542,14 @@
     display: none;
   }
 
+  /* 폰은 목록 하나뿐이라 모양이 바뀌며 옮겨 가는 일이 없음: 자리를 처음부터 고정하고(옮겨 가는 0.9초 없음), 3D 원근도 끔(카드마다 3D 층이 생겨 끊김) */
   .lib-frame {
-    transition: left 900ms var(--ease-morph);
+    left: calc(100% - var(--page-x) - var(--card));
+    perspective: none;
   }
 
-  .lib[data-view="list"] .lib-frame {
-    left: calc(100% - var(--page-x) - var(--card));
+  .lib-ring {
+    will-change: auto;
   }
 
   .lib-names {

@@ -258,6 +258,45 @@
         "duration": "1回・60分"
       },
       {
+        "id": "localization",
+        "href": "services.html#localization",
+        "ask": "contact.html?services=localization",
+        "title": "ブランドのローカライズ・商品ページ",
+        "summary": "翻訳ではなく、現地のお客様が読む形に書き直します。",
+        "price": "items.localization",
+        "mode": "unit",
+        "lead": "商品ページ、ブランド紹介、商品名、営業メールなどを1件ずつご依頼いただけます。言葉づかいと情報の順番を現地の基準で組み直し、化粧品・食品の表現が規制に触れないかも確認します。",
+        "for": [
+          "日本語や韓国語の販売ページが必要な事業者",
+          "翻訳ツールで作った文章が気になる方"
+        ],
+        "deliverables": [
+          "ローカライズした資料",
+          "表現・表示規制のメモ"
+        ],
+        "duration": "資料1件につき1⁠〜⁠2週間"
+      },
+      {
+        "id": "advisory",
+        "href": "services.html#advisory",
+        "ask": "contact.html?services=advisory",
+        "title": "月次メンタリング",
+        "summary": "始めたあとも、毎月点検して質問にお答えします。",
+        "price": "items.advisory",
+        "mode": "monthly",
+        "lead": "ライトは月1回30分の点検相談、スタンダードは月2回の相談とメッセンジャーでの質問対応、小さな修正作業1件まで。1か月単位で始めて、いつでも止められます。",
+        "for": [
+          "ひとりで現地販売を回している事業者",
+          "一度つくって終わりにせず、継続して点検を受けたい方"
+        ],
+        "deliverables": [
+          "定期相談とメモ",
+          "メッセンジャーでの質問対応(スタンダード)",
+          "小さな修正作業 月1件(スタンダード)"
+        ],
+        "duration": "月単位"
+      },
+      {
         "id": "diagnostic",
         "href": "services.html#diagnostic",
         "ask": "contact.html?services=diagnostic",
@@ -300,46 +339,25 @@
         "duration": "1⁠〜⁠3週間"
       },
       {
-        "id": "web",
-        "href": "services.html#web",
-        "ask": "contact.html?services=web",
-        "title": "ホームページ制作",
-        "summary": "日本語・韓国語で読めるご紹介ページをつくります。",
-        "price": "items.web",
+        "id": "channel",
+        "href": "services.html#channel",
+        "ask": "contact.html?services=channel",
+        "title": "出店準備ガイド",
+        "summary": "ショップに出品する前に、準備することを整理します。",
+        "price": "items.channel",
         "mode": "from",
-        "lead": "ブランドの紹介、商品、お問い合わせ方法をまとめたホームページをつくります。基本は1ページの紹介ページ、詳細は5ページ以内のホームページにお問い合わせフォームと日本語・韓国語版まで。独自のショッピングサイトや複雑な会員機能は含まれません。必要な場合は専門の開発会社をご紹介します。",
+        "lead": "日本(Qoo10・楽天)や韓国(スマートストア・クーパン)で初めて販売する方のために、チャネルの選び方、必要書類、配送と価格、商品ページを整理します。基本はチャネル比較と準備チェックリスト、詳細は商品ページ2点の点検まで。税務・通関の相談は含まれません。必要な場合は専門家をご紹介します。",
         "for": [
-          "ご紹介の場がSNSだけの事業者",
-          "日本や韓国のお客様が検索して見つけられるページが必要な方"
+          "オンライン販売を初めて始める事業者",
+          "出店したものの売上が伸びない事業者"
         ],
         "deliverables": [
-          "ホームページ1ページ(基本)または5ページ以内(詳細)",
-          "お問い合わせフォームと連携",
-          "日本語・韓国語の文章(詳細)",
-          "更新の手引き"
+          "チャネル比較表",
+          "出店準備チェックリスト",
+          "配送・価格設定のメモ",
+          "商品ページの点検2点(詳細)"
         ],
-        "duration": "2⁠〜⁠5週間"
-      },
-      {
-        "id": "booking",
-        "href": "services.html#booking",
-        "ask": "contact.html?services=booking",
-        "title": "予約システム構築",
-        "summary": "予約を受け付けて知らせる流れをつくります。",
-        "price": "items.booking",
-        "mode": "from",
-        "lead": "店舗、教室、相談など、予約が必要な事業のために予約ページと通知の流れをつくります。基本は既存の予約サービスの設定と、案内文の日本語・韓国語化。詳細では、ブランドに合わせた予約ページと確認メール・メッセージ通知まで。決済システムそのものの開発は行いません。",
-        "for": [
-          "予約でお客様を迎える店舗・工房・教室の運営者",
-          "日本と韓国のお客様の予約を一か所で受けたい方"
-        ],
-        "deliverables": [
-          "予約ページ",
-          "日本語・韓国語の案内文",
-          "確認メール・通知の設定(詳細)",
-          "運用の手引き"
-        ],
-        "duration": "1⁠〜⁠4週間"
+        "duration": "1⁠〜⁠3週間"
       },
       {
         "id": "sns",
@@ -364,64 +382,46 @@
         "duration": "1⁠〜⁠3週間"
       },
       {
-        "id": "localization",
-        "href": "services.html#localization",
-        "ask": "contact.html?services=localization",
-        "title": "ブランドのローカライズ・商品ページ",
-        "summary": "翻訳ではなく、現地のお客様が読む形に書き直します。",
-        "price": "items.localization",
-        "mode": "unit",
-        "lead": "商品ページ、ブランド紹介、商品名、営業メールなどを1件ずつご依頼いただけます。言葉づかいと情報の順番を現地の基準で組み直し、化粧品・食品の表現が規制に触れないかも確認します。",
-        "for": [
-          "日本語や韓国語の販売ページが必要な事業者",
-          "翻訳ツールで作った文章が気になる方"
-        ],
-        "deliverables": [
-          "ローカライズした資料",
-          "表現・表示規制のメモ"
-        ],
-        "duration": "資料1件につき1⁠〜⁠2週間"
-      },
-      {
-        "id": "channel",
-        "href": "services.html#channel",
-        "ask": "contact.html?services=channel",
-        "title": "出店準備ガイド",
-        "summary": "ショップに出品する前に、準備することを整理します。",
-        "price": "items.channel",
+        "id": "booking",
+        "href": "services.html#booking",
+        "ask": "contact.html?services=booking",
+        "title": "予約システム構築",
+        "summary": "予約を受け付けて知らせる流れをつくります。",
+        "price": "items.booking",
         "mode": "from",
-        "lead": "日本(Qoo10・楽天)や韓国(スマートストア・クーパン)で初めて販売する方のために、チャネルの選び方、必要書類、配送と価格、商品ページを整理します。基本はチャネル比較と準備チェックリスト、詳細は商品ページ2点の点検まで。税務・通関の相談は含まれません。必要な場合は専門家をご紹介します。",
+        "lead": "店舗、教室、相談など、予約が必要な事業のために予約ページと通知の流れをつくります。基本は既存の予約サービスの設定と、案内文の日本語・韓国語化。詳細では、ブランドに合わせた予約ページと確認メール・メッセージ通知まで。決済システムそのものの開発は行いません。",
         "for": [
-          "オンライン販売を初めて始める事業者",
-          "出店したものの売上が伸びない事業者"
+          "予約でお客様を迎える店舗・工房・教室の運営者",
+          "日本と韓国のお客様の予約を一か所で受けたい方"
         ],
         "deliverables": [
-          "チャネル比較表",
-          "出店準備チェックリスト",
-          "配送・価格設定のメモ",
-          "商品ページの点検2点(詳細)"
+          "予約ページ",
+          "日本語・韓国語の案内文",
+          "確認メール・通知の設定(詳細)",
+          "運用の手引き"
         ],
-        "duration": "1⁠〜⁠3週間"
+        "duration": "1⁠〜⁠4週間"
       },
       {
-        "id": "advisory",
-        "href": "services.html#advisory",
-        "ask": "contact.html?services=advisory",
-        "title": "月次メンタリング",
-        "summary": "始めたあとも、毎月点検して質問にお答えします。",
-        "price": "items.advisory",
-        "mode": "monthly",
-        "lead": "ライトは月1回30分の点検相談、スタンダードは月2回の相談とメッセンジャーでの質問対応、小さな修正作業1件まで。1か月単位で始めて、いつでも止められます。",
+        "id": "web",
+        "href": "services.html#web",
+        "ask": "contact.html?services=web",
+        "title": "ホームページ制作",
+        "summary": "日本語・韓国語で読めるご紹介ページをつくります。",
+        "price": "items.web",
+        "mode": "from",
+        "lead": "ブランドの紹介、商品、お問い合わせ方法をまとめたホームページをつくります。基本は1ページの紹介ページ、詳細は5ページ以内のホームページにお問い合わせフォームと日本語・韓国語版まで。独自のショッピングサイトや複雑な会員機能は含まれません。必要な場合は専門の開発会社をご紹介します。",
         "for": [
-          "ひとりで現地販売を回している事業者",
-          "一度つくって終わりにせず、継続して点検を受けたい方"
+          "ご紹介の場がSNSだけの事業者",
+          "日本や韓国のお客様が検索して見つけられるページが必要な方"
         ],
         "deliverables": [
-          "定期相談とメモ",
-          "メッセンジャーでの質問対応(スタンダード)",
-          "小さな修正作業 月1件(スタンダード)"
+          "ホームページ1ページ(基本)または5ページ以内(詳細)",
+          "お問い合わせフォームと連携",
+          "日本語・韓国語の文章(詳細)",
+          "更新の手引き"
         ],
-        "duration": "月単位"
+        "duration": "2⁠〜⁠5週間"
       }
     ],
     "directions": {
@@ -492,6 +492,42 @@
           "mode": "plain"
         },
         {
+          "id": "localization",
+          "title": "ブランドのローカライズ・商品ページ",
+          "desc": "商品ページ・ブランド紹介・商品名など",
+          "qty": {
+            "label": "ローカライズする資料",
+            "unit": "件",
+            "min": 1,
+            "max": 10,
+            "start": 2
+          }
+        },
+        {
+          "id": "advisory",
+          "title": "月次メンタリング",
+          "desc": "1か月単位で開始・停止",
+          "tiers": [
+            {
+              "v": "light",
+              "name": "ライト",
+              "desc": "月1回30分の相談とメモ"
+            },
+            {
+              "v": "standard",
+              "name": "スタンダード",
+              "desc": "月2回の相談・質問対応・小さな修正1件"
+            }
+          ],
+          "qty": {
+            "label": "期間",
+            "unit": "か月",
+            "min": 1,
+            "max": 12,
+            "start": 3
+          }
+        },
+        {
           "id": "diagnostic",
           "title": "進出診断レポート",
           "desc": "自分の商品がその市場に合うかを確認",
@@ -526,36 +562,19 @@
           ]
         },
         {
-          "id": "web",
-          "title": "ホームページ制作",
-          "desc": "日本語・韓国語の紹介ページ",
+          "id": "channel",
+          "title": "出店準備ガイド",
+          "desc": "出品前の準備を整理",
           "tiers": [
             {
               "v": "basic",
               "name": "基本",
-              "desc": "1ページの紹介ページ · 2⁠〜⁠3週間"
+              "desc": "チャネル比較・準備チェックリスト · 1⁠〜⁠2週間"
             },
             {
               "v": "deep",
               "name": "詳細",
-              "desc": "5ページ以内・お問い合わせフォーム・2言語 · 3⁠〜⁠5週間"
-            }
-          ]
-        },
-        {
-          "id": "booking",
-          "title": "予約システム構築",
-          "desc": "予約を受け付けて知らせる流れ",
-          "tiers": [
-            {
-              "v": "basic",
-              "name": "基本",
-              "desc": "既存の予約サービスの設定・案内文 · 1⁠〜⁠2週間"
-            },
-            {
-              "v": "deep",
-              "name": "詳細",
-              "desc": "専用の予約ページ・確認メール・通知 · 3⁠〜⁠4週間"
+              "desc": "商品ページ2点の点検つき · 2⁠〜⁠3週間"
             }
           ]
         },
@@ -577,57 +596,38 @@
           ]
         },
         {
-          "id": "localization",
-          "title": "ブランドのローカライズ・商品ページ",
-          "desc": "商品ページ・ブランド紹介・商品名など",
-          "qty": {
-            "label": "ローカライズする資料",
-            "unit": "件",
-            "min": 1,
-            "max": 10,
-            "start": 2
-          }
-        },
-        {
-          "id": "channel",
-          "title": "出店準備ガイド",
-          "desc": "出品前の準備を整理",
+          "id": "booking",
+          "title": "予約システム構築",
+          "desc": "予約を受け付けて知らせる流れ",
           "tiers": [
             {
               "v": "basic",
               "name": "基本",
-              "desc": "チャネル比較・準備チェックリスト · 1⁠〜⁠2週間"
+              "desc": "既存の予約サービスの設定・案内文 · 1⁠〜⁠2週間"
             },
             {
               "v": "deep",
               "name": "詳細",
-              "desc": "商品ページ2点の点検つき · 2⁠〜⁠3週間"
+              "desc": "専用の予約ページ・確認メール・通知 · 3⁠〜⁠4週間"
             }
           ]
         },
         {
-          "id": "advisory",
-          "title": "月次メンタリング",
-          "desc": "1か月単位で開始・停止",
+          "id": "web",
+          "title": "ホームページ制作",
+          "desc": "日本語・韓国語の紹介ページ",
           "tiers": [
             {
-              "v": "light",
-              "name": "ライト",
-              "desc": "月1回30分の相談とメモ"
+              "v": "basic",
+              "name": "基本",
+              "desc": "1ページの紹介ページ · 2⁠〜⁠3週間"
             },
             {
-              "v": "standard",
-              "name": "スタンダード",
-              "desc": "月2回の相談・質問対応・小さな修正1件"
+              "v": "deep",
+              "name": "詳細",
+              "desc": "5ページ以内・お問い合わせフォーム・2言語 · 3⁠〜⁠5週間"
             }
-          ],
-          "qty": {
-            "label": "期間",
-            "unit": "か月",
-            "min": 1,
-            "max": 12,
-            "start": 3
-          }
+          ]
         }
       ],
       "result_title": "概算費用 · 税込み",
@@ -745,53 +745,24 @@
         ]
       },
       {
-        "group": "点検とデザイン",
-        "items": [
-          {
-            "name": "進出診断レポート · 基本",
-            "desc": "市場・競合商品の調査レポート",
-            "price": "items.diagnostic.basic",
-            "mode": "plain"
-          },
-          {
-            "name": "進出診断レポート · 詳細",
-            "desc": "価格比較・規制チェックリスト・フォロー相談",
-            "price": "items.diagnostic.deep",
-            "mode": "plain"
-          },
-          {
-            "name": "ロゴ・ブランドデザイン · 基本",
-            "desc": "ロゴ案3つ・完成データ1案",
-            "price": "items.logo.basic",
-            "mode": "plain"
-          },
-          {
-            "name": "ロゴ・ブランドデザイン · 詳細",
-            "desc": "ブランドガイド・SNSプロフィール・名刺画像",
-            "price": "items.logo.deep",
-            "mode": "plain"
-          }
-        ]
-      },
-      {
         "group": "制作",
         "items": [
           {
-            "name": "ホームページ制作 · 基本",
-            "desc": "1ページの紹介ページ",
-            "price": "items.web.basic",
-            "mode": "plain"
-          },
-          {
-            "name": "ホームページ制作 · 詳細",
-            "desc": "5ページ以内・お問い合わせフォーム・2言語",
-            "price": "items.web.deep",
-            "mode": "plain"
+            "name": "ブランドのローカライズ・商品ページ",
+            "desc": "資料1件",
+            "price": "items.localization",
+            "mode": "unit"
           },
           {
             "name": "予約システム構築 · 基本",
             "desc": "既存の予約サービスの設定・案内文",
             "price": "items.booking.basic",
+            "mode": "plain"
+          },
+          {
+            "name": "ホームページ制作 · 基本",
+            "desc": "1ページの紹介ページ",
+            "price": "items.web.basic",
             "mode": "plain"
           },
           {
@@ -801,38 +772,9 @@
             "mode": "plain"
           },
           {
-            "name": "ブランドのローカライズ・商品ページ",
-            "desc": "資料1件",
-            "price": "items.localization",
-            "mode": "unit"
-          }
-        ]
-      },
-      {
-        "group": "販売と運用",
-        "items": [
-          {
-            "name": "SNS・広告運用サポート · 基本",
-            "desc": "アカウント診断・広告設定のご案内",
-            "price": "items.sns.basic",
-            "mode": "plain"
-          },
-          {
-            "name": "SNS・広告運用サポート · 詳細",
-            "desc": "4週間のカレンダー・文章12本・成果確認",
-            "price": "items.sns.deep",
-            "mode": "plain"
-          },
-          {
-            "name": "出店準備ガイド · 基本",
-            "desc": "チャネル比較・準備チェックリスト",
-            "price": "items.channel.basic",
-            "mode": "plain"
-          },
-          {
-            "name": "出店準備ガイド · 詳細",
-            "desc": "商品ページ2点の点検つき",
-            "price": "items.channel.deep",
+            "name": "ホームページ制作 · 詳細",
+            "desc": "5ページ以内・お問い合わせフォーム・2言語",
+            "price": "items.web.deep",
             "mode": "plain"
           }
         ]
@@ -851,6 +793,64 @@
             "desc": "月2回の相談・質問対応・小さな修正1件",
             "price": "items.advisory.standard",
             "mode": "monthly"
+          }
+        ]
+      },
+      {
+        "group": "点検とデザイン",
+        "items": [
+          {
+            "name": "進出診断レポート · 基本",
+            "desc": "市場・競合商品の調査レポート",
+            "price": "items.diagnostic.basic",
+            "mode": "plain"
+          },
+          {
+            "name": "ロゴ・ブランドデザイン · 基本",
+            "desc": "ロゴ案3つ・完成データ1案",
+            "price": "items.logo.basic",
+            "mode": "plain"
+          },
+          {
+            "name": "進出診断レポート · 詳細",
+            "desc": "価格比較・規制チェックリスト・フォロー相談",
+            "price": "items.diagnostic.deep",
+            "mode": "plain"
+          },
+          {
+            "name": "ロゴ・ブランドデザイン · 詳細",
+            "desc": "ブランドガイド・SNSプロフィール・名刺画像",
+            "price": "items.logo.deep",
+            "mode": "plain"
+          }
+        ]
+      },
+      {
+        "group": "販売と運用",
+        "items": [
+          {
+            "name": "出店準備ガイド · 基本",
+            "desc": "チャネル比較・準備チェックリスト",
+            "price": "items.channel.basic",
+            "mode": "plain"
+          },
+          {
+            "name": "SNS・広告運用サポート · 基本",
+            "desc": "アカウント診断・広告設定のご案内",
+            "price": "items.sns.basic",
+            "mode": "plain"
+          },
+          {
+            "name": "出店準備ガイド · 詳細",
+            "desc": "商品ページ2点の点検つき",
+            "price": "items.channel.deep",
+            "mode": "plain"
+          },
+          {
+            "name": "SNS・広告運用サポート · 詳細",
+            "desc": "4週間のカレンダー・文章12本・成果確認",
+            "price": "items.sns.deep",
+            "mode": "plain"
           }
         ]
       }

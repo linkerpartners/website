@@ -213,6 +213,9 @@
   let pitchX = 0;
   let pitchY = 0;
   let rowH = 0;
+  let half = 0; // 무대 가로 절반 (매 프레임 읽으면 강제 레이아웃이 생겨 미리 잼)
+  let stageW = 0;
+  const phoneMq = window.matchMedia("(max-width: 640px)");
 
   const num = function (i) {
     return String(i + 1).padStart(2, "0");
@@ -241,6 +244,10 @@
     pitchX = cw + STEP_GAP;
     pitchY = cw * 1.25 + STEP_GAP;
     rowH = rows[0] ? rows[0].offsetHeight : 36;
+    // 폰: 이름 띠가 무대보다 짧으면 줄이 무대 한가운데서 사라졌다 반대편에 나타나 순간이동처럼 보임 → 줄 간격을 늘려 감기는 자리가 무대 밖이 되게
+    if (phoneMq.matches && rows.length) rowH = Math.max(rowH, Math.ceil((stage.clientHeight + rowH) / rows.length));
+    half = stage.clientWidth / 2;
+    stageW = window.innerWidth;
     // 링 반지름: 옆으로 가장 멀리 간 카드가 무대 안에 들어오게(원근 1600px), 카드 폭의 1.3–2.6배
     const a = stage.clientWidth / 2 - cw * 0.55;
     const fit = a > 0 ? (1600 * a) / Math.max(1600 - a, 200) : 0;
@@ -301,7 +308,6 @@
     const deg = 360 / n;
     const sk = clamp(speed * 55, -22, 22);
     const sc = 1 - Math.min(Math.abs(speed) * 1.4, 0.14);
-    const half = stage.clientWidth / 2;
     const view = t("home.work.view");
     cards.forEach(function (c, i) {
       let d = i - o;
@@ -309,6 +315,7 @@
       let reach = true;
       if (mode === "ring") {
         const ang = d * deg;
+        c.style.visibility = "";
         c.style.transform =
           "rotateY(" + ang.toFixed(2) + "deg) translateZ(" + (R * spread).toFixed(1) + "px) scale(" + sc.toFixed(3) + ") skewX(" + sk.toFixed(2) + "deg)" + (Math.abs(ang) > 90 ? " scaleX(-1)" : "");
         c.style.filter = "";
@@ -318,6 +325,7 @@
       } else if (mode === "slider") {
         const r = d * pitchX;
         c.style.transform = "translateX(" + r.toFixed(1) + "px)";
+        c.style.visibility = "";
         c.style.filter = "";
         c.style.opacity = "";
         c.style.zIndex = "";
@@ -330,6 +338,7 @@
         c.style.opacity = clamp(1 - Math.max(0, a - 0.6) * 0.55, 0.12, 1).toFixed(3);
         c.style.zIndex = String(100 - Math.round(a * 10));
         reach = a < 1.5;
+        c.style.visibility = a > 2.2 ? "hidden" : ""; // 멀리 간 카드는 어차피 무대 밖: 그리지 않음(층 수 줄임 · 감겨 넘어갈 때 튀어 보이지 않게)
       }
       c.tabIndex = reach ? 0 : -1;
       // 커서 렌즈의 글자: 가운데 카드는 "보기", 옆 카드는 갈 방향
@@ -377,10 +386,14 @@
           vel *= Math.pow(0.93, k);
           if (Math.abs(vel) < 0.02) {
             o += (Math.round(o) - o) * ease(0.05, k);
-            if (Math.abs(vel) < 3e-5) vel = 0;
+            if (Math.abs(vel) < 3e-5) {
+              vel = 0;
+              if (Math.abs(Math.round(o) - o) < 5e-4) o = Math.round(o);
+            }
           }
         }
         tilt += (0 - tilt) * ease(0.08, k);
+        if (Math.abs(tilt) < 0.005) tilt = 0;
       }
       spread += (spreadTo - spread) * ease(0.045, k);
       if (Math.abs(spreadTo - spread) < 0.001) spread = spreadTo;
@@ -395,6 +408,17 @@
     speed += (dO - speed) * ease(0.25, k);
     if (reduce.matches) speed = 0;
     layout();
+    // 다 멈췄으면 프레임 루프를 쉼 (가만히 있는 동안 매 프레임 스타일을 쓰면 폰에서 스크롤이 끊김). 입력이 오면 start()가 다시 깨움
+    const still =
+      !dragging &&
+      aim === null &&
+      Math.abs(speed) < 1e-4 &&
+      (mode === "ring" ? Math.abs(vel) < 3e-5 && Math.abs(o - Math.round(o)) < 5e-4 && Math.abs(tilt) < 0.01 && spread === spreadTo : o === p);
+    if (still) {
+      speed = 0;
+      running = false;
+      return;
+    }
     requestAnimationFrame(tick);
   }
 
@@ -438,10 +462,12 @@
     caption.append(meta(c), el("h3", "lib-caption-title", x.title));
     openLink.href = "cases.html#case=" + c.id;
     if (!first && !reduce.matches) {
+      // 폰에서는 번짐(blur) 없이 (매 프레임 필터를 다시 그려 끊김)
+      const soft = !phoneMq.matches;
       caption.animate(
         [
-          { opacity: 0, filter: "blur(10px)", transform: "translateY(8px)" },
-          { opacity: 1, filter: "blur(0)", transform: "none" },
+          soft ? { opacity: 0, filter: "blur(10px)", transform: "translateY(8px)" } : { opacity: 0, transform: "translateY(8px)" },
+          soft ? { opacity: 1, filter: "blur(0)", transform: "none" } : { opacity: 1, transform: "none" },
         ],
         { duration: 700, easing: EXPO },
       );
@@ -553,6 +579,7 @@
     // 끌기: 링은 돌리고(세로로는 기울임), 슬라이드는 가로, 목록은 세로(마우스만. 손가락 세로는 페이지 스크롤)
     stage.addEventListener("pointerdown", function (e) {
       if (e.button !== 0 || e.target.closest(".lib-names")) return;
+      if (e.pointerType !== "mouse" && mode === "list") return; // 손가락 세로 끌기는 페이지 스크롤 (끌기 상태로 두면 매 스크롤마다 스타일이 바뀜)
       dragging = true;
       moved = false;
       sx = e.clientX;
@@ -651,6 +678,7 @@
     window.addEventListener("resize", function () {
       cancelAnimationFrame(rz);
       rz = requestAnimationFrame(function () {
+        if (window.innerWidth === stageW) return; // 폰 주소창이 접히며 높이만 바뀔 때는 다시 재지 않음
         measure();
         start();
       });

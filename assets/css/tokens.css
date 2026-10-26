@@ -82,11 +82,11 @@
   /* ======================================================
      5. 글꼴
      ====================================================== */
-  --font-ko: "Newsreader", "Pretendard Variable", "Pretendard", -apple-system, "Apple SD Gothic Neo",
-    "Malgun Gothic", sans-serif;
+  --font-ko: "Newsreader", "Pretendard Variable", "Pretendard", "Noto Serif JP", -apple-system, "Apple SD Gothic Neo",
+    "Malgun Gothic", sans-serif; /* 한글 문장 속 한자 · 일본어 표기는 Noto Serif JP */
   --font-ja: "Newsreader", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "Pretendard Variable", serif;
-  --font-en: "Newsreader", "Pretendard Variable", "Pretendard", -apple-system, "Segoe UI", sans-serif;
-  --font-brand: "Newsreader", "Pretendard Variable", sans-serif; /* 라틴 글자 · 숫자 · 국가 코드: Newsreader Display(광학 크기 72) ExtraLight 200, 대문자(base.css). 한글 · 일본어는 Pretendard로 자동 대체. 로고만 예외(Jost로 만든 SVG 파일) */
+  --font-en: "Newsreader", "Noto Serif JP", "Pretendard Variable", "Pretendard", -apple-system, "Segoe UI", sans-serif;
+  --font-brand: "Newsreader", "Pretendard Variable", "Noto Serif JP", sans-serif; /* 라틴 글자 · 숫자 · 국가 코드: Newsreader Display(광학 크기 72) ExtraLight 200, 대문자(base.css). 한글 · 일본어는 Pretendard로 자동 대체. 로고만 예외(Jost로 만든 SVG 파일) */
   --font-base: var(--font-ko);
 
   --fw-thin: 100; /* 각 페이지 첫 제목 */
@@ -181,6 +181,7 @@
 /* ----- 언어별 글꼴·줄 간격 ----- */
 :root:lang(ja) {
   --font-base: var(--font-ja);
+  --font-brand: var(--font-ja); /* 라틴 · 숫자 전용 요소의 일본어도 같은 명조로 (없으면 Pretendard 고딕이 섞임) */
 }
 
 :root:lang(en) {
