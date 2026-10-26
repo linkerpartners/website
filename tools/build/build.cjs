@@ -207,6 +207,9 @@ function render(page, lang) {
   });
   if (SITE.ogImage) add("meta", { property: "og:image", content: SITE.url.replace(/\/$/, "") + "/" + SITE.ogImage });
   add("meta", { name: "twitter:card", content: SITE.ogImage ? "summary_large_image" : "summary" });
+  // 검색엔진 사이트 소유 확인(site.json에 값이 있을 때만): 구글 서치 콘솔 · 네이버 서치어드바이저의 'HTML 태그' 방식
+  if (SITE.googleSiteVerification) add("meta", { name: "google-site-verification", content: SITE.googleSiteVerification });
+  if (SITE.naverSiteVerification) add("meta", { name: "naver-site-verification", content: SITE.naverSiteVerification });
   if (page === "index") {
     const ld = add("script", { type: "application/ld+json" });
     ld.textContent = JSON.stringify({

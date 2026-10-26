@@ -41,6 +41,7 @@ jobs:
           cp -r assets data i18n ja en _site/
           cp index.html about.html services.html pricing.html cases.html insights.html contact.html privacy.html 404.html _site/
           cp sitemap.xml robots.txt CNAME _site/
+          cp naver*.html google*.html _site/ 2>/dev/null || true
           touch _site/.nojekyll
 
       - uses: actions/configure-pages@v5
