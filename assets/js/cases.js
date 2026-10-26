@@ -464,7 +464,7 @@
     start();
   }
 
-  function setMode(m) {
+  function setMode(m, instant) {
     if (m === mode) return;
     mode = m;
     lib.dataset.view = m;
@@ -479,7 +479,7 @@
     aim = null;
     prevO = o;
     p = Math.round(o);
-    if (!reduce.matches) {
+    if (!reduce.matches && !instant) {
       stage.classList.add("is-switching");
       clearTimeout(switchTimer);
       switchTimer = setTimeout(function () {
@@ -496,6 +496,7 @@
   let sy = 0;
   let so = 0;
   let st = 0;
+  let lastMoveT = 0;
 
   function bindLibrary() {
     stage = lib.querySelector(".lib-stage");
@@ -504,6 +505,14 @@
     caption = lib.querySelector("[data-lib-caption]");
     openLink = lib.querySelector("[data-lib-open]");
     if (reduce.matches) spread = spreadTo = 1;
+
+    // 폰에서는 목록 보기만 (링 · 슬라이드는 폰에서 끊기고 카드가 튀는 문제가 있어 뺌. 탭도 CSS에서 숨김)
+    const phone = window.matchMedia("(max-width: 640px)");
+    const phoneOnlyList = function () {
+      if (phone.matches) setMode("list", true);
+    };
+    phoneOnlyList();
+    phone.addEventListener("change", phoneOnlyList);
 
     // 화면에 있을 때만 프레임을 돌림. 처음 들어오면 링이 펼쳐짐
     new IntersectionObserver(
@@ -564,16 +573,19 @@
       if (!moved) return;
       if (mode === "ring") {
         const no = so - dx / pitchX;
-        vel = no - o;
+        vel = clamp(no - o, -0.5, 0.5);
+        lastMoveT = e.timeStamp;
         o = no;
         if (e.pointerType === "mouse") tilt = clamp(st + dy * 0.18, -14, 14);
       } else if (mode === "slider") p = so - dx / pitchX;
       else if (e.pointerType === "mouse") p = so - dy / pitchY;
       start();
     });
-    const release = function () {
+    const release = function (e) {
       if (!dragging) return;
       dragging = false;
+      // 손가락을 멈춘 채 떼면 관성 없음 (마지막 이동량이 남아 카드가 갑자기 튀는 것 방지)
+      if (e && e.timeStamp - lastMoveT > 80) vel = 0;
       stage.classList.remove("is-dragging");
       if (mode !== "ring") p = Math.round(p);
       start();
