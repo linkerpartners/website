@@ -1,0 +1,177 @@
+<!doctype html>
+<!-- 자동 생성 파일: src/terms.html 을 고친 뒤 tools/build 에서 npm run build -->
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8"><meta content="default-src 'self'; script-src 'self' 'sha256-3tgS6NiBvlG5EjYI79ZLCmHSYpXotSZYP50TuxQnFRA='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.frankfurter.dev; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="meta.terms.title">이용약관 | LINKERPARTNERS</title>
+    <meta name="description" content="LINKERPARTNERS 컨설팅과 제작 서비스를 이용하실 때 적용되는 기본 조건입니다." data-i18n-attr="content:meta.terms.description">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="assets/logo/favicon.ico" sizes="any">
+    <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/logo/favicon-48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="assets/logo/favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        // 이 창에서 처음이면 인트로, 사이트 안에서 넘어왔으면 전환 막. 동작 줄이기 설정이면 둘 다 생략
+        try {
+          var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (!sessionStorage.getItem("lp_intro_seen") && !still) d.classList.add("is-intro");
+          else if (sessionStorage.getItem("lp_nav") && !still) d.classList.add("is-arriving");
+          sessionStorage.removeItem("lp_nav");
+        } catch (e) {}
+        // 안전장치: 스크립트가 늦거나 실패해도 6초 뒤에는 첫 화면을 그대로 보여 줌
+        setTimeout(function () {
+          if (d.classList.contains("is-ready")) return;
+          d.classList.add("is-ready");
+          d.classList.remove("is-arriving");
+          document.querySelectorAll("[data-hero]").forEach(function (n) {
+            n.classList.add("is-inview");
+          });
+        }, 6000);
+      })();
+    </script>
+
+    <!-- 글꼴: 한국어 Pretendard / 일본어 Noto Serif JP / 영어 · 숫자 Newsreader Display ExtraLight(대문자). 모두 assets/fonts에 직접 두고 필요한 글자 조각만 불러옴 (tools/build/fonts.cjs) -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+
+    <!-- 공통 CSS (순서 중요) -->
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/ambient.css">
+  <link href="https://linkerpartners.com/terms.html" rel="canonical"><link href="https://linkerpartners.com/terms.html" hreflang="ko" rel="alternate"><link href="https://linkerpartners.com/ja/terms.html" hreflang="ja" rel="alternate"><link href="https://linkerpartners.com/en/terms.html" hreflang="en" rel="alternate"><link href="https://linkerpartners.com/terms.html" hreflang="x-default" rel="alternate"><meta content="website" property="og:type"><meta content="LINKERPARTNERS" property="og:site_name"><meta content="이용약관 | LINKERPARTNERS" property="og:title"><meta content="LINKERPARTNERS 컨설팅과 제작 서비스를 이용하실 때 적용되는 기본 조건입니다." property="og:description"><meta content="https://linkerpartners.com/terms.html" property="og:url"><meta content="ko_KR" property="og:locale"><meta content="ja_JP" property="og:locale:alternate"><meta content="en_US" property="og:locale:alternate"><meta content="https://linkerpartners.com/assets/og-image.png" property="og:image"><meta content="1200" property="og:image:width"><meta content="630" property="og:image:height"><meta content="LINKERPARTNERS" property="og:image:alt"><meta content="summary_large_image" name="twitter:card"><meta content="aa0369991a68222c57cb7bfdd5a6c807b556212e" name="naver-site-verification"></head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main" tabindex="-1">
+
+      <!-- 첫 화면: 가운데 정렬. 제목 → 한 줄 → 아래로 이어지는 금빛 세로선 -->
+      <section class="pg-hero container" aria-labelledby="page-title">
+        <h1 id="page-title" class="pg-title" data-reveal="lines" data-hero="" data-i18n="terms.hero.title"><span style="--l: 0" class="line"><span>이용약관</span></span></h1>
+        <p class="pg-lead" data-reveal="rise" data-hero="" style="--d: 450ms" data-i18n="terms.hero.lead">상담부터 제작까지, 서비스를 이용하실 때 적용되는 기본 조건입니다.</p>
+        <span class="pg-drop" data-reveal="drawy" data-hero="" style="--d: 900ms" aria-hidden="true"></span>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div class="legal" data-list="terms.sections">
+            <template>
+              <section data-reveal="rise" data-keep="">
+                <h2 data-k="h"></h2>
+                <p data-k="p"></p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            </template>
+          
+              <section data-gen="" style="--i: 0" data-reveal="rise" data-keep="">
+                <h2 data-k="h">목적과 적용</h2>
+                <p data-k="p">이 약관은 LINKERPARTNERS(이하 ‘회사’)가 한국과 일본 사이의 진출을 돕는 컨설팅과 제작 서비스를 제공할 때 회사와 고객의 기본 조건을 정합니다. 서비스별 구체적인 범위와 조건은 견적서에 적으며, 약관과 견적서가 다르면 견적서가 우선합니다.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 1" data-reveal="rise" data-keep="">
+                <h2 data-k="h">서비스 내용과 견적</h2>
+                <p data-k="p">서비스의 범위, 기간, 금액은 상담 뒤 보내 드리는 견적서에 적습니다. 사이트에 공개한 금액과 기간은 안내용이며, 견적서에 적힌 내용이 최종입니다.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 2" data-reveal="rise" data-keep="">
+                <h2 data-k="h">계약의 성립</h2>
+                <p data-k="p">고객이 견적서의 범위와 금액에 동의하고 회사가 이를 확인한 때 계약이 성립합니다. 동의는 이메일이나 메신저 회신으로도 할 수 있습니다.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 3" data-reveal="rise" data-keep="">
+                <h2 data-k="h">요금과 결제</h2>
+                <p data-k="p">금액은 부가세 별도로 표시합니다. 결제 시기와 방법은 견적서에 적은 대로 합니다.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template><li data-gen="" data-k=".">광고비, 도메인&#160;· 서버 이용료 같은 실비와 번역 감수&#160;· 세무&#160;· 통관 같은 외부 전문가 비용은 별도로 안내합니다</li><li data-gen="" data-k=".">엔화 금액은 참고용입니다</li></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 4" data-reveal="rise" data-keep="">
+                <h2 data-k="h">수정과 범위 변경</h2>
+                <p data-k="p">수정 횟수와 범위는 견적서에 적은 대로 합니다. 범위를 넘는 요청은 일정과 금액을 함께 안내하고, 고객이 동의하면 진행합니다.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 5" data-reveal="rise" data-keep="">
+                <h2 data-k="h">취소와 환불</h2>
+                <p data-k="p">계약 취소와 환불 요청은 견적서에 적은 기준을 따르며, 이미 진행한 작업의 비용은 정산합니다. 구체적인 기준은 서비스별로 계약 전에 안내합니다.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">고객의 협조</h2>
+                <p data-k="p">원활한 진행을 위해 필요한 자료와 확인을 제때 보내 주세요. 자료가 늦어지면 일정도 함께 조정될 수 있습니다.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">결과물의 권리</h2>
+                <p data-k="p">결과물의 이용 권리는 대금을 모두 받은 뒤 고객에게 이전됩니다. 글꼴, 이미지, 플러그인처럼 제3자의 권리가 있는 요소는 각각의 이용 조건을 따릅니다. 회사는 고객의 동의를 받은 경우에만 결과물과 사례를 포트폴리오로 공개합니다.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">비밀 유지</h2>
+                <p data-k="p">회사는 업무 중 알게 된 고객의 정보를 서비스의 목적으로만 사용하고, 고객의 동의를 받은 경우에만 외부에 알립니다. 원하시면 상담 단계부터 비밀유지계약(NDA)을 맺을 수 있습니다.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">성과에 대한 안내</h2>
+                <p data-k="p">매출, 순위, 광고 성과는 시장 상황에 따라 달라집니다. 서비스는 전문적인 조언과 제작을 제공하는 것이며, 특정 결과를 약속하는 계약이 아닙니다.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">외부 전문가</h2>
+                <p data-k="p">세무, 통관, 개발처럼 전문 영역이 필요하면 외부 전문가를 소개해 드립니다. 외부 전문가와의 계약과 비용은 고객과 해당 전문가 사이에서 정합니다.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">책임의 범위</h2>
+                <p data-k="p">회사는 고의 또는 중대한 과실이 있는 경우를 제외하고, 해당 서비스에서 받은 금액을 한도로 책임을 집니다. 천재지변이나 외부 서비스 장애처럼 회사가 통제할 수 없는 사유로 생긴 지연은 책임 대상에서 제외됩니다.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">약관의 변경</h2>
+                <p data-k="p">약관을 바꾸면 사이트에 알리고, 이미 시작한 계약에는 계약 당시의 약관을 적용합니다.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">준거법과 분쟁</h2>
+                <p data-k="p">이 약관은 대한민국 법에 따릅니다. 분쟁이 생기면 먼저 협의로 해결하고, 해결되지 않으면 민사소송법에 따른 관할 법원에서 다룹니다.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            </div>
+          <div class="legal">
+            <p class="fine"><a class="inline-link" data-config-href="email" data-config-text="email"></a> · <a class="inline-link" data-config-href="phone" data-config-text="phone"></a></p>
+            <p class="fine" data-i18n="terms.effective">시행일: 확정 후 기재</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- 공통 JS (순서 중요) -->
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/intro.js" defer></script>
+    <script src="assets/js/ambient.js" defer></script>
+    <script src="assets/js/motion.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/langbar.js" defer></script>
+    <script src="assets/js/ticker.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

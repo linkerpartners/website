@@ -19,7 +19,7 @@ const SITE = JSON.parse(fs.readFileSync(path.join(__dirname, "site.json"), "utf8
 const LANGS = ["ko", "ja", "en"];
 const DIR = { ko: "", ja: "ja/", en: "en/" };
 const LOCALE = { ko: "ko_KR", ja: "ja_JP", en: "en_US" };
-const PAGES = ["index", "about", "services", "pricing", "cases", "insights", "contact", "privacy"];
+const PAGES = ["index", "about", "services", "pricing", "cases", "insights", "contact", "privacy", "terms"];
 
 const dicts = {};
 LANGS.forEach(function (l) {
@@ -107,8 +107,9 @@ function render(page, lang) {
     Array.from(box.children).forEach(function (c) {
       if (c.hasAttribute("data-gen")) c.remove();
     });
+    const offset = Number(box.getAttribute("data-offset")) || 0;
     const limit = Number(box.getAttribute("data-limit")) || arr.length;
-    arr.slice(0, limit).forEach(function (item, i) {
+    arr.slice(offset, offset + limit).forEach(function (item, i) {
       const frag = tpl.content.cloneNode(true);
       frag.querySelectorAll("[data-k]").forEach(function (n) {
         const v = lookup(item, n.getAttribute("data-k"));

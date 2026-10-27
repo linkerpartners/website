@@ -168,4 +168,25 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://linkerpartners.com/en/privacy.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://linkerpartners.com/privacy.html" />
   </url>
+  <url>
+    <loc>https://linkerpartners.com/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://linkerpartners.com/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://linkerpartners.com/ja/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://linkerpartners.com/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://linkerpartners.com/terms.html" />
+  </url>
+  <url>
+    <loc>https://linkerpartners.com/ja/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://linkerpartners.com/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://linkerpartners.com/ja/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://linkerpartners.com/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://linkerpartners.com/terms.html" />
+  </url>
+  <url>
+    <loc>https://linkerpartners.com/en/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://linkerpartners.com/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://linkerpartners.com/ja/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://linkerpartners.com/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://linkerpartners.com/terms.html" />
+  </url>
 </urlset>

@@ -16,7 +16,7 @@ window.LP_CONFIG = {
   supportedLangs: ["ko", "ja", "en"],
   // 언어별 폴더: 한국어는 맨 위, 나머지는 하위 폴더 (tools/build가 이 구조로 페이지를 만듦)
   langDirs: { ko: "", ja: "ja/", en: "en/" },
-  pages: ["index", "about", "services", "pricing", "cases", "insights", "contact", "privacy"], // 언어별로 만들어지는 페이지(src/)
+  pages: ["index", "about", "services", "pricing", "cases", "insights", "contact", "privacy", "terms"], // 언어별로 만들어지는 페이지(src/)
   // 언어 메뉴에 보이는 이름: 앞 두 글자 이니셜만 (헤더 지구본 메뉴)
   langNames: { ko: "KO", ja: "JA", en: "EN" },
 
@@ -49,6 +49,7 @@ window.LP_CONFIG = {
     { key: "cases", href: "cases.html" },
     { key: "insights", href: "insights.html" },
     { key: "contact", href: "contact.html" },
+    { key: "terms", href: "terms.html" },
     { key: "privacy", href: "privacy.html" },
   ],
 

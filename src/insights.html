@@ -92,16 +92,35 @@
               <button type="button" data-filter="regulation" aria-pressed="false" data-i18n="insights.filters.regulation"></button>
             </div>
           </div>
-          <ul class="rows" id="post-list" data-stagger data-list="insights.posts">
+          <ul class="rows" id="post-list" data-accordion data-stagger data-list="insights.posts" data-offset="1">
             <template>
-              <li class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep>
-                <span class="post-date num" data-k="date"></span>
-                <span class="post-cat" data-k="category"></span>
-                <div>
-                  <h3 data-k="title"></h3>
-                  <p data-k="summary"></p>
+              <li class="post-item" data-k-attr="data-tags:tags;id:id" data-reveal="rise" data-keep>
+                <h3 class="post-h">
+                  <button class="post-head" type="button" aria-expanded="false" aria-controls="">
+                    <span class="post-date num" data-k="date"></span>
+                    <span class="post-cat" data-k="category"></span>
+                    <span class="post-main">
+                      <span class="post-title" data-k="title"></span>
+                      <span class="post-sum" data-k="summary"></span>
+                    </span>
+                    <span class="post-read" data-k="read"></span>
+                    <span class="acc-icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body">
+                      <article class="article-body post-article" data-k-list="body">
+                        <template>
+                          <section>
+                            <h4 data-k="h"></h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template></div>
+                          </section>
+                        </template>
+                      </article>
+                    </div>
+                  </div>
                 </div>
-                <span class="post-read" data-k="read"></span>
               </li>
             </template>
           </ul>
@@ -172,6 +191,7 @@
     <script src="assets/js/ambient.js" defer></script>
     <script src="assets/js/motion.js" defer></script>
     <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/langbar.js" defer></script>
     <script src="assets/js/ticker.js" defer></script>
     <script src="assets/js/main.js" defer></script>
   </body>

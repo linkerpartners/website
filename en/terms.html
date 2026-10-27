@@ -1,0 +1,177 @@
+<!doctype html>
+<!-- 자동 생성 파일: src/terms.html 을 고친 뒤 tools/build 에서 npm run build -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"><meta content="default-src 'self'; script-src 'self' 'sha256-3tgS6NiBvlG5EjYI79ZLCmHSYpXotSZYP50TuxQnFRA='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.frankfurter.dev; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="meta.terms.title">Terms of service | LINKERPARTNERS</title>
+    <meta name="description" content="The basic conditions that apply when you use LINKERPARTNERS consulting and build services." data-i18n-attr="content:meta.terms.description">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="../assets/logo/favicon.ico" sizes="any">
+    <link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../assets/logo/favicon-48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="../assets/logo/favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        // 이 창에서 처음이면 인트로, 사이트 안에서 넘어왔으면 전환 막. 동작 줄이기 설정이면 둘 다 생략
+        try {
+          var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (!sessionStorage.getItem("lp_intro_seen") && !still) d.classList.add("is-intro");
+          else if (sessionStorage.getItem("lp_nav") && !still) d.classList.add("is-arriving");
+          sessionStorage.removeItem("lp_nav");
+        } catch (e) {}
+        // 안전장치: 스크립트가 늦거나 실패해도 6초 뒤에는 첫 화면을 그대로 보여 줌
+        setTimeout(function () {
+          if (d.classList.contains("is-ready")) return;
+          d.classList.add("is-ready");
+          d.classList.remove("is-arriving");
+          document.querySelectorAll("[data-hero]").forEach(function (n) {
+            n.classList.add("is-inview");
+          });
+        }, 6000);
+      })();
+    </script>
+
+    <!-- 글꼴: 한국어 Pretendard / 일본어 Noto Serif JP / 영어 · 숫자 Newsreader Display ExtraLight(대문자). 모두 assets/fonts에 직접 두고 필요한 글자 조각만 불러옴 (tools/build/fonts.cjs) -->
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+
+    <!-- 공통 CSS (순서 중요) -->
+    <link rel="stylesheet" href="../assets/css/tokens.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/ambient.css">
+  <link href="https://linkerpartners.com/en/terms.html" rel="canonical"><link href="https://linkerpartners.com/terms.html" hreflang="ko" rel="alternate"><link href="https://linkerpartners.com/ja/terms.html" hreflang="ja" rel="alternate"><link href="https://linkerpartners.com/en/terms.html" hreflang="en" rel="alternate"><link href="https://linkerpartners.com/terms.html" hreflang="x-default" rel="alternate"><meta content="website" property="og:type"><meta content="LINKERPARTNERS" property="og:site_name"><meta content="Terms of service | LINKERPARTNERS" property="og:title"><meta content="The basic conditions that apply when you use LINKERPARTNERS consulting and build services." property="og:description"><meta content="https://linkerpartners.com/en/terms.html" property="og:url"><meta content="en_US" property="og:locale"><meta content="ko_KR" property="og:locale:alternate"><meta content="ja_JP" property="og:locale:alternate"><meta content="https://linkerpartners.com/assets/og-image.png" property="og:image"><meta content="1200" property="og:image:width"><meta content="630" property="og:image:height"><meta content="LINKERPARTNERS" property="og:image:alt"><meta content="summary_large_image" name="twitter:card"><meta content="aa0369991a68222c57cb7bfdd5a6c807b556212e" name="naver-site-verification"></head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main" tabindex="-1">
+
+      <!-- 첫 화면: 가운데 정렬. 제목 → 한 줄 → 아래로 이어지는 금빛 세로선 -->
+      <section class="pg-hero container" aria-labelledby="page-title">
+        <h1 id="page-title" class="pg-title" data-reveal="lines" data-hero="" data-i18n="terms.hero.title"><span style="--l: 0" class="line"><span>Terms of</span></span><span style="--l: 1" class="line"><span>service</span></span></h1>
+        <p class="pg-lead" data-reveal="rise" data-hero="" style="--d: 450ms" data-i18n="terms.hero.lead">The basic conditions that apply when you use our services, from the first call to delivery.</p>
+        <span class="pg-drop" data-reveal="drawy" data-hero="" style="--d: 900ms" aria-hidden="true"></span>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div class="legal" data-list="terms.sections">
+            <template>
+              <section data-reveal="rise" data-keep="">
+                <h2 data-k="h"></h2>
+                <p data-k="p"></p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            </template>
+          
+              <section data-gen="" style="--i: 0" data-reveal="rise" data-keep="">
+                <h2 data-k="h">Purpose and scope</h2>
+                <p data-k="p">These terms set out the basic conditions between LINKERPARTNERS (“we”) and you when we provide consulting and build services that help businesses expand between Korea and Japan. The scope and conditions of each service are written in the quote. If the quote differs from these terms, the quote applies.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 1" data-reveal="rise" data-keep="">
+                <h2 data-k="h">Services and quotes</h2>
+                <p data-k="p">The scope, timeline and fee of each service are written in the quote we send after we talk. Fees and timelines on the site are a guide; the quote is final.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 2" data-reveal="rise" data-keep="">
+                <h2 data-k="h">When a contract begins</h2>
+                <p data-k="p">A contract begins when you agree to the scope and fee in the quote and we confirm it. You can agree by replying by email or chat.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 3" data-reveal="rise" data-keep="">
+                <h2 data-k="h">Fees and payment</h2>
+                <p data-k="p">Fees are shown excluding VAT. Payment timing and method follow the quote.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template><li data-gen="" data-k=".">Running costs such as ad spend, domains and servers, and outside experts such as translation reviewers, tax advisers and customs brokers, are quoted separately</li><li data-gen="" data-k=".">Yen amounts are for reference</li></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 4" data-reveal="rise" data-keep="">
+                <h2 data-k="h">Revisions and changes of scope</h2>
+                <p data-k="p">The number and scope of revisions follow the quote. For requests beyond the scope, we give you the timeline and fee first and proceed once you agree.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 5" data-reveal="rise" data-keep="">
+                <h2 data-k="h">Cancellation and refunds</h2>
+                <p data-k="p">Cancellations and refund requests follow the criteria written in the quote, and the cost of work already done is settled. We explain the specific criteria for each service before the contract.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">Your cooperation</h2>
+                <p data-k="p">To keep things moving, please send the materials and confirmations we need on time. If materials arrive late, the schedule may shift with them.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">Rights in deliverables</h2>
+                <p data-k="p">The right to use deliverables passes to you once we have received the full fee. Elements that carry third-party rights, such as fonts, images and plug-ins, follow their own terms of use. We publish deliverables and cases in our portfolio only with your consent.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">Confidentiality</h2>
+                <p data-k="p">We use the information we learn through our work only for the purpose of the service, and share it outside the company only with your consent. We can sign an NDA from the first call if you wish.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">About results</h2>
+                <p data-k="p">Sales, rankings and ad results depend on the market. The service provides professional advice and production; it is not a contract for a specific result.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">Outside experts</h2>
+                <p data-k="p">When a specialist area such as tax, customs or development is needed, we point you to outside experts. Your contract and fees with them are agreed between you and the expert.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">Limit of liability</h2>
+                <p data-k="p">Except in cases of intent or gross negligence, our liability is limited to the amount we received for the service concerned. Delays caused by matters beyond our control, such as natural disasters or outages of outside services, are not covered.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">Changes to these terms</h2>
+                <p data-k="p">If we change these terms, we post a notice on this site. Contracts already started stay under the terms in force when they began.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            
+              <section data-gen="" style="--i: 6" data-reveal="rise" data-keep="">
+                <h2 data-k="h">Governing law and disputes</h2>
+                <p data-k="p">These terms are governed by the laws of the Republic of Korea. We first try to settle any dispute by discussion; if it cannot be settled, it goes to the court with jurisdiction under the Civil Procedure Act.</p>
+                <ul class="dots" data-k-list="items"><template><li data-k="."></li></template></ul>
+              </section>
+            </div>
+          <div class="legal">
+            <p class="fine"><a class="inline-link" data-config-href="email" data-config-text="email"></a> · <a class="inline-link" data-config-href="phone" data-config-text="phone"></a></p>
+            <p class="fine" data-i18n="terms.effective">Effective date: to be confirmed</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- 공통 JS (순서 중요) -->
+    <script src="../assets/js/config.js" defer></script>
+    <script src="../assets/js/components.js" defer></script>
+    <script src="../assets/js/i18n.js" defer></script>
+    <script src="../assets/js/intro.js" defer></script>
+    <script src="../assets/js/ambient.js" defer></script>
+    <script src="../assets/js/motion.js" defer></script>
+    <script src="../assets/js/site.js" defer></script>
+    <script src="../assets/js/langbar.js" defer></script>
+    <script src="../assets/js/ticker.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>

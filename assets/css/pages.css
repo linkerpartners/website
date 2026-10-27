@@ -4097,7 +4097,8 @@
   margin-top: var(--space-8);
 }
 
-.article-body h3 {
+.article-body h3,
+.article-body h4 {
   margin-bottom: var(--space-4);
   font-size: var(--text-headline-s);
   font-weight: var(--fw-regular);
@@ -4112,12 +4113,19 @@
   margin-top: var(--space-4);
 }
 
-.post-row {
+/* 글 목록: 줄을 누르면 본문이 펼쳐짐(서비스 목록과 같은 방식). 날짜 · 주제 · 제목과 요약 · 읽는 시간 · 더하기 */
+.post-head {
   display: grid;
-  grid-template-columns: 7.5rem 9rem minmax(0, 1fr) auto;
+  grid-template-columns: 7.5rem 9rem minmax(0, 1fr) auto 20px;
   gap: var(--space-2) var(--space-6);
   align-items: baseline;
+  width: 100%;
   padding-block: var(--space-6);
+  text-align: left;
+}
+
+.post-main {
+  display: block;
 }
 
 .post-date {
@@ -4130,15 +4138,34 @@
   color: var(--ink-3);
 }
 
-.post-row h3 {
+.post-title {
+  display: block;
   margin-bottom: var(--space-2);
   font-size: var(--text-headline-s);
   font-weight: var(--fw-light);
   letter-spacing: var(--tracking-heading);
+  transition: transform var(--dur-5) var(--ease-expo);
 }
 
-.post-row p {
+.post-sum {
+  display: block;
   color: var(--ink-2);
+}
+
+.post-head .acc-icon {
+  align-self: center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .post-head:hover .post-title {
+    transform: translateX(10px);
+  }
+}
+
+/* 펼친 본문은 제목 칸에 맞춰 놓음 */
+.post-article {
+  max-width: 40em;
+  margin-left: calc(7.5rem + 9rem + 2 * var(--space-6));
 }
 
 .post-read {
@@ -4511,12 +4538,21 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .post-row {
-    grid-template-columns: auto minmax(0, 1fr);
+  .post-head {
+    grid-template-columns: auto minmax(0, 1fr) 20px;
   }
 
-  .post-row > div {
+  .post-main {
     grid-column: 1 / -1;
+  }
+
+  .post-head .acc-icon {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .post-article {
+    margin-left: 0;
   }
 
   .post-read {

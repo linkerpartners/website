@@ -104,7 +104,7 @@
       <section class="section" aria-labelledby="list-title">
         <div class="container">
           <div class="pg-head">
-            <h2 id="list-title" class="pg-h2" data-reveal="lines" data-i18n="insights.list.title"><span style="--l: 0" class="line"><span>All notes</span></span></h2>
+            <h2 id="list-title" class="pg-h2" data-reveal="lines" data-i18n="insights.list.title"><span style="--l: 0" class="line"><span>Earlier notes</span></span></h2>
             <div aria-label="Filter by topic" class="filter-bar" role="group" data-filter-for="post-list" data-i18n-attr="aria-label:insights.filters.label" data-reveal="rise">
               <button type="button" data-filter="all" aria-pressed="true" data-i18n="insights.filters.all">All</button>
               <button type="button" data-filter="culture" aria-pressed="false" data-i18n="insights.filters.culture">Consumer culture</button>
@@ -113,77 +113,261 @@
               <button type="button" data-filter="regulation" aria-pressed="false" data-i18n="insights.filters.regulation">Rules and labelling</button>
             </div>
           </div>
-          <ul class="rows" id="post-list" data-stagger="" data-list="insights.posts">
+          <ul class="rows" id="post-list" data-accordion="" data-stagger="" data-list="insights.posts" data-offset="1">
             <template>
-              <li class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
-                <span class="post-date num" data-k="date"></span>
-                <span class="post-cat" data-k="category"></span>
-                <div>
-                  <h3 data-k="title"></h3>
-                  <p data-k="summary"></p>
+              <li class="post-item" data-k-attr="data-tags:tags;id:id" data-reveal="rise" data-keep="">
+                <h3 class="post-h">
+                  <button class="post-head" type="button" aria-expanded="false" aria-controls="">
+                    <span class="post-date num" data-k="date"></span>
+                    <span class="post-cat" data-k="category"></span>
+                    <span class="post-main">
+                      <span class="post-title" data-k="title"></span>
+                      <span class="post-sum" data-k="summary"></span>
+                    </span>
+                    <span class="post-read" data-k="read"></span>
+                    <span class="acc-icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body">
+                      <article class="article-body post-article" data-k-list="body">
+                        <template>
+                          <section>
+                            <h4 data-k="h"></h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template></div>
+                          </section>
+                        </template>
+                      </article>
+                    </div>
+                  </div>
                 </div>
-                <span class="post-read" data-k="read"></span>
               </li>
             </template>
           
-              <li data-gen="" style="--i: 0" data-tags="strategy" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
-                <span class="post-date num" data-k="date">2026.10.24</span>
-                <span class="post-cat" data-k="category">Entry strategy</span>
-                <div>
-                  <h3 data-k="title">Five things small brands did first when they entered&#160;Japan</h3>
-                  <p data-k="summary">What brands that built trust before translating had in common.</p>
+              <li data-gen="" style="--i: 0" id="qoo10-checklist" data-tags="market" class="post-item" data-k-attr="data-tags:tags;id:id" data-reveal="rise" data-keep="">
+                <h3 class="post-h">
+                  <button class="post-head" type="button" aria-expanded="false" aria-controls="">
+                    <span class="post-date num" data-k="date">2026.10.10</span>
+                    <span class="post-cat" data-k="category">Channels and sales</span>
+                    <span class="post-main">
+                      <span class="post-title" data-k="title">Four things to sort out before listing on Qoo10</span>
+                      <span class="post-sum" data-k="summary">Fees, shipping, payout cycle and product page. Sorting them out first makes your launch smoother.</span>
+                    </span>
+                    <span class="post-read" data-k="read">5&#160;min</span>
+                    <span class="acc-icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body">
+                      <article class="article-body post-article" data-k-list="body">
+                        <template>
+                          <section>
+                            <h4 data-k="h"></h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template></div>
+                          </section>
+                        </template>
+                      
+                          <section data-gen="">
+                            <h4 data-k="h">1. Work out fees from one real product</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">Qoo10 fees can vary by category and by the programmes you join. Check the official fees for your category, pick one product, and subtract fees, shipping and ad spend from its selling price to see what is left.</p><p data-gen="" data-k=".">Put exchange rates and transfer fees in the same sum, and you will rework your prices less often later.</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">2. Shipping at the speed customers expect</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">Customers in Japan tend to care about delivery dates and packaging. Shipping from Korea and shipping from a warehouse in Japan differ in time and cost, so decide which to start with. Write down the address and steps for returns and exchanges too, so you can answer questions straight away.</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">3. Check the payout cycle and how you are paid</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">Find out when, in which currency and by which route sales proceeds arrive. A long cycle means you need working capital to cover it, and transfer methods carry different fees. Sketch a payout calendar before you start selling and your cash planning gets easier.</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">4. Build the product page in the order Japanese customers read</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">Go beyond translating the description. Arrange it in the order Japanese customers want to know: how to use it, ingredients or materials, reviews, and shipping and returns. Check that ingredient and efficacy wording fits Japanese rules, and put the text inside images into Japanese as well, which makes reading much easier.</p><p data-gen="" data-k=".">Official guidance changes from time to time, so check it again just before you list. The LINKERPARTNERS store-launch guide sorts out these four, and the rest of your launch preparation, in one go.</p></div>
+                          </section>
+                        </article>
+                    </div>
+                  </div>
                 </div>
-                <span class="post-read" data-k="read">5&#160;min</span>
               </li>
             
-              <li data-gen="" style="--i: 1" data-tags="market" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
-                <span class="post-date num" data-k="date">2026.10.10</span>
-                <span class="post-cat" data-k="category">Channels and sales</span>
-                <div>
-                  <h3 data-k="title">Four things to sort out before listing on Qoo10</h3>
-                  <p data-k="summary">Fees, shipping, payout cycle and product page. Sorting them out first makes your launch smoother.</p>
+              <li data-gen="" style="--i: 1" id="translated-page" data-tags="market" class="post-item" data-k-attr="data-tags:tags;id:id" data-reveal="rise" data-keep="">
+                <h3 class="post-h">
+                  <button class="post-head" type="button" aria-expanded="false" aria-controls="">
+                    <span class="post-date num" data-k="date">2026.09.26</span>
+                    <span class="post-cat" data-k="category">Channels and sales</span>
+                    <span class="post-main">
+                      <span class="post-title" data-k="title">How to make a translated product page read naturally to local customers</span>
+                      <span class="post-sum" data-k="summary">Correct sentences are only the start. Matching the order of information and the tone to the market keeps customers reading.</span>
+                    </span>
+                    <span class="post-read" data-k="read">4&#160;min</span>
+                    <span class="acc-icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body">
+                      <article class="article-body post-article" data-k-list="body">
+                        <template>
+                          <section>
+                            <h4 data-k="h"></h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template></div>
+                          </section>
+                        </template>
+                      
+                          <section data-gen="">
+                            <h4 data-k="h">Change the order before the sentences</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">Sentences from a translation tool can be grammatical and still read in an unfamiliar order. Rather than carrying over the order you used in Korea, move the information local customers want first to the top. Customers in Japan tend to look early for concrete details such as how to use the product, ingredients and reviews.</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">Choose one tone of voice</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">In Japanese, the level of politeness changes the impression a lot. Decide who your brand is speaking to and keep the same tone from the product name to the notices and the closing line. On Korean pages, smoothing stiff, translated phrasing into everyday language makes them easier to read.</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">Localize the text and numbers inside images</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">Wording inside images is often missed by translation tools. Sizes, units, dates and price formats also build trust when they follow local habits.</p><p data-gen="" data-k=".">Finally, ask someone who uses the local language to read it once. Awkward spots usually show up on the spot. LINKERPARTNERS brand localization and product pages take on this work one piece at a time.</p></div>
+                          </section>
+                        </article>
+                    </div>
+                  </div>
                 </div>
-                <span class="post-read" data-k="read">5&#160;min</span>
               </li>
             
-              <li data-gen="" style="--i: 2" data-tags="market" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
-                <span class="post-date num" data-k="date">2026.09.26</span>
-                <span class="post-cat" data-k="category">Channels and sales</span>
-                <div>
-                  <h3 data-k="title">How to make a translated product page read naturally to local customers</h3>
-                  <p data-k="summary">Correct sentences are only the start. Matching the order of information and the tone to the market keeps customers reading.</p>
+              <li data-gen="" style="--i: 2" id="logo-japanese" data-tags="culture" class="post-item" data-k-attr="data-tags:tags;id:id" data-reveal="rise" data-keep="">
+                <h3 class="post-h">
+                  <button class="post-head" type="button" aria-expanded="false" aria-controls="">
+                    <span class="post-date num" data-k="date">2026.09.12</span>
+                    <span class="post-cat" data-k="category">Consumer culture</span>
+                    <span class="post-main">
+                      <span class="post-title" data-k="title">What to check before putting Japanese text in your logo</span>
+                      <span class="post-sum" data-k="summary">Sound and meaning, colour, lettering layout. Small differences change the impression.</span>
+                    </span>
+                    <span class="post-read" data-k="read">4&#160;min</span>
+                    <span class="acc-icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body">
+                      <article class="article-body post-article" data-k-list="body">
+                        <template>
+                          <section>
+                            <h4 data-k="h"></h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template></div>
+                          </section>
+                        </template>
+                      
+                          <section data-gen="">
+                            <h4 data-k="h">Sound and meaning</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">When your name is read in katakana or the Latin alphabet, check that it does not sound like another word or feel awkward in Japanese. Ask a Japanese speaker to read it aloud and tell you what words come to mind. The same spelling can be read in different ways.</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">The impression of colour</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">The impression a colour gives can differ by country and by industry. Look at the colours Japanese brands in your field use, and check that your logo's colour gives the impression you intend.</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">Lettering and layout</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">Japanese is set both horizontally and vertically, and mixes kanji, hiragana and katakana, so letter shapes vary widely. When you add Japanese to a logo, adjust the weight and spacing of the Japanese typeface separately and check that it still reads at small sizes. Placed beside a Korean or Latin logo, matching height and visual weight keeps the pair steady.</p><p data-gen="" data-k=".">LINKERPARTNERS logo and brand design checks sound, meaning and colour through both Korean and Japanese eyes.</p></div>
+                          </section>
+                        </article>
+                    </div>
+                  </div>
                 </div>
-                <span class="post-read" data-k="read">4&#160;min</span>
               </li>
             
-              <li data-gen="" style="--i: 3" data-tags="culture" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
-                <span class="post-date num" data-k="date">2026.09.12</span>
-                <span class="post-cat" data-k="category">Consumer culture</span>
-                <div>
-                  <h3 data-k="title">What to check before putting Japanese text in your logo</h3>
-                  <p data-k="summary">Sound and meaning, colour, lettering layout. Small differences change the impression.</p>
+              <li data-gen="" style="--i: 3" id="claims-rules" data-tags="regulation" class="post-item" data-k-attr="data-tags:tags;id:id" data-reveal="rise" data-keep="">
+                <h3 class="post-h">
+                  <button class="post-head" type="button" aria-expanded="false" aria-controls="">
+                    <span class="post-date num" data-k="date">2026.08.29</span>
+                    <span class="post-cat" data-k="category">Rules and labelling</span>
+                    <span class="post-main">
+                      <span class="post-title" data-k="title">How far can cosmetics and food ads go?</span>
+                      <span class="post-sum" data-k="summary">The rules on health and beauty claims differ by country. Check before you publish.</span>
+                    </span>
+                    <span class="post-read" data-k="read">6&#160;min</span>
+                    <span class="acc-icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body">
+                      <article class="article-body post-article" data-k-list="body">
+                        <template>
+                          <section>
+                            <h4 data-k="h"></h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template></div>
+                          </section>
+                        </template>
+                      
+                          <section data-gen="">
+                            <h4 data-k="h">Allowed efficacy claims differ by country</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">For cosmetics and food, each country sets a range of effects you may claim. Wording that is common in Korea may not carry over to Japan as it is, and the reverse can also be true.</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">Wording to check first</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">Words that suggest medicine, such as “treat”, “prevent” and “cure”, effects with numbers, comparisons with other products, and claims backed by experts or doctors all need a careful check. For ordinary foods, the basic rule is to avoid wording that suggests preventing or treating disease.</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">A checking order before you publish</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">1. Confirm which category your product is sold under: cosmetics, ordinary food, food with function claims and so on.</p><p data-gen="" data-k=".">2. Look up the range of claims allowed for that category in official sources.</p><p data-gen="" data-k=".">3. Gather product pages, ad copy, text inside images and quoted reviews into one table and check them against it one by one.</p><p data-gen="" data-k=".">4. Replace borderline wording with plain facts such as ingredients, feel and how to use.</p><p data-gen="" data-k=".">This is general guidance, not legal advice. Rules change, so check the latest official sources or a specialist before you sell. LINKERPARTNERS localization also checks that wording fits the rules.</p></div>
+                          </section>
+                        </article>
+                    </div>
+                  </div>
                 </div>
-                <span class="post-read" data-k="read">4&#160;min</span>
               </li>
             
-              <li data-gen="" style="--i: 4" data-tags="regulation" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
-                <span class="post-date num" data-k="date">2026.08.29</span>
-                <span class="post-cat" data-k="category">Rules and labelling</span>
-                <div>
-                  <h3 data-k="title">How far can cosmetics and food ads go?</h3>
-                  <p data-k="summary">The rules on health and beauty claims differ by country. Check before you publish.</p>
+              <li data-gen="" style="--i: 4" id="korea-fast" data-tags="market" class="post-item" data-k-attr="data-tags:tags;id:id" data-reveal="rise" data-keep="">
+                <h3 class="post-h">
+                  <button class="post-head" type="button" aria-expanded="false" aria-controls="">
+                    <span class="post-date num" data-k="date">2026.08.15</span>
+                    <span class="post-cat" data-k="category">Channels and sales</span>
+                    <span class="post-main">
+                      <span class="post-title" data-k="title">Korea moves fast: how Japanese brands can start small</span>
+                      <span class="post-sum" data-k="summary">Plan a schedule built for testing online and changing quickly.</span>
+                    </span>
+                    <span class="post-read" data-k="read">5&#160;min</span>
+                    <span class="acc-icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body">
+                      <article class="article-body post-article" data-k-list="body">
+                        <template>
+                          <section>
+                            <h4 data-k="h"></h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template></div>
+                          </section>
+                        </template>
+                      
+                          <section data-gen="">
+                            <h4 data-k="h">Test online first</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">In Korea, searching for and comparing products on online channels such as Smartstore, Coupang and Instagram is very active. Starting small online and watching the response is a lighter load than rushing into physical stores.</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">How fast reviews and photos build up</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">Customers in Korea tend to read purchase reviews and photo reviews closely. Look after the first few reviews, and answer customer questions quickly. On a Korean product page, go beyond translating the Japanese original and put what Korean customers ask most near the top: ingredients, how to use it, delivery time and exchange methods.</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">Test small, fix fast</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">Plan your first four weeks around one or two products, a small ad budget and about two edits to the product page. Keep the wording and images that work and change the rest the following week; that pace suits the Korean market. A small pop-up or a test sale is also a good way to check the response in person. LINKERPARTNERS sorts out a Japanese brand's entry into Korea in the same order.</p></div>
+                          </section>
+                        </article>
+                    </div>
+                  </div>
                 </div>
-                <span class="post-read" data-k="read">6&#160;min</span>
-              </li>
-            
-              <li data-gen="" style="--i: 5" data-tags="market" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
-                <span class="post-date num" data-k="date">2026.08.15</span>
-                <span class="post-cat" data-k="category">Channels and sales</span>
-                <div>
-                  <h3 data-k="title">Korea moves fast: how Japanese brands can start small</h3>
-                  <p data-k="summary">Plan a schedule built for testing online and changing quickly.</p>
-                </div>
-                <span class="post-read" data-k="read">5&#160;min</span>
               </li>
             </ul>
           <span class="sr-only" data-filter-count="post-list"></span>
@@ -253,6 +437,7 @@
     <script src="../assets/js/ambient.js" defer></script>
     <script src="../assets/js/motion.js" defer></script>
     <script src="../assets/js/site.js" defer></script>
+    <script src="../assets/js/langbar.js" defer></script>
     <script src="../assets/js/ticker.js" defer></script>
     <script src="../assets/js/main.js" defer></script>
   </body>

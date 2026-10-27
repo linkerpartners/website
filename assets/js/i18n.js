@@ -6,7 +6,8 @@
        템플릿 안에서  data-k="필드"            글자 채움 (값이 없으면 요소를 지움, "."은 항목 자체)
                       data-k-attr="속성:필드"  속성 채움 (; 로 여러 개)
                       data-k-list="필드"       항목 안의 배열을 다시 안쪽 <template>으로 그림
-       data-limit="3"        앞에서부터 몇 개만 그림
+       data-limit="3"        몇 개만 그림
+       data-offset="1"       앞에서 몇 개를 건너뛰고 그림 (예: 맨 위에 따로 보여 준 글은 목록에서 뺌)
    - data-i18n="키"       : 요소의 글자를 번역 문구로 채웁니다.
                             문구 안의 줄바꿈(\n)은 줄 단위 <span class="line">이 됩니다.
    - data-i18n-attr="속성:키" : aria-label, content 같은 속성을 번역합니다. (; 로 여러 개) */
@@ -78,8 +79,9 @@
     Array.from(box.children).forEach(function (c) {
       if (c.hasAttribute("data-gen")) c.remove();
     });
+    const offset = Number(box.dataset.offset) || 0;
     const limit = Number(box.dataset.limit) || arr.length;
-    arr.slice(0, limit).forEach(function (item, i) {
+    arr.slice(offset, offset + limit).forEach(function (item, i) {
       const frag = tpl.content.cloneNode(true);
       frag.querySelectorAll("[data-k]").forEach(function (n) {
         const v = lookup(item, n.dataset.k);
@@ -191,5 +193,7 @@
     lang: function () {
       return currentLang;
     },
+    // 같은 페이지의 다른 언어 주소 (언어 안내 띠 등)
+    href: pageHref,
   };
 })();

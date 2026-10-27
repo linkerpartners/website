@@ -104,7 +104,7 @@
       <section class="section" aria-labelledby="list-title">
         <div class="container">
           <div class="pg-head">
-            <h2 id="list-title" class="pg-h2" data-reveal="lines" data-i18n="insights.list.title"><span style="--l: 0" class="line"><span>すべての記事</span></span></h2>
+            <h2 id="list-title" class="pg-h2" data-reveal="lines" data-i18n="insights.list.title"><span style="--l: 0" class="line"><span>これまでの記事</span></span></h2>
             <div aria-label="テーマで絞り込む" class="filter-bar" role="group" data-filter-for="post-list" data-i18n-attr="aria-label:insights.filters.label" data-reveal="rise">
               <button type="button" data-filter="all" aria-pressed="true" data-i18n="insights.filters.all">すべて</button>
               <button type="button" data-filter="culture" aria-pressed="false" data-i18n="insights.filters.culture">消費者文化</button>
@@ -113,77 +113,261 @@
               <button type="button" data-filter="regulation" aria-pressed="false" data-i18n="insights.filters.regulation">規制・表示</button>
             </div>
           </div>
-          <ul class="rows" id="post-list" data-stagger="" data-list="insights.posts">
+          <ul class="rows" id="post-list" data-accordion="" data-stagger="" data-list="insights.posts" data-offset="1">
             <template>
-              <li class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
-                <span class="post-date num" data-k="date"></span>
-                <span class="post-cat" data-k="category"></span>
-                <div>
-                  <h3 data-k="title"></h3>
-                  <p data-k="summary"></p>
+              <li class="post-item" data-k-attr="data-tags:tags;id:id" data-reveal="rise" data-keep="">
+                <h3 class="post-h">
+                  <button class="post-head" type="button" aria-expanded="false" aria-controls="">
+                    <span class="post-date num" data-k="date"></span>
+                    <span class="post-cat" data-k="category"></span>
+                    <span class="post-main">
+                      <span class="post-title" data-k="title"></span>
+                      <span class="post-sum" data-k="summary"></span>
+                    </span>
+                    <span class="post-read" data-k="read"></span>
+                    <span class="acc-icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body">
+                      <article class="article-body post-article" data-k-list="body">
+                        <template>
+                          <section>
+                            <h4 data-k="h"></h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template></div>
+                          </section>
+                        </template>
+                      </article>
+                    </div>
+                  </div>
                 </div>
-                <span class="post-read" data-k="read"></span>
               </li>
             </template>
           
-              <li data-gen="" style="--i: 0" data-tags="strategy" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
-                <span class="post-date num" data-k="date">2026.10.24</span>
-                <span class="post-cat" data-k="category">進出戦略</span>
-                <div>
-                  <h3 data-k="title">日本に進出した小さな⁠ブランドが、最初にやった五つのこと</h3>
-                  <p data-k="summary">翻訳ではなく、日本のお客様が信頼できる根拠から用意したブランドの共通点。</p>
+              <li data-gen="" style="--i: 0" id="qoo10-checklist" data-tags="market" class="post-item" data-k-attr="data-tags:tags;id:id" data-reveal="rise" data-keep="">
+                <h3 class="post-h">
+                  <button class="post-head" type="button" aria-expanded="false" aria-controls="">
+                    <span class="post-date num" data-k="date">2026.10.10</span>
+                    <span class="post-cat" data-k="category">チャネル・販売</span>
+                    <span class="post-main">
+                      <span class="post-title" data-k="title">Qoo10に出店する前に整理しておきたい四つのこと</span>
+                      <span class="post-sum" data-k="summary">手数料、配送、入金サイクル、商品ページ。出品前に整理しておくと、準備がスムーズです。</span>
+                    </span>
+                    <span class="post-read" data-k="read">5⁠分</span>
+                    <span class="acc-icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body">
+                      <article class="article-body post-article" data-k-list="body">
+                        <template>
+                          <section>
+                            <h4 data-k="h"></h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template></div>
+                          </section>
+                        </template>
+                      
+                          <section data-gen="">
+                            <h4 data-k="h">1. 手数料は商品一つで計算してみる</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">Qoo10の手数料は、カテゴリーや参加するプログラムによって変わることがあります。公式の案内で販売するカテゴリーの手数料を確認し、商品を一つ決めて、販売価格から手数料、送料、広告費を引くといくら残るかを先に計算してみましょう。</p><p data-gen="" data-k=".">この計算に為替と送金手数料も入れておくと、価格を決めたあとの修正が減ります。</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">2. 配送はお客様が期待する速さで</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">日本のお客様は、配送の日程や梱包の状態への関心が高い傾向があります。韓国から発送するか、日本国内の倉庫から発送するかで配送日数と費用が変わるため、どちらで始めるかを決めておきましょう。返品・交換を受け付ける住所と手順も先に書き出しておくと、問い合わせにすぐ答えられます。</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">3. 入金サイクルと受け取り方法を確認する</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">販売代金がいつ、どの通貨で、どの経路で入金されるかを確認します。入金までの期間が長いと、その間の運転資金が必要になり、送金方法によって手数料も変わります。販売を始める前に入金のスケジュール表を一度つくってみると、資金計画が立てやすくなります。</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">4. 商品ページは日本のお客様が見る順番で</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">商品説明を日本語に置き換えるところから一歩進んで、日本のお客様が知りたい順番(使い方、成分や素材、レビュー、配送と返品)で整理してみましょう。成分や効能の表現が日本の規制に合っているかも、あわせて確認します。画像の中の文字も日本語にしておくと、読む方がずっと楽になります。</p><p data-gen="" data-k=".">公式の案内は随時変わるため、出品の直前にもう一度確認してください。リンカーパートナーズの出店準備ガイドでは、この四つを含めて出店準備を一度に整理します。</p></div>
+                          </section>
+                        </article>
+                    </div>
+                  </div>
                 </div>
-                <span class="post-read" data-k="read">5⁠分</span>
               </li>
             
-              <li data-gen="" style="--i: 1" data-tags="market" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
-                <span class="post-date num" data-k="date">2026.10.10</span>
-                <span class="post-cat" data-k="category">チャネル・販売</span>
-                <div>
-                  <h3 data-k="title">Qoo10に出店する前に整理しておきたい四つのこと</h3>
-                  <p data-k="summary">手数料、配送、入金サイクル、商品ページ。出品前に整理しておくと、準備がスムーズです。</p>
+              <li data-gen="" style="--i: 1" id="translated-page" data-tags="market" class="post-item" data-k-attr="data-tags:tags;id:id" data-reveal="rise" data-keep="">
+                <h3 class="post-h">
+                  <button class="post-head" type="button" aria-expanded="false" aria-controls="">
+                    <span class="post-date num" data-k="date">2026.09.26</span>
+                    <span class="post-cat" data-k="category">チャネル・販売</span>
+                    <span class="post-main">
+                      <span class="post-title" data-k="title">翻訳ツールで作った商品ページを、現地のお客様に読まれる形にする方法</span>
+                      <span class="post-sum" data-k="summary">文が正しいのは出発点です。情報の順番と言葉づかいを現地に合わせると、お客様は最後まで読んでくれます。</span>
+                    </span>
+                    <span class="post-read" data-k="read">4⁠分</span>
+                    <span class="acc-icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body">
+                      <article class="article-body post-article" data-k-list="body">
+                        <template>
+                          <section>
+                            <h4 data-k="h"></h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template></div>
+                          </section>
+                        </template>
+                      
+                          <section data-gen="">
+                            <h4 data-k="h">文章より先に順番を変える</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">翻訳ツールで置き換えた文章は、文法が合っていても、読む順番が現地の感覚と違うことがあります。韓国で使っていた順番をそのまま移すのではなく、現地のお客様がいちばん先に知りたい情報を上に持ってきましょう。日本のお客様は、使い方、成分、レビューなどの具体的な情報を早い段階で探す傾向があります。</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">言葉づかいを一つに決める</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">日本語は丁寧さの度合いによって印象が大きく変わります。誰に向けて話すブランドなのかを決め、商品名から案内文、結びの言葉まで同じ言葉づかいを保ちましょう。韓国語の販売ページでも、翻訳調の硬い表現をふだん使う言葉に整えると読みやすくなります。</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">画像の中の文字と数字も現地に合わせる</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">画像に入った文言は、翻訳ツールが拾えないことが多くあります。サイズ、単位、日付や価格の表記も現地の方式に合わせると、信頼につながります。</p><p data-gen="" data-k=".">最後に、現地の言語を使う方に一度読んでもらいましょう。不自然な箇所は、たいていその場で見つかります。リンカーパートナーズのブランドのローカライズ・商品ページでは、この作業を1⁠件ずつお引き受けします。</p></div>
+                          </section>
+                        </article>
+                    </div>
+                  </div>
                 </div>
-                <span class="post-read" data-k="read">5⁠分</span>
               </li>
             
-              <li data-gen="" style="--i: 2" data-tags="market" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
-                <span class="post-date num" data-k="date">2026.09.26</span>
-                <span class="post-cat" data-k="category">チャネル・販売</span>
-                <div>
-                  <h3 data-k="title">翻訳ツールで作った商品ページを、現地のお客様に読まれる形にする方法</h3>
-                  <p data-k="summary">文が正しいのは出発点です。情報の順番と言葉づかいを現地に合わせると、お客様は最後まで読んでくれます。</p>
+              <li data-gen="" style="--i: 2" id="logo-japanese" data-tags="culture" class="post-item" data-k-attr="data-tags:tags;id:id" data-reveal="rise" data-keep="">
+                <h3 class="post-h">
+                  <button class="post-head" type="button" aria-expanded="false" aria-controls="">
+                    <span class="post-date num" data-k="date">2026.09.12</span>
+                    <span class="post-cat" data-k="category">消費者文化</span>
+                    <span class="post-main">
+                      <span class="post-title" data-k="title">ロゴに日本語を入れる⁠前に確認したいこと</span>
+                      <span class="post-sum" data-k="summary">発音と意味、色、文字の配置。小さな違いが印象を変えます。</span>
+                    </span>
+                    <span class="post-read" data-k="read">4⁠分</span>
+                    <span class="acc-icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body">
+                      <article class="article-body post-article" data-k-list="body">
+                        <template>
+                          <section>
+                            <h4 data-k="h"></h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template></div>
+                          </section>
+                        </template>
+                      
+                          <section data-gen="">
+                            <h4 data-k="h">発音と意味</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">ハングルの名前をカタカナやアルファベットで読んだとき、日本語で別の意味や不自然な響きになっていないかを確認しましょう。日本語を使う方に声に出して読んでもらい、思い浮かぶ言葉を聞いてみるのがおすすめです。同じつづりでも読み方が変わることがあります。</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">色の印象</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">色が与える印象は、国や業種によって違うことがあります。同じ業種の日本のブランドがどんな色を使っているかを見て、自分のロゴの色が意図した印象を与えているかを確かめましょう。</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">文字の配置と書体</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">日本語は横書きと縦書きの両方が使われ、漢字、ひらがな、カタカナが混ざるため、字形も多様です。ロゴに日本語を入れるときは、日本語書体の太さと文字間を別に調整し、小さくしても読めるかを確認します。ハングルや英文のロゴと並べるときは、高さと重さをそろえると安定して見えます。</p><p data-gen="" data-k=".">リンカーパートナーズのロゴ・ブランドデザインでは、発音、意味、色を韓国と日本の両方の目で確認しながら進めます。</p></div>
+                          </section>
+                        </article>
+                    </div>
+                  </div>
                 </div>
-                <span class="post-read" data-k="read">4⁠分</span>
               </li>
             
-              <li data-gen="" style="--i: 3" data-tags="culture" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
-                <span class="post-date num" data-k="date">2026.09.12</span>
-                <span class="post-cat" data-k="category">消費者文化</span>
-                <div>
-                  <h3 data-k="title">ロゴに日本語を入れる⁠前に確認したいこと</h3>
-                  <p data-k="summary">発音と意味、色、文字の配置。小さな違いが印象を変えます。</p>
+              <li data-gen="" style="--i: 3" id="claims-rules" data-tags="regulation" class="post-item" data-k-attr="data-tags:tags;id:id" data-reveal="rise" data-keep="">
+                <h3 class="post-h">
+                  <button class="post-head" type="button" aria-expanded="false" aria-controls="">
+                    <span class="post-date num" data-k="date">2026.08.29</span>
+                    <span class="post-cat" data-k="category">規制・表示</span>
+                    <span class="post-main">
+                      <span class="post-title" data-k="title">化粧品・食品の広告表現は、どこまで大丈夫?</span>
+                      <span class="post-sum" data-k="summary">効能をうたう表現の基準は国ごとに違います。公開する前に一度確認しましょう。</span>
+                    </span>
+                    <span class="post-read" data-k="read">6⁠分</span>
+                    <span class="acc-icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body">
+                      <article class="article-body post-article" data-k-list="body">
+                        <template>
+                          <section>
+                            <h4 data-k="h"></h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template></div>
+                          </section>
+                        </template>
+                      
+                          <section data-gen="">
+                            <h4 data-k="h">国によって使える効能表現が違います</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">化粧品や食品には、どんな効果を表現できるかについて、国ごとに決められた範囲があります。韓国で広く使われている表現が日本でそのまま使えるとは限らず、その逆もあります。</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">まず確認したい表現</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">「治療」「予防」「改善」のように医薬品を連想させる言葉、数値を伴う効果、他社製品との比較、専門家や医師の推薦をうたう文言は、とくに確認が必要です。一般の食品では、病気の予防や治療を連想させる表現を避けることが基本です。</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">公開前の確認手順</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">① 商品がどの区分(化粧品、一般食品、機能性をうたう食品など)で販売されるかを確認します。</p><p data-gen="" data-k=".">② その区分で認められている表現の範囲を、公式の資料で調べます。</p><p data-gen="" data-k=".">③ 商品ページ、広告文、画像内の文字、レビューの引用を一枚の表にまとめ、一つずつ照らし合わせます。</p><p data-gen="" data-k=".">④ 判断に迷う文言は、成分、使用感、使い方など、事実が伝わる表現に置き換えます。</p><p data-gen="" data-k=".">この記事は一般的な案内であり、法的な助言ではありません。規制は変わることがあるため、販売前に最新の公式資料や専門家で確認してください。リンカーパートナーズのローカライズでも、表現が規制に合っているかを一緒に確認します。</p></div>
+                          </section>
+                        </article>
+                    </div>
+                  </div>
                 </div>
-                <span class="post-read" data-k="read">4⁠分</span>
               </li>
             
-              <li data-gen="" style="--i: 4" data-tags="regulation" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
-                <span class="post-date num" data-k="date">2026.08.29</span>
-                <span class="post-cat" data-k="category">規制・表示</span>
-                <div>
-                  <h3 data-k="title">化粧品・食品の広告表現は、どこまで大丈夫?</h3>
-                  <p data-k="summary">効能をうたう表現の基準は国ごとに違います。公開する前に一度確認しましょう。</p>
+              <li data-gen="" style="--i: 4" id="korea-fast" data-tags="market" class="post-item" data-k-attr="data-tags:tags;id:id" data-reveal="rise" data-keep="">
+                <h3 class="post-h">
+                  <button class="post-head" type="button" aria-expanded="false" aria-controls="">
+                    <span class="post-date num" data-k="date">2026.08.15</span>
+                    <span class="post-cat" data-k="category">チャネル・販売</span>
+                    <span class="post-main">
+                      <span class="post-title" data-k="title">韓国市場は速い:日本ブランドが小さく始める方法</span>
+                      <span class="post-sum" data-k="summary">オンラインで試して、すぐ直せるスケジュールから組んでみましょう。</span>
+                    </span>
+                    <span class="post-read" data-k="read">5⁠分</span>
+                    <span class="acc-icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="acc-panel">
+                  <div class="acc-inner">
+                    <div class="acc-body">
+                      <article class="article-body post-article" data-k-list="body">
+                        <template>
+                          <section>
+                            <h4 data-k="h"></h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template></div>
+                          </section>
+                        </template>
+                      
+                          <section data-gen="">
+                            <h4 data-k="h">まずオンラインで試す</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">韓国では、スマートストア、クーパン、Instagramなどのオンラインチャネルで商品を探し、比べる行動が活発です。実店舗を急ぐより、オンラインで小さく始めて反応を見るほうが、負担が少なく済みます。</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">レビューと写真が積み上がる速さ</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">韓国のお客様は、購入レビューや写真付きレビューをじっくり読む傾向があります。最初の数件のレビューを大切に扱い、お客様からの質問には素早く答えましょう。韓国語の商品ページは、日本語の原文を置き換えるところから一歩進んで、韓国のお客様がよく知りたい情報(成分、使い方、配送日数、交換方法)を前に置くと効果的です。</p></div>
+                          </section>
+                        
+                          <section data-gen="">
+                            <h4 data-k="h">小さく試して、すぐ直す</h4>
+                            <div data-k-list="p"><template><p data-k="."></p></template><p data-gen="" data-k=".">最初の4⁠週間は、商品は一つか二つ、広告は少額、商品ページの修正は2⁠回ほど、という計画から始めてみてください。反応のよかった文言や画像を残し、物足りない部分は翌週にすぐ変える進め方が、韓国市場のスピードに合います。小さなポップアップやテスト販売で現場の反応を確かめるのもよい方法です。リンカーパートナーズは、日本ブランドの韓国進出も同じ順番で整理します。</p></div>
+                          </section>
+                        </article>
+                    </div>
+                  </div>
                 </div>
-                <span class="post-read" data-k="read">6⁠分</span>
-              </li>
-            
-              <li data-gen="" style="--i: 5" data-tags="market" class="post-row" data-k-attr="data-tags:tags" data-reveal="rise" data-keep="">
-                <span class="post-date num" data-k="date">2026.08.15</span>
-                <span class="post-cat" data-k="category">チャネル・販売</span>
-                <div>
-                  <h3 data-k="title">韓国市場は速い:日本ブランドが小さく始める方法</h3>
-                  <p data-k="summary">オンラインで試して、すぐ直せるスケジュールから組んでみましょう。</p>
-                </div>
-                <span class="post-read" data-k="read">5⁠分</span>
               </li>
             </ul>
           <span class="sr-only" data-filter-count="post-list"></span>
@@ -253,6 +437,7 @@
     <script src="../assets/js/ambient.js" defer></script>
     <script src="../assets/js/motion.js" defer></script>
     <script src="../assets/js/site.js" defer></script>
+    <script src="../assets/js/langbar.js" defer></script>
     <script src="../assets/js/ticker.js" defer></script>
     <script src="../assets/js/main.js" defer></script>
   </body>

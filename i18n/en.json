@@ -31,6 +31,10 @@
     "privacy": {
       "title": "Privacy policy | LINKERPARTNERS",
       "description": "LINKERPARTNERS privacy policy"
+    },
+    "terms": {
+      "title": "Terms of service | LINKERPARTNERS",
+      "description": "The basic conditions that apply when you use LINKERPARTNERS consulting and build services."
     }
   },
   "intro": {
@@ -50,6 +54,7 @@
     "cases": "Cases",
     "insights": "Insights",
     "contact": "Contact",
+    "terms": "Terms of service",
     "privacy": "Privacy policy",
     "toggle": "Menu",
     "close": "Close"
@@ -933,7 +938,7 @@
       ]
     },
     "list": {
-      "title": "All notes"
+      "title": "Earlier notes"
     },
     "filters": {
       "label": "Filter by topic",
@@ -945,6 +950,7 @@
     },
     "posts": [
       {
+        "id": "five-things",
         "date": "2026.10.24",
         "tags": "strategy",
         "category": "Entry strategy",
@@ -953,44 +959,163 @@
         "summary": "What brands that built trust before translating had in common."
       },
       {
+        "id": "qoo10-checklist",
         "date": "2026.10.10",
         "tags": "market",
         "category": "Channels and sales",
         "read": "5 min",
         "title": "Four things to sort out before listing on Qoo10",
-        "summary": "Fees, shipping, payout cycle and product page. Sorting them out first makes your launch smoother."
+        "summary": "Fees, shipping, payout cycle and product page. Sorting them out first makes your launch smoother.",
+        "body": [
+          {
+            "h": "1. Work out fees from one real product",
+            "p": [
+              "Qoo10 fees can vary by category and by the programmes you join. Check the official fees for your category, pick one product, and subtract fees, shipping and ad spend from its selling price to see what is left.",
+              "Put exchange rates and transfer fees in the same sum, and you will rework your prices less often later."
+            ]
+          },
+          {
+            "h": "2. Shipping at the speed customers expect",
+            "p": [
+              "Customers in Japan tend to care about delivery dates and packaging. Shipping from Korea and shipping from a warehouse in Japan differ in time and cost, so decide which to start with. Write down the address and steps for returns and exchanges too, so you can answer questions straight away."
+            ]
+          },
+          {
+            "h": "3. Check the payout cycle and how you are paid",
+            "p": [
+              "Find out when, in which currency and by which route sales proceeds arrive. A long cycle means you need working capital to cover it, and transfer methods carry different fees. Sketch a payout calendar before you start selling and your cash planning gets easier."
+            ]
+          },
+          {
+            "h": "4. Build the product page in the order Japanese customers read",
+            "p": [
+              "Go beyond translating the description. Arrange it in the order Japanese customers want to know: how to use it, ingredients or materials, reviews, and shipping and returns. Check that ingredient and efficacy wording fits Japanese rules, and put the text inside images into Japanese as well, which makes reading much easier.",
+              "Official guidance changes from time to time, so check it again just before you list. The LINKERPARTNERS store-launch guide sorts out these four, and the rest of your launch preparation, in one go."
+            ]
+          }
+        ]
       },
       {
+        "id": "translated-page",
         "date": "2026.09.26",
         "tags": "market",
         "category": "Channels and sales",
         "read": "4 min",
         "title": "How to make a translated product page read naturally to local customers",
-        "summary": "Correct sentences are only the start. Matching the order of information and the tone to the market keeps customers reading."
+        "summary": "Correct sentences are only the start. Matching the order of information and the tone to the market keeps customers reading.",
+        "body": [
+          {
+            "h": "Change the order before the sentences",
+            "p": [
+              "Sentences from a translation tool can be grammatical and still read in an unfamiliar order. Rather than carrying over the order you used in Korea, move the information local customers want first to the top. Customers in Japan tend to look early for concrete details such as how to use the product, ingredients and reviews."
+            ]
+          },
+          {
+            "h": "Choose one tone of voice",
+            "p": [
+              "In Japanese, the level of politeness changes the impression a lot. Decide who your brand is speaking to and keep the same tone from the product name to the notices and the closing line. On Korean pages, smoothing stiff, translated phrasing into everyday language makes them easier to read."
+            ]
+          },
+          {
+            "h": "Localize the text and numbers inside images",
+            "p": [
+              "Wording inside images is often missed by translation tools. Sizes, units, dates and price formats also build trust when they follow local habits.",
+              "Finally, ask someone who uses the local language to read it once. Awkward spots usually show up on the spot. LINKERPARTNERS brand localization and product pages take on this work one piece at a time."
+            ]
+          }
+        ]
       },
       {
+        "id": "logo-japanese",
         "date": "2026.09.12",
         "tags": "culture",
         "category": "Consumer culture",
         "read": "4 min",
         "title": "What to check before putting Japanese text in your logo",
-        "summary": "Sound and meaning, colour, lettering layout. Small differences change the impression."
+        "summary": "Sound and meaning, colour, lettering layout. Small differences change the impression.",
+        "body": [
+          {
+            "h": "Sound and meaning",
+            "p": [
+              "When your name is read in katakana or the Latin alphabet, check that it does not sound like another word or feel awkward in Japanese. Ask a Japanese speaker to read it aloud and tell you what words come to mind. The same spelling can be read in different ways."
+            ]
+          },
+          {
+            "h": "The impression of colour",
+            "p": [
+              "The impression a colour gives can differ by country and by industry. Look at the colours Japanese brands in your field use, and check that your logo's colour gives the impression you intend."
+            ]
+          },
+          {
+            "h": "Lettering and layout",
+            "p": [
+              "Japanese is set both horizontally and vertically, and mixes kanji, hiragana and katakana, so letter shapes vary widely. When you add Japanese to a logo, adjust the weight and spacing of the Japanese typeface separately and check that it still reads at small sizes. Placed beside a Korean or Latin logo, matching height and visual weight keeps the pair steady.",
+              "LINKERPARTNERS logo and brand design checks sound, meaning and colour through both Korean and Japanese eyes."
+            ]
+          }
+        ]
       },
       {
+        "id": "claims-rules",
         "date": "2026.08.29",
         "tags": "regulation",
         "category": "Rules and labelling",
         "read": "6 min",
         "title": "How far can cosmetics and food ads go?",
-        "summary": "The rules on health and beauty claims differ by country. Check before you publish."
+        "summary": "The rules on health and beauty claims differ by country. Check before you publish.",
+        "body": [
+          {
+            "h": "Allowed efficacy claims differ by country",
+            "p": [
+              "For cosmetics and food, each country sets a range of effects you may claim. Wording that is common in Korea may not carry over to Japan as it is, and the reverse can also be true."
+            ]
+          },
+          {
+            "h": "Wording to check first",
+            "p": [
+              "Words that suggest medicine, such as “treat”, “prevent” and “cure”, effects with numbers, comparisons with other products, and claims backed by experts or doctors all need a careful check. For ordinary foods, the basic rule is to avoid wording that suggests preventing or treating disease."
+            ]
+          },
+          {
+            "h": "A checking order before you publish",
+            "p": [
+              "1. Confirm which category your product is sold under: cosmetics, ordinary food, food with function claims and so on.",
+              "2. Look up the range of claims allowed for that category in official sources.",
+              "3. Gather product pages, ad copy, text inside images and quoted reviews into one table and check them against it one by one.",
+              "4. Replace borderline wording with plain facts such as ingredients, feel and how to use.",
+              "This is general guidance, not legal advice. Rules change, so check the latest official sources or a specialist before you sell. LINKERPARTNERS localization also checks that wording fits the rules."
+            ]
+          }
+        ]
       },
       {
+        "id": "korea-fast",
         "date": "2026.08.15",
         "tags": "market",
         "category": "Channels and sales",
         "read": "5 min",
         "title": "Korea moves fast: how Japanese brands can start small",
-        "summary": "Plan a schedule built for testing online and changing quickly."
+        "summary": "Plan a schedule built for testing online and changing quickly.",
+        "body": [
+          {
+            "h": "Test online first",
+            "p": [
+              "In Korea, searching for and comparing products on online channels such as Smartstore, Coupang and Instagram is very active. Starting small online and watching the response is a lighter load than rushing into physical stores."
+            ]
+          },
+          {
+            "h": "How fast reviews and photos build up",
+            "p": [
+              "Customers in Korea tend to read purchase reviews and photo reviews closely. Look after the first few reviews, and answer customer questions quickly. On a Korean product page, go beyond translating the Japanese original and put what Korean customers ask most near the top: ingredients, how to use it, delivery time and exchange methods."
+            ]
+          },
+          {
+            "h": "Test small, fix fast",
+            "p": [
+              "Plan your first four weeks around one or two products, a small ad budget and about two edits to the product page. Keep the wording and images that work and change the rest the following week; that pace suits the Korean market. A small pop-up or a test sale is also a good way to check the response in person. LINKERPARTNERS sorts out a Japanese brand's entry into Korea in the same order."
+            ]
+          }
+        ]
       }
     ]
   },
@@ -1189,6 +1314,75 @@
       {
         "h": "Your rights and contact",
         "p": "You can ask at any time to see, correct or delete your personal data, or to stop its use. Please email us at the address below."
+      }
+    ],
+    "effective": "Effective date: to be confirmed"
+  },
+  "terms": {
+    "hero": {
+      "title": "Terms of\nservice",
+      "lead": "The basic conditions that apply when you use our services, from the first call to delivery."
+    },
+    "sections": [
+      {
+        "h": "Purpose and scope",
+        "p": "These terms set out the basic conditions between LINKERPARTNERS (“we”) and you when we provide consulting and build services that help businesses expand between Korea and Japan. The scope and conditions of each service are written in the quote. If the quote differs from these terms, the quote applies."
+      },
+      {
+        "h": "Services and quotes",
+        "p": "The scope, timeline and fee of each service are written in the quote we send after we talk. Fees and timelines on the site are a guide; the quote is final."
+      },
+      {
+        "h": "When a contract begins",
+        "p": "A contract begins when you agree to the scope and fee in the quote and we confirm it. You can agree by replying by email or chat."
+      },
+      {
+        "h": "Fees and payment",
+        "p": "Fees are shown excluding VAT. Payment timing and method follow the quote.",
+        "items": [
+          "Running costs such as ad spend, domains and servers, and outside experts such as translation reviewers, tax advisers and customs brokers, are quoted separately",
+          "Yen amounts are for reference"
+        ]
+      },
+      {
+        "h": "Revisions and changes of scope",
+        "p": "The number and scope of revisions follow the quote. For requests beyond the scope, we give you the timeline and fee first and proceed once you agree."
+      },
+      {
+        "h": "Cancellation and refunds",
+        "p": "Cancellations and refund requests follow the criteria written in the quote, and the cost of work already done is settled. We explain the specific criteria for each service before the contract."
+      },
+      {
+        "h": "Your cooperation",
+        "p": "To keep things moving, please send the materials and confirmations we need on time. If materials arrive late, the schedule may shift with them."
+      },
+      {
+        "h": "Rights in deliverables",
+        "p": "The right to use deliverables passes to you once we have received the full fee. Elements that carry third-party rights, such as fonts, images and plug-ins, follow their own terms of use. We publish deliverables and cases in our portfolio only with your consent."
+      },
+      {
+        "h": "Confidentiality",
+        "p": "We use the information we learn through our work only for the purpose of the service, and share it outside the company only with your consent. We can sign an NDA from the first call if you wish."
+      },
+      {
+        "h": "About results",
+        "p": "Sales, rankings and ad results depend on the market. The service provides professional advice and production; it is not a contract for a specific result."
+      },
+      {
+        "h": "Outside experts",
+        "p": "When a specialist area such as tax, customs or development is needed, we point you to outside experts. Your contract and fees with them are agreed between you and the expert."
+      },
+      {
+        "h": "Limit of liability",
+        "p": "Except in cases of intent or gross negligence, our liability is limited to the amount we received for the service concerned. Delays caused by matters beyond our control, such as natural disasters or outages of outside services, are not covered."
+      },
+      {
+        "h": "Changes to these terms",
+        "p": "If we change these terms, we post a notice on this site. Contracts already started stay under the terms in force when they began."
+      },
+      {
+        "h": "Governing law and disputes",
+        "p": "These terms are governed by the laws of the Republic of Korea. We first try to settle any dispute by discussion; if it cannot be settled, it goes to the court with jurisdiction under the Civil Procedure Act."
       }
     ],
     "effective": "Effective date: to be confirmed"
