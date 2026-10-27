@@ -812,7 +812,10 @@
         const mode = cfg.monthly ? "monthly" : cfg.unit != null ? "unit" : cfg.tiers ? "from" : "plain";
         return { name: names[id] || id, krw: krw, mode: mode, monthly: !!cfg.monthly };
       })
-      .filter(Boolean);
+      .filter(Boolean)
+      .sort(function (x, y) {
+        return x.krw - y.krw; // 싼 것부터
+      });
     if (!rows.length) return null;
     const max = Math.max.apply(
       null,

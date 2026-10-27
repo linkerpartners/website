@@ -273,7 +273,7 @@
 ## 11. 데이터와 다국어
 
 - **문구**는 [i18n/ko.json](i18n/ko.json) · [ja.json](i18n/ja.json) · [en.json](i18n/en.json)에만 있고(키 711개, 세 파일이 같아야 함), HTML에는 `data-i18n="키"`만 써요. 서비스 · 글 · 질문처럼 반복되는 내용은 번역 파일에 배열로 두고 `data-list="키"` 안 `<template>`으로 그려요. **언어는 주소로 정해져요**: 한국어 `/`, 일본어 `/ja/`, 영어 `/en/`. 페이지 원본은 `src/`에 있고 `tools/build`의 `npm run build`가 번역 문구를 미리 채워 세 언어 페이지 · `sitemap.xml` · `robots.txt`와 head의 `canonical` · `hreflang` · Open Graph를 만들어요. 언어 단추는 같은 페이지의 다른 언어 주소로 이동하고, 브라우저가 같은 번역 파일로 한 번 더 채워 동적인 부분(견적 · 사례 · 환율)과 맞춰요. **번역이나 `src/`를 고치면 다시 빌드해야 화면에 반영돼요.**
-- **회사 정보 · 메뉴 · 비용**은 [assets/js/config.js](assets/js/config.js)에서만 고쳐요. 모든 금액은 `pricing`에 원 단위로 한 곳에만 있고, 서비스 줄 · 견적 계산기 · 묶음 표 · 요금표가 여기서 읽어요(`pricing.js`). 엔화는 `jpyPerKrw`(1,000엔 단위 반올림)로 환산한 참고값이에요. **지금 금액은 예시입니다.** 서비스 · 견적 항목 · 요금표는 **싼 가격부터 비싼 순**(각 항목의 시작 금액 기준, 요금표는 묶음 안에서 순서 + 묶음은 시작 금액 순)이며, 번역 파일의 `services.items` · `pricing.estimator.items` · `pricing.menu`를 새로 넣을 때 이 순서를 지켜 주세요.
+- **회사 정보 · 메뉴 · 비용**은 [assets/js/config.js](assets/js/config.js)에서만 고쳐요. 모든 금액은 `pricing`에 원 단위로 한 곳에만 있고, 서비스 줄 · 견적 계산기 · 묶음 표 · 요금표가 여기서 읽어요(`pricing.js`). 엔화는 `jpyPerKrw`(1,000엔 단위 반올림)로 환산한 참고값이에요. **지금 금액은 예시입니다.** 서비스 · 견적 항목 · 요금표는 **싼 가격부터 비싼 순**(각 항목의 시작 금액 기준, 요금표는 묶음 안에서 순서 + 묶음은 시작 금액 순)이며, 번역 파일의 `services.items` · `pricing.estimator.items` · `pricing.menu`를 새로 넣을 때 이 순서를 지켜 주세요. 홈 간단 견적 단추(`pricing.js`의 `QUICK_IDS`)와 사례 상세의 비슷한 구성 막대는 코드가 금액으로 정렬해요.
 - **문의 양식**은 서버 전송 없이, 입력을 확인한 뒤 사용 중인 메일 앱에 내용을 채워 엽니다([contact.js](assets/js/contact.js)). 서버가 생기면 `send()`만 바꾸면 돼요.
 - **사례**는 [data/cases/](data/cases/)의 `case.json` 하나가 사례 하나이고 `index.json`의 순서대로 보여요. **사진은 쓰지 않아요**(상세에서는 그래프 · 숫자 카드로 대신, 목록에서는 브랜드 이름만). 넣는 법은 [data/cases/README.md](data/cases/README.md).
 

@@ -387,11 +387,16 @@
 
   function quickItems() {
     const all = LP_I18N.get("pricing.estimator.items") || [];
+    // 시작 금액이 싼 것부터 (금액은 config.js에서 읽으므로 가격을 바꿔도 순서가 따라감)
     return QUICK_IDS.map(function (id) {
       return all.filter(function (x) {
         return x.id === id;
       })[0];
-    }).filter(Boolean);
+    })
+      .filter(Boolean)
+      .sort(function (x, y) {
+        return resolve("items." + x.id) - resolve("items." + y.id);
+      });
   }
 
   function chip(label, attr, value, on, radio) {
