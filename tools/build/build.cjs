@@ -26,6 +26,18 @@ LANGS.forEach(function (l) {
   dicts[l] = JSON.parse(fs.readFileSync(path.join(ROOT, "i18n", l + ".json"), "utf8"));
 });
 
+// 문의 전송 주소(assets/js/config.js의 form.endpoint): 있으면 그 사이트(origin)를 보안 정책의 connect-src에 허용
+const FORM_ORIGIN = (function () {
+  const cfgText = fs.readFileSync(path.join(ROOT, "assets/js/config.js"), "utf8");
+  const m = /endpoint:\s*"([^"]*)"/.exec(cfgText);
+  if (!m || !m[1]) return "";
+  try {
+    return new URL(m[1]).origin;
+  } catch (e) {
+    throw new Error("config.js의 form.endpoint가 올바른 주소가 아닙니다: " + m[1]);
+  }
+})();
+
 const problems = [];
 const inlineHashes = new Set(); // 페이지 안의 인라인 스크립트(CSP에 해시로 허용)
 
@@ -38,7 +50,7 @@ function buildCsp(hashes, asMeta) {
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data:",
     "font-src 'self'",
-    "connect-src 'self' https://api.frankfurter.dev",
+    "connect-src 'self' https://api.frankfurter.dev" + (FORM_ORIGIN ? " " + FORM_ORIGIN : ""),
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",

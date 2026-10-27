@@ -353,8 +353,17 @@
     form.addEventListener("change", function (e) {
       if (e.target.getAttribute("aria-invalid") === "true") mark(e.target, check(e.target));
     });
-    form.addEventListener("submit", function (e) {
+    const button = form.querySelector('button[type="submit"]');
+    const status = form.querySelector("[data-form-status]");
+    function setStatus(kind, message) {
+      if (!status) return;
+      status.textContent = message || "";
+      status.classList.toggle("is-ok", kind === "ok");
+      status.classList.toggle("is-error", kind === "error");
+    }
+    form.addEventListener("submit", async function (e) {
       e.preventDefault();
+      if (button.disabled) return;
       let first = null;
       inputs().forEach(function (input) {
         const msg = check(input);
@@ -364,14 +373,30 @@
       if (first) return first.focus();
       const el = form.elements;
       const opt = el.service.options[el.service.selectedIndex];
-      const lines = [
-        t("contact.form.name") + ": " + el.name.value.trim(),
-        t("contact.form.email") + ": " + el.email.value.trim(),
-        t("contact.form.services") + ": " + (el.service.value ? opt.textContent : "-"),
-        "",
-        el.message.value.trim(),
+      const service = el.service.value ? opt.textContent.replace(/[ ⁠]/g, " ") : "-";
+      const data = {
+        name: el.name.value.trim(),
+        email: el.email.value.trim(),
+        services: service,
+        message: el.message.value.trim(),
+        website: el.website ? el.website.value : "",
+      };
+      const rows = [
+        [t("contact.form.name"), data.name],
+        [t("contact.form.email"), data.email],
+        [t("contact.form.services"), service],
       ];
-      window.location.href = "mailto:" + cfg.email + "?subject=" + encodeURIComponent(t("contact.form.mail_subject") + " " + el.name.value.trim()) + "&body=" + encodeURIComponent(lines.join("\n"));
+      button.disabled = true;
+      setStatus("", t("contact.form.sending"));
+      const result = await window.LP_INQUIRY.send({ subject: t("contact.form.mail_subject") + " " + data.name, data: data, rows: rows });
+      button.disabled = false;
+      if (result.mode === "mail") return setStatus("", "");
+      if (result.ok) {
+        form.reset();
+        setStatus("ok", t("contact.form.success"));
+      } else {
+        setStatus("error", t("contact.form.error").replace("{email}", cfg.email));
+      }
     });
     document.addEventListener("lp:langchange", function () {
       form.querySelectorAll('[aria-invalid="true"]').forEach(function (input) {

@@ -2310,3 +2310,28 @@ select.input {
     transform: translate(-50%, 0);
   }
 }
+
+/* ---------- 문의 전송 결과 · 스팸 막기 칸 (inquiry.js) ---------- */
+.form-status {
+  min-height: 1.5em;
+  font-size: var(--text-label-l);
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+.form-status.is-ok {
+  color: var(--ink);
+}
+
+.form-status.is-error {
+  color: var(--danger);
+}
+
+/* 사람 눈에는 보이지 않고, 자동으로 채우는 프로그램만 채우는 칸 */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

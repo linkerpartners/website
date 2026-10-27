@@ -219,8 +219,10 @@
               </div>
               <div class="quick-submit">
                 <button class="btn btn--primary" type="submit"><span class="roll"><span data-i18n="contact.form.submit">相談を申し込む</span></span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></button>
-                <p class="form-note" data-i18n="contact.form.note">送信を押すと、お使いのメールアプリが開き、入力した内容が入ります。</p>
+                <p class="form-note" data-i18n="contact.form.note">お送りいただいた内容は、代表のメールアドレスに届きます。</p>
+                <p class="form-status" role="status" aria-live="polite" data-form-status=""></p>
               </div>
+              <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
             </form>
           </div>
         </div>
@@ -231,6 +233,7 @@
 
     <!-- 공통 JS (순서 중요) -->
     <script src="../assets/js/config.js" defer></script>
+    <script src="../assets/js/inquiry.js" defer></script>
     <script src="../assets/js/components.js" defer></script>
     <script src="../assets/js/i18n.js" defer></script>
     <script src="../assets/js/intro.js" defer></script>

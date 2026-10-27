@@ -1,5 +1,5 @@
-/* 문의 양식: 입력을 확인한 뒤, 사용 중인 메일 앱에 내용을 채워서 엽니다.
-   (서버 전송 기능이 생기면 send() 부분만 바꾸면 됩니다.)
+/* 문의 양식: 입력을 확인한 뒤 LP_INQUIRY(inquiry.js)로 보냅니다. 폼 서비스 주소(config.js의 form.endpoint)가 있으면 서버로,
+   없으면 사용 중인 메일 앱에 내용을 채워서 엽니다.
    - 견적 계산기에서 넘어오면(?services=a,b&est=요약) 관심 서비스가 골라져 있고, 고른 구성이 문의 내용에 채워집니다. */
 (function () {
   "use strict";
@@ -55,26 +55,59 @@
     return o ? o.textContent : "-";
   }
 
-  function send() {
+  const button = form.querySelector('button[type="submit"]');
+  const status = form.querySelector("[data-form-status]");
+
+  function setStatus(kind, message) {
+    if (!status) return;
+    status.textContent = message || "";
+    status.classList.toggle("is-ok", kind === "ok");
+    status.classList.toggle("is-error", kind === "error");
+  }
+
+  async function send() {
     const el = form.elements;
     const picked = Array.from(form.querySelectorAll('input[name="services"]:checked')).map(function (i) {
-      return i.nextElementSibling.textContent.replace(/ /g, " ");
+      return i.nextElementSibling.textContent.replace(/[\u00a0\u2060]/g, " ");
     });
-    const subject = t("contact.form.mail_subject") + " " + (el.company.value.trim() || el.name.value.trim());
-    const lines = [
-      t("contact.form.name") + ": " + el.name.value.trim(),
-      t("contact.form.company") + ": " + (el.company.value.trim() || "-"),
-      t("contact.form.email") + ": " + el.email.value.trim(),
-      t("contact.form.direction") + ": " + label(el.direction),
-      t("contact.form.services") + ": " + (picked.join(", ") || "-"),
+    const company = el.company.value.trim();
+    const direction = label(el.direction);
+    const subject = t("contact.form.mail_subject") + " " + (company || el.name.value.trim());
+    const data = {
+      name: el.name.value.trim(),
+      company: company || "-",
+      email: el.email.value.trim(),
+      direction: direction,
+      services: picked.join(", ") || "-",
+      message: el.message.value.trim(),
+      website: el.website ? el.website.value : "",
+    };
+    const rows = [
+      [t("contact.form.name"), data.name],
+      [t("contact.form.company"), data.company],
+      [t("contact.form.email"), data.email],
+      [t("contact.form.direction"), direction],
+      [t("contact.form.services"), data.services],
     ];
-    lines.push("", el.message.value.trim());
-    window.location.href =
-      "mailto:" + cfg.email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
+    button.disabled = true;
+    setStatus("", t("contact.form.sending"));
+    const result = await window.LP_INQUIRY.send({ subject: subject, data: data, rows: rows });
+    button.disabled = false;
+    if (result.mode === "mail") return setStatus("", "");
+    if (result.ok) {
+      form.reset();
+      form.querySelectorAll(".is-error").forEach(function (f) {
+        f.classList.remove("is-error");
+      });
+      setStatus("ok", t("contact.form.success"));
+    } else {
+      setStatus("error", t("contact.form.error").replace("{email}", cfg.email));
+    }
   }
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+    if (button.disabled) return;
     let firstInvalid = null;
     required().forEach(function (input) {
       const message = check(input);
