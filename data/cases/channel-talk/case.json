@@ -37,22 +37,22 @@
   ],
   "sources": [
     {
-      "label": "머니투데이 · 일본 기업에 ‘귀이개’로 영업한 한국 스타트업…11년뒤 벌어진 일",
+      "label": "머니투데이 · 일본 기업에 ‘귀이개’로 영업한 한국 스타트업…11년뒤 벌어진 일",
       "url": "https://www.mt.co.kr/future/2026/06/07/2026060711434842883"
     }
   ],
   "ko": {
     "client": "채널코퍼레이션 (채널톡)",
-    "industry": "스타트업 · 고객 상담 SaaS",
+    "industry": "스타트업 · 고객 상담 SaaS",
     "duration": "2014 – 2026",
     "short": "Channel Talk의 일본 11년",
     "title": "Channel Talk, 대리점에서 막힌 뒤 직접 고객을 만나 일본 고객 2만5천 곳을 얻다",
     "summary": "대리점과 파트너십이 번번이 실패한 뒤, 직접 고객을 만나는 영업으로 길을 열었습니다.",
     "challenge": "법인 설립 직후인 2014년에 일본에 들어갔지만, 대리점과 파트너십을 통한 방식이 번번이 실패했습니다.",
     "approach": [
-      "대리점 · 파트너십 대신 고객을 직접 만나는 정석 세일즈로 바꿨습니다.",
+      "대리점 · 파트너십 대신 고객을 직접 만나는 정석 세일즈로 바꿨습니다.",
       "코로나로 매장을 닫은 패션 기업의 직원이 온라인으로 접객하는 수요를 출발점으로 삼았습니다.",
-      "일본은 후기보다 구매 전 문의가 많다는 점에 맞춰 패션 · 이커머스와의 궁합을 살렸습니다.",
+      "일본은 후기보다 구매 전 문의가 많다는 점에 맞춰 패션 · 이커머스와의 궁합을 살렸습니다.",
       "기존 고객이 낸 개선 제안을 먼저 반영했습니다.",
       "AI 상담 기능을 일본 고객 환경에 맞춰 키웠고, 일본에서는 평균 해결률이 약 80%로 한국(약 60%)보다 높습니다."
     ],
@@ -64,11 +64,11 @@
       },
       {
         "when": "초기",
-        "what": "대리점 · 파트너십 전략이 번번이 실패"
+        "what": "대리점 · 파트너십 전략이 번번이 실패"
       },
       {
         "when": "이후",
-        "what": "직접 영업으로 전환, 패션 · 이커머스로 확대"
+        "what": "직접 영업으로 전환, 패션 · 이커머스로 확대"
       },
       {
         "when": "2026.06",
@@ -113,7 +113,7 @@
   },
   "en": {
     "client": "Channel Corporation (Channel Talk)",
-    "industry": "Startup · customer-chat SaaS",
+    "industry": "Startup · customer-chat SaaS",
     "duration": "2014 – 2026",
     "short": "Channel Talk's eleven years in Japan",
     "title": "Channel Talk: after agencies failed, selling directly wins 25,000 customers in Japan",

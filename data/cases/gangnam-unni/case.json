@@ -41,21 +41,21 @@
   ],
   "sources": [
     {
-      "label": "바이라인네트워크 · [인터뷰] 강남언니, 일본에서 터진 비결",
+      "label": "바이라인네트워크 · [인터뷰] 강남언니, 일본에서 터진 비결",
       "url": "https://byline.network/2024/04/22-332/"
     },
     {
-      "label": "메디게이트뉴스 · 2025.10.17",
+      "label": "메디게이트뉴스 · 2025.10.17",
       "url": "https://medigatenews.com/news/2654920729"
     }
   ],
   "ko": {
     "client": "힐링페이퍼 (강남언니)",
-    "industry": "미용 의료 플랫폼 · 스타트업",
+    "industry": "미용 의료 플랫폼 · 스타트업",
     "duration": "2019 진출 – 2025",
     "short": "Gangnam Unni의 일본 현지화",
-    "title": "Gangnam Unni, 일본 병원 · 일본 이용자까지 품은 플랫폼이 되기까지",
-    "summary": "한국 병원에 찾아온 일본 손님의 요청에서 출발해, 국경이 닫힌 시기에도 일본 서비스를 인수 · 통합하며 뿌리를 내렸습니다.",
+    "title": "Gangnam Unni, 일본 병원 · 일본 이용자까지 품은 플랫폼이 되기까지",
+    "summary": "한국 병원에 찾아온 일본 손님의 요청에서 출발해, 국경이 닫힌 시기에도 일본 서비스를 인수 · 통합하며 뿌리를 내렸습니다.",
     "challenge": "한국의 시술 이름은 기계 번역을 거치면 어색해지고, 일본에서는 신뢰와 인맥이 쌓이는 데 시간이 오래 걸렸습니다. 2020년에는 국경이 닫히며 일본 사업이 거의 멈췄습니다.",
     "approach": [
       "제휴 병원에서 ‘일본 손님이 강남언니 화면을 캡처해 온다’는 이야기를 반복해 들은 뒤 2019년 일본판을 냈습니다.",
@@ -80,7 +80,7 @@
       },
       {
         "when": "2025.10",
-        "what": "일본 제휴 병원 1,500곳 · 이용자 160만 명 (보도)"
+        "what": "일본 제휴 병원 1,500곳 · 이용자 160만 명 (보도)"
       }
     ]
   },
@@ -121,7 +121,7 @@
   },
   "en": {
     "client": "Healing Paper (Gangnam Unni)",
-    "industry": "Aesthetic-medicine platform · startup",
+    "industry": "Aesthetic-medicine platform · startup",
     "duration": "Entered 2019 – 2025",
     "short": "Gangnam Unni's localisation in Japan",
     "title": "How Gangnam Unni became a platform with Japanese clinics and Japanese users",

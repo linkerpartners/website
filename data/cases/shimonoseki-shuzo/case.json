@@ -29,13 +29,13 @@
   ],
   "sources": [
     {
-      "label": "JETRO 활용 사례 · 下関酒造株式会社 (2026)",
+      "label": "JETRO 활용 사례 · 下関酒造株式会社 (2026)",
       "url": "https://www.jetro.go.jp/case_study/2026/shimonoseki.html"
     }
   ],
   "ko": {
     "client": "시모노세키주조 (下関酒造)",
-    "industry": "청주 · 야마구치현 시모노세키시",
+    "industry": "청주 · 야마구치현 시모노세키시",
     "duration": "2025년도 (공개 2026)",
     "short": "Shimonoseki Shuzo의 한국 온라인 판매",
     "title": "Shimonoseki Shuzo, 첫 해외 온라인 판매로 한국에서 계속 주문받다",
@@ -44,9 +44,9 @@
     "approach": [
       "2015년부터 JETRO 해외 판매 지원을 쓰고, 2020년 JAPAN MALL 사업에 참여했습니다.",
       "한국 크로스보더 EC 업체 말테일의 주문이 조금씩 늘자 2025년도에 유료 옵션을 사서 한국 판매를 넓혔습니다.",
-      "참여 이유는 소비자에게 직접 알릴 수 있고, 컨설팅보다 비용이 낮고, JETRO의 신뢰가 있고, 일본에서 보관 · 배송해 품질이 안심된다는 점이었습니다.",
+      "참여 이유는 소비자에게 직접 알릴 수 있고, 컨설팅보다 비용이 낮고, JETRO의 신뢰가 있고, 일본에서 보관 · 배송해 품질이 안심된다는 점이었습니다.",
       "2월 재입고 때 말테일 전용 페이지, 네이버 카페 게시, 고객 직접 메일로 알렸습니다.",
-      "국내 납품 · 엔화 결제 · 전량 매입이라 해외 전담 담당자 없이 운영했습니다."
+      "국내 납품 · 엔화 결제 · 전량 매입이라 해외 전담 담당자 없이 운영했습니다."
     ],
     "result": "‘가이쿄 준마이 다이긴조’는 첫 입고분을 넘겨 팔렸고 추가 입고분도 모두 팔렸습니다. 판매 → 재입고 → 홍보 → 재주문의 흐름이 생기며 한 번의 거래가 계속 거래가 됐습니다. JETRO는 전자상거래 경험이 없던 회사도 해외 소비자 판매와 지속 거래를 얻은 사례로 꼽습니다.",
     "timeline": [
@@ -64,7 +64,7 @@
       },
       {
         "when": "2월",
-        "what": "재입고와 함께 전용 페이지 · 네이버 카페 · 메일로 홍보"
+        "what": "재입고와 함께 전용 페이지 · 네이버 카페 · 메일로 홍보"
       }
     ]
   },
@@ -105,7 +105,7 @@
   },
   "en": {
     "client": "Shimonoseki Shuzo",
-    "industry": "Sake · Shimonoseki, Yamaguchi",
+    "industry": "Sake · Shimonoseki, Yamaguchi",
     "duration": "FY2025 (published 2026)",
     "short": "Shimonoseki Shuzo's online sales in Korea",
     "title": "Shimonoseki Shuzo wins continuing orders in Korea from its first overseas e-commerce sales",

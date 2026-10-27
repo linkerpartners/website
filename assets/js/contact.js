@@ -58,7 +58,7 @@
   function send() {
     const el = form.elements;
     const picked = Array.from(form.querySelectorAll('input[name="services"]:checked')).map(function (i) {
-      return i.nextElementSibling.textContent;
+      return i.nextElementSibling.textContent.replace(/ /g, " ");
     });
     const subject = t("contact.form.mail_subject") + " " + (el.company.value.trim() || el.name.value.trim());
     const lines = [

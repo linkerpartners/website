@@ -1913,6 +1913,18 @@
   text-wrap: balance;
 }
 
+/* 작은 휴대폰(360 · 320px)에서도 한 줄 제목이 두 줄로 꺾이지 않게: 390px에서는 기존과 같은 44px */
+@media (max-width: 480px) {
+  .pg-title {
+    font-size: clamp(2.1rem, 0.4rem + 9.6vw, 2.75rem);
+  }
+
+  /* 영어 디스플레이체는 폭이 넓어 한 줄 15~16자가 들어가도록 더 줄임 */
+  :lang(en) .pg-title {
+    font-size: clamp(1.6rem, 0.3rem + 7.4vw, 2.25rem);
+  }
+}
+
 :lang(ja) .pg-title,
 :lang(en) .pg-title {
   font-weight: var(--fw-extralight); /* 일본어 명조 · 영어 디스플레이는 200이 가장 가는 굵기 */

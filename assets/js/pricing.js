@@ -366,7 +366,7 @@
       }
       const copy = e.target.closest("[data-est='copy']");
       if (copy && summary && navigator.clipboard) {
-        navigator.clipboard.writeText(summary).then(function () {
+        navigator.clipboard.writeText(summary.replace(/ /g, " ")).then(function () {
           const label = copy.querySelector("[data-i18n]");
           if (!label) return;
           label.textContent = t("pricing.estimator.copied");

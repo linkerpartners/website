@@ -43,19 +43,16 @@ body {
   overflow-wrap: break-word;
 }
 
+/* 일본어는 문절 단위로 줄바꿈(지원하지 않는 브라우저는 normal로 돌아감) */
 :lang(ja) {
   word-break: normal;
+  word-break: auto-phrase;
   line-break: strict;
   overflow-wrap: break-word;
 }
 
 :lang(en) {
   word-break: normal;
-}
-
-/* 일본어 제목은 어절(문절) 단위로 줄바꿈 (지원 브라우저에서) */
-:lang(ja) :is(h1, h2, h3, h4) {
-  word-break: auto-phrase;
 }
 
 img,
@@ -133,6 +130,11 @@ h4 {
 }
 
 p {
+  text-wrap: pretty;
+}
+
+/* 짧은 글 덩어리도 마지막 줄에 한두 글자만 남지 않게. 클래스에 지정한 balance가 있으면 그쪽이 우선 */
+:is(li, dd, dt, td, th, summary, figcaption, blockquote, label, small, span, div, a) {
   text-wrap: pretty;
 }
 

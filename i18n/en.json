@@ -63,15 +63,15 @@
       "insights": "Notes on both markets",
       "contact": "Free 30-minute call"
     },
-    "reach": "Talk to us",
+    "reach": "Talk to us",
     "hours": "Weekdays 10:00⁠–⁠18:00 (Seoul and Tokyo time)",
     "eyebrow": "Menu",
     "news": "Latest",
     "rate": "Today’s rate"
   },
   "header": {
-    "cta": "Talk to us",
-    "fx": "FX · ECB reference",
+    "cta": "Talk to us",
+    "fx": "FX · ECB reference",
     "fxpairs": {
       "usdkrw": "USD/KRW",
       "jpykrw": "100 JPY/KRW",
@@ -82,7 +82,7 @@
   },
   "footer": {
     "description": "Korea–Japan expansion consulting for small brands.",
-    "hours": "Weekdays 10:00⁠–⁠18:00 · 한국어 · 日本語 · English",
+    "hours": "Weekdays 10:00⁠–⁠18:00 · 한국어 · 日本語 · English",
     "top": "Back to top",
     "links": "Links",
     "copyright": "© {year} LINKERPARTNERS",
@@ -109,14 +109,14 @@
     "info": {
       "open": "Available now",
       "closed": "Please email us for now",
-      "clock": "Seoul · Tokyo time"
+      "clock": "Seoul · Tokyo time"
     },
     "form": {
       "pick": "Choose a service (optional)"
     },
     "faq": {
       "label": "Frequently asked",
-      "q": "Can we talk before our plans are concrete?",
+      "q": "Can we talk if we have only just started thinking about it?",
       "a": "Yes. A call helps most when you have only just started thinking about it. Tell us where you are and we will work out what to do first.",
       "more": "More questions"
     }
@@ -132,28 +132,28 @@
     },
     "about": {
       "title": "About us",
-      "lead": "We work alongside small brands crossing between Korea and Japan",
+      "lead": "We help small brands cross between Korea and Japan",
       "items": [
         {
           "n": "01",
           "t": "Start small",
-          "d": "No big contract. Hand us the one thing you need now, from ₩50K."
+          "d": "Hand us just the one thing you need now, from ₩50K."
         },
         {
           "n": "02",
           "t": "No surprises",
-          "d": "Fees and progress are open, and if something looks hard, we say so"
+          "d": "Our fees and progress are open, and we tell you what is quick and what takes time"
         },
         {
           "n": "03",
           "t": "The same person to the end",
-          "d": "The person who first hears your story stays with you until there is a result"
+          "d": "The person you first talk to stays on until you see results"
         }
       ],
-      "link": "Read our thinking",
+      "link": "How we work",
       "eyebrow": "What we do",
-      "vision": "We want crossing the border to feel closer and more honest, even for solo founders and small brands",
-      "mission": "We help Korean brands meet their first customers in Japan, and Japanese brands in Korea. Logos, websites, booking systems, social media and ads, store-launch prep: the essentials, at a price that is easy to say yes to.",
+      "vision": "We want solo founders and small brands to be able to cross the border simply and honestly.",
+      "mission": "We help Korean brands find their first customers in Japan, and Japanese brands in Korea. Choose only what you need from logos, websites, booking systems, social media and ads, and store-launch prep, at a price that is easy to say yes to.",
       "principles": "Three principles we work by"
     },
     "services": {
@@ -176,10 +176,10 @@
     },
     "story": {
       "title": "How it works",
-      "desc": "The person who first hears your story stays with you to the end"
+      "desc": "Your contact stays the same from the first call to the result"
     },
     "pricing": {
-      "pre": "Talks start at",
+      "pre": "Sessions start at",
       "post": "",
       "button": "See all fees",
       "link": "Try the estimator",
@@ -195,7 +195,7 @@
       "tier": "Scope",
       "total": "Estimated cost",
       "vat": "{p} incl. VAT",
-      "note": "Outside experts are not included. You get an exact quote after we talk.",
+      "note": "Outside experts are billed separately. You get an exact quote after we talk.",
       "weeks": "Timeline",
       "weeks_one": "About {a} weeks",
       "weeks_within": "Within a week",
@@ -229,7 +229,7 @@
   "services": {
     "hero": {
       "title": "Pick only\nwhat you need",
-      "lead": "From a first conversation to a logo, a website, a booking system or social media and ads: hand us just the one thing you need now. Every service has its price and timeline up front."
+      "lead": "Pick just the one thing you need now: a logo, a website, a booking system, or social media and ads. Every service has its price and timeline up front."
     },
     "labels": {
       "for": "Best for",
@@ -243,38 +243,38 @@
         "href": "services.html#spot",
         "ask": "contact.html?services=spot",
         "title": "1:1 focus session",
-        "summary": "Sixty minutes on the one thing holding you back.",
+        "summary": "Sixty minutes on the one thing that matters most right now.",
         "price": "items.spot",
         "mode": "plain",
         "lead": "We take your questions in advance and spend 60 minutes on answers and next steps. Afterwards you get a short summary note.",
         "for": [
           "Anyone who has just started thinking about selling abroad",
-          "Anyone unsure whether to start with the logo, website or social media"
+          "Anyone choosing where to start: logo, website or social media"
         ],
         "deliverables": [
           "60-minute video session",
           "Summary note with next steps"
         ],
-        "duration": "One session · 60 min"
+        "duration": "One session · 60 min"
       },
       {
         "id": "localization",
         "href": "services.html#localization",
         "ask": "contact.html?services=localization",
         "title": "Brand localization and product pages",
-        "summary": "Not a translation: rewritten for how local customers read.",
+        "summary": "Rewritten for how local customers read.",
         "price": "items.localization",
         "mode": "unit",
         "lead": "Hand us product pages, brand intros, product names or sales emails one piece at a time. We rework tone and the order of information for the local market, and check that cosmetics and food claims stay within the rules.",
         "for": [
           "Sellers who need Japanese or Korean product pages",
-          "Anyone uneasy about copy made with a translation tool"
+          "Anyone who wants copy made with a translation tool to read naturally"
         ],
         "deliverables": [
           "Localized material",
           "Note on wording and labelling rules"
         ],
-        "duration": "1⁠–⁠2 weeks per piece"
+        "duration": "1⁠–⁠2 weeks per piece"
       },
       {
         "id": "advisory",
@@ -287,7 +287,7 @@
         "lead": "Light is one 30-minute check-in a month. Standard is two calls a month, answers to your questions by chat and one small fix. Start for one month and stop whenever you like.",
         "for": [
           "Sellers running local sales on their own",
-          "Anyone who wants steady check-ins, not a one-off job"
+          "Anyone who wants steady check-ins after launch"
         ],
         "deliverables": [
           "Regular calls and notes",
@@ -304,18 +304,18 @@
         "summary": "Check, with evidence, whether your product suits that market.",
         "price": "items.diagnostic",
         "mode": "from",
-        "lead": "The basic report researches the market and competing products. The deep version adds a price comparison, a labelling-rules checklist and a 30-minute follow-up call.",
+        "lead": "The basic report researches the market and competing products. The advanced version adds a price comparison, a labelling-rules checklist and a 30-minute follow-up call.",
         "for": [
           "Solo and small sellers looking at Japan or Korea for the first time",
           "Startups that need supporting evidence for grant or investor documents"
         ],
         "deliverables": [
           "Market and competitor research report",
-          "Price comparison with similar products (deep)",
-          "Labelling-rules checklist (deep)",
+          "Price comparison with similar products (advanced)",
+          "Labelling-rules checklist (advanced)",
           "A go or no-go view and a first step"
         ],
-        "duration": "1⁠–⁠3 weeks"
+        "duration": "1⁠–⁠3 weeks"
       },
       {
         "id": "logo",
@@ -325,7 +325,7 @@
         "summary": "A logo that works in both Korea and Japan, made for you.",
         "price": "items.logo",
         "mode": "from",
-        "lead": "We make your logo while checking sound, meaning and colour through both Korean and Japanese eyes. The basic option is three logo drafts and the final files for the one you pick. The deep option adds a one-page brand guide plus social profile and business-card images.",
+        "lead": "We make your logo while checking sound, meaning and colour through both Korean and Japanese eyes. Basic is three logo drafts and the final files for the one you pick. Advanced adds a one-page brand guide plus social profile and business-card images.",
         "for": [
           "Solo founders and startups that have just built a brand",
           "Anyone who wants to name or refine their logo before selling in Japan"
@@ -334,9 +334,9 @@
           "Three logo drafts",
           "Final files (PNG and SVG)",
           "Memo on sound, meaning and colour",
-          "Brand guide, social profile and card images (deep)"
+          "Brand guide, social profile and card images (advanced)"
         ],
-        "duration": "1⁠–⁠3 weeks"
+        "duration": "1⁠–⁠3 weeks"
       },
       {
         "id": "channel",
@@ -346,18 +346,18 @@
         "summary": "What to prepare before you list on a marketplace.",
         "price": "items.channel",
         "mode": "from",
-        "lead": "For first-time sellers on Qoo10 or Rakuten in Japan, or Smartstore or Coupang in Korea: choosing a channel, documents to prepare, shipping and pricing, and your product page. The basic option is a channel comparison and preparation checklist. The deep option adds a review of two product pages. Tax and customs advice is not included; we can point you to specialists.",
+        "lead": "For first-time sellers on Qoo10 or Rakuten in Japan, or Smartstore or Coupang in Korea: choosing a channel, documents to prepare, shipping and pricing, and your product page. Basic is a channel comparison and preparation checklist. Advanced adds a review of two product pages. For tax and customs, we can point you to specialists.",
         "for": [
           "Sellers starting online sales for the first time",
-          "Sellers who are listed but not selling"
+          "Sellers who are listed and want to grow sales"
         ],
         "deliverables": [
           "Channel comparison table",
           "Preparation checklist",
           "Shipping and pricing memo",
-          "Review of two product pages (deep)"
+          "Review of two product pages (advanced)"
         ],
-        "duration": "1⁠–⁠3 weeks"
+        "duration": "1⁠–⁠3 weeks"
       },
       {
         "id": "sns",
@@ -367,19 +367,19 @@
         "summary": "We set up accounts and ads and plan your first month.",
         "price": "items.sns",
         "mode": "from",
-        "lead": "We help you start on channels such as Instagram, X and LINE and run ads in Japan. The basic option is an account review and an ad-setup guide. The deep option adds a four-week content calendar, 12 post and ad captions, and a results check after a month. We polish the local wording in Japanese and Korean. Ad spend is separate, and we cannot promise sales.",
+        "lead": "We help you start on channels such as Instagram, X and LINE, and run ads in Japan. Basic is an account review and an ad-setup guide. Advanced adds a four-week content calendar, 12 post and ad captions, and a results check after a month. We polish the local wording in Japanese and Korean. Ad spend is separate, and results depend on the market.",
         "for": [
           "Sellers who want to reach customers in Japan or Korea through social media and ads",
-          "Brands with an account but little response"
+          "Brands with an account that want more response"
         ],
         "deliverables": [
           "Account review report",
           "Ad-account setup guide",
-          "Four-week content calendar (deep)",
-          "12 post and ad captions (deep)",
-          "Results check after one month (deep)"
+          "Four-week content calendar (advanced)",
+          "12 post and ad captions (advanced)",
+          "Results check after one month (advanced)"
         ],
-        "duration": "1⁠–⁠3 weeks"
+        "duration": "1⁠–⁠3 weeks"
       },
       {
         "id": "booking",
@@ -389,7 +389,7 @@
         "summary": "A smooth way to take bookings and send confirmations.",
         "price": "items.booking",
         "mode": "from",
-        "lead": "For shops, classes and consultations that run on bookings, we set up a booking page and notifications. The basic option configures an existing booking service and polishes the notices in Japanese and Korean. The deep option adds a booking page styled to your brand with confirmation emails and chat alerts. We do not build payment systems from scratch.",
+        "lead": "For shops, classes and consultations that run on bookings, we set up a booking page and notifications. Basic configures an existing booking service and writes the notices in Japanese and Korean. Advanced adds a booking page styled to your brand, with confirmation emails and chat alerts. We cover the booking page and notifications; payment systems are built by specialists.",
         "for": [
           "Owners of shops, studios and classes that take bookings",
           "Anyone who wants Korean and Japanese customers booking in one place"
@@ -397,10 +397,10 @@
         "deliverables": [
           "Booking page",
           "Notices in Japanese and Korean",
-          "Confirmation email and alert setup (deep)",
+          "Confirmation email and alert setup (advanced)",
           "A guide to running it"
         ],
-        "duration": "1⁠–⁠4 weeks"
+        "duration": "1⁠–⁠4 weeks"
       },
       {
         "id": "web",
@@ -410,22 +410,22 @@
         "summary": "An intro site that reads well in Korean and Japanese.",
         "price": "items.web",
         "mode": "from",
-        "lead": "We build a website with your brand story, products and how to reach you. The basic option is a one-page site. The deep option is a site of up to five pages with a contact form and both Japanese and Korean versions. A custom online shop or complex member features are not included; we can point you to developers if you need one.",
+        "lead": "We build a website with your brand story, products and how to reach you. Basic is a one-page site. Advanced is up to five pages with a contact form and both Japanese and Korean versions. If you need a custom online shop or member features, we can point you to developers.",
         "for": [
-          "Sellers whose only presence is social media",
+          "Sellers who want a home beyond social media",
           "Anyone who needs a page that customers in Japan or Korea can find by search"
         ],
         "deliverables": [
-          "One-page site (basic) or up to five pages (deep)",
+          "One-page site (basic) or up to five pages (advanced)",
           "Contact form connected to your email",
-          "Japanese and Korean copy (deep)",
+          "Japanese and Korean copy (advanced)",
           "A short guide to editing it"
         ],
-        "duration": "2⁠–⁠5 weeks"
+        "duration": "2⁠–⁠5 weeks"
       }
     ],
     "directions": {
-      "title": "Each direction\nneeds different prep"
+      "title": "Prep differs by\ndirection"
     },
     "process": {
       "title": "Every job runs\nin four steps"
@@ -456,17 +456,17 @@
       {
         "line": "First, we listen",
         "desc": "In a free call we go over your product, goals and budget",
-        "time": "30 min · free"
+        "time": "30 min · free"
       },
       {
         "line": "Then, we check where you stand",
         "desc": "We look at your logo, sales page and social accounts and list what is needed",
-        "time": "1⁠–⁠2 weeks"
+        "time": "1⁠–⁠2 weeks"
       },
       {
         "line": "Together, we build it",
         "desc": "We prepare localized copy, a logo, a website and an operating plan",
-        "time": "1⁠–⁠5 weeks"
+        "time": "1⁠–⁠5 weeks"
       },
       {
         "line": "If you need more, we continue",
@@ -478,7 +478,7 @@
   "pricing": {
     "note": "VAT not included. Ad spend, running costs such as domains and servers, and outside experts such as translation reviewers, tax advisers and customs brokers are quoted separately. Yen amounts are for reference (₩1 = ¥0.118).",
     "hero": {
-      "title": "Don't wait for a quote.\nCalculate it yourself.",
+      "title": "Skip the wait.\nDo the math.",
       "lead": "From a ₩50K session to builds under ₩1M, every fee is public. Pick what you need, choose levels and quantities, and your estimate with VAT appears at once."
     },
     "estimator": {
@@ -535,12 +535,12 @@
             {
               "v": "basic",
               "name": "Basic",
-              "desc": "Market and competitor research report · 1⁠–⁠2 weeks"
+              "desc": "Market and competitor research report · 1⁠–⁠2 weeks"
             },
             {
               "v": "deep",
-              "name": "Deep",
-              "desc": "Includes price comparison, rules checklist and follow-up call · 2⁠–⁠3 weeks"
+              "name": "Advanced",
+              "desc": "Includes price comparison, rules checklist and follow-up call · 2⁠–⁠3 weeks"
             }
           ]
         },
@@ -552,12 +552,12 @@
             {
               "v": "basic",
               "name": "Basic",
-              "desc": "Three drafts, final files for one · 1⁠–⁠2 weeks"
+              "desc": "Three drafts, final files for one · 1⁠–⁠2 weeks"
             },
             {
               "v": "deep",
-              "name": "Deep",
-              "desc": "Includes brand guide, social profile and card images · 2⁠–⁠3 weeks"
+              "name": "Advanced",
+              "desc": "Includes brand guide, social profile and card images · 2⁠–⁠3 weeks"
             }
           ]
         },
@@ -569,12 +569,12 @@
             {
               "v": "basic",
               "name": "Basic",
-              "desc": "Channel comparison and checklist · 1⁠–⁠2 weeks"
+              "desc": "Channel comparison and checklist · 1⁠–⁠2 weeks"
             },
             {
               "v": "deep",
-              "name": "Deep",
-              "desc": "Includes review of two product pages · 2⁠–⁠3 weeks"
+              "name": "Advanced",
+              "desc": "Includes review of two product pages · 2⁠–⁠3 weeks"
             }
           ]
         },
@@ -586,12 +586,12 @@
             {
               "v": "basic",
               "name": "Basic",
-              "desc": "Account review and ad-setup guide · within 1 week"
+              "desc": "Account review and ad-setup guide · within 1 week"
             },
             {
               "v": "deep",
-              "name": "Deep",
-              "desc": "Four-week calendar, 12 captions, results check · 2⁠–⁠3 weeks"
+              "name": "Advanced",
+              "desc": "Four-week calendar, 12 captions, results check · 2⁠–⁠3 weeks"
             }
           ]
         },
@@ -603,12 +603,12 @@
             {
               "v": "basic",
               "name": "Basic",
-              "desc": "Existing booking service set up, notices written · 1⁠–⁠2 weeks"
+              "desc": "Existing booking service set up, notices written · 1⁠–⁠2 weeks"
             },
             {
               "v": "deep",
-              "name": "Deep",
-              "desc": "Branded booking page, confirmation emails, alerts · 3⁠–⁠4 weeks"
+              "name": "Advanced",
+              "desc": "Branded booking page, confirmation emails, alerts · 3⁠–⁠4 weeks"
             }
           ]
         },
@@ -620,22 +620,22 @@
             {
               "v": "basic",
               "name": "Basic",
-              "desc": "One-page site · 2⁠–⁠3 weeks"
+              "desc": "One-page site · 2⁠–⁠3 weeks"
             },
             {
               "v": "deep",
-              "name": "Deep",
-              "desc": "Up to five pages, contact form, two languages · 3⁠–⁠5 weeks"
+              "name": "Advanced",
+              "desc": "Up to five pages, contact form, two languages · 3⁠–⁠5 weeks"
             }
           ]
         }
       ],
-      "result_title": "Estimated cost · incl. VAT",
+      "result_title": "Estimated cost · incl. VAT",
       "duration": "Timeline",
       "weeks": "About {a}⁠–⁠{b} weeks",
       "weeks_ongoing": "Mentoring is monthly",
       "package": "If you bundle",
-      "hint": "Outside experts are not included. You get an exact quote after we talk.",
+      "hint": "Outside experts are billed separately. You get an exact quote after we talk.",
       "cta": "Talk about this estimate",
       "rush": "Rush",
       "rush_desc": "Shortens the timeline by about a quarter. Adds 20% to the subtotal.",
@@ -651,7 +651,7 @@
       "more": "Increase"
     },
     "plans": {
-      "title": "Three bundles\nmost people choose",
+      "title": "Three popular\nbundles",
       "head": "What is included",
       "pick": "Most popular",
       "names": {
@@ -668,9 +668,9 @@
         {
           "k": "Timeline",
           "v": [
-            "1⁠–⁠2 weeks",
-            "2⁠–⁠3 weeks",
-            "4⁠–⁠6 weeks"
+            "1⁠–⁠2 weeks",
+            "2⁠–⁠3 weeks",
+            "4⁠–⁠6 weeks"
           ]
         },
         {
@@ -722,7 +722,7 @@
           ]
         }
       ],
-      "cta": "Talk to us"
+      "cta": "Talk to us"
     },
     "menu_section": {
       "title": "Fees\nby item"
@@ -738,7 +738,7 @@
           },
           {
             "name": "1:1 focus session",
-            "desc": "60 minutes · summary note",
+            "desc": "60 minutes · summary note",
             "price": "items.spot",
             "mode": "plain"
           }
@@ -754,25 +754,25 @@
             "mode": "unit"
           },
           {
-            "name": "Booking system setup · Basic",
+            "name": "Booking system setup · Basic",
             "desc": "Existing booking service set up, notices written",
             "price": "items.booking.basic",
             "mode": "plain"
           },
           {
-            "name": "Website building · Basic",
+            "name": "Website building · Basic",
             "desc": "One-page site",
             "price": "items.web.basic",
             "mode": "plain"
           },
           {
-            "name": "Booking system setup · Deep",
+            "name": "Booking system setup · Advanced",
             "desc": "Branded booking page, confirmation emails, alerts",
             "price": "items.booking.deep",
             "mode": "plain"
           },
           {
-            "name": "Website building · Deep",
+            "name": "Website building · Advanced",
             "desc": "Up to five pages, contact form, two languages",
             "price": "items.web.deep",
             "mode": "plain"
@@ -783,13 +783,13 @@
         "group": "Mentoring",
         "items": [
           {
-            "name": "Monthly mentoring · Light",
+            "name": "Monthly mentoring · Light",
             "desc": "One 30-minute call a month, with notes",
             "price": "items.advisory.light",
             "mode": "monthly"
           },
           {
-            "name": "Monthly mentoring · Standard",
+            "name": "Monthly mentoring · Standard",
             "desc": "Two calls a month, chat answers and one small fix",
             "price": "items.advisory.standard",
             "mode": "monthly"
@@ -800,25 +800,25 @@
         "group": "Review and design",
         "items": [
           {
-            "name": "Market-fit report · Basic",
+            "name": "Market-fit report · Basic",
             "desc": "Market and competitor research report",
             "price": "items.diagnostic.basic",
             "mode": "plain"
           },
           {
-            "name": "Logo and brand design · Basic",
+            "name": "Logo and brand design · Basic",
             "desc": "Three drafts, final files for one",
             "price": "items.logo.basic",
             "mode": "plain"
           },
           {
-            "name": "Market-fit report · Deep",
+            "name": "Market-fit report · Advanced",
             "desc": "Price comparison, rules checklist and follow-up call",
             "price": "items.diagnostic.deep",
             "mode": "plain"
           },
           {
-            "name": "Logo and brand design · Deep",
+            "name": "Logo and brand design · Advanced",
             "desc": "Brand guide, social profile and card images",
             "price": "items.logo.deep",
             "mode": "plain"
@@ -829,25 +829,25 @@
         "group": "Sell and run",
         "items": [
           {
-            "name": "Store-launch guide · Basic",
+            "name": "Store-launch guide · Basic",
             "desc": "Channel comparison and checklist",
             "price": "items.channel.basic",
             "mode": "plain"
           },
           {
-            "name": "Social media and ads support · Basic",
+            "name": "Social media and ads support · Basic",
             "desc": "Account review and ad-setup guide",
             "price": "items.sns.basic",
             "mode": "plain"
           },
           {
-            "name": "Store-launch guide · Deep",
+            "name": "Store-launch guide · Advanced",
             "desc": "Includes review of two product pages",
             "price": "items.channel.deep",
             "mode": "plain"
           },
           {
-            "name": "Social media and ads support · Deep",
+            "name": "Social media and ads support · Advanced",
             "desc": "Four-week calendar, 12 captions, results check",
             "price": "items.sns.deep",
             "mode": "plain"
@@ -858,12 +858,12 @@
   },
   "cases": {
     "hero": {
-      "title": "How did small brands\ncross over?",
+      "title": "How small brands\ncross over",
       "lead": "The routes small businesses and startups actually took between Korea and Japan, pieced together from public sources."
     },
-    "note": "These are not LINKERPARTNERS projects. They are Korea–Japan expansion cases compiled from public sources. Figures come only from press and official materials. Charts draw those figures, and timeline graphics show order only. We publish our own projects only with the client's consent.",
+    "note": "These are not LINKERPARTNERS projects but Korea–Japan expansion cases compiled from public sources. Every figure comes from press or official materials. Charts only redraw those figures, and timeline graphics show order, not scale. We publish our own projects only with the client’s consent.",
     "labels": {
-      "challenge": "The hurdle",
+      "challenge": "The challenge",
       "approach": "What they did",
       "result": "Result",
       "period": "Duration",
@@ -888,19 +888,19 @@
       "sources": "Sources",
       "similar": "If you commissioned a similar scope",
       "similarNote": "Starting fees as an example. Exact fees come in a written quote after we talk",
-      "similarTotal": "Total of starting fees (monthly excluded)"
+      "similarTotal": "Total of starting fees (monthly fees billed separately)"
     }
   },
   "insights": {
     "hero": {
       "title": "Short notes on\ntwo markets",
-      "lead": "What to know when you sell to customers in Japan and Korea, in short notes. New posts every month."
+      "lead": "Short notes on what to know when selling to customers in Japan and Korea. New posts every month."
     },
     "featured": {
       "date": "2026.10.24",
       "category": "Entry strategy",
-      "read": "5 min",
-      "title": "Five things small brands did first when they entered Japan",
+      "read": "5 min",
+      "title": "Five things small brands did first when they entered Japan",
       "quote": "Brands that started without a big budget had one thing in common: instead of translating, they first built what Japanese customers need to trust them.",
       "body": [
         {
@@ -948,31 +948,31 @@
         "date": "2026.10.24",
         "tags": "strategy",
         "category": "Entry strategy",
-        "read": "5 min",
-        "title": "Five things small brands did first when they entered Japan",
+        "read": "5 min",
+        "title": "Five things small brands did first when they entered Japan",
         "summary": "What brands that built trust before translating had in common."
       },
       {
         "date": "2026.10.10",
         "tags": "market",
         "category": "Channels and sales",
-        "read": "5 min",
+        "read": "5 min",
         "title": "Four things to sort out before listing on Qoo10",
-        "summary": "Fees, shipping, payout cycle and product page. Sorting them out first saves you from stumbling."
+        "summary": "Fees, shipping, payout cycle and product page. Sorting them out first makes your launch smoother."
       },
       {
         "date": "2026.09.26",
         "tags": "market",
         "category": "Channels and sales",
-        "read": "4 min",
-        "title": "Why product pages made with a translation tool don't sell",
-        "summary": "Even correct sentences lose customers if the order of information and the tone feel foreign."
+        "read": "4 min",
+        "title": "How to make a translated product page read naturally to local customers",
+        "summary": "Correct sentences are only the start. Matching the order of information and the tone to the market keeps customers reading."
       },
       {
         "date": "2026.09.12",
         "tags": "culture",
         "category": "Consumer culture",
-        "read": "4 min",
+        "read": "4 min",
         "title": "What to check before putting Japanese text in your logo",
         "summary": "Sound and meaning, colour, lettering layout. Small differences change the impression."
       },
@@ -980,7 +980,7 @@
         "date": "2026.08.29",
         "tags": "regulation",
         "category": "Rules and labelling",
-        "read": "6 min",
+        "read": "6 min",
         "title": "How far can cosmetics and food ads go?",
         "summary": "The rules on health and beauty claims differ by country. Check before you publish."
       },
@@ -988,7 +988,7 @@
         "date": "2026.08.15",
         "tags": "market",
         "category": "Channels and sales",
-        "read": "5 min",
+        "read": "5 min",
         "title": "Korea moves fast: how Japanese brands can start small",
         "summary": "Plan a schedule built for testing online and changing quickly."
       }
@@ -1003,7 +1003,7 @@
       },
       {
         "q": "Can I trust the quality of the work?",
-        "a": "We do not custom-build everything from scratch like a large agency, but we aim for a standard that is good enough for a business starting out, at a fair price. We check every deliverable once more before it reaches you, and when something is beyond us, we say so and point you to specialists."
+        "a": "We aim for a standard that is good enough for a business starting out, at a fair price. We check every deliverable once more before it reaches you, and for specialist areas we point you to trusted partners."
       },
       {
         "q": "Is it OK if I am a sole proprietor or still preparing to start?",
@@ -1014,42 +1014,42 @@
         "a": "Every fee is on the pricing page, and the estimator gives you a cost straight away. After we talk, you get a quote with the scope and amount, and we tell you in advance about any cost outside it. Ad spend and running costs such as domains are separate."
       },
       {
-        "q": "Is it OK if I don't speak Japanese or Korean?",
+        "q": "Can I use the service without Japanese or Korean?",
         "a": "Yes. We talk in Korean, Japanese or English, and we write localized material and website copy in the local language."
       },
       {
         "q": "How long does it take?",
-        "a": "A 1:1 session is one call. Reports, logo, social media and store-launch work usually take 1⁠–⁠3 weeks. A website takes 2⁠–⁠5 weeks, a booking system 1⁠–⁠4 weeks, and a piece like a product page 1⁠–⁠2 weeks."
+        "a": "A 1:1 session is one call. Reports, logo, social media and store-launch work usually take 1⁠–⁠3 weeks. A website takes 2⁠–⁠5 weeks, a booking system 1⁠–⁠4 weeks, and a piece like a product page 1⁠–⁠2 weeks."
       },
       {
-        "q": "Do you guarantee sales?",
-        "a": "We cannot promise sales or rankings. What we do is set out what you can do now, with evidence, and tell you when something looks difficult."
+        "q": "What results can I expect?",
+        "a": "Sales and rankings depend on the market. So we set out what you can do now, with evidence, and agree on realistic expectations up front."
       },
       {
         "q": "How do you handle confidentiality?",
-        "a": "We can sign an NDA from the first call. We never publish client details or cases without consent."
+        "a": "We can sign an NDA from the first call. Client details and cases are published only with consent."
       }
     ]
   },
   "about": {
     "hero": {
-      "title": "Closing the gap\nbetween two markets",
-      "lead": "LINKERPARTNERS is a consultancy that helps solo founders, small brands and startups sell between Korea and Japan, from a first conversation to logos, websites, booking systems and social media and ads."
+      "title": "Closing the gap\nbetween markets",
+      "lead": "LINKERPARTNERS is a consultancy that helps solo founders, small brands and startups sell between Korea and Japan."
     },
     "story": {
-      "text": "The person who first hears your story stays with you to the end. You can hand over only what you need, so the price is easy to say yes to. How customers read a page, how trust is built and how sales channels work differ between Korea and Japan. We explain those differences first and shape your brand so it looks like one brand to customers on both sides."
+      "text": "How customers read a page, how trust is built and how sales channels work differ between Korea and Japan. We explain those differences first and shape your brand so it looks like one brand to customers on both sides."
     },
     "name": {
       "title": "Our name",
       "linker": "Someone who connects two markets, two brands, two people.",
-      "partners": "Colleagues who stay until there are results, not just until the report is handed over."
+      "partners": "Colleagues who stay until there are results."
     },
     "principles": {
       "title": "Four promises\nwe keep",
       "items": [
         {
           "t": "Facts first",
-          "d": "If the odds are low, we say so. Not entering a market can be a good decision too."
+          "d": "We explain what to expect and what to prepare, with evidence. Together we decide whether to start now or prepare further."
         },
         {
           "t": "Fees up front",
@@ -1057,17 +1057,17 @@
         },
         {
           "t": "Only what you need",
-          "d": "We never push a big bundle first. Start with the one thing you need now."
+          "d": "Start with the one thing you need now. We decide what comes next together."
         },
         {
           "t": "The same person to the end",
-          "d": "The person who first hears your story stays with you until there is a result."
+          "d": "The person you first talk to stays on until you see results."
         }
       ]
     },
     "team": {
       "title": "The person you meet first\nstays to the end",
-      "lead": "Your contact never changes midway. With you we speak your language; locally we work the way the other side does.",
+      "lead": "The same contact from start to finish. With you we speak your language; locally we work the way the other side does.",
       "client_title": "With you",
       "client": "We communicate in your language and make material you can use for sales right away.",
       "local_title": "On the ground",
@@ -1086,14 +1086,14 @@
         },
         {
           "k": "Languages",
-          "v": "Korean · Japanese · English"
+          "v": "Korean · Japanese · English"
         },
         {
           "k": "Hours",
           "v": "Weekdays 10:00⁠–⁠18:00 (Seoul and Tokyo time)"
         },
         {
-          "k": "Founded · Representative · Address",
+          "k": "Founded · Representative · Address",
           "v": "To be added"
         }
       ],
@@ -1139,14 +1139,14 @@
         },
         {
           "v": "undecided",
-          "label": "Not decided yet"
+          "label": "Still deciding"
         }
       ],
       "services": "Services of interest",
       "message": "Message",
       "message_placeholder": "The market you want to sell in, your product or service, and what is on your mind.",
       "required": "Required",
-      "consent": "I agree to the collection and use of my personal data.",
+      "consent": "I agree to the collection and use of my personal data.",
       "consent_link": "Details",
       "submit": "Send request",
       "note": "Sending opens your email app with everything filled in.",
@@ -1184,11 +1184,11 @@
       },
       {
         "h": "Sharing with third parties",
-        "p": "We do not share personal data outside the company without consent, except where the law requires it. If we need a partner expert's help, we ask for your consent first."
+        "p": "We do not share personal data outside the company without consent, except where the law requires it. If we need a partner expert's help, we ask for your consent first."
       },
       {
         "h": "Your rights and contact",
-        "p": "You can ask at any time to see, correct or delete your personal data, or to stop its use. Please email us at the address below."
+        "p": "You can ask at any time to see, correct or delete your personal data, or to stop its use. Please email us at the address below."
       }
     ],
     "effective": "Effective date: to be confirmed"
