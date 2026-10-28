@@ -143,7 +143,8 @@
   --container: 1600px;
   --gutter: clamp(1rem, 0.5rem + 2.2vw, 2rem); /* 레퍼런스 32px */
   --page-x: max(var(--gutter), calc((100vw - var(--container)) / 2 + var(--gutter))); /* 화면 끝에서 내용 시작선까지 (넓은 화면에서도 내용 칸에 맞춤) */
-  --grid-gap-x: clamp(2rem, 1rem + 3vw, 4rem); /* 레퍼런스 64px */
+  /* 레퍼런스 64px. 12열 간격 11개가 화면 안쪽 폭보다 커지지 않게 폰에서는 줄임 (전체 폭 블록이 오른쪽으로 밀리는 것 방지) */
+  --grid-gap-x: min(clamp(2rem, 1rem + 3vw, 4rem), calc((100vw - 2 * var(--gutter)) / 13));
   --header-h: 72px; /* 기존 88px에서 줄임 */
 
   /* 화면 폭 기준점 (레퍼런스 768 / 1024) — CSS 변수는 미디어쿼리에 못 쓰므로 참고용 */

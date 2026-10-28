@@ -2347,8 +2347,8 @@ select.input {
   overflow-wrap: anywhere;
 }
 
-/* 아주 좁은 휴대폰(360px 미만)에서는 푸터 바로가기를 한 열로: 일본어 "プライバシーポリシー"처럼 긴 이름이 2열 칸을 넘지 않게 */
-@media (max-width: 359px) {
+/* 좁은 휴대폰(380px 미만)에서는 푸터 바로가기를 한 열로: 일본어 "プライバシーポリシー"처럼 긴 이름이 2열 칸을 넘지 않게 */
+@media (max-width: 379px) {
   .footer-links {
     grid-template-columns: minmax(0, 1fr);
   }
