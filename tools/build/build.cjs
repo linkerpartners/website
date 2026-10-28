@@ -38,6 +38,16 @@ const FORM_ORIGIN = (function () {
   }
 })();
 
+// 공식 SNS 주소: assets/js/config.js의 social에서 읽음(한 곳에서만 관리). 비어 있는 항목은 뺌
+const SOCIAL_URLS = (function () {
+  const cfgText = fs.readFileSync(path.join(ROOT, "assets/js/config.js"), "utf8");
+  const out = [];
+  const re = /\{\s*id:\s*"(?:kakao|instagram|line)",\s*href:\s*"([^"]+)"\s*\}/g;
+  let m;
+  while ((m = re.exec(cfgText))) out.push(m[1]);
+  return out;
+})();
+
 const problems = [];
 const inlineHashes = new Set(); // 페이지 안의 인라인 스크립트(CSP에 해시로 허용)
 
@@ -240,6 +250,8 @@ function render(page, lang) {
       email: SITE.email,
       areaServed: ["KR", "JP"],
       knowsLanguage: ["ko", "ja", "en"],
+      // 공식 SNS 계정(assets/js/config.js의 social에 주소가 있는 것만)
+      ...(SOCIAL_URLS.length ? { sameAs: SOCIAL_URLS } : {}),
     });
   }
 

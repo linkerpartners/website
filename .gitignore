@@ -11,4 +11,5 @@ Thumbs.db
 # 외부 사이트에서 뽑은 참고 자료(저작권) · 내부 메모는 공개 저장소에 올리지 않음
 docs/reference/
 docs/V1-*.md
+docs/내부/
 _headers

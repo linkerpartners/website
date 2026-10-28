@@ -34,7 +34,7 @@ window.LP_CONFIG = {
   // SNS 주소: 정해지면 href에 넣으세요. 비워 두면 버튼은 보이되 눌러도 이동하지 않습니다.
   social: [
     { id: "kakao", href: "" },
-    { id: "instagram", href: "" },
+    { id: "instagram", href: "https://www.instagram.com/linker_partners/" },
     { id: "line", href: "" },
   ],
 

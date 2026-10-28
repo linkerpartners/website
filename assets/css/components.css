@@ -2335,3 +2335,25 @@ select.input {
   height: 1px;
   overflow: hidden;
 }
+
+/* 일본어는 문절을 하나로 지키므로, 320px처럼 아주 좁은 폼 칸에서는 동의 문구가 칸을 밀어내지 않게 마지막 수단으로 중간에서 꺾음
+   (표 · 요금 칸에는 쓰지 않음: 칸이 지나치게 좁아져 단어가 쪼개짐) */
+.consent,
+.consent *,
+.field-label,
+.field-hint,
+.form-note,
+.closing-desc {
+  overflow-wrap: anywhere;
+}
+
+/* 아주 좁은 휴대폰(360px 미만)에서는 푸터 바로가기를 한 열로: 일본어 "プライバシーポリシー"처럼 긴 이름이 2열 칸을 넘지 않게 */
+@media (max-width: 359px) {
+  .footer-links {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer-links a:nth-child(2) {
+    box-shadow: inset 0 -1px 0 var(--line);
+  }
+}

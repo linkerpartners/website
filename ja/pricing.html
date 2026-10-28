@@ -67,7 +67,7 @@
               <div data-est-items=""></div>
               <label class="est-switch">
                 <input type="checkbox" name="rush">
-                <span><span class="est-name" data-i18n="pricing.estimator.rush">お急ぎ対応</span><small data-i18n="pricing.estimator.rush_desc">日程を約4⁠分の1短縮します。小計の20%が加わります。</small></span>
+                <span><span class="est-name" data-i18n="pricing.estimator.rush">お急ぎ対応</span><small data-i18n="pricing.estimator.rush_desc">納期を約4⁠分の1短縮します。小計の20%が加算されます。</small></span>
               </label>
             </div>
 
@@ -160,7 +160,7 @@
                   </tr>
                 
                   <tr data-gen="">
-                    <th scope="row" data-k="k">ホームページ制作</th>
+                    <th scope="row" data-k="k">Webサイト制作</th>
                     <td data-k="v.0">—</td>
                     <td data-k="v.1">—</td>
                     <td data-k="v.2">基本</td>
@@ -263,7 +263,7 @@
                       </li>
                     
                       <li data-gen="" class="pm-row">
-                        <span class="pm-name"><strong data-k="name">ホームページ制作&#160;· 基本</strong><small data-k="desc">1⁠ページの紹介ページ</small></span>
+                        <span class="pm-name"><strong data-k="name">Webサイト制作&#160;· 基本</strong><small data-k="desc">1⁠ページの紹介ページ</small></span>
                         
                         <span data-price-mode="plain" data-price="items.web.basic" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
                       </li>
@@ -275,7 +275,7 @@
                       </li>
                     
                       <li data-gen="" class="pm-row">
-                        <span class="pm-name"><strong data-k="name">ホームページ制作&#160;· 充実</strong><small data-k="desc">5⁠ページ以内・お問い合わせフォーム・2⁠言語</small></span>
+                        <span class="pm-name"><strong data-k="name">Webサイト制作&#160;· 充実</strong><small data-k="desc">5⁠ページ以内・お問い合わせフォーム・2⁠言語</small></span>
                         
                         <span data-price-mode="plain" data-price="items.web.deep" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
                       </li>
@@ -300,7 +300,7 @@
                       </li>
                     
                       <li data-gen="" class="pm-row">
-                        <span class="pm-name"><strong data-k="name">月次メンタリング&#160;· スタンダード</strong><small data-k="desc">月2⁠回の相談・質問対応・小さな修正1⁠件</small></span>
+                        <span class="pm-name"><strong data-k="name">月次メンタリング&#160;· スタンダード</strong><small data-k="desc">月2⁠回の相談・質問対応・軽微な修正1⁠件</small></span>
                         
                         <span data-price-mode="monthly" data-price="items.advisory.standard" class="pm-price" data-k-attr="data-price:price;data-price-mode:mode"></span>
                       </li>
@@ -414,11 +414,11 @@
                   <select class="input" id="q-service" name="service" data-list="services.items">
                     <option value="" data-i18n="closing.form.pick">ご関心のサービス(任意)</option>
                     <template><option data-k-attr="value:id" data-k="title"></option></template>
-                  <option data-gen="" value="spot" data-k-attr="value:id" data-k="title">個別集中相談</option><option data-gen="" value="localization" data-k-attr="value:id" data-k="title">ブランドのローカライズ・商品ページ</option><option data-gen="" value="advisory" data-k-attr="value:id" data-k="title">月次メンタリング</option><option data-gen="" value="diagnostic" data-k-attr="value:id" data-k="title">進出診断レポート</option><option data-gen="" value="logo" data-k-attr="value:id" data-k="title">ロゴ・ブランドデザイン</option><option data-gen="" value="channel" data-k-attr="value:id" data-k="title">出店準備ガイド</option><option data-gen="" value="sns" data-k-attr="value:id" data-k="title">SNS⁠・⁠広告運用サポート</option><option data-gen="" value="booking" data-k-attr="value:id" data-k="title">予約システム構築</option><option data-gen="" value="web" data-k-attr="value:id" data-k="title">ホームページ制作</option></select>
+                  <option data-gen="" value="spot" data-k-attr="value:id" data-k="title">個別集中相談</option><option data-gen="" value="localization" data-k-attr="value:id" data-k="title">ブランドのローカライズ・商品ページ</option><option data-gen="" value="advisory" data-k-attr="value:id" data-k="title">月次メンタリング</option><option data-gen="" value="diagnostic" data-k-attr="value:id" data-k="title">進出診断レポート</option><option data-gen="" value="logo" data-k-attr="value:id" data-k="title">ロゴ・ブランドデザイン</option><option data-gen="" value="channel" data-k-attr="value:id" data-k="title">出店準備ガイド</option><option data-gen="" value="sns" data-k-attr="value:id" data-k="title">SNS⁠・⁠広告運用サポート</option><option data-gen="" value="booking" data-k-attr="value:id" data-k="title">予約システム構築</option><option data-gen="" value="web" data-k-attr="value:id" data-k="title">Webサイト制作</option></select>
                 </div>
                 <div class="field span-2">
                   <label class="field-label" for="q-message"><span data-i18n="contact.form.message">ご相談内容</span><span class="req" data-i18n="contact.form.required">必須</span></label>
-                  <textarea placeholder="販売したい市場、商品やサービス、いまお悩みのことをお書きください。" class="input" id="q-message" name="message" rows="4" required aria-describedby="q-message-hint" data-i18n-attr="placeholder:contact.form.message_placeholder"></textarea>
+                  <textarea placeholder="販売したい市場、商品・サービスの内容、現在のお悩みなどをご記入ください。" class="input" id="q-message" name="message" rows="4" required aria-describedby="q-message-hint" data-i18n-attr="placeholder:contact.form.message_placeholder"></textarea>
                   <p class="field-hint" id="q-message-hint" aria-live="polite"></p>
                 </div>
                 <div class="field span-2">

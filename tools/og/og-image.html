@@ -1,0 +1,31 @@
+<!doctype html>
+<!-- 링크 공유 이미지(assets/og-image.png, 1200×630)의 원본.
+     문구를 바꾸면 사이트를 로컬 서버로 열고(예: http://localhost:5600/tools/og/og-image.html) #og 요소를 1200×630으로 캡처해 assets/og-image.png를 바꿉니다. -->
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OG image</title>
+    <link rel="stylesheet" href="/assets/css/fonts.css" />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { background: #888; }
+      #og { position: relative; width: 1200px; height: 630px; background: #f5efe4; overflow: hidden; text-align: center; will-change: transform; }
+      #og::before { content: ""; position: absolute; inset: 28px; border: 1px solid #d9ccb0; }
+      .logo { position: absolute; left: 288px; top: 112px; width: 624px; height: auto; }
+      .rule { position: absolute; left: 572px; top: 352px; width: 56px; height: 2px; background: #a8874e; }
+      .t { position: absolute; left: 0; right: 0; white-space: nowrap; }
+      .ko { top: 386px; font: 400 29px/1.3 "Pretendard Variable", "Pretendard", sans-serif; color: #1d1f23; letter-spacing: -0.01em; }
+      .ja { top: 441px; font: 400 25px/1.3 "Noto Serif JP", serif; color: #5f636a; }
+      .en { top: 483px; font: 300 26px/1.3 "Newsreader", "Noto Serif JP", serif; color: #8e8a82; }
+    </style>
+  </head>
+  <body>
+    <div id="og">
+      <img class="logo" src="/assets/logo/linker-logo.svg" alt="" />
+      <div class="rule"></div>
+      <p class="t ko">처음 나서는 브랜드를 위한 한일 진출 컨설팅</p>
+      <p class="t ja" lang="ja">初めての日韓進出に挑むブランドのためのコンサルティング</p>
+      <p class="t en" lang="en">Korea–Japan expansion consulting for brands taking their first step</p>
+    </div>
+  </body>
+</html>
