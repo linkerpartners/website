@@ -29,7 +29,7 @@ window.LP_CONFIG = {
   // - fields: 서비스가 요구하는 추가 값 (예: Web3Forms는 { access_key: "..." })
   // - subjectKey: 메일 제목으로 쓰이는 칸 이름 (Formspree "_subject" · Web3Forms "subject")
   // ※ endpoint의 주소(origin)는 tools/build가 이 파일에서 읽어 보안 정책(CSP)에 허용합니다. 바꾼 뒤에는 npm run build.
-  form: { endpoint: "", fields: {}, subjectKey: "_subject" },
+  form: { endpoint: "https://formspree.io/f/xgaakgwq", fields: {}, subjectKey: "_subject" },
 
   // SNS 주소: 정해지면 href에 넣으세요. 비워 두면 버튼은 보이되 눌러도 이동하지 않습니다.
   social: [

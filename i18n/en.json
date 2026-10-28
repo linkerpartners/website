@@ -1315,6 +1315,18 @@
         "p": "We do not share personal data outside the company without consent, except where the law requires it. If we need a partner expert's help, we ask for your consent first."
       },
       {
+        "h": "Service providers and transfers abroad",
+        "p": "What you send through the contact form is handled by a form service and delivered to our team by email. Your personal data may be transferred abroad in the process. Messages you send by email come to us through an email service, and the same retention period applies.",
+        "items": [
+          "Recipient: Formspree, Inc.",
+          "Country: United States (and other countries needed to run the service)",
+          "Data transferred: name, email, company or brand, direction, services of interest, message",
+          "Purpose: receiving your request and delivering it by email",
+          "Retention: the same as “How long we keep it” above. When that period ends, we also delete the copy stored in the service",
+          "Alternative: you can contact us by email or phone instead of the form"
+        ]
+      },
+      {
         "h": "Your rights and contact",
         "p": "You can ask at any time to see, correct or delete your personal data, or to stop its use. Please email us at the address below."
       }
