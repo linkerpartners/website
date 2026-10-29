@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "LINKERPARTNERS | Korea–Japan expansion consulting for brands taking their first step",
-      "description": "Logos, websites, booking systems, social media and ads, brand localization and store-launch prep. Consulting and build support for solo founders and brands taking their first step between Korea and Japan. From ₩50K to under ₩1M, and you pay only for what you need."
+      "description": "Logos, websites, booking systems, social media and ads, brand localization and store-launch prep. Consulting and production support for solo founders and brands taking their first step between Korea and Japan. From ₩50K to under ₩1M, and you pay only for what you need."
     },
     "about": {
       "title": "About | LINKERPARTNERS",
@@ -34,7 +34,7 @@
     },
     "terms": {
       "title": "Terms of service | LINKERPARTNERS",
-      "description": "The basic conditions that apply when you use LINKERPARTNERS consulting and build services."
+      "description": "The basic conditions that apply when you use LINKERPARTNERS consulting and production services."
     }
   },
   "intro": {
@@ -62,9 +62,9 @@
   "menu": {
     "desc": {
       "about": "How we think and work",
-      "services": "From advice to building",
+      "services": "From advice to production",
       "pricing": "Estimator and fees",
-      "cases": "How brands crossed over",
+      "cases": "How brands made the move",
       "insights": "Notes on both markets",
       "contact": "Free 30-minute call"
     },
@@ -120,7 +120,7 @@
       "pick": "Choose a service (optional)"
     },
     "faq": {
-      "label": "Frequently asked",
+      "label": "Frequently asked questions",
       "q": "Can we talk if we have only just started thinking about it?",
       "a": "Yes. A call helps most when you have only just started thinking about it. Tell us where you are and we will work out what to do first.",
       "more": "More questions"
@@ -131,13 +131,13 @@
       "title": "LINKERPARTNERS — the shortest path between Korea and Japan",
       "eyebrow": "Korea–Japan expansion consulting",
       "l1": "Between two markets,\nthe shortest path",
-      "sub": "Consulting and build services for brands preparing to enter Korea or Japan",
+      "sub": "Consulting and production for brands preparing to enter Korea or Japan",
       "cta": "Book a free call",
       "link": "Estimate the cost"
     },
     "about": {
       "title": "About us",
-      "lead": "We help brands cross between Korea and Japan for the first time",
+      "lead": "We help brands make their first move between Korea and Japan",
       "items": [
         {
           "n": "01",
@@ -146,24 +146,24 @@
         },
         {
           "n": "02",
-          "t": "No surprises",
+          "t": "Upfront, always",
           "d": "Our fees and progress are open, and we tell you what is quick and what takes time"
         },
         {
           "n": "03",
-          "t": "The same person to the end",
-          "d": "The person you first talk to stays on until you see results"
+          "t": "One point of contact, start to finish",
+          "d": "The person you first talk to stays with you until the work is done"
         }
       ],
       "link": "How we work",
       "eyebrow": "What we do",
       "vision": "We want crossing the border to feel simple and honest for solo founders and brands on their first move.",
-      "mission": "We help Korean brands find their first customers in Japan, and Japanese brands in Korea. Choose only what you need from logos, websites, booking systems, social media and ads, and store-launch prep, at a price that is easy to say yes to.",
+      "mission": "We help Korean brands find their first customers in Japan, and Japanese brands in Korea. Choose only what you need from logos, websites, booking systems, social media and ads, and store-launch prep, at an affordable price.",
       "principles": "Three principles we work by"
     },
     "services": {
       "title": "Services",
-      "desc": "Logos, websites, bookings, social media and ads, localization, store launch. One at a time, from ₩50K.",
+      "desc": "Logos, websites, booking systems, social media and ads, localization, store launch. One service at a time, from ₩50K.",
       "link": "All services"
     },
     "work": {
@@ -177,7 +177,7 @@
       },
       "open": "View this case",
       "view": "View",
-      "desc": "How brands crossed between Korea and Japan"
+      "desc": "Stories of brands that made the move between Korea and Japan"
     },
     "story": {
       "title": "How it works",
@@ -200,7 +200,7 @@
       "tier": "Scope",
       "total": "Estimated cost",
       "vat": "{p} incl. VAT",
-      "note": "Outside experts are billed separately. You get an exact quote after we talk.",
+      "note": "Outside experts are billed separately. After we talk, you get an exact written quote.",
       "weeks": "Timeline",
       "weeks_one": "About {a} weeks",
       "weeks_within": "Within a week",
@@ -209,7 +209,7 @@
     "insights": {
       "kicker": "Journal",
       "title": "Insights",
-      "desc": "Short notes on reading two markets",
+      "desc": "Short notes for reading the Korean and Japanese markets",
       "link": "All articles",
       "new": "Latest",
       "prev": "Earlier",
@@ -411,7 +411,7 @@
         "id": "web",
         "href": "services.html#web",
         "ask": "contact.html?services=web",
-        "title": "Website building",
+        "title": "Website development",
         "summary": "An intro site that reads well in Korean and Japanese.",
         "price": "items.web",
         "mode": "from",
@@ -439,7 +439,7 @@
   "directions": {
     "kr_jp": {
       "title": "Korean brands entering Japan",
-      "desc": "Customers in Japan buy from shops that explain things in detail and feel trustworthy. For a brand entering for the first time, the first page and the first reviews decide a lot.",
+      "desc": "Customers in Japan buy from shops that explain things in detail and feel trustworthy. For a brand entering for the first time, the first page and the first reviews can make a real difference.",
       "points": [
         "Starting on online channels such as Qoo10 and Rakuten",
         "Japanese product pages and labelling rules (especially cosmetics and food)",
@@ -448,7 +448,7 @@
     },
     "jp_kr": {
       "title": "Japanese brands entering Korea",
-      "desc": "Korea moves fast and runs mostly online. Starting small, watching the response and changing quickly works best.",
+      "desc": "Korea moves quickly, and online channels play a major role. Starting small, watching the response and changing quickly works best.",
       "points": [
         "Online sales through Smartstore, Coupang and Instagram",
         "Korean product pages and an understanding of review culture",
@@ -469,7 +469,7 @@
         "time": "1⁠–⁠2 weeks"
       },
       {
-        "line": "Together, we build it",
+        "line": "Together, we make it",
         "desc": "We prepare localized copy, a logo, a website and an operating plan",
         "time": "1⁠–⁠5 weeks"
       },
@@ -483,8 +483,8 @@
   "pricing": {
     "note": "VAT not included. Ad spend, running costs such as domains and servers, and outside experts such as translation reviewers, tax advisers and customs brokers are quoted separately. Yen amounts are for reference (₩1 = ¥0.118).",
     "hero": {
-      "title": "Skip the wait.\nDo the math.",
-      "lead": "From a ₩50K session to builds under ₩1M, every fee is public. Pick what you need, choose levels and quantities, and your estimate with VAT appears at once."
+      "title": "Get your estimate\nwithout the wait",
+      "lead": "From a ₩50K session to projects under ₩1M, every fee is public. Pick what you need, choose levels and quantities, and your estimate with VAT appears at once."
     },
     "estimator": {
       "title": "Pick what you need\nand get a quote",
@@ -619,7 +619,7 @@
         },
         {
           "id": "web",
-          "title": "Website building",
+          "title": "Website development",
           "desc": "An intro site in Japanese and Korean",
           "tiers": [
             {
@@ -640,7 +640,7 @@
       "weeks": "About {a}⁠–⁠{b} weeks",
       "weeks_ongoing": "Mentoring is monthly",
       "package": "If you bundle",
-      "hint": "Outside experts are billed separately. You get an exact quote after we talk.",
+      "hint": "Outside experts are billed separately. After we talk, you get an exact written quote.",
       "cta": "Talk about this estimate",
       "rush": "Rush",
       "rush_desc": "Shortens the timeline by about a quarter. Adds 20% to the subtotal.",
@@ -703,7 +703,7 @@
           ]
         },
         {
-          "k": "Website building",
+          "k": "Website development",
           "v": [
             "—",
             "—",
@@ -750,7 +750,7 @@
         ]
       },
       {
-        "group": "Build",
+        "group": "Production",
         "items": [
           {
             "name": "Brand localization and product pages",
@@ -765,7 +765,7 @@
             "mode": "plain"
           },
           {
-            "name": "Website building · Basic",
+            "name": "Website development · Basic",
             "desc": "One-page site",
             "price": "items.web.basic",
             "mode": "plain"
@@ -777,7 +777,7 @@
             "mode": "plain"
           },
           {
-            "name": "Website building · Advanced",
+            "name": "Website development · Advanced",
             "desc": "Up to five pages, contact form, two languages",
             "price": "items.web.deep",
             "mode": "plain"
@@ -831,7 +831,7 @@
         ]
       },
       {
-        "group": "Sell and run",
+        "group": "Sales and operations",
         "items": [
           {
             "name": "Store-launch guide · Basic",
@@ -863,13 +863,13 @@
   },
   "cases": {
     "hero": {
-      "title": "How brands\ncross over",
+      "title": "How brands\nmake the move",
       "lead": "The routes small businesses and startups actually took between Korea and Japan, pieced together from public sources."
     },
     "note": "These are not LINKERPARTNERS projects but Korea–Japan expansion cases compiled from public sources. Every figure comes from press or official materials. Charts only redraw those figures, and timeline graphics show order, not scale. We publish our own projects only with the client’s consent.",
     "labels": {
-      "challenge": "The challenge",
-      "approach": "What they did",
+      "challenge": "Challenge",
+      "approach": "Approach",
       "result": "Result",
       "period": "Duration",
       "services": "Services",
@@ -892,8 +892,8 @@
       "route": "Direction",
       "sources": "Sources",
       "similar": "If you commissioned a similar scope",
-      "similarNote": "Starting fees as an example. Exact fees come in a written quote after we talk",
-      "similarTotal": "Total of starting fees (monthly fees billed separately)"
+      "similarNote": "Starting fees as an example. You get an exact written quote after we talk",
+      "similarTotal": "Total starting price (monthly fees billed separately)"
     }
   },
   "insights": {
@@ -906,7 +906,7 @@
       "category": "Entry strategy",
       "read": "5 min",
       "title": "Five things brands did first when they entered Japan",
-      "quote": "Brands that started without a big budget had one thing in common: instead of translating, they first built what Japanese customers need to trust them.",
+      "quote": "Brands that started without a big budget had one thing in common: instead of translating, they first gave Japanese customers reasons to trust them.",
       "body": [
         {
           "h": "They rewrote the Japanese page from scratch",
@@ -925,7 +925,7 @@
         {
           "h": "They put their weight behind one or two hero products",
           "p": [
-            "A select shop run by one person looked for products that would sell and focused on one or two hero items. It passed 30,000 followers in two years. For a brand entering for the first time, making one thing well known before adding more was the safer route.",
+            "A select shop run by one person looked for products that would sell and focused on one or two hero items. Starting this way, it grew to more than 30,000 followers in two years. For a brand entering for the first time, making one thing well known before adding more was the safer route.",
             "Many did not aim at big retailers at the start. A bakery brand set up a Japanese entity, tested the response with a small pop-up, and used that response to move up to a department-store pop-up."
           ]
         },
@@ -971,7 +971,7 @@
             "h": "1. Work out fees from one real product",
             "p": [
               "Qoo10 fees can vary by category and by the programmes you join. Check the official fees for your category, pick one product, and subtract fees, shipping and ad spend from its selling price to see what is left.",
-              "Put exchange rates and transfer fees in the same sum, and you will rework your prices less often later."
+              "Include exchange rates and transfer fees in your calculation, and you will have to revise your prices less often later."
             ]
           },
           {
@@ -1132,7 +1132,7 @@
       },
       {
         "q": "Is it OK if I am a sole proprietor or still preparing to start?",
-        "a": "Yes. Solo founders, one-person brands and people preparing to start are all welcome. We mostly deal with the questions of the first stage."
+        "a": "Yes. Solo founders, one-person brands and people preparing to start are all welcome. We focus on the questions that come up when you are just starting out."
       },
       {
         "q": "How are fees decided?",
@@ -1144,11 +1144,11 @@
       },
       {
         "q": "How long does it take?",
-        "a": "A 1:1 session is one call. Reports, logo, social media and store-launch work usually take 1⁠–⁠3 weeks. A website takes 2⁠–⁠5 weeks, a booking system 1⁠–⁠4 weeks, and a piece like a product page 1⁠–⁠2 weeks."
+        "a": "A 1:1 session is one call. Diagnostic reports, logo, social media and store-launch work usually take 1⁠–⁠3 weeks. A website takes 2⁠–⁠5 weeks, a booking system 1⁠–⁠4 weeks, and a piece like a product page 1⁠–⁠2 weeks."
       },
       {
         "q": "What results can I expect?",
-        "a": "Sales and rankings depend on the market. So we set out what you can do now, with evidence, and agree on realistic expectations up front."
+        "a": "Sales and rankings depend on the market. So we set out what you can do now, with evidence, and set realistic expectations together from the start."
       },
       {
         "q": "How do you handle confidentiality?",
@@ -1185,7 +1185,7 @@
           "d": "Start with the one thing you need now. We decide what comes next together."
         },
         {
-          "t": "The same person to the end",
+          "t": "One point of contact, start to finish",
           "d": "The person you first talk to stays on until you see results."
         }
       ]
@@ -1207,7 +1207,7 @@
         },
         {
           "k": "Business",
-          "v": "Korea–Japan expansion consulting and build support (logos, websites, booking systems, social media, ads, brand localization, store-launch prep)"
+          "v": "Korea–Japan expansion consulting and production support (logos, websites, booking systems, social media, ads, brand localization, store-launch prep)"
         },
         {
           "k": "Languages",
@@ -1287,7 +1287,7 @@
   "privacy": {
     "hero": {
       "title": "Privacy\npolicy",
-      "lead": "We collect only what a consultation needs and delete it promptly once the purpose is served."
+      "lead": "We collect only what a consultation needs and delete it when the retention period ends."
     },
     "sections": [
       {
@@ -1323,7 +1323,7 @@
           "Data transferred: name, email, company or brand, direction, services of interest, message",
           "Purpose: receiving your request and delivering it by email",
           "Retention: the same as “How long we keep it” above. When that period ends, we also delete the copy stored in the service",
-          "Alternative: you can contact us by email or phone instead of the form"
+          "If you do not wish to use the form: contact us by email or phone instead"
         ]
       },
       {
@@ -1341,15 +1341,15 @@
     "sections": [
       {
         "h": "Purpose and scope",
-        "p": "These terms set out the basic conditions between LINKERPARTNERS (“we”) and you when we provide consulting and build services that help businesses expand between Korea and Japan. The scope and conditions of each service are written in the quote. If the quote differs from these terms, the quote applies."
+        "p": "These terms set out the basic conditions between LINKERPARTNERS (“we”) and you when we provide consulting and production services that help businesses expand between Korea and Japan. The scope and conditions of each service are written in the quote. If the quote differs from these terms, the quote applies."
       },
       {
         "h": "Services and quotes",
-        "p": "The scope, timeline and fee of each service are written in the quote we send after we talk. Fees and timelines on the site are a guide; the quote is final."
+        "p": "The scope, timeline and fee of each service are written in the quote we send after we talk. Fees and timelines shown on the site are for guidance only; the quote is final."
       },
       {
         "h": "When a contract begins",
-        "p": "A contract begins when you agree to the scope and fee in the quote and we confirm it. You can agree by replying by email or chat."
+        "p": "A contract is formed when you agree to the scope and fee in the quote and we confirm it. You can agree by replying by email or chat."
       },
       {
         "h": "Fees and payment",
@@ -1373,11 +1373,11 @@
       },
       {
         "h": "Rights in deliverables",
-        "p": "The right to use deliverables passes to you once we have received the full fee. Elements that carry third-party rights, such as fonts, images and plug-ins, follow their own terms of use. We publish deliverables and cases in our portfolio only with your consent."
+        "p": "The right to use deliverables passes to you once we have received the full fee. Elements that carry third-party rights, such as fonts, images and plug-ins, follow their own terms of use. We publish deliverables and project examples in our portfolio only with your consent."
       },
       {
         "h": "Confidentiality",
-        "p": "We use the information we learn through our work only for the purpose of the service, and share it outside the company only with your consent. We can sign an NDA from the first call if you wish."
+        "p": "We use the information we learn through our work only for the purpose of the service, and disclose it to third parties only with your consent. We can sign an NDA from the first call if you wish."
       },
       {
         "h": "About results",
@@ -1385,10 +1385,10 @@
       },
       {
         "h": "Outside experts",
-        "p": "When a specialist area such as tax, customs or development is needed, we point you to outside experts. Your contract and fees with them are agreed between you and the expert."
+        "p": "When a specialist area such as tax, customs or development is needed, we can introduce you to outside experts. Your contract and fees with them are agreed between you and the expert."
       },
       {
-        "h": "Limit of liability",
+        "h": "Limitation of liability",
         "p": "Except in cases of intent or gross negligence, our liability is limited to the amount we received for the service concerned. Delays caused by matters beyond our control, such as natural disasters or outages of outside services, are not covered."
       },
       {
@@ -1397,7 +1397,7 @@
       },
       {
         "h": "Governing law and disputes",
-        "p": "These terms are governed by the laws of the Republic of Korea. We first try to settle any dispute by discussion; if it cannot be settled, it goes to the court with jurisdiction under the Civil Procedure Act."
+        "p": "These terms are governed by the laws of the Republic of Korea. We first try to settle any dispute by discussion; if it cannot be settled, it will be brought before the court with jurisdiction under the Civil Procedure Act."
       }
     ],
     "effective": "Effective date: to be confirmed"
