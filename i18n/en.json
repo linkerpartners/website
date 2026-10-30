@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "LINKERPARTNERS | Korea–Japan expansion consulting for brands taking their first step",
-      "description": "Logos, websites, booking systems, social media and ads, brand localization and store-launch prep. Consulting and production support for solo founders and brands taking their first step between Korea and Japan. From ₩50K to under ₩1M, and you pay only for what you need."
+      "description": "Logos, websites, booking systems, social media and ads, brand localization and marketplace listing prep. Consulting and production support for solo founders and brands taking their first step between Korea and Japan. From ₩50K to under ₩1M, and you pay only for what you need."
     },
     "about": {
       "title": "About | LINKERPARTNERS",
@@ -10,7 +10,7 @@
     },
     "services": {
       "title": "Services | LINKERPARTNERS",
-      "description": "1:1 sessions, market-fit reports, logo and brand design, websites, booking systems, social media and ads, brand localization, store-launch guides and monthly mentoring. From ₩50K to under ₩1M."
+      "description": "1:1 sessions, market-fit reports, logo and brand design, websites, booking systems, social media and ads, brand localization, marketplace listing guides and monthly mentoring. From ₩50K to under ₩1M."
     },
     "pricing": {
       "title": "Pricing | LINKERPARTNERS",
@@ -158,12 +158,12 @@
       "link": "How we work",
       "eyebrow": "What we do",
       "vision": "We want crossing the border to feel simple and honest for solo founders and brands on their first move.",
-      "mission": "We help Korean brands find their first customers in Japan, and Japanese brands in Korea. Choose only what you need from logos, websites, booking systems, social media and ads, and store-launch prep, at an affordable price.",
+      "mission": "We help Korean brands find their first customers in Japan, and Japanese brands in Korea. Choose only what you need from logos, websites, booking systems, social media and ads, and marketplace listing prep, at an affordable price.",
       "principles": "Three principles we work by"
     },
     "services": {
       "title": "Services",
-      "desc": "Logos, websites, booking systems, social media and ads, localization, store launch. One service at a time, from ₩50K.",
+      "desc": "Logos, websites, booking systems, social media and ads, localization, marketplace listing. One service at a time, from ₩50K.",
       "link": "All services"
     },
     "work": {
@@ -347,7 +347,7 @@
         "id": "channel",
         "href": "services.html#channel",
         "ask": "contact.html?services=channel",
-        "title": "Store-launch guide",
+        "title": "Marketplace listing guide",
         "summary": "What to prepare before you list on a marketplace.",
         "price": "items.channel",
         "mode": "from",
@@ -568,7 +568,7 @@
         },
         {
           "id": "channel",
-          "title": "Store-launch guide",
+          "title": "Marketplace listing guide",
           "desc": "Get ready before you list",
           "tiers": [
             {
@@ -834,7 +834,7 @@
         "group": "Sales and operations",
         "items": [
           {
-            "name": "Store-launch guide · Basic",
+            "name": "Marketplace listing guide · Basic",
             "desc": "Channel comparison and checklist",
             "price": "items.channel.basic",
             "mode": "plain"
@@ -846,7 +846,7 @@
             "mode": "plain"
           },
           {
-            "name": "Store-launch guide · Advanced",
+            "name": "Marketplace listing guide · Advanced",
             "desc": "Includes review of two product pages",
             "price": "items.channel.deep",
             "mode": "plain"
@@ -990,7 +990,7 @@
             "h": "4. Build the product page in the order Japanese customers read",
             "p": [
               "Go beyond translating the description. Arrange it in the order Japanese customers want to know: how to use it, ingredients or materials, reviews, and shipping and returns. Check that ingredient and efficacy wording fits Japanese rules, and put the text inside images into Japanese as well, which makes reading much easier.",
-              "Official guidance changes from time to time, so check it again just before you list. The LINKERPARTNERS store-launch guide sorts out these four, and the rest of your launch preparation, in one go."
+              "Official guidance changes from time to time, so check it again just before you list. The LINKERPARTNERS marketplace listing guide sorts out these four, and the rest of your launch preparation, in one go."
             ]
           }
         ]
@@ -1124,7 +1124,7 @@
     "items": [
       {
         "q": "Can I hire you for something small?",
-        "a": "Yes. A ₩50K 1:1 session or a single product page is fine. Taking on only what you need is how we work."
+        "a": "Yes. A ₩50K 1:1 session or a single product page is fine. You can choose just the services you need."
       },
       {
         "q": "Can I trust the quality of the work?",
@@ -1144,7 +1144,7 @@
       },
       {
         "q": "How long does it take?",
-        "a": "A 1:1 session is one call. Diagnostic reports, logo, social media and store-launch work usually take 1⁠–⁠3 weeks. A website takes 2⁠–⁠5 weeks, a booking system 1⁠–⁠4 weeks, and a piece like a product page 1⁠–⁠2 weeks."
+        "a": "A 1:1 session is one call. Diagnostic reports, logo, social media and marketplace listing work usually take 1⁠–⁠3 weeks. A website takes 2⁠–⁠5 weeks, a booking system 1⁠–⁠4 weeks, and a piece like a product page 1⁠–⁠2 weeks."
       },
       {
         "q": "What results can I expect?",
@@ -1191,7 +1191,7 @@
       ]
     },
     "team": {
-      "title": "Bring your great idea to the local market",
+      "title": "Turn your idea into a business that works locally",
       "lead": "From the first conversation to the local launch, the same contact carries it through. We talk with you in a language you are at ease in, and in the market we follow local rules to make the business work.",
       "client_title": "With you",
       "client": "We communicate in your native language and build practical material and tools you can use right away in sales and negotiations.",
@@ -1207,7 +1207,7 @@
         },
         {
           "k": "Business",
-          "v": "Korea–Japan expansion consulting and production support (logos, websites, booking systems, social media, ads, brand localization, store-launch prep)"
+          "v": "Korea–Japan expansion consulting and production support (logos, websites, booking systems, social media, ads, brand localization, marketplace listing prep)"
         },
         {
           "k": "Languages",

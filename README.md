@@ -38,6 +38,10 @@ npm run build    # 페이지 24개 · sitemap.xml · robots.txt 생성
 
 빌드는 번역 키가 빠진 곳이 있으면 알려 줍니다. CSS · JS · 사례(`data/cases`) · `config.js`는 빌드 없이 바로 반영돼요.
 
+## 문구 전수조사
+
+사이트의 한국어 문구를 한 번에 점검하려면 저장소 맨 위에서 `node tools/audit/korean-audit.cjs`를 실행하세요. 한국어 전체 문구 · 사례 문구 · 코드에 직접 쓴 한글 · 일본어/영어 화면에 섞인 한글 · 점검 패턴(부정 표현, 호칭 등)에 걸린 문장이 표(CSV)와 `요약.md`로 `docs/내부/문구-검수/한국어-전수조사/`에 만들어져요. 사이트 파일은 바꾸지 않습니다. 점검 패턴은 스크립트 위쪽 `PATTERNS`에서 고칩니다.
+
 ## 문서
 
 - [DESIGN.md](DESIGN.md) · [design-system.html](design-system.html): 디자인 시스템(색 · 글자 · 부품 · 움직임 · 모바일 규칙)
