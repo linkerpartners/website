@@ -181,13 +181,15 @@ write("linker-logo-header-mobile.svg", svg(headerMobile, COLORS.light));
 write("linker-logo-header-pc.svg", svg(headerPc, COLORS.light));
 
 // 파비콘: LINKER 한 줄 (18px 미만 규칙)
-// 파비콘은 로고와 같은 Jost Regular의 'L' 한 글자(금색)를 흰 원 안에 둠. 흰 바탕에서도 보이도록 옅은 금색 테두리
+// 파비콘은 로고와 같은 Jost Regular의 'L' 한 글자(금색)를 아이보리 원 안에 크게 둠(작은 탭 크기에서도 읽히도록 원 높이의 약 77%).
+// 바탕은 로고 금색과 어울리는 따뜻한 아이보리 그라데이션, 흰 탭에서도 원이 보이도록 옅은 금색 테두리
+const FAVICON_L_SIZE = 112;
 const lGlyph = regular.charToGlyph("L");
-const lb = lGlyph.getPath(0, 0, 88).getBoundingBox();
-const lD = lGlyph.getPath(50 - (lb.x1 + lb.x2) / 2, 50 - (lb.y1 + lb.y2) / 2, 88).toPathData(2);
+const lb = lGlyph.getPath(0, 0, FAVICON_L_SIZE).getBoundingBox();
+const lD = lGlyph.getPath(50 - (lb.x1 + lb.x2) / 2, 50 - (lb.y1 + lb.y2) / 2, FAVICON_L_SIZE).toPathData(2);
 write(
   "favicon.svg",
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="LINKERPARTNERS"><title>LINKERPARTNERS</title><circle cx="50" cy="50" r="49" fill="#FFFFFF" stroke="#E4DAC3" stroke-width="1.4"/><path fill="#A8874E" d="${lD}"/></svg>\n`,
+  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="LINKERPARTNERS"><title>LINKERPARTNERS</title><defs><radialGradient id="bg" cx="36%" cy="28%" r="90%"><stop offset="0" stop-color="#FFFCF4"/><stop offset="1" stop-color="#EFE3C8"/></radialGradient></defs><circle cx="50" cy="50" r="49" fill="url(#bg)" stroke="#D6C59C" stroke-width="1.4"/><path fill="#A8874E" d="${lD}"/></svg>\n`,
 );
 // PNG(favicon-48/96/192 · apple-touch-icon · icon-512)와 favicon.ico는 이 SVG를 브라우저로 그려 만듦(docs/배포-가이드.md)
 
