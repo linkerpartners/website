@@ -181,15 +181,21 @@ write("linker-logo-header-mobile.svg", svg(headerMobile, COLORS.light));
 write("linker-logo-header-pc.svg", svg(headerPc, COLORS.light));
 
 // 파비콘: LINKER 한 줄 (18px 미만 규칙)
-// 파비콘은 로고와 같은 Jost Regular의 'L' 한 글자(금색)를 아이보리 원 안에 크게 둠(작은 탭 크기에서도 읽히도록 원 높이의 약 77%).
-// 바탕은 로고 금색과 어울리는 따뜻한 아이보리 그라데이션, 흰 탭에서도 원이 보이도록 옅은 금색 테두리
-const FAVICON_L_SIZE = 112;
+// 파비콘은 로고와 같은 Jost Regular의 'L' 한 글자(밝은 금색 #C9AB70)를 따뜻한 잉크색(#25211B) 단색 원 안에 둠.
+// 장식(그라데이션 · 테두리 · 그림자) 없이 색 두 개만. 밝은 탭에서 원이 또렷하고 16px에서도 L이 읽힘(어두운 탭에서는 원이 배경과 비슷해 L만 떠 보임).
+// L 높이는 원 지름의 52%(여백을 넉넉히), 글자 모양상 왼쪽 아래로 쏠려 보이므로 가운데에서 오른쪽 위로 살짝 옮겨 눈으로 가운데에 맞춤
+const FAVICON_L_HEIGHT_PCT = 52;
+const FAVICON_L_SHIFT = { x: 1.6, y: -0.6 };
 const lGlyph = regular.charToGlyph("L");
-const lb = lGlyph.getPath(0, 0, FAVICON_L_SIZE).getBoundingBox();
-const lD = lGlyph.getPath(50 - (lb.x1 + lb.x2) / 2, 50 - (lb.y1 + lb.y2) / 2, FAVICON_L_SIZE).toPathData(2);
+const lProbe = lGlyph.getPath(0, 0, 100).getBoundingBox();
+const lSize = (100 * FAVICON_L_HEIGHT_PCT) / (lProbe.y2 - lProbe.y1);
+const lb = lGlyph.getPath(0, 0, lSize).getBoundingBox();
+const lD = lGlyph
+  .getPath(50 - (lb.x1 + lb.x2) / 2 + FAVICON_L_SHIFT.x, 50 - (lb.y1 + lb.y2) / 2 + FAVICON_L_SHIFT.y, lSize)
+  .toPathData(2);
 write(
   "favicon.svg",
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="LINKERPARTNERS"><title>LINKERPARTNERS</title><defs><radialGradient id="bg" cx="36%" cy="28%" r="90%"><stop offset="0" stop-color="#FFFCF4"/><stop offset="1" stop-color="#EFE3C8"/></radialGradient></defs><circle cx="50" cy="50" r="49" fill="url(#bg)" stroke="#D6C59C" stroke-width="1.4"/><path fill="#A8874E" d="${lD}"/></svg>\n`,
+  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="LINKERPARTNERS"><title>LINKERPARTNERS</title><circle cx="50" cy="50" r="50" fill="#25211B"/><path fill="#C9AB70" d="${lD}"/></svg>\n`,
 );
 // PNG(favicon-48/96/192 · apple-touch-icon · icon-512)와 favicon.ico는 이 SVG를 브라우저로 그려 만듦(docs/배포-가이드.md)
 
