@@ -3443,8 +3443,10 @@
 }
 
 .nh-facts dd {
+  min-width: 0; /* 긴 고객 이름이 줄어들 수 있게 (flex 칸의 기본 최소 폭 해제) */
   margin: 0;
   color: var(--ink-2);
+  overflow-wrap: anywhere;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -3515,6 +3517,7 @@
 /* 브랜드 이름 머리 아래의 머리말: 방향 · 업종 · 연도, 제목, 요약 (상자 없이) */
 .cv-intro {
   display: grid;
+  grid-template-columns: minmax(0, 1fr); /* 제목의 최소 폭에 칸이 늘어나 화면 밖으로 밀리지 않게 */
   gap: var(--space-4);
   max-width: 50rem;
   padding-top: var(--space-8);
@@ -3548,6 +3551,7 @@
 .cv-main {
   grid-column: 1 / span 7;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-9);
 }
 
@@ -3556,6 +3560,7 @@
   position: sticky;
   top: var(--space-8);
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-5);
   padding-top: var(--space-5);
   box-shadow: inset 0 1px 0 var(--line-strong);
@@ -3578,6 +3583,11 @@
 .cv-facts dt {
   font-size: var(--text-label-l);
   color: var(--ink-3);
+}
+
+/* 고객 이름처럼 긴 가타카나 · 영문이 칸 오른쪽 여백까지 닿지 않게 (좁은 칸에서만 필요할 때 끊음) */
+.cv-facts dd {
+  overflow-wrap: anywhere;
 }
 
 .cv-tags {
