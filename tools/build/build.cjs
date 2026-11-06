@@ -48,6 +48,16 @@ const SOCIAL_URLS = (function () {
   return out;
 })();
 
+// 대표 연락처: assets/js/config.js의 email · phone · phoneDisplay (JS가 꺼져 있어도 보이게 미리 채움)
+const CONTACT = (function () {
+  const cfgText = fs.readFileSync(path.join(ROOT, "assets/js/config.js"), "utf8");
+  const get = function (key) {
+    const m = cfgText.match(new RegExp(String.raw`\b` + key + String.raw`:\s*"([^"]*)"`));
+    return m ? m[1] : "";
+  };
+  return { email: get("email"), phone: get("phone"), phoneDisplay: get("phoneDisplay") };
+})();
+
 const problems = [];
 const inlineHashes = new Set(); // 페이지 안의 인라인 스크립트(CSP에 해시로 허용)
 
@@ -185,6 +195,18 @@ function render(page, lang) {
         const v = t(key);
         if (v !== null) node.setAttribute(attr, v.replace(/\n/g, " "));
       });
+  });
+
+  // 연락처 링크(data-config-href · data-config-text)도 글자로 미리 채움: 스크립트가 없어도 이메일 · 전화가 보이도록
+  document.querySelectorAll("[data-config-href]").forEach(function (a) {
+    const key = a.getAttribute("data-config-href");
+    if (key === "email" && CONTACT.email) a.setAttribute("href", "mailto:" + CONTACT.email);
+    if (key === "phone" && CONTACT.phone) a.setAttribute("href", "tel:" + CONTACT.phone);
+  });
+  document.querySelectorAll("[data-config-text]").forEach(function (n) {
+    const k = n.getAttribute("data-config-text");
+    const v = k === "phone" ? CONTACT.phoneDisplay : CONTACT[k];
+    if (v) n.textContent = v;
   });
 
   document.documentElement.setAttribute("lang", lang);
